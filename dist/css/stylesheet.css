@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Heavy.eot");
+  src: url("../fonts/Lato-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Heavy.woff2") format("woff2"), url("../fonts/Lato-Heavy.woff") format("woff"), url("../fonts/Lato-Heavy.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url("../fonts/Lato-Semibold.eot");
+  src: url("../fonts/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/Lato-Semibold.woff2") format("woff2"), url("../fonts/Lato-Semibold.woff") format("woff"), url("../fonts/Lato-Semibold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"), url("../fonts/Gilroy-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #4E5B67;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  position: relative;
+  box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
+  background: #fff;
+}
+
+header.fixed .header__logo img {
+  width: 135px;
+}
+
+header.fixed .main-menu__link {
+  padding: 26px 0;
+}
+
+.header__top {
+  background: rgba(232, 240, 246, 0.4);
+}
+
+.header__logo {
+  align-self: center;
+}
+
+.header__logo img {
+  width: 170px;
+  transition: width .2s ease;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+}
+
+.language {
+  margin-right: 15px;
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.top-menu__link {
+  display: flex;
+  align-items: center;
+  line-height: 40px;
+  margin-left: 30px;
+}
+
+.top-menu__link:first-child {
+  margin-left: 0;
+}
+
+.top-menu__link .icon {
+  width: 24px;
+  height: 24px;
+  background: #132434;
+  margin-right: 9px;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.main-menu__link {
+  font-weight: 600;
+  font-size: 16px;
+  color: #132434;
+  margin-right: 17px;
+  margin-left: 17px;
+  padding: 47px 0;
+  transition: padding .2s ease;
+}
+
+.main-menu__link > a {
+  font-family: Literata;
+  text-transform: uppercase;
+}
+
+.main-menu__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  background: #F1F6FA;
+  z-index: 100;
+}

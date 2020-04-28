@@ -6,15 +6,77 @@ html(lang="ru")
         title #{title}
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Literata:wght@600&display=swap')
+        link(rel="stylesheet" href='css/bootstrap-grid.min.css')
+        link(rel="stylesheet" href='css/normalize.min.css')
         link(rel="stylesheet" href='css/stylesheet.css')
         block styles
     body
         header
-            p menu here
+            .header__top
+                .container
+                    .row
+                        .top-left.col-lg-4
+                            .language lang
+                            .city-select Ваш город: 
+
+                        .top-menu.col-lg-8
+                            a.top-menu__link(href="#")
+                                .icon
+                                span Бесплатная доставка
+                            a.top-menu__link(href="#")
+                                .icon
+                                span Примерка перед покупкой
+                            a.top-menu__link(href="#")
+                                .icon
+                                span Связаться с нами
+
+            .header__main.container
+                .row
+                    .header__logo.col-lg-3
+                        a(href="/")
+                            img(src="images/logo.svg", alt="Alexander Bogdanov")
+
+                    .header__menu
+                        .main-menu
+                            .main-menu__link
+                                a(href="") Каталог
+                                .main-menu__dropdown
+                                    .container
+                                        .row
+                                            .col-lg-2
+                                                a(href="") Новое
+                                                a(href="") Бестселлеры
+                                            .col-lg-2
+                                                a(href="") Новое
+                                                a(href="") Бестселлеры
+                                            .col-lg-2
+                                                a(href="") Новое
+                                                a(href="") Бестселлеры
+                                            .col-lg-3
+                                                a(href="") Новое
+                                                a(href="") Бестселлеры
+                                            .col-lg-3
+                                                a(href="") Новое
+                                                a(href="") Бестселлеры
+
+                            .main-menu__link
+                                a(href="") О нас
+                            .main-menu__link
+                                a(href="") Lookbook
+                            .main-menu__link
+                                a(href="") Адреса магазинов
+   
+
+                    .header__right.col-lg-3
+
+
+
 
         block content
 
         footer
             p footer here
 
+        
         block scripts

@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Heavy.eot');
+    src: url('../fonts/Lato-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-Heavy.woff2') format('woff2'),
+         url('../fonts/Lato-Heavy.woff') format('woff'),
+         url('../fonts/Lato-Heavy.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 800;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Semibold.eot');
+    src: url('../fonts/Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Lato-Semibold.woff2') format('woff2'),
+         url('../fonts/Lato-Semibold.woff') format('woff'),
+         url('../fonts/Lato-Semibold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Medium.eot');
+    src: url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Gilroy-Medium.woff2') format('woff2'),
+         url('../fonts/Gilroy-Medium.woff') format('woff'),
+         url('../fonts/Gilroy-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+$dark: #132434;
+$gray: #4E5B67;
+$blue: #67ADD7;
+$light: #E8F0F6;
+
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: $gray;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
