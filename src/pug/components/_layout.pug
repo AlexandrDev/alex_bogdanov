@@ -39,26 +39,58 @@ html(lang="ru")
 
                     .header__menu
                         .main-menu
-                            .main-menu__link
+                            .main-menu__link.has-child
                                 a(href="") Каталог
                                 .main-menu__dropdown
                                     .container
                                         .row
                                             .col-lg-2
-                                                a(href="") Новое
-                                                a(href="") Бестселлеры
+                                                a.main-menu__sub-link.head(href="") Новое
+                                                a.main-menu__sub-link.head(href="") Бестселлеры
+                                                a.main-menu__sub-link(href="") Специальные предложения
                                             .col-lg-2
-                                                a(href="") Новое
-                                                a(href="") Бестселлеры
+                                                a.main-menu__sub-link.head(href="") Одежда
+                                                a.main-menu__sub-link(href="") Блузы и рубашки
+                                                a.main-menu__sub-link(href="") Брюки и шорты
+                                                a.main-menu__sub-link(href="") Верхняя одежда
+                                                a.main-menu__sub-link(href="") Джемперы
+                                                a.main-menu__sub-link(href="") Жакеты и бомберы
+                                                a.main-menu__sub-link(href="") Платья
+                                                a.main-menu__sub-link(href="") Юбки
                                             .col-lg-2
-                                                a(href="") Новое
-                                                a(href="") Бестселлеры
-                                            .col-lg-3
-                                                a(href="") Новое
-                                                a(href="") Бестселлеры
-                                            .col-lg-3
-                                                a(href="") Новое
-                                                a(href="") Бестселлеры
+                                                a.main-menu__sub-link.head(href="") Аксессуары
+                                                a.main-menu__sub-link(href="") Шапки
+                                                a.main-menu__sub-link(href="") Палантины
+                                            .col-lg-6
+                                                a.main-menu__sub-link.head(href="") Коллекции
+                                                .row
+                                                    .col-6
+                                                        a.main-menu__img-link(href="")
+                                                            .img-link
+                                                                img(src="", alt="")
+                                                                .img-link__info
+                                                                    .img-link__title Прованс
+                                                                    .img-link__short Весна/Лето 2020
+                                                        a.main-menu__img-link(href="")
+                                                            .img-link
+                                                                img(src="", alt="")
+                                                                .img-link__info
+                                                                    .img-link__title Настроение города
+                                                                    .img-link__short Осень 2019/Зима 2020
+                                                    .col-6
+                                                        a.main-menu__img-link(href="")
+                                                            .img-link
+                                                                img(src="", alt="")
+                                                                .img-link__info
+                                                                    .img-link__title Лигурия
+                                                                    .img-link__short Весна/Лето 2019
+                                                        a.main-menu__img-link(href="")
+                                                            .img-link
+                                                                img(src="", alt="")
+                                                                .img-link__info
+                                                                    .img-link__title Ломбардия
+                                                                    .img-link__short Осень 2018/Зима 2019
+                                               
 
                             .main-menu__link
                                 a(href="") О нас
@@ -78,5 +110,6 @@ html(lang="ru")
         footer
             p footer here
 
-        
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="js/scripts.js")
         block scripts

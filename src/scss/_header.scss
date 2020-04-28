@@ -77,7 +77,7 @@ header {
     justify-content: center;
     height: 100%;
 
-    &__link {     
+    &__link {
         font-weight: 600;
         font-size: 16px;   
         color: $dark;
@@ -87,12 +87,38 @@ header {
         transition: padding .2s ease;
 
         > a {
+            position: relative;
             font-family: Literata;
             text-transform: uppercase;
+        }
+
+        &.has-child {
+            > a::after {
+                content: '';
+                display: none;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -58px;
+                margin: 0 auto;
+                transform: rotate(-45deg);
+                background: #F1F6FA;
+                pointer-events: none;
+            }
+
+            &.opened > {
+                a::after,
+                .main-menu__dropdown {
+                    display: block;
+                }
+            }
         }
     }
 
     &__dropdown {
+        display: none;
         position: absolute;
         top: 100%;
         left: 0;
@@ -101,5 +127,54 @@ header {
         padding-bottom: 60px;
         background: #F1F6FA;
         z-index: 100;
+    }
+
+    &__sub-link {
+        display: block;
+        font-weight: 500;
+        font-size: 15px;
+        color: $gray;
+        line-height: 20px;
+        margin-bottom: 15px;
+
+        &.head {
+            font-weight: 600;
+            font-size: 16px;
+            color: $dark;
+        }
+    }
+
+    &__img-link {
+        display: block;
+        font-weight: 500;
+        line-height: 20px;
+        color: $gray;
+        margin-bottom: 20px;
+    }
+}
+
+.img-link {
+    display: flex;
+    align-items: center;
+
+    img {
+        flex: 0 0 90px;
+        width: 90px;
+        height: 60px;
+        object-fit: cover;
+        margin-right: 20px;
+        background: #4E5B67;
+    }
+    &__title {
+        font-size: 15px;
+        margin-bottom: 4px;
+    }
+    &__short {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 14px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        opacity: 0.7;
     }
 }

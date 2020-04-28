@@ -56,4 +56,8 @@ h1 {
 a {
     color: inherit;
     text-decoration: none;
+    transition: color .16s ease;
+    &:hover {
+        color: $blue;
+    }
 }
