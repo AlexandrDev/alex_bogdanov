@@ -42,6 +42,28 @@ $blue: #67ADD7;
 $light: #E8F0F6;
 
 
+@mixin desktop {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media screen and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin tablets {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+@mixin phones {
+   @media screen and (max-width: 479px) {
+        @content;
+   }
+}
+
+
 body {
     font-family: 'Gilroy', sans-serif;
     font-size: 16px;

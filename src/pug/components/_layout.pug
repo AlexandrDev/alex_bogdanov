@@ -17,8 +17,26 @@ html(lang="ru")
                 .container
                     .row
                         .top-left.col-lg-4
-                            .language lang
-                            .city-select Ваш город: 
+                            .language
+                                .language-select.dropdown-toggle(data-toggle="dropdown")
+                                    .language__icon.language__icon_rus
+                                    .language__arrow
+                                .language-dropdown.dropdown-menu
+                                    a(href="").language__item
+                                        .language__icon.language__icon_rus
+                                        span Русский
+                                    a(href="").language__item
+                                        .language__icon.language__icon_eng
+                                        span English
+                                    a(href="").language__item
+                                        .language__icon.language__icon_esp
+                                        span Espanol
+                                    a(href="").language__item
+                                        .language__icon.language__icon_de
+                                        span German
+
+                            .city-select Ваш город:
+                                a.city-select__link(href="") Александровск-Сахалинский
 
                         .top-menu.col-lg-8
                             a.top-menu__link(href="#")
@@ -32,75 +50,90 @@ html(lang="ru")
                                 span Связаться с нами
 
             .header__main.container
-                .row
-                    .header__logo.col-lg-3
+                .header__main-row.row
+                    .hamburger.col-1.d-xl-none
+                        .hamburger-switcher
+                            .hamburger__icon
+                                span
+                                span
+                                span
+
+                    .header__logo.col-3.mr-auto
                         a(href="/")
                             img(src="images/logo.svg", alt="Alexander Bogdanov")
 
-                    .header__menu
+                    .header__menu.d-none.d-xl-block
                         .main-menu
-                            .main-menu__link.has-child
-                                a(href="") Каталог
-                                .main-menu__dropdown
+                            .main-menu__item.main-menu__item_parent
+                                a.dropdown-toggle(href="", data-toggle="dropdown") Каталог
+                                .main-menu__dropdown.dropdown-menu
                                     .container
                                         .row
                                             .col-lg-2
-                                                a.main-menu__sub-link.head(href="") Новое
-                                                a.main-menu__sub-link.head(href="") Бестселлеры
-                                                a.main-menu__sub-link(href="") Специальные предложения
+                                                .main-menu__sub-item
+                                                    a.head(href="") Новое
+                                                .main-menu__sub-item
+                                                    a.head(href="") Бестселлеры
+                                                .main-menu__sub-item
+                                                    a(href="") Специальные предложения
                                             .col-lg-2
-                                                a.main-menu__sub-link.head(href="") Одежда
-                                                a.main-menu__sub-link(href="") Блузы и рубашки
-                                                a.main-menu__sub-link(href="") Брюки и шорты
-                                                a.main-menu__sub-link(href="") Верхняя одежда
-                                                a.main-menu__sub-link(href="") Джемперы
-                                                a.main-menu__sub-link(href="") Жакеты и бомберы
-                                                a.main-menu__sub-link(href="") Платья
-                                                a.main-menu__sub-link(href="") Юбки
+                                                .main-menu__sub-item
+                                                    a.head(href="") Одежда
+                                                .main-menu__sub-item
+                                                    a(href="") Блузы и рубашки
+                                                .main-menu__sub-item
+                                                    a(href="") Брюки и шорты
+                                                .main-menu__sub-item
+                                                    a(href="") Верхняя одежда
+                                                .main-menu__sub-item
+                                                    a(href="") Джемперы
+                                                .main-menu__sub-item
+                                                    a(href="") Жакеты и бомберы
+                                                .main-menu__sub-item
+                                                    a(href="") Платья
+                                                .main-menu__sub-item
+                                                    a(href="") Юбки
                                             .col-lg-2
-                                                a.main-menu__sub-link.head(href="") Аксессуары
-                                                a.main-menu__sub-link(href="") Шапки
-                                                a.main-menu__sub-link(href="") Палантины
+                                                .main-menu__sub-item
+                                                    a.head(href="") Аксессуары
+                                                .main-menu__sub-item
+                                                    a(href="") Шапки
+                                                .main-menu__sub-item
+                                                    a(href="") Палантины
                                             .col-lg-6
-                                                a.main-menu__sub-link.head(href="") Коллекции
+                                                .main-menu__sub-item
+                                                    a.head(href="") Коллекции
                                                 .row
                                                     .col-6
-                                                        a.main-menu__img-link(href="")
-                                                            .img-link
-                                                                img(src="", alt="")
-                                                                .img-link__info
-                                                                    .img-link__title Прованс
-                                                                    .img-link__short Весна/Лето 2020
-                                                        a.main-menu__img-link(href="")
-                                                            .img-link
-                                                                img(src="", alt="")
-                                                                .img-link__info
-                                                                    .img-link__title Настроение города
-                                                                    .img-link__short Осень 2019/Зима 2020
+                                                        a.collection-link(href="")
+                                                            img(src="", alt="")
+                                                            .collection-link__info
+                                                                .collection-link__title Прованс
+                                                                .collection-link__short Весна/Лето 2020
+                                                        a.collection-link(href="")
+                                                            img(src="", alt="")
+                                                            .collection-link__info
+                                                                .collection-link__title Настроение города
+                                                                .collection-link__short Осень 2019/Зима 2020
                                                     .col-6
-                                                        a.main-menu__img-link(href="")
-                                                            .img-link
-                                                                img(src="", alt="")
-                                                                .img-link__info
-                                                                    .img-link__title Лигурия
-                                                                    .img-link__short Весна/Лето 2019
-                                                        a.main-menu__img-link(href="")
-                                                            .img-link
-                                                                img(src="", alt="")
-                                                                .img-link__info
-                                                                    .img-link__title Ломбардия
-                                                                    .img-link__short Осень 2018/Зима 2019
-                                               
-
-                            .main-menu__link
+                                                        a.collection-link(href="")
+                                                            img(src="", alt="")
+                                                            .collection-link__info
+                                                                .collection-link__title Лигурия
+                                                                .collection-link__short Весна/Лето 2019
+                                                        a.collection-link(href="")
+                                                            img(src="", alt="")
+                                                            .collection-link__info
+                                                                .collection-link__title Ломбардия
+                                                                .collection-link__short Осень 2018/Зима 2019
+                            .main-menu__item
                                 a(href="") О нас
-                            .main-menu__link
+                            .main-menu__item
                                 a(href="") Lookbook
-                            .main-menu__link
+                            .main-menu__item
                                 a(href="") Адреса магазинов
-   
 
-                    .header__right.col-lg-3
+                    .header__right.col-3.ml-auto
 
 
 
@@ -108,8 +141,8 @@ html(lang="ru")
         block content
 
         footer
-            p footer here
 
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-        script(src="js/scripts.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js", defer)
+        script(src="js/bootstrap.bundle.min.js", defer)
+        script(src="js/scripts.js", defer)
         block scripts
