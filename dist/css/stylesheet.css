@@ -580,6 +580,7 @@ header.fixed .header__logo img {
 }
 
 .fw-slider {
+  width: 100%;
   opacity: 0;
   transition: opacity .2s ease;
 }

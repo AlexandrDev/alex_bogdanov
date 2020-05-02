@@ -14,9 +14,4 @@ $(function() {
         pageDots: false
     });
 
-    // $('.main-menu__link.has-child > a').click(function(e) {       
-    //     e.preventDefault();
-
-    //     $(this).parent().toggleClass('opened');
-    // });
 });
