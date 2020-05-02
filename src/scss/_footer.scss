@@ -1,0 +1,153 @@
+footer {
+    color: #fff;
+}
+
+.footer {
+    
+
+    &-top {
+        padding-top: 62px;
+        padding-bottom: 34px;
+        background-color: rgba(19, 36, 52, .98);
+
+        @include laptop {
+            padding-top: 50px;
+            padding-bottom: 0;
+        }
+    }
+
+    &-menu {
+        @include laptop {
+            display: none;
+        }
+
+        &__title {
+            margin-bottom: 20px;
+            > a {
+                font-family: Literata;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                text-transform: uppercase;
+            }
+        }
+
+        &__link {
+            margin-bottom: 15px;
+
+            > a {
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 20px;
+                letter-spacing: 0.5px;
+                opacity: 0.6;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__right {
+
+        .subscribe {
+            margin-bottom: 40px;
+            
+            @media screen and (max-width: 991px) and (min-width: 768px) {
+                margin-bottom: 32px;
+            }
+        }
+
+        .socials {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-bottom {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        background-color: #132434;
+        @include laptop {
+            font-size: 13px;
+            line-height: 18px;
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-areas: "logo copy links";
+            grid-template-columns: auto auto 1fr;
+            grid-column-gap: 30px;
+            align-items: center;
+            height: 80px;
+
+            @include laptop {
+                grid-template-areas: "logo copy"
+                                     "logo links";
+                grid-template-columns: auto 1fr;
+                grid-column-gap: (118/8)+vw;
+            }
+
+            @include tablet {
+                grid-template-areas: "logo copy"
+                                     "links links";
+                grid-column-gap: 20px;
+                grid-row-gap: 20px;
+                height: auto;
+                padding-top: 25px;
+                padding-bottom: 25px;
+            }
+        }
+
+        &__links {
+            grid-area: links;
+
+            @media screen and (max-width: 991px) and (min-width: 768px) {
+                align-self: start;
+            }
+    
+            @include tablet {
+                text-align: center;
+            }
+
+            a {
+                border-bottom: 1px solid;
+                white-space: nowrap;
+                opacity: 0.6;
+    
+                &:hover {
+                    opacity: 1;
+                    color: inherit;
+                }
+            }
+    
+            .determiner {
+                margin: 0 8px;
+                opacity: 0.6;
+            }
+        }
+    }
+
+    &__logo {
+        grid-area: logo;
+        width: 136px;
+
+        @include tablet {
+            width: 113px;
+        }
+    }
+
+    &__copyright {
+        grid-area: copy;
+        padding-left: 44px;
+        opacity: 0.6;
+        
+        @include laptop {
+            padding-left: 0;
+        }
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+            align-self: flex-end;
+        }
+    }
+}

@@ -1,8 +1,25 @@
+@import 'fonts';
+
 @import 'gui';
 
 @import 'components/dropdown';
-@import 'components/lang';
-@import 'components/city-select';
-@import 'components/hamburger';
+@import 'components/slider';
 
 @import 'header';
+@import 'header/top';
+@import 'header/lang';
+@import 'header/city-select';
+@import 'header/hamburger';
+@import 'header/main-menu';
+@import 'header/header-icons';
+@import 'header/mini-cart';
+
+
+@import 'pages';
+
+@import 'homepage/fw-slider';
+
+
+@import 'footer';
+@import 'footer/subscribe';
+@import 'footer/socials';

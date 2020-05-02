@@ -1,0 +1,49 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Главная'
+    - var mainCls = 'homepage'
+
+block content
+    .homepage__fw-slider.slider-container
+        #fw-slider.fw-slider
+            .fw-slide
+                .fw-slide__container.container
+                    .fw-slide__content
+                        .fw-slide__label Одежда 
+                            br 
+                            | для утонченных женщин
+                        .fw-slide__title Новая коллекция
+                        a(href="").fw-slide__button.button.button_blue-filled Посмотреть в каталоге
+
+                picture.fw-slide__background
+                    source(media="(max-width: 600px)", srcset="./images/dev/fw-slide-600.jpg")
+                    img(src="./images/dev/fw-slide.jpg", alt="sldie")
+            .fw-slide
+                .fw-slide__container.container
+                    .fw-slide__content
+                        .fw-slide__label Одежда 
+                            br 
+                            | для утонченных женщин
+                        .fw-slide__title Новая коллекция
+                        a(href="").fw-slide__button.button.button_blue-filled Посмотреть в каталоге
+
+                picture.fw-slide__background
+                    source(media="(max-width: 600px)", srcset="./images/dev/fw-slide-600.jpg")
+                    img(src="./images/dev/fw-slide.jpg", alt="sldie")
+                
+        .slider-nav-container.container
+            .slider-nav
+                .slider-nav__arrows
+                    .arrow.arrow-prev
+                        include _include/slider-arrow-prev.svg
+                    .counter
+                        | 01/05
+                    .arrow.arrow-next
+                        include _include/slider-arrow-next.svg
+
+                .slider-nav__dots
+                    span.dot.current
+                    span.dot
+                    span.dot
+                    span.dot
+                    span.dot

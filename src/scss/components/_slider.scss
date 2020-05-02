@@ -1,0 +1,76 @@
+.slider {
+
+
+    &-nav-container {
+        position: relative;
+    }
+    
+    &-nav {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        padding: 19px 32px 19px 38px;
+        border-radius: 25px 0 0 0;
+        background: #fff;
+
+        &__arrows {
+            display: flex;
+            align-items: center;
+            margin-right: 35px;
+
+            .counter {
+                font-size: 16px;
+                line-height: 22px;
+                margin: 0 15px;
+                color: $dark;
+            }
+        }
+
+        .arrow {
+            font-size: 0;
+            cursor: pointer;
+        }
+
+        &__dots {
+            display: flex;
+            align-items: center;
+        }
+
+        .dot {
+            position: relative;
+            width: 13px;
+            height: 13px;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            margin-right: 7px;
+            cursor: pointer;
+            transition: border-color .1s;
+            
+            &::before {
+                content: '';
+                display: block;
+                width: 3px;
+                height: 3px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                border-radius: 50%;
+                background: $dark;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.current,
+            &:hover {
+                border-color: $blue;
+            }
+        }
+    }
+}

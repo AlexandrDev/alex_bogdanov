@@ -6,9 +6,10 @@ html(lang="ru")
         title #{title}
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Literata:wght@600&display=swap')
-        link(rel="stylesheet" href='css/bootstrap-grid.min.css')
+        link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Literata:wght@600;700&display=swap')
         link(rel="stylesheet" href='css/normalize.min.css')
+        link(rel="stylesheet" href='css/bootstrap-grid.min.css')
+        link(rel="stylesheet" href='css/flickity.min.css')
         link(rel="stylesheet" href='css/stylesheet.css')
         block styles
     body
@@ -18,7 +19,7 @@ html(lang="ru")
                     .row
                         .top-left.col-lg-4
                             .language
-                                .language-select.dropdown-toggle(data-toggle="dropdown")
+                                .language-select(data-toggle="dropdown")
                                     .language__icon.language__icon_rus
                                     .language__arrow
                                 .language-dropdown.dropdown-menu
@@ -40,32 +41,32 @@ html(lang="ru")
 
                         .top-menu.col-lg-8
                             a.top-menu__link(href="#")
-                                .icon
+                                include ../_include/freeship.svg
                                 span Бесплатная доставка
                             a.top-menu__link(href="#")
-                                .icon
+                                include ../_include/primerka.svg
                                 span Примерка перед покупкой
                             a.top-menu__link(href="#")
-                                .icon
+                                include ../_include/call-us.svg
                                 span Связаться с нами
 
             .header__main.container
                 .header__main-row.row
-                    .hamburger.col-1.d-xl-none
+                    .hamburger.col-auto.d-xl-none
                         .hamburger-switcher
                             .hamburger__icon
                                 span
                                 span
                                 span
 
-                    .header__logo.col-3.mr-auto
-                        a(href="/")
+                    .header__logo.col-lg-3.col-auto.mr-auto
+                        a(href="")
                             img(src="images/logo.svg", alt="Alexander Bogdanov")
 
                     .header__menu.d-none.d-xl-block
                         .main-menu
                             .main-menu__item.main-menu__item_parent
-                                a.dropdown-toggle(href="", data-toggle="dropdown") Каталог
+                                a(href="", data-toggle="dropdown") Каталог
                                 .main-menu__dropdown.dropdown-menu
                                     .container
                                         .row
@@ -133,16 +134,154 @@ html(lang="ru")
                             .main-menu__item
                                 a(href="") Адреса магазинов
 
-                    .header__right.col-3.ml-auto
+                    .header-icons.col-lg-3.col-auto.ml-auto
+                        .header-icons__item.account
+                            a(href="", title="Личный кабинет")
+                                include ../_include/lk.svg
+                            .account__dropdown
 
+                        .header-icons__item.following
+                            a(href="", title="Избранное")
+                                include ../_include/following.svg
 
+                        .header-icons__item.mini-cart
+                            a(href="", title="Корзина", data-toggle="dropdown")
+                                include ../_include/cart.svg
+                                .mini-cart__counter 18
+                            .mini-cart__dropdown.dropdown-menu
+                                p asdas dasd 
+                                p asd asd asd
+                                p asda sda s
 
+                        .header-icons__item.search
+                            a(href="", title="Поиск")
+                                include ../_include/search.svg
 
-        block content
+        .page-wrapper(class="" + mainCls)
+            block content
 
         footer
+            .footer-top
+                .container
+                    .row
+                        .footer-menu.col-lg-9
+                            .row
+                                .col-lg-3
+                                    .footer-menu__title
+                                        a(href="") О нас
+                                    .footer-menu__link
+                                        a(href="") О компании
+                                    .footer-menu__link
+                                        a(href="") Александр Богданов
+                                    .footer-menu__link
+                                        a(href="") История
+                                    .footer-menu__link
+                                        a(href="") Пресса о нас
+                                    .footer-menu__link
+                                        a(href="") Новости
+                                    .footer-menu__link
+                                        a(href="") Партнерам
+                                    .footer-menu__link
+                                        a(href="") Франчайзинг
+                                    .footer-menu__link
+                                        a(href="") Зарубежные партнеры
+                                    .footer-menu__link
+                                        a(href="") Оптовые партнеры
+
+                                .col-lg-3
+                                    .footer-menu__title
+                                        a(href="") Каталог
+                                    .footer-menu__link
+                                        a(href="") Купить женскую одежду
+                                    .footer-menu__link
+                                        a(href="") Платья
+                                    .footer-menu__link
+                                        a(href="") Юбки
+                                    .footer-menu__link
+                                        a(href="") Джемперы
+                                    .footer-menu__link
+                                        a(href="") Жакеты и бомберы
+                                    .footer-menu__link
+                                        a(href="") Блузы
+                                    .footer-menu__link
+                                        a(href="") Рубашки
+                                    .footer-menu__link
+                                        a(href="") Верхняя одежда
+                                    .footer-menu__link
+                                        a(href="") Аксессуары
+
+                                .col-lg-3
+                                    .footer-menu__title
+                                        a(href="") Помощь
+                                    .footer-menu__link
+                                        a(href="") Как оформить заказ
+                                    .footer-menu__link
+                                        a(href="") Как выбрать размер
+                                    .footer-menu__link
+                                        a(href="") Оплата
+                                    .footer-menu__link
+                                        a(href="") Доставка
+                                    .footer-menu__link
+                                        a(href="") Возврат
+                                    .footer-menu__link
+                                        a(href="") Конфиденциальность
+                                    .footer-menu__link
+                                        a(href="") Мои заказы
+                                    .footer-menu__link
+                                        a(href="") Уход за изделиями
+                                
+                                .col-lg-3
+                                    .footer-menu__title
+                                        a(href="") Партнерам
+                                    .footer-menu__link
+                                        a(href="") Партнерам
+                                    .footer-menu__link
+                                        a(href="") Франчайзинг
+                                    .footer-menu__link
+                                        a(href="") Зарубежные партнеры
+                                    .footer-menu__link
+                                        a(href="") Оптовые партнеры
+
+                        .footer__right.col-lg-3
+                            .subscribe
+                                .subscribe__title Подпишитесь 
+                                    br
+                                    | на нашу рассылку
+                                .subscribe__subtitle
+                                    | Обещаем отправлять только важное и интересное
+                                form(action="").subscribe-form
+                                    input(type="email", placeholder="Email").subscribe-form__input
+                                    button.subscribe-form__button
+                                        include ../_include/subscribe-email.svg
+                                .subscribe__privacy
+                                    | Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности
+                                    
+
+                            .socials
+                                a(href="").socials__link.yt
+                                    img(src="./images/socials/soc-yt.svg", alt="")
+                                a(href="").socials__link.fb
+                                    img(src="./images/socials/soc-fb.svg", alt="")
+                                a(href="").socials__link.inst
+                                    img(src="./images/socials/soc-inst.svg", alt="")
+                                a(href="").socials__link.vk
+                                    img(src="./images/socials/soc-vk.svg", alt="")
+
+
+            .footer-bottom
+                .footer-bottom-grid.container
+                    a.footer__logo(href="")
+                        img(src="images/logo_white.svg", alt="Alexander Bogdanov")
+                    .footer__copyright
+                        | ©  2020, Alexander Bogdanov. Все права защищены
+                    .footer-bottom__links
+                        a(href="") Политика конфиденциальности
+                        span.determiner |
+                        a(href="") Условия продажи
+
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js", defer)
         script(src="js/bootstrap.bundle.min.js", defer)
+        script(src="js/flickity.pkgd.min.js", defer)
         script(src="js/scripts.js", defer)
         block scripts
