@@ -1,31 +1,52 @@
-.fw-slider {
-    width: 100%;
-    opacity: 0;
-    transition: opacity .2s ease;
-
-    &.flickity-enabled {
-        opacity: 1;
-    }
-}
-
+.fw-slider,
 .fw-slide {
-    display: flex;
-    align-items: center;
     width: 100%;
     min-height: 550px;
 
     @include laptop {
         min-height: 380px;
     }
+}
 
-    @include tablet {
-        min-height: 340px;
+
+.fw-slider {
+    opacity: 0;
+    transition: opacity .2s ease;
+
+    &.flickity-enabled {
+        opacity: 1;
     }
+
+    &-wrapper {
+        margin-bottom: 60px;
+
+        @include tablet {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__nav {
+        position: relative;
+    }
+}
+
+.fw-slide {
+    display: flex;
+    align-items: center;
 
     &__content {
         width: 50%;
         padding-left: 50px;
         margin-bottom: 60px;
+
+        @include tablet {
+            width: 100%;
+            margin-top: 200px;
+            margin-bottom: 0;
+            padding: 40px 25px 56px;
+            border-radius: 25px 0 25px 0;
+            background: linear-gradient(0.76deg, #67ADD7 49.3%, rgba(72, 145, 198, 0.93) 98.61%);
+        }
     }
 
     &__label {
@@ -44,6 +65,19 @@
             left: -50px;
             background-color: $blue;
         }
+
+        @include laptop {
+            margin-bottom: 25px;
+        }
+
+        @include tablet {
+            color: #fff;
+            margin-bottom: 15px;
+            padding: 0 5px;
+            &::before {
+                content: none;
+            }
+        }
     }
 
     &__title {
@@ -54,6 +88,28 @@
         text-transform: uppercase;
         color: $dark;
         margin-bottom: 50px;
+
+        @include laptop {
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 35px;
+        }
+
+        @include tablet {
+            font-size: 26px;
+            line-height: 30px;
+            color: #fff;
+            margin-bottom: 30px;
+            padding: 0 5px;
+        }
+    }
+
+    &__button {
+        @include tablet {
+            font-size: 15px;
+            letter-spacing: 0.5px;
+            background: #559CCD;
+        }
     }
 
     &__background {
@@ -64,6 +120,11 @@
         height: 100%;
         z-index: -1;
 
+        @include tablet {
+            height: 340px;
+        }
+
+
         img {
             width: 100%;
             height: 100%;
@@ -73,3 +134,4 @@
     }
 
 }
+

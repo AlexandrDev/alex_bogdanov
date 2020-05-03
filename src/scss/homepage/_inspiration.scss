@@ -1,0 +1,66 @@
+.inspiration {
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 160px;
+
+    @include laptop {
+        padding-bottom: 108px;
+    }
+
+    @include tablet {
+        padding-top: 0;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+    }
+
+    &-wrapper {
+        overflow: hidden;
+    }
+
+    &__content {
+        margin-bottom: 65px;
+
+        @include laptop {
+            margin-bottom: 36px;
+        }
+
+        @include tablet {
+            margin-bottom: 6px;
+        }
+        
+        p {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 0;
+            
+            @include laptop {
+                font-size: 16px;
+                line-height: 24px;
+            }           
+        }
+    }
+
+
+    &__gallery {
+        @include tablet {
+            display: none;
+        }
+    }
+   
+
+    &__poster {
+        position: absolute;
+        top: 0;
+        right: -100px;
+
+        @include laptop {
+            width: 500px;
+            right: -86px;
+        }
+
+        @include tablet {
+            position: initial;
+            width: 100%;
+        }
+    }
+}

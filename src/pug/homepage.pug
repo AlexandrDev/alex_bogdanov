@@ -4,7 +4,7 @@ block variables
     - var mainCls = 'homepage'
 
 block content
-    .homepage__fw-slider.slider-container
+    .fw-slider-wrapper
         #fw-slider.fw-slider
             .fw-slide
                 .fw-slide__container.container
@@ -14,10 +14,10 @@ block content
                             | для утонченных женщин
                         .fw-slide__title Новая коллекция
                         a(href="").fw-slide__button.button.button_blue-filled Посмотреть в каталоге
-
                 picture.fw-slide__background
-                    source(media="(max-width: 600px)", srcset="./images/dev/fw-slide-600.jpg")
-                    img(src="./images/dev/fw-slide.jpg", alt="sldie")
+                    source(media="(max-width: 600px)", srcset="images/dev/fw-slide-600.jpg")
+                    img(src="images/dev/fw-slide.jpg", alt="sldie")
+
             .fw-slide
                 .fw-slide__container.container
                     .fw-slide__content
@@ -26,20 +26,19 @@ block content
                             | для утонченных женщин
                         .fw-slide__title Новая коллекция
                         a(href="").fw-slide__button.button.button_blue-filled Посмотреть в каталоге
-
                 picture.fw-slide__background
-                    source(media="(max-width: 600px)", srcset="./images/dev/fw-slide-600.jpg")
-                    img(src="./images/dev/fw-slide.jpg", alt="sldie")
+                    source(media="(max-width: 600px)", srcset="images/dev/fw-slide-600.jpg")
+                    img(src="images/dev/fw-slide.jpg", alt="sldie")
                 
-        .slider-nav-container.container
+        .fw-slider__nav.container
             .slider-nav
                 .slider-nav__arrows
                     .arrow.arrow-prev
-                        include _include/slider-arrow-prev.svg
+                        include svg/slider-arrow-prev.svg
                     .counter
                         | 01/05
                     .arrow.arrow-next
-                        include _include/slider-arrow-next.svg
+                        include svg/slider-arrow-next.svg
 
                 .slider-nav__dots
                     span.dot.current
@@ -47,3 +46,83 @@ block content
                     span.dot
                     span.dot
                     span.dot
+
+    .advantages.container
+        .row
+            .advantages__item.col-md-3
+                img(src="images/adv-1.svg", alt="").advantages__icon
+                .advantages__text Собственные уникальные принты
+            .advantages__item.col-md-3
+                img(src="images/adv-2.svg", alt="").advantages__icon
+                .advantages__text Авторская вышивка для каждого изделия
+            .advantages__item.col-md-3
+                img(src="images/adv-3.svg", alt="").advantages__icon
+                .advantages__text Произведенные во Франции кружева
+            .advantages__item.col-md-3
+                img(src="images/adv-4.svg", alt="").advantages__icon
+                .advantages__text Лучшая фурнитура из Италии
+
+    .watch-catalog-wrapper.container
+        .watch-catalog
+            .b-heading Акварельный Прованс
+            .watch-catalog__content
+                .watch-catalog__short Весна/Лето 2020
+                .watch-catalog__image-mask
+                    img(src="images/catalog-preview.png", alt="").watch-catalog__image
+                a(href="").link-detailed Листать полный каталог
+
+    .new-products-wrapper
+        .new-products.container
+            .row
+                .new-products__left.col-md-4
+                    .b-heading Новинки
+                    p Каждая модель – маленькое произведение искусства, подлинник автора, без копий, реплик и прямых заимствований.
+                    a(href="").button.button_blue-filled Посмотреть все
+
+                .new-products-slider.col-md-8
+                    .row
+                        .col-md-4
+                            include ./components/_product-card.pug
+                        .col-md-4
+                            include ./components/_product-card.pug
+                        .col-md-4
+                            include ./components/_product-card.pug
+
+
+    .founder-quote
+        .container
+            .row
+                .founder-quote__photo.col-md-5
+                    img(src="images/alexandr-bogdanov.png", alt="")
+
+                .founder-quote__text.col-md-7
+                    .b-heading 
+                        img(src="images/quote.svg", alt="").founder-quote__quote-icon
+                        | Женщинам,
+                        br
+                        | которые предпочитают не эпатировать, а очаровывать
+                    p Моя одежда адресована достаточно утонченным, интеллигентным женщинам. Женщинам, чьё эстетическое «я» строится на оттенках, на полутонах. Женщинам, которые предпочитают не эпатировать, а очаровывать. У меня есть и яркие коллекции, но основа – нежные, пастельно-акварельные вещи. Они позволяют лучше передать нюансы текстуры, деталировки. В таких вещах лучше виден рисунок волокон, лучше видна строчка – все те чарующие мелочи, которые помогают влюбляться в одежду. Получается такой парадокс: будучи весьма спокойной по основному тону, вещь становится яркой. Но яркой в деталях, в нюансах.
+
+                    .founder-quote__about
+                        img(src="images/alexandr-bogdanov_thumb.png", alt="")
+                        .text Александр Богданов / Основатель и Главный Дизайнер
+    
+    .inspiration-wrapper
+        .inspiration.container
+            .row
+                .inspiration__content.col-lx-5.col-lg-6.col-md-8
+                    .b-heading Вдохновение
+                    p Иллюстрации пастелью лично от Александра Богданова для каждой капсулы коллекции
+            .row
+                .col-12
+                    img(src="images/inspiration-gallery.jpg", alt="").inspiration__gallery
+            picture.inspiration__poster
+                source(media="(max-width:767px)", srcset="images/inspiration-poster_mob.png")
+                img(src="images/inspiration-poster.png", alt="")
+
+
+    .about-company.container
+        .b-heading О компании
+        p Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут.
+
+        p Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.

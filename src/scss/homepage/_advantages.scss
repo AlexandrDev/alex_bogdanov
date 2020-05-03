@@ -1,0 +1,27 @@
+.advantages {
+    margin-bottom: 70px;
+    
+    @include tablet {
+        display: none;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        line-height: 22px;
+
+        @include desktop {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__icon {
+        margin-right: 10px;
+
+        @include desktop {
+            margin-right: 0;
+        }
+    }
+}

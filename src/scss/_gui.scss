@@ -20,7 +20,7 @@ $light: #E8F0F6;
     }
 }
 @mixin phone {
-   @media screen and (max-width: 479px) {
+   @media screen and (max-width: 575px) {
         @content;
    }
 }
@@ -44,6 +44,10 @@ a {
     transition: all .16s ease;
 }
 
+p {
+    line-height: 24px;
+}
+
 img {
     max-width: 100%;
 }
@@ -57,11 +61,27 @@ button {
     pointer-events: none;
 }
 
-.button {
-    display: inline-block;
+.b-heading {
+    font-family: Literata;
     font-weight: 600;
+    font-size: 40px;
+    line-height: 50px;
+    color: $dark;
+    margin-bottom: 30px;
+
+    @include laptop {
+        font-size: 26px;
+        line-height: 34px;
+        margin-bottom: 20px;
+    }
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
     font-size: 14px;
-    line-height: 54px;
+    line-height: 1.4em;
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -69,7 +89,6 @@ button {
     padding: 0 35px;
     height: 54px;
     border-radius: 30px;
-    white-space: nowrap;
     transition: background .16s ease;
 
     &_blue-filled {
@@ -84,6 +103,38 @@ button {
         &.disabled {
             background: #2A71B1;
             opacity: 0.15;
+        }
+    }
+}
+
+.link {
+
+    &-detailed {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        color: $gray;
+        &::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            background-color: $blue;
+            background-image: url(../images/arrow-detailed.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-color .16s ease;
+        }
+
+        &:hover::before {
+            background-color: #428CC3;
+        }
+        &:active::before {
+            background-color: #2A71B1;
         }
     }
 }

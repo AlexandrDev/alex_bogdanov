@@ -5,8 +5,10 @@ html(lang="ru")
     head
         title #{title}
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Literata:wght@600;700&display=swap')
+        meta#mvp(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
+        script
+            | function setViewport(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}setViewport();
+        link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&display=swap')
         link(rel="stylesheet" href='css/normalize.min.css')
         link(rel="stylesheet" href='css/bootstrap-grid.min.css')
         link(rel="stylesheet" href='css/flickity.min.css')
@@ -41,13 +43,13 @@ html(lang="ru")
 
                         .top-menu.col-lg-8
                             a.top-menu__link(href="")
-                                include ../_include/freeship.svg
+                                include ../svg/top-freeship.svg
                                 span Бесплатная доставка
                             a.top-menu__link(href="")
-                                include ../_include/primerka.svg
+                                include ../svg/top-primerka.svg
                                 span Примерка перед покупкой
                             a.top-menu__link(href="")
-                                include ../_include/call-us.svg
+                                include ../svg/top-call-us.svg
                                 span Связаться с нами
 
             .header__main.container
@@ -137,17 +139,18 @@ html(lang="ru")
                     .header-icons.col-lg-3.col-auto.ml-auto
                         .header-icons__item.account
                             a(href="", title="Личный кабинет")
-                                include ../_include/lk.svg
+                                include ../svg/menu-lk.svg
                             .account__dropdown
 
                         .header-icons__item.following
                             a(href="", title="Избранное")
-                                include ../_include/following.svg
+                                include ../svg/menu-following.svg
+                                .counter 3
 
                         .header-icons__item.mini-cart
                             a(href="", title="Корзина", data-toggle="dropdown")
-                                include ../_include/cart.svg
-                                .mini-cart__counter 18
+                                include ../svg/menu-cart.svg
+                                .counter 18
                             .mini-cart__dropdown.dropdown-menu
                                 p asdas dasd 
                                 p asd asd asd
@@ -155,7 +158,7 @@ html(lang="ru")
 
                         .header-icons__item.search
                             a(href="", title="Поиск")
-                                include ../_include/search.svg
+                                include ../svg/menu-search.svg
 
         .page-wrapper(class="" + mainCls)
             block content
@@ -252,7 +255,7 @@ html(lang="ru")
                                 form(action="").subscribe-form
                                     input(type="email", placeholder="Email").subscribe-form__input
                                     button.subscribe-form__button
-                                        include ../_include/subscribe-email.svg
+                                        include ../svg/subscribe-email.svg
                                 .subscribe__privacy
                                     | Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности
                                     
@@ -278,7 +281,6 @@ html(lang="ru")
                         a(href="") Политика конфиденциальности
                         span.determiner |
                         a(href="") Условия продажи
-
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js", defer)
         script(src="js/bootstrap.bundle.min.js", defer)

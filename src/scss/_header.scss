@@ -2,12 +2,7 @@ header {
     position: relative;
     box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
     background: #fff;
-
-    &.fixed {
-        .header__logo img {
-            width: 135px;
-        }
-    }
+    z-index: 1;
 }
 
 .header {
@@ -22,9 +17,25 @@ header {
     &__logo {
         align-self: center;
 
+        @include desktop {
+            padding: 0;
+        }
+
         img {
             width: 170px;
             transition: width .2s ease;
+            
+            @include desktop {
+                width: 136px;
+            }
+
+            @include phone {
+                width: 128px;
+            }
+
+            header.fixed & {
+                width: 136px;
+            }
         }
     }
 

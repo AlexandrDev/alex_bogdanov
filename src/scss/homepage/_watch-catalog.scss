@@ -1,0 +1,103 @@
+.watch-catalog {
+    position: relative;
+    padding: 40px 52px 32px;
+    margin-bottom: 120px;
+    border-radius: 25px 0 25px 0;
+    background-color: $light;
+    background-image: url(../images/bg-flowers.png);
+    background-position: right -60px center;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    @include laptop {
+        padding: 20px 42px 24px;
+        margin-bottom: 80px;
+    }
+
+    @include tablet {
+        padding: 40px 5px;
+        margin-bottom: 50px;
+        background-position: right -100px bottom -190px;
+    }
+
+    .b-heading {
+        font-size: 34px;
+        line-height: 48px;
+        margin-bottom: 10px;
+
+        @include laptop {
+            font-size: 26px;
+            line-height: 48px;
+        }
+
+        @include tablet {
+            padding: 0 25px;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        @include tablet {
+            display: block;
+        }
+    }
+
+    &__short {
+        margin-right: 20px;
+
+        @include tablet {
+            padding: 0 25px;
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__image-mask {
+        position: absolute;
+        top: -32px;
+        right: 0;
+        bottom: 0;
+        width: 647px;
+        border-radius: 0 0 25px 0;
+        overflow: hidden;
+        z-index: -1;
+
+        @include laptop {
+            top: -17px;
+            width: 419px;
+        }
+        
+        @include tablet {
+            position: initial;
+            width: 100%;
+            margin-bottom: 7px;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        right: -38px;
+
+        @include desktop {
+            right: -170px;
+        }
+
+        @include laptop {
+            right: -136px;
+        }
+
+        @include tablet {
+            position: initial;
+        }
+    }
+
+    .link-detailed {
+        @include tablet {
+            padding: 0 25px;
+        }
+    }
+}

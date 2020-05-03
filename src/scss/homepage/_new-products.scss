@@ -1,0 +1,31 @@
+.new-products {
+    margin-bottom: 100px;
+
+    @include laptop {
+        margin-bottom: 78px;
+    }
+
+    @include tablet {
+        margin-bottom: 60px;
+    }
+
+    &-wrapper {
+        overflow: hidden;
+    }
+
+    &__left {
+        padding-top: 30px;
+
+        p {
+            font-size: 18px;
+            line-height: 26px;
+            margin-bottom: 40px;
+        }
+    }
+
+
+    .product-card__thumb {
+        height: 380px;
+        margin-bottom: 15px;
+    }
+}

@@ -1,26 +1,6 @@
 .mini-cart {
-    > a {
-        position: relative;
-    }
-
     svg {
         margin-top: -4px;
-    }
-
-    &__counter {
-        position: absolute;
-        top: -5px;
-        right: -7px;
-        width: 17px;
-        height: 17px;
-        line-height: 17px;
-        font-weight: 500;
-        font-size: 11px;
-        letter-spacing: 0.01em;
-        color: #FFFFFF;
-        text-align: center;
-        background: $blue;
-        border-radius: 50%;
     }
 
     &__dropdown {
