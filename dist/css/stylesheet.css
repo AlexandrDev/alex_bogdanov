@@ -321,15 +321,12 @@ header.sticky-header .header__logo {
 }
 
 .header__main {
-  position: relative;
   height: 110px;
   transition: height .2s ease;
 }
 
 .header__main-row {
-  position: relative;
   height: 100%;
-  z-index: 10;
 }
 
 .top-left {
@@ -468,6 +465,7 @@ header.sticky-header .header__logo {
   align-items: center;
   justify-content: center;
   padding: 0 10px;
+  cursor: pointer;
 }
 
 .hamburger-switcher {
@@ -527,7 +525,7 @@ header.sticky-header .header__logo {
   visibility: hidden;
   transform: translateX(-100%);
   transition: all .2s;
-  z-index: 5;
+  z-index: -1;
 }
 
 .mobile-menu::before {

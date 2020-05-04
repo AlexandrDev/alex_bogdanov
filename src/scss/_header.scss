@@ -58,7 +58,6 @@ header {
     }
 
     &__main {
-        position: relative;
         height: 110px;        
         transition: height .2s ease;
 
@@ -67,9 +66,7 @@ header {
         }
 
         &-row {
-            position: relative;
             height: 100%;
-            z-index: 10;
         }
     }
 }
