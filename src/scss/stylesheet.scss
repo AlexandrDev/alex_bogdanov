@@ -3,6 +3,7 @@
 @import 'gui';
 
 @import 'components/dropdown';
+@import 'components/socials';
 @import 'components/slider';
 
 @import 'header';
@@ -10,8 +11,10 @@
 @import 'header/lang';
 @import 'header/city-select';
 @import 'header/hamburger';
+@import 'header/mobile-menu';
 @import 'header/main-menu';
 @import 'header/header-icons';
+@import 'header/account';
 @import 'header/mini-cart';
 
 
@@ -24,4 +27,6 @@
 
 @import 'footer';
 @import 'footer/subscribe';
-@import 'footer/socials';
+
+
+@import 'icons';

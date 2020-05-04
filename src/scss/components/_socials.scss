@@ -15,10 +15,16 @@
         border-radius: 50%;
         margin-right: 10px;
         margin-bottom: 10px;
-        background: $dark;
-
         &:last-child {
             margin-right: 0;
         }
+    }
+
+    &_dark &__link {
+        background: $dark;
+    }
+
+    &_light &__link {
+        background: $blue;
     }
 }

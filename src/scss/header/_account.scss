@@ -1,19 +1,20 @@
-.mini-cart {
-    svg {
-        margin-top: -4px;
-    }
-
+.account {
     &__dropdown {
-        width: 410px;
+        width: 250px;
         right: 15px;
         left: auto !important;
+        padding: 20px 25px;
         background: #F1F6FA;
 
         &::before {
             top: -13px;
-            right: 64px;
+            left: 63px;
             width: 25px;
             height: 25px;
+        }
+
+        .high-link:last-child {
+            border-bottom: 0;
         }
     }
 }

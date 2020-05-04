@@ -33,7 +33,7 @@
     &__arrow {
         width: 20px;
         height: 20px;
-        background: url(../images/dropdown-arrow.svg) center/10px 6px no-repeat;
+        background: url("data:image/svg+xml,%3Csvg width='10' height='7' viewBox='0 0 10 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.6' fill-rule='evenodd' clip-rule='evenodd' d='M8.83333 0L5 3.83333L1.16667 0L0 1.16667L5 6.16667L10 1.16667L8.83333 0Z' fill='%234E5B67'/%3E%3C/svg%3E%0A") center no-repeat;
         transition: transform .2s;
 
         .show & {
@@ -48,14 +48,11 @@
     }
 
     &-dropdown {
-        top: 100%;
         min-width: 120px;
         padding: 15px 10px;
-        margin-top: 8px;
         margin-left: -10px;
         background-color: #fff;
         box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
-        z-index: 101;
 
         &::before {
             width: 10px;

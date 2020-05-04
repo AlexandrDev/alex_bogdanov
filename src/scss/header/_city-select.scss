@@ -2,7 +2,10 @@
     display: inline-flex;
     align-items: center;
     height: 100%;
-    white-space: nowrap;
+
+    span {
+        white-space: nowrap;
+    }
 
     &__link {
         margin-left: 8px;

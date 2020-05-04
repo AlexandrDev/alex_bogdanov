@@ -38,18 +38,19 @@ html(lang="ru")
                                         .language__icon.language__icon_de
                                         span German
 
-                            .city-select Ваш город:
-                                a.city-select__link(href="") Александровск-Сахалинский
+                            .city-select 
+                                span Ваш город:
+                                a.city-select__link(href="") Санкт-Петербург
 
                         .top-menu.col-lg-8
                             a.top-menu__link(href="")
-                                include ../svg/top-freeship.svg
+                                i.ab-i-freeship
                                 span Бесплатная доставка
                             a.top-menu__link(href="")
-                                include ../svg/top-primerka.svg
+                                i.ab-i-primerka
                                 span Примерка перед покупкой
                             a.top-menu__link(href="")
-                                include ../svg/top-call-us.svg
+                                i.ab-i-callus
                                 span Связаться с нами
 
             .header__main.container
@@ -66,81 +67,19 @@ html(lang="ru")
                             img(src="images/logo.svg", alt="Alexander Bogdanov")
 
                     .header__menu.d-none.d-xl-block
-                        .main-menu
-                            .main-menu__item.main-menu__item_parent
-                                a(href="", data-toggle="dropdown") Каталог
-                                .main-menu__dropdown.dropdown-menu
-                                    .container
-                                        .row
-                                            .col-lg-2
-                                                .main-menu__sub-item
-                                                    a.head(href="") Новое
-                                                .main-menu__sub-item
-                                                    a.head(href="") Бестселлеры
-                                                .main-menu__sub-item
-                                                    a(href="") Специальные предложения
-                                            .col-lg-2
-                                                .main-menu__sub-item
-                                                    a.head(href="") Одежда
-                                                .main-menu__sub-item
-                                                    a(href="") Блузы и рубашки
-                                                .main-menu__sub-item
-                                                    a(href="") Брюки и шорты
-                                                .main-menu__sub-item
-                                                    a(href="") Верхняя одежда
-                                                .main-menu__sub-item
-                                                    a(href="") Джемперы
-                                                .main-menu__sub-item
-                                                    a(href="") Жакеты и бомберы
-                                                .main-menu__sub-item
-                                                    a(href="") Платья
-                                                .main-menu__sub-item
-                                                    a(href="") Юбки
-                                            .col-lg-2
-                                                .main-menu__sub-item
-                                                    a.head(href="") Аксессуары
-                                                .main-menu__sub-item
-                                                    a(href="") Шапки
-                                                .main-menu__sub-item
-                                                    a(href="") Палантины
-                                            .col-lg-6
-                                                .main-menu__sub-item
-                                                    a.head(href="") Коллекции
-                                                .row
-                                                    .col-6
-                                                        a.collection-link(href="")
-                                                            img(src="", alt="")
-                                                            .collection-link__info
-                                                                .collection-link__title Прованс
-                                                                .collection-link__short Весна/Лето 2020
-                                                        a.collection-link(href="")
-                                                            img(src="", alt="")
-                                                            .collection-link__info
-                                                                .collection-link__title Настроение города
-                                                                .collection-link__short Осень 2019/Зима 2020
-                                                    .col-6
-                                                        a.collection-link(href="")
-                                                            img(src="", alt="")
-                                                            .collection-link__info
-                                                                .collection-link__title Лигурия
-                                                                .collection-link__short Весна/Лето 2019
-                                                        a.collection-link(href="")
-                                                            img(src="", alt="")
-                                                            .collection-link__info
-                                                                .collection-link__title Ломбардия
-                                                                .collection-link__short Осень 2018/Зима 2019
-                            .main-menu__item
-                                a(href="") О нас
-                            .main-menu__item
-                                a(href="") Lookbook
-                            .main-menu__item
-                                a(href="") Адреса магазинов
+                        include _main-menu.pug
 
                     .header-icons.col-lg-3.col-auto.ml-auto
                         .header-icons__item.account
-                            a(href="", title="Личный кабинет")
+                            a(href="", title="Личный кабинет", data-toggle="dropdown")
                                 include ../svg/menu-lk.svg
-                            .account__dropdown
+                            .account__dropdown.dropdown-menu
+                                a(href="").high-link Личные данные
+                                a(href="").high-link Оформленные заказы
+                                a(href="").high-link Избранные товары
+                                a(href="").high-link Адреса доставки
+                                a(href="").high-link Подписки
+                                a(href="").high-link.ab-i-logout Выйти
 
                         .header-icons__item.following
                             a(href="", title="Избранное")
@@ -152,14 +91,13 @@ html(lang="ru")
                                 include ../svg/menu-cart.svg
                                 .counter 18
                             .mini-cart__dropdown.dropdown-menu
-                                p asdas dasd 
-                                p asd asd asd
-                                p asda sda s
+                                | mini-cart
 
                         .header-icons__item.search
                             a(href="", title="Поиск")
                                 include ../svg/menu-search.svg
-
+                    
+                include _mobile-menu.pug
         .page-wrapper(class="" + mainCls)
             block content
 
@@ -260,15 +198,11 @@ html(lang="ru")
                                     | Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности
                                     
 
-                            .socials
-                                a(href="").socials__link.yt
-                                    img(src="./images/socials/soc-yt.svg", alt="")
-                                a(href="").socials__link.fb
-                                    img(src="./images/socials/soc-fb.svg", alt="")
-                                a(href="").socials__link.inst
-                                    img(src="./images/socials/soc-inst.svg", alt="")
-                                a(href="").socials__link.vk
-                                    img(src="./images/socials/soc-vk.svg", alt="")
+                            .socials.socials_dark
+                                a(href="").socials__link.ab-i-yt
+                                a(href="").socials__link.ab-i-fb
+                                a(href="").socials__link.ab-i-inst
+                                a(href="").socials__link.ab-i-vk
 
 
             .footer-bottom
