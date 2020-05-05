@@ -10,11 +10,19 @@
     @include tablet {
         padding-top: 0;
         padding-bottom: 30px;
-        margin-bottom: 40px;
     }
 
     &-wrapper {
         overflow: hidden;
+        margin-bottom: 100px;
+
+        @include laptop {
+            margin-bottom: 50px;
+        }
+
+        @include tablet {
+            margin-bottom: 40px;
+        }
     }
 
     &__content {

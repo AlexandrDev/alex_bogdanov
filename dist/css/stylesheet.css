@@ -1063,6 +1063,7 @@ header.sticky-header .header__logo {
 
 .inspiration-wrapper {
   overflow: hidden;
+  margin-bottom: 100px;
 }
 
 .inspiration__content {
@@ -1079,6 +1080,85 @@ header.sticky-header .header__logo {
   position: absolute;
   top: 0;
   right: -100px;
+}
+
+.made-form {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.made-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 49vw;
+  border-radius: 0 25px 0 0;
+  background-color: rgba(232, 240, 246, 0.4);
+  z-index: -1;
+}
+
+.made-form .b-heading {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.made-form__image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.made-form__materials,
+.made-form__details {
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+.made-form__materials .made-form__item {
+  flex-direction: row-reverse;
+  text-align: right;
+  padding-right: 24px;
+}
+
+.made-form__materials .made-form__item:nth-child(2) {
+  padding-right: 54px;
+}
+
+.made-form__materials .made-form__item svg {
+  margin-left: 16px;
+}
+
+.made-form__details .made-form__item {
+  padding-left: 24px;
+}
+
+.made-form__details .made-form__item:nth-child(2) {
+  padding-left: 54px;
+}
+
+.made-form__details .made-form__item svg {
+  margin-right: 16px;
+}
+
+.made-form__item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 40px;
+}
+
+.made-form__item svg {
+  flex: 0 0 auto;
+}
+
+.made-form__item span {
+  max-width: 252px;
 }
 
 .style-samples {
@@ -1549,6 +1629,45 @@ footer {
   .watch-catalog__image {
     right: -170px;
   }
+
+  .made-form .b-heading {
+    margin-bottom: 40px;
+  }
+
+  .made-form__materials,
+  .made-form__details {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .made-form__item {
+    margin-bottom: 20px;
+  }
+
+  .made-form__image {
+    width: 120px;
+    top: 5px;
+  }
+
+  .made-form__materials .b-heading {
+    text-align: right;
+    padding-right: 80px;
+  }
+
+  .made-form__materials .made-form__item,
+  .made-form__materials .made-form__item:nth-child(2) {
+    padding-right: 26px;
+  }
+
+  .made-form__details .b-heading {
+    text-align: left;
+    padding-left: 80px;
+  }
+
+  .made-form__details .made-form__item,
+  .made-form__details .made-form__item:nth-child(2) {
+    padding-left: 26px;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -1632,6 +1751,10 @@ footer {
     padding-bottom: 108px;
   }
 
+  .inspiration-wrapper {
+    margin-bottom: 50px;
+  }
+
   .inspiration__content {
     margin-bottom: 36px;
   }
@@ -1644,6 +1767,10 @@ footer {
   .inspiration__poster {
     width: 500px;
     right: -86px;
+  }
+
+  .made-form {
+    margin-bottom: 80px;
   }
 
   .style-samples {
@@ -1818,6 +1945,9 @@ footer {
   .inspiration {
     padding-top: 0;
     padding-bottom: 30px;
+  }
+
+  .inspiration-wrapper {
     margin-bottom: 40px;
   }
 
@@ -1832,6 +1962,59 @@ footer {
   .inspiration__poster {
     position: initial;
     width: 100%;
+  }
+
+  .made-form {
+    margin-bottom: 50px;
+  }
+
+  .made-form::before {
+    width: 100%;
+    top: 180px;
+  }
+
+  .made-form__image {
+    position: initial;
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .made-form__materials,
+  .made-form__details {
+    margin-top: 0;
+  }
+
+  .made-form__materials .b-heading,
+  .made-form__details .b-heading {
+    text-align: left;
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .made-form__materials .made-form__item,
+  .made-form__materials .made-form__item:nth-child(2),
+  .made-form__details .made-form__item,
+  .made-form__details .made-form__item:nth-child(2) {
+    padding: 0;
+  }
+
+  .made-form__materials .made-form__item,
+  .made-form__details .made-form__item {
+    flex-direction: row;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .made-form__materials .made-form__item svg,
+  .made-form__details .made-form__item svg {
+    margin-left: 0;
+    margin-right: 16px;
+  }
+
+  .made-form__materials .made-form__item span,
+  .made-form__details .made-form__item span {
+    max-width: 100%;
   }
 
   .style-samples {

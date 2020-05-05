@@ -120,6 +120,40 @@ block content
                 source(media="(max-width:767px)", srcset="images/inspiration-poster_mob.png")
                 img(src="images/inspiration-poster.png", alt="")
 
+    .made-form
+        .container
+            picture.made-form__image
+                source(media="(max-width: 1200px)", srcset="images/h-block-materials-woman-320.png")
+                img(src="images/h-block-materials-woman.png", alt="")
+            .row.justify-content-between
+                .made-form__materials.col-xl-4.col-md-6
+                    .b-heading Материалы
+                    .made-form__items
+                        .made-form__item
+                            include svg/h-materials-1.svg
+                            span Трикотажные полотна из Италии
+                        .made-form__item
+                            include svg/h-materials-2.svg
+                            span Специально созданные переплетения для комфорта в движении
+                        .made-form__item
+                            include svg/h-materials-3.svg
+                            span Натуральные матер иалы: шелк, визкоза, хлопок, лён
+
+                .made-form__details.col-xl-4.col-md-6
+                    .b-heading Детали
+                    .made-form__items
+                        .made-form__item
+                            include svg/h-details-1.svg
+                            span Уникальные трикотажные детали
+                        .made-form__item
+                            include svg/h-details-2.svg
+                            span Авторские принты, нарисованные Александром Богдановым
+                        .made-form__item
+                            include svg/h-details-3.svg
+                            span Авторские вышитые шевроны
+                    
+
+
     .style-samples.container
         .row
             .style-samples__left.col-lg-4
