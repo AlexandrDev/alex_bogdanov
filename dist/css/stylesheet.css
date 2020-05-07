@@ -228,10 +228,12 @@ button {
 }
 
 .slider-nav__arrows .counter {
+  width: 50px;
   font-size: 16px;
   line-height: 22px;
   margin: 0 15px;
   color: #132434;
+  text-align: center;
 }
 
 .slider-nav .arrow {

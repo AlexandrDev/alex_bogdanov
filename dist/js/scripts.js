@@ -48,11 +48,58 @@ $(function() {
     });
 
 
-    $('#fw-slider').flickity({
-        wrapAround: true,
-        prevNextButtons: false,
-        pageDots: false,
-        adaptiveHeight: true
+
+    // sliders with navigation
+    let sliders = ['#fw-slider'];
+
+    sliders.forEach((slider) => {
+        let flkty = new Flickity( document.querySelector(slider), {
+            wrapAround: true,
+            prevNextButtons: false,
+            pageDots: false
+        });
+
+        let slides_count = flkty.slides.length,
+            current_slide = '01';
+
+        let $navs = $(slider).parent().find('.slider-nav'),
+            $dotsContainer = $navs.find('.slider-nav__dots');
+
+        for (let i = 0; i < slides_count; i++) {
+            let cls = (i == 0) ? 'dot current' : 'dot';
+
+            $dotsContainer.append('<span class="' + cls + '"></span>');
+        }
+
+        let $dots = $navs.find('.dot'),
+            $counter = $navs.find('.counter');
+
+        $counter.html(current_slide + '/' + addZero(slides_count));
+
+        // update selected dots
+        flkty.on('select', function() {
+            $dots.filter('.current').removeClass('current');
+            $dots.eq(flkty.selectedIndex).addClass('current');
+            
+            $counter.html(addZero(flkty.selectedIndex + 1) + '/' + addZero(slides_count));
+        });
+
+        $dots.on('click', function() {
+            flkty.select( $(this).index() );
+        });
+
+        $navs.find('.arrow-prev').on('click', function() {
+            flkty.previous();
+        });
+
+        $navs.find('.arrow-next').on('click', function() {
+            flkty.next();
+        });
+
+
+        function addZero(num) {
+            return (num >= 0 && num <= 9) ? '0' + num : num;
+        }
     });
 
 
