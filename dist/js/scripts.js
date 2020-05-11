@@ -50,14 +50,14 @@ $(function() {
 
 
     // sliders with navigation
-    let sliders = ['#fw-slider'];
+    let sliders = ['#fw-slider', '.goods-pw-photo-slider', '.shops-slider'];
 
     sliders.forEach((slider) => {
         let flkty = new Flickity( document.querySelector(slider), {
             wrapAround: true,
             prevNextButtons: false,
-            pageDots: false
-        });
+            pageDots: false,
+        });        
 
         let slides_count = flkty.slides.length,
             current_slide = '01';
@@ -102,6 +102,15 @@ $(function() {
         }
     });
 
+
+    $('.goods-pw-description-slider').flickity({
+        prevNextButtons: false,
+        pageDots: false,
+        fade: true,
+        adaptiveHeight: true,
+        draggable: false,
+        asNavFor: '.goods-pw-photo-slider',
+    });
 
     $('.product-card').each(function() {
         let $thumb = $(this).find('.product-card__thumb'),

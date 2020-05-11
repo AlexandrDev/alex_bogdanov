@@ -66,6 +66,15 @@ button {
     pointer-events: none;
 }
 
+.fancybox-bg {
+    background: $light;
+    opacity: 0.8;
+}
+
+.page-wrapper {
+    margin-bottom: 140px;
+}
+
 .b-heading {
     font-family: Literata;
     font-weight: 600;
@@ -103,6 +112,26 @@ button {
             background: #428CC3;
         }
         &:active {
+            background: #2A71B1;
+        }
+        &.disabled {
+            background: #2A71B1;
+            opacity: 0.15;
+        }
+    }
+
+    &_blue-bordered {
+        color: $gray;
+        border: 1px solid #67ADD7;
+        background: transparent;
+
+        &:hover {
+            color: #fff;
+            border-color: #428CC3;
+            background: #428CC3;
+        }
+        &:active {
+            border-color: #2A71B1;
             background: #2A71B1;
         }
         &.disabled {

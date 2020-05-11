@@ -10,5 +10,54 @@
     &__link {
         margin-left: 8px;
         border-bottom: 1px dashed;
+        cursor: pointer;
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &-dropdown {
+        left: 0;
+        margin-left: 15px;
+        padding: 30px 30px 34px;
+        background: #FFFFFF;
+        box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
+
+        &::before {
+            width: 10px;
+            height: 10px;
+            top: -5px;
+            left: 180px;
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            color: $dark;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+
+            .button {
+                white-space: nowrap;
+
+                &:first-child {
+                    margin-right: 15px;
+                }
+            }
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $gray;
+            margin-bottom: 0;
+        }
     }
 }

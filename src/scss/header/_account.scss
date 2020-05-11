@@ -11,10 +11,20 @@
             left: 63px;
             width: 25px;
             height: 25px;
+
+            @include phone {
+                left: 125px;
+            }
         }
 
-        .high-link:last-child {
-            border-bottom: 0;
+        a {
+            &:hover {
+                color: $blue;
+            }
+            
+            &:last-child {
+                border-bottom: 0;
+            }
         }
     }
 }

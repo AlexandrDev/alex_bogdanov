@@ -18,6 +18,14 @@
         > a {
             position: relative;
             font-size: 0;
+
+            > svg {
+                transition: opacity .16s ease;
+            }
+
+            &:hover > svg {
+                opacity: 0.8;
+            }
         }
 
         .counter {

@@ -146,8 +146,6 @@ block content
                             include svg/h-details-3.svg
                             span Авторские вышитые шевроны
                     
-
-
     .style-samples.container
         .row
             .style-samples__left.col-lg-4
@@ -171,7 +169,78 @@ block content
 
         a(href="").button.button_blue-filled В каталог
 
+    .goods-pw.container
+        .row
+            .goods-pw__description.col-md-7
+                .b-heading Alexander Bogdanov — бренд, понимающий женщин
+                .goods-pw-description-slider
+                    .item
+                        a.item__photo
+                            img(src="images/dev/0b58f76f59365cbb23933f1895be115f 1.png", alt="Платье «Миндальный цвет» в две строки")
 
+                        .item__right
+                            .item__title Платье «Миндальный цвет» в две строки
+                            .item__price 28 700 ₽
+                            .item__description
+                                | Характер платья задаёт ткань – крупнофактурное кружево нежных серо-розовых оттенков. Состав и оттенки делают материал тактильно приятным, подчёркивают элитарность кружева.
+                            a(href="").link-detailed Подробнее
+                    .item
+                        a.item__photo
+                            img(src="images/dev/prod-thumb.png", alt="Пальто «Нежные струны»")
+
+                        .item__right
+                            .item__title Пальто «Нежные струны»
+                            .item__price 27 000 ₽
+                            .item__description
+                                | Характер платья задаёт ткань – крупнофактурное кружево нежных серо-розовых оттенков. Состав и оттенки делают материал тактильно приятным, подчёркивают элитарность кружева.
+                            a(href="").link-detailed Подробнее
+
+
+            .goods-pw__photo.col-md-5
+                .goods-pw-photo-slider
+                    .item
+                        img(src="images/dev/8O2A1936+min 1.jpg", alt="")
+                    .item
+                        img(src="images/dev/8O2A1936+min 1.jpg", alt="")
+                .slider-nav
+                    .slider-nav__arrows
+                        .arrow.arrow-prev
+                            include svg/slider-arrow-prev.svg
+                        .counter
+                        .arrow.arrow-next
+                            include svg/slider-arrow-next.svg
+
+                    .slider-nav__dots
+
+    .shops
+        .container
+            .row.align-items-center
+                .shops__left.col-lg-4
+                    .b-heading Более 
+                        br
+                        | 200 магазинов 
+                        br
+                        | в России
+                    a(href="").button.button_blue-filled Посмотреть на карте
+
+                .shops__slider.col-lg-8
+                    .shops-slider
+                        .shops-slider__slide.grid--2-left
+                            img(src="images/dev/image 15.jpg", alt="")
+                            img(src="images/dev/image 18.jpg", alt="")
+                            img(src="images/dev/image 16.jpg", alt="")
+                        .shops-slider__slide.grid--2-left
+                            img(src="images/dev/image 15.jpg", alt="")
+                            img(src="images/dev/image 18.jpg", alt="")
+                            img(src="images/dev/image 16.jpg", alt="")
+                    .slider-nav
+                        .slider-nav__arrows
+                            .arrow.arrow-prev
+                                include svg/slider-arrow-prev.svg
+                            .counter
+                            .arrow.arrow-next
+                                include svg/slider-arrow-next.svg
+                        .slider-nav__dots
 
     .about-company.container
         .b-heading О компании

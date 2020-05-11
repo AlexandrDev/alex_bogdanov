@@ -10,214 +10,25 @@ html(lang="ru")
             | function setViewport(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}setViewport();
         link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&display=swap')
         link(rel="stylesheet" href='css/normalize.min.css')
-        link(rel="stylesheet" href='css/bootstrap-grid.min.css')
+        link(rel="stylesheet" href='css/bootstrap-grid-custom.min.css')
         link(rel="stylesheet" href='css/flickity.min.css')
+        link(rel="stylesheet" href='css/jquery.fancybox.min.css')
         link(rel="stylesheet" href='css/stylesheet.css')
         block styles
     body
-        header
-            .header__top
-                .container
-                    .row
-                        .top-left.col-lg-4
-                            .language
-                                .language-select(data-toggle="dropdown")
-                                    .language__icon.language__icon_rus
-                                    .language__arrow
-                                .language-dropdown.dropdown-menu
-                                    a(href="").language__item
-                                        .language__icon.language__icon_rus
-                                        span Русский
-                                    a(href="").language__item
-                                        .language__icon.language__icon_eng
-                                        span English
-                                    a(href="").language__item
-                                        .language__icon.language__icon_esp
-                                        span Espanol
-                                    a(href="").language__item
-                                        .language__icon.language__icon_de
-                                        span German
+        include _header.pug
 
-                            .city-select 
-                                span Ваш город:
-                                a.city-select__link(href="") Санкт-Петербург
-
-                        .top-menu.col-lg-8
-                            a.top-menu__link(href="")
-                                i.ab-i-freeship
-                                span Бесплатная доставка
-                            a.top-menu__link(href="")
-                                i.ab-i-primerka
-                                span Примерка перед покупкой
-                            a.top-menu__link(href="")
-                                i.ab-i-callus
-                                span Связаться с нами
-
-            .header__main.container
-                .header__main-row.row
-                    .hamburger.col-auto.d-xl-none
-                        .hamburger-switcher
-                            .hamburger__icon
-                                span
-                                span
-                                span
-
-                    .header__logo.col-lg-3.col-auto.mr-auto
-                        a(href="")
-                            img(src="images/logo.svg", alt="Alexander Bogdanov")
-
-                    .header__menu.d-none.d-xl-block
-                        include _main-menu.pug
-
-                    .header-icons.col-lg-3.col-auto.ml-auto
-                        .header-icons__item.account
-                            a(href="", title="Личный кабинет", data-toggle="dropdown")
-                                include ../svg/menu-lk.svg
-                            .account__dropdown.dropdown-menu
-                                a(href="").high-link Личные данные
-                                a(href="").high-link Оформленные заказы
-                                a(href="").high-link Избранные товары
-                                a(href="").high-link Адреса доставки
-                                a(href="").high-link Подписки
-                                a(href="").high-link.ab-i-logout Выйти
-
-                        .header-icons__item.following
-                            a(href="", title="Избранное")
-                                include ../svg/menu-following.svg
-                                .counter 3
-
-                        .header-icons__item.mini-cart
-                            a(href="", title="Корзина", data-toggle="dropdown")
-                                include ../svg/menu-cart.svg
-                                .counter 18
-                            .mini-cart__dropdown.dropdown-menu
-                                | mini-cart
-
-                        .header-icons__item.search
-                            a(href="", title="Поиск")
-                                include ../svg/menu-search.svg
-                    
-                include _mobile-menu.pug
         .page-wrapper(class="" + mainCls)
             block content
 
-        footer
-            .footer-top
-                .container
-                    .row
-                        .footer-menu.col-lg-9
-                            .row
-                                .col-lg-3
-                                    .footer-menu__title
-                                        a(href="") О нас
-                                    .footer-menu__link
-                                        a(href="") О компании
-                                    .footer-menu__link
-                                        a(href="") Александр Богданов
-                                    .footer-menu__link
-                                        a(href="") История
-                                    .footer-menu__link
-                                        a(href="") Пресса о нас
-                                    .footer-menu__link
-                                        a(href="") Новости
-                                    .footer-menu__link
-                                        a(href="") Партнерам
-                                    .footer-menu__link
-                                        a(href="") Франчайзинг
-                                    .footer-menu__link
-                                        a(href="") Зарубежные партнеры
-                                    .footer-menu__link
-                                        a(href="") Оптовые партнеры
+        include _footer.pug
 
-                                .col-lg-3
-                                    .footer-menu__title
-                                        a(href="") Каталог
-                                    .footer-menu__link
-                                        a(href="") Купить женскую одежду
-                                    .footer-menu__link
-                                        a(href="") Платья
-                                    .footer-menu__link
-                                        a(href="") Юбки
-                                    .footer-menu__link
-                                        a(href="") Джемперы
-                                    .footer-menu__link
-                                        a(href="") Жакеты и бомберы
-                                    .footer-menu__link
-                                        a(href="") Блузы
-                                    .footer-menu__link
-                                        a(href="") Рубашки
-                                    .footer-menu__link
-                                        a(href="") Верхняя одежда
-                                    .footer-menu__link
-                                        a(href="") Аксессуары
-
-                                .col-lg-3
-                                    .footer-menu__title
-                                        a(href="") Помощь
-                                    .footer-menu__link
-                                        a(href="") Как оформить заказ
-                                    .footer-menu__link
-                                        a(href="") Как выбрать размер
-                                    .footer-menu__link
-                                        a(href="") Оплата
-                                    .footer-menu__link
-                                        a(href="") Доставка
-                                    .footer-menu__link
-                                        a(href="") Возврат
-                                    .footer-menu__link
-                                        a(href="") Конфиденциальность
-                                    .footer-menu__link
-                                        a(href="") Мои заказы
-                                    .footer-menu__link
-                                        a(href="") Уход за изделиями
-                                
-                                .col-lg-3
-                                    .footer-menu__title
-                                        a(href="") Партнерам
-                                    .footer-menu__link
-                                        a(href="") Партнерам
-                                    .footer-menu__link
-                                        a(href="") Франчайзинг
-                                    .footer-menu__link
-                                        a(href="") Зарубежные партнеры
-                                    .footer-menu__link
-                                        a(href="") Оптовые партнеры
-
-                        .footer__right.col-lg-3
-                            .subscribe
-                                .subscribe__title Подпишитесь 
-                                    br
-                                    | на нашу рассылку
-                                .subscribe__subtitle
-                                    | Обещаем отправлять только важное и интересное
-                                form(action="").subscribe-form
-                                    input(type="email", placeholder="Email").subscribe-form__input
-                                    button.subscribe-form__button
-                                        include ../svg/subscribe-email.svg
-                                .subscribe__privacy
-                                    | Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности
-                                    
-
-                            .socials.socials_dark
-                                a(href="").socials__link.ab-i-yt
-                                a(href="").socials__link.ab-i-fb
-                                a(href="").socials__link.ab-i-inst
-                                a(href="").socials__link.ab-i-vk
-
-
-            .footer-bottom
-                .footer-bottom-grid.container
-                    a.footer__logo(href="")
-                        img(src="images/logo_white.svg", alt="Alexander Bogdanov")
-                    .footer__copyright
-                        | ©  2020, Alexander Bogdanov. Все права защищены
-                    .footer-bottom__links
-                        a(href="") Политика конфиденциальности
-                        span.determiner |
-                        a(href="") Условия продажи
+        include _forms.pug
 
         script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js", defer)
         script(src="js/bootstrap.bundle.min.js", defer)
         script(src="js/flickity.pkgd.min.js", defer)
+        script(src="js/flickity-fade.min.js", defer)
+        script(src="js/jquery.fancybox.min.js", defer)
         script(src="js/scripts.js", defer)
         block scripts

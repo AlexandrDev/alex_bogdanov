@@ -1,6 +1,7 @@
 @import 'fonts';
 
 @import 'gui';
+@import 'inputs';
 
 @import 'components/dropdown';
 @import 'components/socials';
@@ -18,8 +19,6 @@
 @import 'header/mini-cart';
 
 
-@import 'pages';
-
 @import 'homepage/index';
 
 
@@ -28,5 +27,7 @@
 @import 'footer';
 @import 'footer/subscribe';
 
+
+@import 'components/modals';
 
 @import 'icons';

@@ -1,0 +1,91 @@
+header
+    .header__top
+        .container
+            .row
+                .top-left.col-lg-4
+                    .language
+                        .language-select(data-toggle="dropdown")
+                            .language__icon.language__icon_rus
+                            .language__arrow
+                        .language-dropdown.dropdown-menu
+                            a(href="").language__item
+                                .language__icon.language__icon_rus
+                                span Русский
+                            a(href="").language__item
+                                .language__icon.language__icon_eng
+                                span English
+                            a(href="").language__item
+                                .language__icon.language__icon_esp
+                                span Espanol
+                            a(href="").language__item
+                                .language__icon.language__icon_de
+                                span German
+
+                    .city-select 
+                        span Ваш город:
+                        a.city-select__link(data-toggle="dropdown") Санкт-Петербург
+                        .city-select-dropdown.dropdown-menu
+                            .title Ваш город Москва?
+                            .buttons
+                                a(href="").button.button_blue-filled Да
+                                a(href="javascript:;", data-fancybox, data-src="#search-city").button.button_blue-bordered Выбрать другой город
+                            p От выбранного города зависят наличие товаров и способы доставки.
+                            
+                .top-menu.col-lg-8
+                    a.top-menu__link(href="")
+                        i.ab-i-freeship
+                        span Бесплатная доставка
+                    a.top-menu__link(href="")
+                        i.ab-i-primerka
+                        span Примерка перед покупкой
+                    a.top-menu__link(href="")
+                        i.ab-i-callus
+                        span Связаться с нами
+
+    .header__main.container
+        .header__main-row.row
+            .hamburger.col-auto.d-xl-none
+                .hamburger-switcher
+                    .hamburger__icon
+                        span
+                        span
+                        span
+
+            .header__logo.col-lg-3.col-auto.mr-auto
+                a(href="")
+                    img(src="images/logo.svg", alt="Alexander Bogdanov")
+
+            .header__menu.d-none.d-xl-block
+                include _main-menu.pug
+
+            .header-icons.col-lg-3.col-auto.ml-auto
+                .header-icons__item.account
+                    a(href="", title="Личный кабинет", data-toggle="dropdown")
+                        include ../svg/menu-lk.svg
+                    .account__dropdown.dropdown-menu
+                        a(href="").high-link Вход
+                        a(href="").high-link Личные данные
+                        a(href="").high-link Оформленные заказы
+                        a(href="").high-link Избранные товары
+                        a(href="").high-link Адреса доставки
+                        a(href="").high-link Подписки
+                        a(href="").high-link.ab-i-logout Выйти
+
+                .header-icons__item.following
+                    a(href="", title="Избранное")
+                        include ../svg/menu-following.svg
+                        .counter 3
+
+                .header-icons__item.mini-cart
+                    a(href="", title="Корзина", data-toggle="dropdown")
+                        include ../svg/menu-cart.svg
+                        .counter 18
+                    //- .mini-cart__dropdown.dropdown-menu
+                    //-     | mini-cart
+
+                .header-icons__item.search
+                    a(href="", title="Поиск")
+                        include ../svg/menu-search.svg
+            
+        include _mobile-menu.pug
+        

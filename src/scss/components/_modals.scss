@@ -1,0 +1,70 @@
+.modals-hidden {
+    // display: none;
+}
+
+.modal {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 100px rgba(42, 19, 52, 0.15);
+    border-radius: 25px 0px;
+    padding: 50px 60px 60px;
+    cursor: default !important;
+
+    .fancybox-close-small {
+        top: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+        opacity: .3;
+        transition: opacity .2s ease;
+
+        &:hover {
+            opacity: .7;
+        }
+
+        svg path {
+            fill: $gray;
+        }
+    }
+
+    &-title {
+        font-family: Literata;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 40px;
+        color: $dark;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+.search-city {
+
+    .modal-title {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        margin-top: 40px;
+        column-count: 3;
+        column-width: 207px;
+        column-gap: 30px;
+    }
+
+    &__item {
+        color: $gray;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 1em;
+
+        &.capital {
+            font-weight: 700;
+        }
+
+        a:hover {
+            color: $blue;
+        }
+    }
+}
