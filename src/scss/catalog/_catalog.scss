@@ -1,0 +1,12 @@
+.page-catalog-common {
+    margin-bottom: 0;
+
+
+    .product-slider-wrapper {
+        padding-bottom: 140px;
+
+        @include laptop {
+            padding-bottom: 60px;
+        }
+    }
+}

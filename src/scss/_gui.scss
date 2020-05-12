@@ -38,14 +38,9 @@ body {
     }
 }
 
-h1 {
-    font-size: 40px;
-}
-
 a {
     color: inherit;
     text-decoration: none;
-    outline: none;
     transition: all .16s ease;
 }
 
@@ -57,6 +52,7 @@ img {
     max-width: 100%;
 }
 
+a,
 input,
 button {
     outline: none;
@@ -89,6 +85,34 @@ button {
         margin-bottom: 20px;
     }
 }
+
+h1, .like-h1,
+h2, .like-h2 {
+    font-family: Literata;
+    font-weight: 600;
+    color: $dark;
+    margin-top: 0.4em;
+    margin-bottom: 0.8em;
+}
+
+h1, .like-h1 {
+    font-size: 40px;
+    line-height: 50px;
+    @include laptop {
+        font-size: 26px;
+        line-height: 30px;
+    }
+}
+
+h2, .like-h2 {
+    font-size: 30px;
+    line-height: 40px;
+    @include laptop {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
 
 .button {
     display: inline-flex;

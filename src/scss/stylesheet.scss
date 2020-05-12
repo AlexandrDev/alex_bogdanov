@@ -1,11 +1,6 @@
-@import 'fonts';
-
 @import 'gui';
+@import 'fonts';
 @import 'inputs';
-
-@import 'components/dropdown';
-@import 'components/socials';
-@import 'components/slider';
 
 @import 'header';
 @import 'header/top';
@@ -18,16 +13,20 @@
 @import 'header/account';
 @import 'header/mini-cart';
 
+@import 'components/dropdown';
+@import 'components/socials';
+@import 'components/slider';
+@import 'components/modals';
+@import 'components/page-top';
+@import 'components/product-slider';
+@import 'components/product-card';
 
 @import 'homepage/index';
 
-
-@import 'components/product-card';
+@import 'catalog/catalog';
+@import 'catalog/categories-grid';
 
 @import 'footer';
 @import 'footer/subscribe';
-
-
-@import 'components/modals';
 
 @import 'icons';

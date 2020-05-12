@@ -44,16 +44,16 @@ block content
     .advantages.container
         .row
             .advantages__item.col-md-3
-                img(src="images/adv-1.svg", alt="").advantages__icon
+                img(src="images/advantages-1.svg", alt="").advantages__icon
                 .advantages__text Собственные уникальные принты
             .advantages__item.col-md-3
-                img(src="images/adv-2.svg", alt="").advantages__icon
+                img(src="images/advantages-2.svg", alt="").advantages__icon
                 .advantages__text Авторская вышивка для каждого изделия
             .advantages__item.col-md-3
-                img(src="images/adv-3.svg", alt="").advantages__icon
+                img(src="images/advantages-3.svg", alt="").advantages__icon
                 .advantages__text Произведенные во Франции кружева
             .advantages__item.col-md-3
-                img(src="images/adv-4.svg", alt="").advantages__icon
+                img(src="images/advantages-4.svg", alt="").advantages__icon
                 .advantages__text Лучшая фурнитура из Италии
 
     .watch-catalog-wrapper.container
@@ -81,7 +81,6 @@ block content
                             include ./components/_product-card.pug
                         .col-md-4
                             include ./components/_product-card.pug
-
 
     .founder-quote
         .container
@@ -146,28 +145,7 @@ block content
                             include svg/h-details-3.svg
                             span Авторские вышитые шевроны
                     
-    .style-samples.container
-        .row
-            .style-samples__left.col-lg-4
-                .b-heading Романтика
-                    br 
-                    | ваших чувств
-                p Каждая модель — маленькое произведение искусства, подлинник автора, без копий, реплик и прямых заимствований.
-                a(href="").button.button_blue-filled В каталог
-
-            .col-lg-8
-                .style-samples__items
-                    .style-samples__item
-                        img(src="images/style-sample_1.jpg", alt="").style-samples__image
-                        .style-samples__label Повседневный Стиль
-                    .style-samples__item
-                        img(src="images/style-sample_2.jpg", alt="").style-samples__image
-                        .style-samples__label Деловой стиль
-                    .style-samples__item
-                        img(src="images/style-sample_3.jpg", alt="").style-samples__image
-                        .style-samples__label Чистый стиль
-
-        a(href="").button.button_blue-filled В каталог
+    include ./content-blocks/_style-samples.pug
 
     .goods-pw.container
         .row

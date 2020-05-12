@@ -1,0 +1,30 @@
+.page-top {
+    padding-top: 30px;
+    margin-bottom: 60px;
+
+    &__title {
+        margin: 0;
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    margin-bottom: 4px;
+
+    &__item {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $gray;
+
+        &:not(:last-child)::after {
+            content: '/';
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        > a {
+            color: $blue;
+        }
+    }
+}

@@ -53,55 +53,56 @@ $(function() {
     let sliders = ['#fw-slider', '.goods-pw-photo-slider', '.shops-slider'];
 
     sliders.forEach((slider) => {
-        let flkty = new Flickity( document.querySelector(slider), {
-            wrapAround: true,
-            prevNextButtons: false,
-            pageDots: false,
-        });        
+        if (document.querySelector(slider)) {
+            let flkty = new Flickity( slider, {
+                wrapAround: true,
+                prevNextButtons: false,
+                pageDots: false,
+            });
 
-        let slides_count = flkty.slides.length,
-            current_slide = '01';
+            let slides_count = flkty.slides.length,
+                current_slide = '01';
 
-        let $navs = $(slider).parent().find('.slider-nav'),
-            $dotsContainer = $navs.find('.slider-nav__dots');
+            let $navs = $(slider).parent().find('.slider-nav'),
+                $dotsContainer = $navs.find('.slider-nav__dots');
 
-        for (let i = 0; i < slides_count; i++) {
-            let cls = (i == 0) ? 'dot current' : 'dot';
+            for (let i = 0; i < slides_count; i++) {
+                let cls = (i == 0) ? 'dot current' : 'dot';
 
-            $dotsContainer.append('<span class="' + cls + '"></span>');
-        }
+                $dotsContainer.append('<span class="' + cls + '"></span>');
+            }
 
-        let $dots = $navs.find('.dot'),
-            $counter = $navs.find('.counter');
+            let $dots = $navs.find('.dot'),
+                $counter = $navs.find('.counter');
 
-        $counter.html(current_slide + '/' + addZero(slides_count));
+            $counter.html(current_slide + '/' + addZero(slides_count));
 
-        // update selected dots
-        flkty.on('select', function() {
-            $dots.filter('.current').removeClass('current');
-            $dots.eq(flkty.selectedIndex).addClass('current');
-            
-            $counter.html(addZero(flkty.selectedIndex + 1) + '/' + addZero(slides_count));
-        });
+            // update selected dots
+            flkty.on('select', function() {
+                $dots.filter('.current').removeClass('current');
+                $dots.eq(flkty.selectedIndex).addClass('current');
+                
+                $counter.html(addZero(flkty.selectedIndex + 1) + '/' + addZero(slides_count));
+            });
 
-        $dots.on('click', function() {
-            flkty.select( $(this).index() );
-        });
+            $dots.on('click', function() {
+                flkty.select( $(this).index() );
+            });
 
-        $navs.find('.arrow-prev').on('click', function() {
-            flkty.previous();
-        });
+            $navs.find('.arrow-prev').on('click', function() {
+                flkty.previous();
+            });
 
-        $navs.find('.arrow-next').on('click', function() {
-            flkty.next();
-        });
+            $navs.find('.arrow-next').on('click', function() {
+                flkty.next();
+            });
 
 
-        function addZero(num) {
-            return (num >= 0 && num <= 9) ? '0' + num : num;
+            function addZero(num) {
+                return (num >= 0 && num <= 9) ? '0' + num : num;
+            }
         }
     });
-
 
     $('.goods-pw-description-slider').flickity({
         prevNextButtons: false,
@@ -111,6 +112,59 @@ $(function() {
         draggable: false,
         asNavFor: '.goods-pw-photo-slider',
     });
+
+
+
+    let product_sliders = ['.product-slider'];
+
+    product_sliders.forEach((slider) => {
+        if (document.querySelector(slider)) {
+            let flkty = new Flickity( slider, {
+                prevNextButtons: false,
+                pageDots: false,
+                adaptiveHeight: true,
+                // contain: true,
+                cellAlign: 'left',
+                percentPosition: false,
+                cellSelector: '.product-card',
+            });
+
+            let slides_count = flkty.slides.length;
+
+            let $navs = $(slider).find('.product-slider__navs'),
+                $prev = $navs.find('.arrow-prev'),
+                $next = $navs.find('.arrow-next');
+
+            $prev.addClass('disabled');
+
+            flkty.on('select', function(index) {
+                if (index == 0) {
+                    $prev.addClass('disabled');
+                } else {
+                    $prev.removeClass('disabled');
+                }
+                
+                if (index == slides_count - 1) {
+                    $next.addClass('disabled');
+                } else {
+                    $next.removeClass('disabled');
+                }
+                console.log(slides_count-1);
+                
+                console.log(index);
+                
+            });
+
+            $prev.on('click', function() {
+                flkty.previous();
+            });
+
+            $next.on('click', function() {
+                flkty.next();
+            });
+        }
+    });
+
 
     $('.product-card').each(function() {
         let $thumb = $(this).find('.product-card__thumb'),
