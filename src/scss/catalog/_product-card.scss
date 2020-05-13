@@ -19,6 +19,32 @@
             margin: auto;
             object-fit: contain;
             object-position: center;
+            z-index: 1;
+        }
+    }
+
+    .label {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 120px;
+        height: 25px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 25px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
+        transform-origin: top left;
+        transform: rotate(-90deg);
+        z-index: 2;
+
+        &_best {
+            background: #B0869A;
+        }
+        &_new {
+            background: #67ADD7;
         }
     }
 
@@ -106,15 +132,15 @@
 
     &__bottom {
         position: relative;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 20px;
-        padding-right: 24px;
     }
 
     &__sku {
         font-size: 12px;
         line-height: 24px;
+        padding-right: 24px;
     }
 
     &__name {

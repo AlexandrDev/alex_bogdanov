@@ -34,12 +34,18 @@
     }
 
 
-    .product-card__thumb {
-        height: 380px;
-        margin-bottom: 15px;
+    .product-card {
+        &__thumb {
+            height: 380px;
+            margin-bottom: 15px;
+    
+            @include desktop {
+                height: 295px;
+            }
+        }
 
-        @include desktop {
-            height: 295px;
+        &__name {
+            padding-right: 24px;
         }
     }
 }

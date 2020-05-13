@@ -69,6 +69,14 @@ button {
 
 .page-wrapper {
     margin-bottom: 140px;
+
+    @include laptop {
+        margin-bottom: 60px;
+    }
+
+    @include phone {
+        margin-bottom: 40px;
+    }
 }
 
 .b-heading {

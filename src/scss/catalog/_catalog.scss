@@ -10,3 +10,153 @@
         }
     }
 }
+
+
+.category {
+    &-right {
+        padding-top: 20px;
+    }
+    
+    &-items {
+        margin-left: -10px;
+        margin-right: -10px;
+        margin-bottom: 30px;
+
+        @include laptop {
+            margin-bottom: 0;
+        }
+
+        > [class*="col-"] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .product-card {
+            margin-bottom: 25px;
+
+            &__thumb {
+                @include desktop {
+                    height: 344px;
+                }
+
+                @include phone {
+                    height: (225/360*100)+vw;
+                }
+            }
+        }
+    }
+
+    &-description {
+        font-size: 15px;
+    }
+}
+
+
+.loadmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 55px;
+    font-weight: 500;
+    font-size: 15px;
+    background: #fff;
+    border: 1px solid #67ADD7;
+    border-radius: 3px;
+    margin-bottom: 30px;
+
+    @include laptop {
+        margin-bottom: 25px;
+    }
+
+    &__icon {
+        margin-right: 12px;
+    }
+}
+
+
+.pagination {
+    display: grid;
+    grid-template-areas: "prev pages pages next";
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 14px;
+    color: $gray;
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+    @include laptop {
+        .command {
+            display: none;
+        }
+    }
+
+    @include tablet {
+        grid-template-areas: "pages pages"
+                            "prev next";
+        margin-top: 25px;
+        margin-bottom: 40px;
+    }
+    
+    .pages {
+        grid-area: pages;
+        display: flex;
+        @include tablet {
+            margin-bottom: 10px;
+        }
+    }
+
+    .item {
+        > a,
+        > span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+        }
+
+        > a {
+            transition: all .16s ease;
+            border-radius: 20px;
+
+            &.current,
+            &:hover {
+                background: #E8F0F6;
+            }
+        }
+
+        @include laptop {
+            > span {
+                width: 20px;
+            }
+        }
+    }
+
+    .prev, .next {
+        line-height: 40px;
+    }
+
+    .prev {
+        grid-area: prev;
+        margin-right: 20px;
+
+        svg {
+            margin-bottom: -1px;
+            margin-right: 13px;
+        }
+    }
+
+    .next {
+        grid-area: next;
+        margin-left: 20px;
+        text-align: right;
+
+        svg {
+            margin-bottom: -1px;
+            margin-left: 13px;
+        }
+    }
+}

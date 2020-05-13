@@ -4,18 +4,17 @@ block variables
     - var mainCls = 'page-catalog-common'
 
 block content
-
     .page-top.container
         .breadcrumbs
             .breadcrumbs__item
-                a(href="homepage.html") Главная
+                a(href=home_link) Главная
             .breadcrumbs__item
                 span Каталог
         h1.page-top__title.like-h1 Каталог
 
     .categories-grid-container.container
         .categories-grid
-            a(href="").item.item-big
+            a(href=category_link).item.item-big
                 .item__content
                     .item__title Платья
                     span.item__more.link-detailed Перейти в раздел
@@ -23,7 +22,7 @@ block content
                     source(media="(max-width: 767px)", srcset="images/catalog/cat-dresses_thumb.png")
                     img(src="images/catalog/cat-dresses.png", alt="")
 
-            a(href="").item
+            a(href=category_link).item
                 .item__content
                     .item__title Блузы 
                         br
@@ -33,7 +32,7 @@ block content
                     source(media="(max-width: 767px)", srcset="images/catalog/cat-blouses_thumb.png")
                     img(src="images/catalog/cat-blouses.png", alt="")
 
-            a(href="").item
+            a(href=category_link).item
                 .item__content
                     .item__title Джемперы 
                         br
@@ -43,7 +42,7 @@ block content
                     source(media="(max-width: 767px)", srcset="images/catalog/cat-jumpers_thumb.png")
                     img(src="images/catalog/cat-jumpers.png", alt="")
             
-            a(href="").item
+            a(href=category_link).item
                 .item__content
                     .item__title Жакеты 
                         br
@@ -53,7 +52,7 @@ block content
                     source(media="(max-width: 767px)", srcset="images/catalog/cat-jackets_thumb.png")
                     img(src="images/catalog/cat-jackets.png", alt="")
 
-            a(href="").item.item-high
+            a(href=category_link).item.item-high
                 .item__content
                     .item__title Юбки
                     span.item__more
@@ -61,7 +60,7 @@ block content
                     source(media="(max-width: 767px)", srcset="images/catalog/cat-skirts_thumb.png")
                     img(src="images/catalog/cat-skirts.png", alt="")
 
-            a(href="").item
+            a(href=category_link).item
                 .item__content
                     .item__title Брюки 
                         br
@@ -71,7 +70,7 @@ block content
                     source(media="(max-width: 767px)", srcset="images/catalog/cat-trousers_thumb.png")
                     img(src="images/catalog/cat-trousers.png", alt="")
 
-            a(href="").item
+            a(href=category_link).item
                 .item__content
                     .item__title Верхняя 
                         br
@@ -81,7 +80,7 @@ block content
                     source(media="(max-width: 767px)", srcset="images/catalog/cat-tops_thumb.png")
                     img(src="images/catalog/cat-tops.png", alt="")
             
-            a(href="").item.item-long
+            a(href=category_link).item.item-long
                 .item__content
                     .item__title Аксессуары
                     span.item__more

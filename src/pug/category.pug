@@ -1,0 +1,77 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Категория'
+    - var mainCls = 'page-category'
+
+block content
+
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                a(href=catalog_link) Каталог
+            .breadcrumbs__item
+                a(href=category_link) Одежда
+            .breadcrumbs__item
+                span Джемперы и кардиганы
+        h1.page-top__title.like-h1 Джемперы и кардиганы
+    
+    .category-wrapper.container
+        .row
+            .sidebar.col-lg-3
+
+            .category-right.col-lg-9
+                .category-filter
+                    | filter
+
+                .category-sort
+                    | sort
+
+
+                .category-items.row
+                    .col-md-4.col-6
+                        include ./components/_product-card-best.pug
+                    .col-md-4.col-6
+                        include ./components/_product-card-new.pug
+                    - for (var x = 0; x < 4; x++)
+                        .col-md-4.col-6
+                            include ./components/_product-card-full.pug
+                    
+                .category-navigation
+                    a(href="").loadmore 
+                        i.loadmore__icon.ab-i-refresh
+                        | Загрузить еще
+
+                    .pagination
+                        .prev 
+                            a(href="")
+                                include ./svg/pagination-prev.svg
+                                span.command Ctrl, 
+                                | Предыдущая
+                        .pages
+                            .item
+                                a(href="") 1
+                            .item
+                                span ...
+                            .item
+                                a(href="") 5
+                            .item
+                                a(href="") 6
+                            .item
+                                a(href="").current 7
+                            .item
+                                a(href="") 8
+                            .item
+                                a(href="") 9
+                            .item
+                                span ...
+                            .item
+                                a(href="") 13
+                        .next 
+                            a(href="") Следующая
+                                span.command , Ctrl
+                                include ./svg/pagination-next.svg                   
+
+        .category-description
+            p Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут. Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.
