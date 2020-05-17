@@ -2,6 +2,7 @@ block variables
 - var home_link = 'homepage.html'
 - var catalog_link = 'catalog.html'
 - var category_link = 'category.html'
+- var version = '0.1.7'
 
 doctype html
 html(lang="ru")
@@ -10,13 +11,13 @@ html(lang="ru")
         meta(charset="UTF-8")
         meta#mvp(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1")
         script
-            | function setViewport(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}setViewport();
+            | function svp(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}
         link(rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&display=swap')
         link(rel="stylesheet" href='css/normalize.min.css')
         link(rel="stylesheet" href='css/bootstrap-grid-custom.min.css')
         link(rel="stylesheet" href='css/flickity.min.css')
         link(rel="stylesheet" href='css/jquery.fancybox.min.css')
-        link(rel="stylesheet" href='css/stylesheet.css')
+        link(rel="stylesheet" href='css/stylesheet.css?v' + version)
         block styles
     body
         include _header.pug
@@ -28,10 +29,12 @@ html(lang="ru")
 
         include _forms.pug
 
-        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js", defer)
-        script(src="js/bootstrap.bundle.min.js", defer)
-        script(src="js/flickity.pkgd.min.js", defer)
-        script(src="js/flickity-fade.min.js", defer)
-        script(src="js/jquery.fancybox.min.js", defer)
-        script(src="js/scripts.js", defer)
+        script(src="js/jquery.min.js")
+        script(src="js/vue.min.js")
+        script(src="js/jquery.bootstrap.custom.min.js")
+        script(src="js/jquery.flickity.pkgd.min.js")
+        script(src="js/jquery.flickity-fade.min.js")
+        script(src="js/jquery.fancybox.min.js")
+        script(src="js/vue.autocomplete.min.js")
+        script(src="js/scripts.js?v" + version)
         block scripts

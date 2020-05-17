@@ -4,13 +4,13 @@
     <title>Категория</title>
     <meta charset="UTF-8">
     <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <script>function setViewport(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}setViewport();</script>
+    <script>function svp(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;display=swap">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.1.7">
   </head>
   <body>
     <header>
@@ -214,14 +214,43 @@
       </div>
       <div class="category-wrapper container">
         <div class="row">
-          <div class="sidebar col-lg-3"></div>
+          <div class="sidebar col-lg-3 d-none d-lg-block">
+            <div class="categories-list">
+              <div class="categories-list__title">Одежда</div>
+              <div class="categories-list__item"><a href="">Платья</a></div>
+              <div class="categories-list__item"><a href="">Блузы и рубашки</a></div>
+              <div class="categories-list__item parent parent-opened"><a href="">Джемперы и кардиганы</a>
+                <div class="arrow"></div>
+                <div class="categories-list-sub">
+                  <div class="categories-list-sub__item current"><a href="">Свитеры</a></div>
+                  <div class="categories-list-sub__item"><a href="">Кардиганы</a></div>
+                </div>
+              </div>
+              <div class="categories-list__item"><a href="">Юбки</a></div>
+            </div>
+            <div class="categories-list">
+              <div class="categories-list__title">Аксессуары</div>
+              <div class="categories-list__item"><a href="">Палантины</a></div>
+              <div class="categories-list__item"><a href="">Снуды</a></div>
+              <div class="categories-list__item parent"><a href="">Сумки</a>
+                <div class="arrow"></div>
+                <div class="categories-list-sub">
+                  <div class="categories-list-sub__item"><a href="">Сумки</a></div>
+                  <div class="categories-list-sub__item"><a href="">Сумки</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="category-right col-lg-9">
             <div class="category-filter">filter</div>
             <div class="category-sort">sort</div>
             <div class="category-items row">
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb2.png" alt="">
+                  <div class="product-card__thumb"><a href="">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb2.webp" type="image/webp"><img src="images/dev/prod-thumb2.png" alt="">
+                      </picture>
                       <div class="label label_best">Бестселлер</div></a>
                     <div class="product-card__buttons">
                       <div class="add-to-cart ab-i-add2cart">Добавить</div>
@@ -236,7 +265,10 @@
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb3.png" alt="">
+                  <div class="product-card__thumb"><a href="">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb3.webp" type="image/webp"><img src="images/dev/prod-thumb3.png" alt="">
+                      </picture>
                       <div class="label label_new">Новинка</div></a>
                     <div class="product-card__buttons">
                       <div class="add-to-cart ab-i-add2cart">Добавить</div>
@@ -251,7 +283,10 @@
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb.png" alt=""></a>
+                  <div class="product-card__thumb"><a href="">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                      </picture></a>
                     <div class="product-card__buttons">
                       <div class="add-to-cart ab-i-add2cart">Добавить</div>
                       <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
@@ -265,7 +300,10 @@
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb.png" alt=""></a>
+                  <div class="product-card__thumb"><a href="">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                      </picture></a>
                     <div class="product-card__buttons">
                       <div class="add-to-cart ab-i-add2cart">Добавить</div>
                       <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
@@ -279,7 +317,10 @@
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb.png" alt=""></a>
+                  <div class="product-card__thumb"><a href="">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                      </picture></a>
                     <div class="product-card__buttons">
                       <div class="add-to-cart ab-i-add2cart">Добавить</div>
                       <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
@@ -293,7 +334,10 @@
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb.png" alt=""></a>
+                  <div class="product-card__thumb"><a href="">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                      </picture></a>
                     <div class="product-card__buttons">
                       <div class="add-to-cart ab-i-add2cart">Добавить</div>
                       <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
@@ -405,9 +449,7 @@
     <div class="modals-hidden">
       <div class="search-city modal" id="search-city">
         <div class="modal-title">Выберите ваш город:</div>
-        <div class="input-item">
-          <input class="search-city__input input input_search" type="text" placeholder="Введите город">
-        </div>
+        <autocomplete class="search-city__autocomplete" :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
         <div class="search-city__list">
           <div class="search-city__item capital"><a href="">Москва</a></div>
           <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
@@ -445,11 +487,13 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
-    <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/flickity.pkgd.min.js" defer></script>
-    <script src="js/flickity-fade.min.js" defer></script>
-    <script src="js/jquery.fancybox.min.js" defer></script>
-    <script src="js/scripts.js" defer></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/jquery.bootstrap.custom.min.js"></script>
+    <script src="js/jquery.flickity.pkgd.min.js"></script>
+    <script src="js/jquery.flickity-fade.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/vue.autocomplete.min.js"></script>
+    <script src="js/scripts.js?v0.1.7"></script>
   </body>
 </html>

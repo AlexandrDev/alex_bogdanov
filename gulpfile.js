@@ -1,25 +1,61 @@
-const gulp = require('gulp');
-const pug = require('gulp-pug');
-const sass = require('gulp-sass');
-const gcmq = require('gulp-group-css-media-queries');
+let gulp = require('gulp'),
+    pug = require('gulp-pug'),
+    sass = require('gulp-sass'),
+    gcmq = require('gulp-group-css-media-queries'),
+    webp = require('gulp-webp'),
+    imagemin = require('gulp-imagemin');
+
+let path = {
+    build: {
+        html: 'dist',
+        css: 'dist/css',
+        img: 'dist/images',
+    },
+    src: {
+        html: 'src/pug/*.pug',
+        css: 'src/scss/**/*.scss',
+        img: 'src/images/**/*',
+    },
+    watch: {
+        html: 'src/pug/**/*.pug',
+        css: 'src/scss/**/*.scss',
+        img: 'src/images/**/*',
+    }
+};
 
 
-function buildHTML() {
-    return gulp.src('src/pug/*.pug')
+function html() {
+    return gulp.src(path.src.html)
         .pipe(pug({pretty: true}))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(path.build.html))
 }
 
-function style() {
-    return gulp.src('src/scss/**/*.scss')
+function styles() {
+    return gulp.src(path.src.css)
         .pipe(sass().on('error', sass.logError))
         .pipe(gcmq())
-        .pipe(gulp.dest('dist/css'))
+        .pipe(gulp.dest(path.build.css))
+}
+
+function images() {
+    return gulp.src(path.src.img)
+        .pipe(imagemin({
+            quality: 95,
+            verbose: true,
+        }))
+        .pipe(gulp.dest(path.build.img))
+        .pipe(gulp.src(path.src.img))
+        .pipe(webp({
+            quality: 90,
+        }))
+        .pipe(gulp.dest(path.build.img))
 }
 
 function watch() {
-    gulp.watch('src/pug/**/*.pug', buildHTML)
-    gulp.watch('src/scss/**/*.scss', style)
+    gulp.watch(path.watch.html, html)
+    gulp.watch(path.watch.css, styles)
+    gulp.watch(path.watch.img, images);
 }
 
-exports.default = gulp.series(buildHTML, style, watch);
+
+exports.default = gulp.parallel(html, styles, images, watch);

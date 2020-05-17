@@ -19,7 +19,39 @@ block content
     
     .category-wrapper.container
         .row
-            .sidebar.col-lg-3
+            .sidebar.col-lg-3.d-none.d-lg-block
+                .categories-list
+                    .categories-list__title Одежда
+                    .categories-list__item
+                        a(href="") Платья
+                    .categories-list__item
+                        a(href="") Блузы и рубашки
+                    .categories-list__item.parent.parent-opened
+                        a(href="") Джемперы и кардиганы
+                        .arrow
+                        .categories-list-sub
+                            .categories-list-sub__item.current
+                                a(href="") Свитеры
+                            .categories-list-sub__item
+                                a(href="") Кардиганы
+                    .categories-list__item
+                        a(href="") Юбки
+
+                .categories-list
+                    .categories-list__title Аксессуары
+                    .categories-list__item
+                        a(href="") Палантины
+                    .categories-list__item
+                        a(href="") Снуды
+                    .categories-list__item.parent
+                        a(href="") Сумки
+                        .arrow
+                        .categories-list-sub
+                            .categories-list-sub__item
+                                a(href="") Сумки
+                            .categories-list-sub__item
+                                a(href="") Сумки
+
 
             .category-right.col-lg-9
                 .category-filter

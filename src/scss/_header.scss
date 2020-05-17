@@ -65,6 +65,10 @@ header {
             height: 70px;
         }
 
+        @include laptop {
+            max-width: 100%;
+        }
+
         &-row {
             height: 100%;
         }

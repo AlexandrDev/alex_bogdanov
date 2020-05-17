@@ -4,13 +4,13 @@
     <title>Главная</title>
     <meta charset="UTF-8">
     <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-    <script>function setViewport(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}setViewport();</script>
+    <script>function svp(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;display=swap">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.1.7">
   </head>
   <body>
     <header>
@@ -213,7 +213,9 @@
               </div>
             </div>
             <picture class="fw-slide__background">
-              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg"><img src="images/dev/fw-slide.jpg" alt="sldie">
+              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg">
+              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.webp" type="image/webp">
+              <source srcset="images/dev/fw-slide.webp" type="image/webp"><img src="images/dev/fw-slide.jpg" alt="sldie">
             </picture>
           </div>
           <div class="fw-slide">
@@ -224,7 +226,9 @@
               </div>
             </div>
             <picture class="fw-slide__background">
-              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg"><img src="images/dev/fw-slide.jpg" alt="sldie">
+              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg">
+              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.webp" type="image/webp">
+              <source srcset="images/dev/fw-slide.webp" type="image/webp"><img src="images/dev/fw-slide.jpg" alt="sldie">
             </picture>
           </div>
         </div>
@@ -260,7 +264,11 @@
           <div class="b-heading">Акварельный Прованс</div>
           <div class="watch-catalog__content">
             <div class="watch-catalog__short">Весна/Лето 2020</div>
-            <div class="watch-catalog__image-mask"><img class="watch-catalog__image" src="images/catalog-preview.png" alt=""></div><a class="link-detailed" href="">Листать полный каталог</a>
+            <div class="watch-catalog__image-mask">
+              <picture>
+                <source srcset="images/catalog-preview.webp" type="image/webp"><img class="watch-catalog__image" src="images/catalog-preview.png" alt="">
+              </picture>
+            </div><a class="link-detailed" href="">Листать полный каталог</a>
           </div>
         </div>
       </div>
@@ -275,7 +283,10 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="product-card">
-                    <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb.png" alt=""></a>
+                    <div class="product-card__thumb"><a href="">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                        </picture></a>
                       <div class="product-card__buttons">
                         <div class="add-to-cart ab-i-add2cart">Добавить</div>
                         <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
@@ -288,7 +299,10 @@
                 </div>
                 <div class="col-md-4">
                   <div class="product-card">
-                    <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb.png" alt=""></a>
+                    <div class="product-card__thumb"><a href="">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                        </picture></a>
                       <div class="product-card__buttons">
                         <div class="add-to-cart ab-i-add2cart">Добавить</div>
                         <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
@@ -301,7 +315,10 @@
                 </div>
                 <div class="col-md-4">
                   <div class="product-card">
-                    <div class="product-card__thumb"><a href=""><img src="images/dev/prod-thumb.png" alt=""></a>
+                    <div class="product-card__thumb"><a href="">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                        </picture></a>
                       <div class="product-card__buttons">
                         <div class="add-to-cart ab-i-add2cart">Добавить</div>
                         <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
@@ -320,11 +337,18 @@
       <div class="founder-quote">
         <div class="container">
           <div class="row">
-            <div class="founder-quote__photo col-md-5"><img src="images/alexandr-bogdanov.png" alt=""></div>
+            <div class="founder-quote__photo col-md-5">
+              <picture>
+                <source srcset="images/alexandr-bogdanov.webp" type="image/webp"><img src="images/alexandr-bogdanov.png" alt="">
+              </picture>
+            </div>
             <div class="founder-quote__text col-md-7">
               <div class="b-heading"> <img class="founder-quote__quote-icon" src="images/quote.svg" alt="">Женщинам,<br>которые предпочитают не эпатировать, а очаровывать</div>
               <p>Моя одежда адресована достаточно утонченным, интеллигентным женщинам. Женщинам, чьё эстетическое «я» строится на оттенках, на полутонах. Женщинам, которые предпочитают не эпатировать, а очаровывать. У меня есть и яркие коллекции, но основа – нежные, пастельно-акварельные вещи. Они позволяют лучше передать нюансы текстуры, деталировки. В таких вещах лучше виден рисунок волокон, лучше видна строчка – все те чарующие мелочи, которые помогают влюбляться в одежду. Получается такой парадокс: будучи весьма спокойной по основному тону, вещь становится яркой. Но яркой в деталях, в нюансах.</p>
-              <div class="founder-quote__about"><img src="images/alexandr-bogdanov_thumb.png" alt="">
+              <div class="founder-quote__about">
+                <picture>
+                  <source srcset="images/alexandr-bogdanov_thumb.webp" type="image/webp"><img src="images/alexandr-bogdanov_thumb.png" alt="">
+                </picture>
                 <div class="text">Александр Богданов / Основатель и Главный Дизайнер</div>
               </div>
             </div>
@@ -340,17 +364,25 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12"><img class="inspiration__gallery" src="images/inspiration-gallery.jpg" alt=""></div>
+            <div class="col-12">
+              <picture>
+                <source srcset="images/inspiration-gallery.webp" type="image/webp"><img class="inspiration__gallery" src="images/inspiration-gallery.jpg" alt="">
+              </picture>
+            </div>
           </div>
-          <picture class="inspiration__poster">
-            <source media="(max-width:767px)" srcset="images/inspiration-poster_mob.png"><img src="images/inspiration-poster.png" alt="">
+          <picture>
+            <source media="(max-width:767px)" srcset="images/inspiration-poster_mob.png">
+            <source media="(max-width:767px)" srcset="images/inspiration-poster_mob.webp" type="image/webp">
+            <source srcset="images/inspiration-poster.webp" type="image/webp"><img class="inspiration__poster" src="images/inspiration-poster.png" alt="">
           </picture>
         </div>
       </div>
       <div class="made-form">
         <div class="container">
           <picture class="made-form__image">
-            <source media="(max-width: 1200px)" srcset="images/h-block-materials-woman-320.png"><img src="images/h-block-materials-woman.png" alt="">
+            <source media="(max-width: 1200px)" srcset="images/h-block-materials-woman-320.png">
+            <source media="(max-width: 1200px)" srcset="images/h-block-materials-woman-320.webp" type="image/webp">
+            <source srcset="images/h-block-materials-woman.webp" type="image/webp"><img src="images/h-block-materials-woman.png" alt="">
           </picture>
           <div class="row justify-content-between">
             <div class="made-form__materials col-xl-4 col-md-6">
@@ -398,14 +430,20 @@
           <div class="goods-pw__description col-md-7">
             <div class="b-heading">Alexander Bogdanov — бренд, понимающий женщин</div>
             <div class="goods-pw-description-slider">
-              <div class="item"><a class="item__photo"><img src="images/dev/0b58f76f59365cbb23933f1895be115f 1.png" alt="Платье «Миндальный цвет» в две строки"></a>
+              <div class="item"><a class="item__photo">
+                  <picture>
+                    <source srcset="images/dev/0b58f76f59365cbb23933f1895be115f.webp" type="image/webp"><img src="images/dev/0b58f76f59365cbb23933f1895be115f.png" alt="Платье «Миндальный цвет» в две строки">
+                  </picture></a>
                 <div class="item__right">
                   <div class="item__title">Платье «Миндальный цвет» в две строки</div>
                   <div class="item__price">28 700 ₽</div>
                   <div class="item__description">Характер платья задаёт ткань – крупнофактурное кружево нежных серо-розовых оттенков. Состав и оттенки делают материал тактильно приятным, подчёркивают элитарность кружева.</div><a class="link-detailed" href="">Подробнее</a>
                 </div>
               </div>
-              <div class="item"><a class="item__photo"><img src="images/dev/prod-thumb.png" alt="Пальто «Нежные струны»"></a>
+              <div class="item"><a class="item__photo">
+                  <picture>
+                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="Пальто «Нежные струны»">
+                  </picture></a>
                 <div class="item__right">
                   <div class="item__title">Пальто «Нежные струны»</div>
                   <div class="item__price">27 000 ₽</div>
@@ -416,8 +454,16 @@
           </div>
           <div class="goods-pw__photo col-md-5">
             <div class="goods-pw-photo-slider">
-              <div class="item"><img src="images/dev/8O2A1936+min 1.jpg" alt=""></div>
-              <div class="item"><img src="images/dev/8O2A1936+min 1.jpg" alt=""></div>
+              <div class="item">
+                <picture>
+                  <source srcset="images/dev/8O2A1936+min.webp" type="image/webp"><img src="images/dev/8O2A1936+min.jpg" alt="">
+                </picture>
+              </div>
+              <div class="item">
+                <picture>
+                  <source srcset="images/dev/8O2A1936+min.webp" type="image/webp"><img src="images/dev/8O2A1936+min.jpg" alt="">
+                </picture>
+              </div>
             </div>
             <div class="slider-nav">
               <div class="slider-nav__arrows">
@@ -534,9 +580,7 @@
     <div class="modals-hidden">
       <div class="search-city modal" id="search-city">
         <div class="modal-title">Выберите ваш город:</div>
-        <div class="input-item">
-          <input class="search-city__input input input_search" type="text" placeholder="Введите город">
-        </div>
+        <autocomplete class="search-city__autocomplete" :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
         <div class="search-city__list">
           <div class="search-city__item capital"><a href="">Москва</a></div>
           <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
@@ -574,11 +618,13 @@
         </div>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" defer></script>
-    <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script src="js/flickity.pkgd.min.js" defer></script>
-    <script src="js/flickity-fade.min.js" defer></script>
-    <script src="js/jquery.fancybox.min.js" defer></script>
-    <script src="js/scripts.js" defer></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/jquery.bootstrap.custom.min.js"></script>
+    <script src="js/jquery.flickity.pkgd.min.js"></script>
+    <script src="js/jquery.flickity-fade.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/vue.autocomplete.min.js"></script>
+    <script src="js/scripts.js?v0.1.7"></script>
   </body>
 </html>

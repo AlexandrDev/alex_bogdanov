@@ -16,6 +16,8 @@ block content
                         a(href=catalog_link).fw-slide__button.button.button_blue-filled Посмотреть в каталоге
                 picture.fw-slide__background
                     source(media="(max-width: 600px)", srcset="images/dev/fw-slide-600.jpg")
+                    source(media="(max-width: 600px)", srcset="images/dev/fw-slide-600.webp", type="image/webp")
+                    source(srcset="images/dev/fw-slide.webp", type="image/webp")
                     img(src="images/dev/fw-slide.jpg", alt="sldie")
 
             .fw-slide
@@ -28,6 +30,8 @@ block content
                         a(href=catalog_link).fw-slide__button.button.button_blue-filled Посмотреть в каталоге
                 picture.fw-slide__background
                     source(media="(max-width: 600px)", srcset="images/dev/fw-slide-600.jpg")
+                    source(media="(max-width: 600px)", srcset="images/dev/fw-slide-600.webp", type="image/webp")
+                    source(srcset="images/dev/fw-slide.webp", type="image/webp")
                     img(src="images/dev/fw-slide.jpg", alt="sldie")
                 
         .fw-slider__nav.container
@@ -62,7 +66,9 @@ block content
             .watch-catalog__content
                 .watch-catalog__short Весна/Лето 2020
                 .watch-catalog__image-mask
-                    img(src="images/catalog-preview.png", alt="").watch-catalog__image
+                    picture
+                        source(srcset="images/catalog-preview.webp", type="image/webp")
+                        img(src="images/catalog-preview.png", alt="").watch-catalog__image
                 a(href="").link-detailed Листать полный каталог
 
     .new-products-wrapper
@@ -86,7 +92,9 @@ block content
         .container
             .row
                 .founder-quote__photo.col-md-5
-                    img(src="images/alexandr-bogdanov.png", alt="")
+                    picture
+                        source(srcset="images/alexandr-bogdanov.webp", type="image/webp")
+                        img(src="images/alexandr-bogdanov.png", alt="")
 
                 .founder-quote__text.col-md-7
                     .b-heading 
@@ -97,7 +105,9 @@ block content
                     p Моя одежда адресована достаточно утонченным, интеллигентным женщинам. Женщинам, чьё эстетическое «я» строится на оттенках, на полутонах. Женщинам, которые предпочитают не эпатировать, а очаровывать. У меня есть и яркие коллекции, но основа – нежные, пастельно-акварельные вещи. Они позволяют лучше передать нюансы текстуры, деталировки. В таких вещах лучше виден рисунок волокон, лучше видна строчка – все те чарующие мелочи, которые помогают влюбляться в одежду. Получается такой парадокс: будучи весьма спокойной по основному тону, вещь становится яркой. Но яркой в деталях, в нюансах.
 
                     .founder-quote__about
-                        img(src="images/alexandr-bogdanov_thumb.png", alt="")
+                        picture
+                            source(srcset="images/alexandr-bogdanov_thumb.webp", type="image/webp")
+                            img(src="images/alexandr-bogdanov_thumb.png", alt="")
                         .text Александр Богданов / Основатель и Главный Дизайнер
     
     .inspiration-wrapper
@@ -108,15 +118,21 @@ block content
                     p Иллюстрации пастелью лично от Александра Богданова для каждой капсулы коллекции
             .row
                 .col-12
-                    img(src="images/inspiration-gallery.jpg", alt="").inspiration__gallery
-            picture.inspiration__poster
+                    picture
+                        source(srcset="images/inspiration-gallery.webp", type="image/webp")
+                        img(src="images/inspiration-gallery.jpg", alt="").inspiration__gallery
+            picture
                 source(media="(max-width:767px)", srcset="images/inspiration-poster_mob.png")
-                img(src="images/inspiration-poster.png", alt="")
+                source(media="(max-width:767px)", srcset="images/inspiration-poster_mob.webp", type="image/webp")
+                source(srcset="images/inspiration-poster.webp", type="image/webp")
+                img(src="images/inspiration-poster.png", alt="").inspiration__poster
 
     .made-form
         .container
             picture.made-form__image
                 source(media="(max-width: 1200px)", srcset="images/h-block-materials-woman-320.png")
+                source(media="(max-width: 1200px)", srcset="images/h-block-materials-woman-320.webp", type="image/webp")
+                source(srcset="images/h-block-materials-woman.webp", type="image/webp")
                 img(src="images/h-block-materials-woman.png", alt="")
             .row.justify-content-between
                 .made-form__materials.col-xl-4.col-md-6
@@ -154,7 +170,9 @@ block content
                 .goods-pw-description-slider
                     .item
                         a.item__photo
-                            img(src="images/dev/0b58f76f59365cbb23933f1895be115f 1.png", alt="Платье «Миндальный цвет» в две строки")
+                            picture
+                                source(srcset="images/dev/0b58f76f59365cbb23933f1895be115f.webp", type="image/webp")
+                                img(src="images/dev/0b58f76f59365cbb23933f1895be115f.png", alt="Платье «Миндальный цвет» в две строки")
 
                         .item__right
                             .item__title Платье «Миндальный цвет» в две строки
@@ -164,7 +182,9 @@ block content
                             a(href="").link-detailed Подробнее
                     .item
                         a.item__photo
-                            img(src="images/dev/prod-thumb.png", alt="Пальто «Нежные струны»")
+                            picture
+                                source(srcset="images/dev/prod-thumb.webp", type="image/webp")
+                                img(src="images/dev/prod-thumb.png", alt="Пальто «Нежные струны»")
 
                         .item__right
                             .item__title Пальто «Нежные струны»
@@ -177,9 +197,13 @@ block content
             .goods-pw__photo.col-md-5
                 .goods-pw-photo-slider
                     .item
-                        img(src="images/dev/8O2A1936+min 1.jpg", alt="")
+                        picture
+                            source(srcset="images/dev/8O2A1936+min.webp", type="image/webp")
+                            img(src="images/dev/8O2A1936+min.jpg", alt="")
                     .item
-                        img(src="images/dev/8O2A1936+min 1.jpg", alt="")
+                        picture
+                            source(srcset="images/dev/8O2A1936+min.webp", type="image/webp")
+                            img(src="images/dev/8O2A1936+min.jpg", alt="")
                 .slider-nav
                     .slider-nav__arrows
                         .arrow.arrow-prev

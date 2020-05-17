@@ -25,6 +25,16 @@ $light: #E8F0F6;
    }
 }
 
+@keyframes rotate {
+	0% {
+		transform: translateY(-50%) rotate(0deg);
+	}
+
+	to {
+		transform: translateY(-50%) rotate(359deg);
+	}
+}
+
 
 body {
     font-family: 'Gilroy', sans-serif;
@@ -56,6 +66,10 @@ a,
 input,
 button {
     outline: none;
+}
+
+picture {
+    font-size: 0;
 }
 
 .disabled {

@@ -1,7 +1,6 @@
 $(function() {
 
     $(window).resize(function() {
-        setViewport()
         set_sticky_header()
     });
 
@@ -47,6 +46,40 @@ $(function() {
         item.querySelector('.mobile-menu-back').addEventListener('click', () => item.classList.remove('expanded'));
     });
 
+
+    // autocomlete search region
+    const wikiUrl = 'https://ru.wikipedia.org';
+    const params = 'action=query&list=search&format=json&origin=*';
+
+    new Vue({
+        el: "#search-city",
+        components: {
+            Autocomplete
+        },
+        methods: {
+            search(input) {
+                const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
+          
+                return new Promise(resolve => {
+                    if (input.length < 2) {
+                        return resolve([]);
+                    }
+          
+                    fetch(url).
+                    then(response => response.json()).
+                    then(data => {
+                        resolve(data.query.search);
+                    });
+                });
+            },
+            getResultValue(result) {
+                return result.title;
+            },
+            handleSubmit(result) {
+                console.log(result.title);
+            }
+        }
+    });
 
 
     // sliders with navigation
@@ -165,6 +198,27 @@ $(function() {
         }
     });
 
+
+    $('.categories-list .parent').each(function() {
+        let $item = $(this),
+            $subcat = $item.find('> .categories-list-sub');
+        
+        $item.find('> .arrow').click(function() {
+            $item.toggleClass('parent-opened');
+
+            showSubcat();
+        });
+
+        showSubcat();
+
+        function showSubcat() {
+            if ($item.hasClass('parent-opened')) {
+                $subcat.slideDown(200);
+            } else {
+                $subcat.slideUp(200);
+            }
+        }
+    });
 
     $('.product-card').each(function() {
         let $thumb = $(this).find('.product-card__thumb'),

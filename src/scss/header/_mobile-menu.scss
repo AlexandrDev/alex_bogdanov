@@ -10,16 +10,6 @@
     transform: translateX(-100%);
     transition: all .2s;
     z-index: -1;
-    &::before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: -300px;
-        width: 300px;
-        background-color: #F1F6FA;
-    }
 
     .menu-opened & {
         opacity: 1;
