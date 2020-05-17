@@ -29,12 +29,12 @@ html(lang="ru")
 
         include _forms.pug
 
-        script(src="js/jquery.min.js")
-        script(src="js/vue.min.js")
-        script(src="js/jquery.bootstrap.custom.min.js")
-        script(src="js/jquery.flickity.pkgd.min.js")
-        script(src="js/jquery.flickity-fade.min.js")
-        script(src="js/jquery.fancybox.min.js")
-        script(src="js/vue.autocomplete.min.js")
-        script(src="js/scripts.js?" + version)
+        script(src="js/jquery.min.js", defer)
+        script(src="js/vue.min.js", defer)
+        script(src="js/jquery.bootstrap.custom.min.js", defer)
+        script(src="js/jquery.flickity.pkgd.min.js", defer)
+        script(src="js/jquery.flickity-fade.min.js", defer)
+        script(src="js/jquery.fancybox.min.js", defer)
+        script(src="js/vue.autocomplete.min.js", defer)
+        script(src="js/scripts.js?" + version, defer)
         block scripts
