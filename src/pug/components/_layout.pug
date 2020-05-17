@@ -2,7 +2,7 @@ block variables
 - var home_link = 'homepage.html'
 - var catalog_link = 'catalog.html'
 - var category_link = 'category.html'
-- var version = '0.1.7'
+- var version = 'v0.1.7'
 
 doctype html
 html(lang="ru")
@@ -17,7 +17,7 @@ html(lang="ru")
         link(rel="stylesheet" href='css/bootstrap-grid-custom.min.css')
         link(rel="stylesheet" href='css/flickity.min.css')
         link(rel="stylesheet" href='css/jquery.fancybox.min.css')
-        link(rel="stylesheet" href='css/stylesheet.css?v' + version)
+        link(rel="stylesheet" href='css/stylesheet.css?' + version)
         block styles
     body
         include _header.pug
@@ -36,5 +36,5 @@ html(lang="ru")
         script(src="js/jquery.flickity-fade.min.js")
         script(src="js/jquery.fancybox.min.js")
         script(src="js/vue.autocomplete.min.js")
-        script(src="js/scripts.js?v" + version)
+        script(src="js/scripts.js?" + version)
         block scripts
