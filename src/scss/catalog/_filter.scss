@@ -1,0 +1,193 @@
+.filter {
+    &__header, &__footer {
+        display: none;
+    }
+
+    &-collapse {
+        position: relative;
+        border-style: solid;
+        border-color: rgba(78, 91, 103, 0.2);
+
+        &__title {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            font-weight: 500;
+            font-size: 15px;
+            padding-left: 20px;
+            padding-right: 15px;
+            background: #FFFFFF;
+            cursor: pointer;
+            z-index: 1;
+            
+            &::before, &::after {
+                content: '';
+                display: block;
+                transition: all .2s ease;
+            }
+
+            &::before {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -1px;
+                height: 2px;
+                background-color: $blue;
+                opacity: 0;
+            }
+
+            &::after {
+                width: 20px;
+                height: 20px;
+                background: url("data:image/svg+xml;charset=utf8, %3Csvg width='10' height='7' fill='%234E5B67' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.6' d='M8.833 0L5 3.833 1.167 0 0 1.167l5 5 5-5L8.833 0z'/%3E%3C/svg%3E") center no-repeat;
+            }
+
+            .show & {
+                color: #132434;
+                &::before {
+                    opacity: 1;
+                }
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &__content {
+            display: none;
+            padding: 20px 10px 25px 20px;
+            
+            .button {
+                width: 100%;
+                font-size: 15px;
+                justify-content: center;
+                letter-spacing: 0.5px;
+                text-transform: none;
+                margin-top: 20px;
+            }
+        }
+
+        &__checkbox-grid {
+            display: flex;
+            flex-wrap: wrap;
+
+            .checkbox-block {
+                margin-right: 20px;
+            }
+        }
+
+        .checkbox-block {
+            margin-bottom: 12px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        &-collapse {
+            flex-grow: 1;
+            border-width: 1px 0 1px 1px;
+            &:last-child {
+                border-right-width: 1px;
+            }
+
+            &__title {
+                &::before {
+                    left: -1px;
+                    right: -1px;
+                }
+                .show & {
+                    box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.1);
+                    z-index: 2;
+                }
+            }
+            &__content {
+                position: absolute;
+                margin-top: 1px;
+                margin-left: -1px;
+                width: 260px;
+                background: #FFFFFF;
+                box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.1);
+                z-index: 999;
+            }
+        }
+    }
+
+    @include tablet {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background: #fff;
+        z-index: 200;
+
+        .fancybox-close-small {
+            top: 13px;
+            right: 15px;
+            padding: 4px;
+
+            path {
+                fill: $gray;
+            }
+        }
+
+        &__header, &__footer {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            height: 70px;
+            background: #fff;
+        }
+
+        &__header {
+            justify-content: space-between;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+            padding: 20px;
+            box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
+        }
+
+        &__content {
+            display: block;
+            height: calc(100% - 140px);
+            overflow: auto;
+        }
+
+        &-collapse {
+            border-width: 0 0 1px;
+            &__content {
+                position: relative;
+                padding-top: 25px;
+
+                .button {
+                    display: none;
+                }
+            }
+        }
+
+        &__footer {
+            justify-content: center;
+            box-shadow: 0px -10px 30px rgba(19, 36, 52, 0.05);
+
+            .button {
+                height: 50px;
+                font-weight: 400;
+                font-size: 15px;
+                text-transform: none;
+                letter-spacing: 0.025em;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+}

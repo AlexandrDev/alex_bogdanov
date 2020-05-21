@@ -26,7 +26,7 @@ block content
                         a(href="") Платья
                     .categories-list__item
                         a(href="") Блузы и рубашки
-                    .categories-list__item.parent.parent-opened
+                    .categories-list__item.parent.active
                         a(href="") Джемперы и кардиганы
                         .arrow
                         .categories-list-sub
@@ -54,11 +54,75 @@ block content
 
 
             .category-right.col-lg-9
-                .category-filter
-                    | filter
+                #category-filter.filter
+                    .filter__header Отфильтровать и упорядочить
+                    .filter__content
+                        .filter-collapse
+                            .filter-collapse__title Коллекция
+                            .filter-collapse__content
+                                .filter-collapse__collections
+                                    .checkbox-block
+                                        input#coll-1(type="checkbox").checkbox
+                                        label(for="coll-1")
+                                            .checkbox__high-label
+                                                | Прованс
+                                                span Весна/Лето 2020
+                                    .checkbox-block
+                                        input#coll-2(type="checkbox").checkbox
+                                        label(for="coll-2") Лигурия
+                                a.button.button_blue-bordered(href="") Сбросить
+                        .filter-collapse
+                            .filter-collapse__title Стиль
+                            .filter-collapse__content
+                        .filter-collapse
+                            .filter-collapse__title Тематика
+                            .filter-collapse__content
+                        .filter-collapse
+                            .filter-collapse__title Размер
+                            .filter-collapse__content
+                                .filter-collapse__checkbox-grid
+                                    .checkbox-block
+                                        input#inp-1(type="checkbox").checkbox
+                                        label(for="inp-1") 40
+                                    .checkbox-block
+                                        input#inp-2(type="checkbox").checkbox
+                                        label(for="inp-2") 40
+                                    .checkbox-block
+                                        input#inp-4(type="checkbox").checkbox
+                                        label(for="inp-4") 40
+                                    .checkbox-block
+                                        input#inp-6(type="checkbox").checkbox.disabled
+                                        label(for="inp-6") 40
+                                    .checkbox-block
+                                        input#inp-8(type="checkbox").checkbox
+                                        label(for="inp-8") Без размера
+                                a.button.button_blue-bordered(href="") Сбросить
+                        .filter-collapse
+                            .filter-collapse__title Цвет
+                            .filter-collapse__content
+                    
+                    .filter__footer
+                        a.button.button_blue-bordered(href="") Сбросить
+                        a.button.button_blue-filled(href="") Применить
 
                 .category-sort
-                    | sort
+                    a(href="javascript:;", data-fancybox data-src="#category-filter", data-touch="false").mobile-filter-button Отфильтровать и упорядочить
+                    .order-by
+                        span Упорядочить
+                        a(href="").order-by__item.default по умолчанию
+                        a(href="").order-by__item.asc.selected новинки
+                        a(href="").order-by__item популярность
+                        a(href="").order-by__item.desc цена
+                        a(href="").order-by__item скидка
+                    .view-type
+                        span Вид:
+                        a(href="").view-type__item.view-type__item_3cols.active
+                            include ../svg-to-css-compressed/view-type-3.svg
+                        a(href="").view-type__item.view-type__item_2cols
+                            include ../svg-to-css-compressed/view-type-2.svg
+                        a(href="").view-type__item.view-type__item_1col
+                            include ../svg-to-css-compressed/view-type-1.svg
+
 
 
                 .category-items.row

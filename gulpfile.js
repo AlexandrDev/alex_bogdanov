@@ -3,7 +3,8 @@ let gulp = require('gulp'),
     sass = require('gulp-sass'),
     gcmq = require('gulp-group-css-media-queries'),
     webp = require('gulp-webp'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    svgcss = require('gulp-svg-css');
 
 let path = {
     build: {
@@ -41,7 +42,7 @@ function images() {
     return gulp.src(path.src.img)
         .pipe(imagemin({
             quality: 95,
-            verbose: true,
+            progressive: true,
         }))
         .pipe(gulp.dest(path.build.img))
         .pipe(gulp.src(path.src.img))
@@ -51,11 +52,23 @@ function images() {
         .pipe(gulp.dest(path.build.img))
 }
 
-function watch() {
-    gulp.watch(path.watch.html, html)
-    gulp.watch(path.watch.css, styles)
-    gulp.watch(path.watch.img, images);
+function svgInCss() {
+    return gulp.src('src/svg-to-css/*.svg')
+        .pipe(imagemin())
+        .pipe(gulp.dest('src/svg-to-css-compressed'))
+        .pipe(gulp.src('src/svg-to-css-compressed/*.svg'))
+        .pipe(svgcss({
+            addSize: true
+        }))
+        .pipe(gulp.dest('src/svg-to-css-compressed'))
 }
 
 
-exports.default = gulp.parallel(html, styles, images, watch);
+function watch() {
+    gulp.watch(path.watch.html, html)
+    gulp.watch(path.watch.css, styles)
+    gulp.watch(path.watch.img, images)
+    gulp.watch('src/svg-to-css/*.svg', svgInCss)
+}
+
+exports.default = gulp.parallel(html, styles, images, svgInCss, watch);

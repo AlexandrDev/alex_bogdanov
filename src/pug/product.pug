@@ -1,0 +1,22 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Товар'
+    - var mainCls = 'page-product'
+
+block content
+
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                a(href=catalog_link) Каталог
+            .breadcrumbs__item
+                a(href=category_link) Платья
+            .breadcrumbs__item
+                span Платье «Зазеркалье»
+    
+    .product-wrapper
+        .container
+
+            h1.like-h1 Платье «Зазеркалье» в две строки

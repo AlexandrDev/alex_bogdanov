@@ -1,5 +1,20 @@
 .input-item {
     position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    .show-password {
+        position: absolute;
+        top: 14px;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        z-index: 1;
+        cursor: pointer;
+    }
 }
 
 .input,
@@ -117,6 +132,110 @@
             background: #FFFFFF;
             box-shadow: 0px 5px 30px rgba(19, 36, 52, 0.15);
             border-radius: 3px;
+        }
+    }
+}
+
+.checkbox, .radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    + label {
+        position: relative;
+        display: inline-flex;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            display: block; 
+        }
+
+        &::before {
+            background-color: #fff;
+            border: 1px solid rgba(78, 91, 103, 0.2);
+        }
+
+        &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            opacity: 0;
+            transition: opacity .12s ease;
+        }
+    }
+
+    &:checked + label::after {
+        opacity: 1;
+    }
+
+    &:disabled + label,
+    &.disabled + label {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+}
+
+.checkbox {
+    + label {
+        line-height: 24px;
+        &::before {
+            flex: 0 0 24px;
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 3px;
+        }
+
+        &::after {
+            top: 7px;
+            bottom: auto;
+            left: 6px;
+            width: 12px;
+            height: 7px;
+            border-width: 0 0 2px 2px;
+            border-color: $blue;
+            border-style: solid;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__high-label {
+        span {
+            display: block;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: #132434;
+            opacity: 0.5;
+        }
+    }
+}
+
+.radio {
+    + label {
+        align-items: center;
+
+        &::before {
+            flex: 0 0 18px;
+            width: 18px;
+            height: 18px;
+            margin-right: 12px;
+            border-radius: 50%;
+        }
+
+        &::after {
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            background: $blue;
+            border-radius: 50%;
         }
     }
 }

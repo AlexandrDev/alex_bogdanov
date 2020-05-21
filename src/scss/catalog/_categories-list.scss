@@ -68,13 +68,13 @@
         }
     }
 
-    .parent-opened > a,
+    .active > a,
     .current > a {
         font-weight: 600;
         color: $dark;
     }
 
-    .parent-opened  .arrow {
+    .active  .arrow {
         transform: rotate(-180deg);
     }
 }

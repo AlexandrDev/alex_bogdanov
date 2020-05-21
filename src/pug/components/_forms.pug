@@ -74,64 +74,64 @@
                 a(href="") Ярославль
 
 
-//- #auth-form.auth-form.modal
-//-     .auth-form__type
-//-         a(href="").modal-title Вход
-//-         a(href="").modal-title Регистрация
+    #auth-form.auth-form.modal
+        .auth-form__type
+            .modal-title(@click="showLogin", :class="{ active: loginShowed }") Вход
+            .modal-title(@click="showSignup", :class="{ active: signupShowed }") Регистрация
 
-//-     .login-form
-//-         p Авторизуйтесь, если вы уже зарегистрированы на нашем сайте
-//-         form#login-form(action="")
-//-             .input-item
-//-                 input(type="email").input
-//-                 label Email
-//-             .input-item
-//-                 input(type="password").input
-//-                 label Пароль
+        .form.form_login(:class="{ active: loginShowed }")
+            p Авторизуйтесь, если вы уже зарегистрированы на нашем сайте
+            form#login-form(action="")
+                .input-item
+                    input(type="email").input
+                    label Email
+                .input-item
+                    .show-password.ab-i-password.hidden
+                    input(type="password").input
+                    label Пароль
+                .form__helpers.input-item
+                    input#remember-passwowrd(type="checkbox").checkbox
+                    label(for="remember-passwowrd") Запомнить меня
+                    a(href="").link Забыли пароль?
+                button.form__button.button.button_blue-filled Войти в личный кабинет
 
-//-             a(href="").button.button_blue-filled Войти в личный кабинет
-        
-//-         .login-form-services
-//-             .login-form-services__title Или войдите
-//-                 br
-//-                 | через сервисы
-//-             .socials.socials_light
-//-                 a(href="").socials__link.ab-i-ggl
-//-                 a(href="").socials__link.ab-i-fb
-//-                 a(href="").socials__link.ab-i-inst
-//-                 a(href="").socials__link.ab-i-vk
+            .form-services
+                .form-services__title Или войдите
+                    br
+                    | через сервисы
+                .socials.socials_light
+                    a(href="").socials__link.ab-i-ggl
+                    a(href="").socials__link.ab-i-fb
+                    a(href="").socials__link.ab-i-inst
+                    a(href="").socials__link.ab-i-vk
 
-
-//-     .signup-form
-//-         .signup-form-services
-//-             .signup-form-services__title Регистрация
-//-                 br
-//-                 | через сервисы
-//-             .socials.socials_light
-//-                 a(href="").socials__link.ab-i-ggl
-//-                 a(href="").socials__link.ab-i-fb
-//-                 a(href="").socials__link.ab-i-inst
-//-                 a(href="").socials__link.ab-i-vk
-//-         p Или заполните поля ниже
-//-         form#signup-form(action="")
-//-             .input-item
-//-                 input(type="email").input
-//-                 label Email
-//-             .input-item
-//-                 input(type="password").input
-//-                 label Пароль
-//-             .input-item
-//-                 input(type="password").input
-//-                 label Повторите пароль
-
-//-             a(href="").button.button_blue-filled Зарегистрироваться
-
-    //- .input-item
-    //-     input(type="text").input.invalid
-    //-     label Ваше имя 
-    //- .input-item
-    //-     input(type="text").input.ok
-    //-     label Ваше имя 
-    //- .input-item
-    //-     input(type="text").input.disabled
-    //-     label Ваше имя 
+        .form.form_signup(:class="{ active: signupShowed }")
+            .form-services
+                .form-services__title Регистрация
+                    br
+                    | через сервисы
+                .socials.socials_light
+                    a(href="").socials__link.ab-i-ggl
+                    a(href="").socials__link.ab-i-fb
+                    a(href="").socials__link.ab-i-inst
+                    a(href="").socials__link.ab-i-vk
+            p Или заполните поля ниже
+            form#signup-form(action="")
+                .input-item
+                    input(type="email").input
+                    label Email
+                .input-item
+                    .show-password.ab-i-password.hidden
+                    input(type="password").input
+                    label Пароль
+                .input-item
+                    .show-password.ab-i-password.showed
+                    input(type="password").input
+                    label Повторите пароль
+                .input-item
+                    input#iwholesale(type="checkbox").checkbox
+                    label(for="iwholesale") Я оптовый покупатель
+                button.form__button.button.button_blue-filled Войти в личный кабинет
+            .form__privacy Регистрируя аккаунт, вы принимаете 
+                a(href="").link Условия пользовательского соглашения 
+                | «Alexander Bogdanov».

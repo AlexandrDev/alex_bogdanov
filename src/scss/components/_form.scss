@@ -1,0 +1,71 @@
+.form {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    &-services {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: -60px;
+        margin-right: -60px;
+        padding-left: 60px;
+        padding-right: 60px;
+    
+        &__title {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 5px;
+        }
+    
+        .socials__link:not(:last-child) {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__helpers {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    &__privacy {
+        font-size: 15px;
+        line-height: 22px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+
+    &_login {
+        form {
+            margin-bottom: 70px;
+        }
+
+        .form-services {
+            padding-top: 32px;
+            padding-bottom: 28px;
+            background: #F1F6FA;
+        }
+    }
+
+    &_signup {
+        .form-services {
+            margin-bottom: 30px;
+        }
+    }
+}

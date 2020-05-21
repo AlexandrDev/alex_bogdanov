@@ -10,8 +10,7 @@ $(function() {
 
 
     // stisky-header
-    let header_h = $('header').height(),
-        header_top_h = $('.header__top').height();
+    let header_top_h = $('.header__top').height();
         
     set_sticky_header();
 
@@ -25,6 +24,10 @@ $(function() {
     
 
     $("[data-toggle='dropdown']").dropdown();
+
+    $('.filter-collapse').on('click', '.dropdown-menu', function(e) {
+        e.stopPropagation();
+    });
 
 
     $('.hamburger').click(function() {
@@ -51,7 +54,7 @@ $(function() {
     const wikiUrl = 'https://ru.wikipedia.org';
     const params = 'action=query&list=search&format=json&origin=*';
 
-    new Vue({
+    let searchCity = new Vue({
         el: "#search-city",
         components: {
             Autocomplete
@@ -77,6 +80,25 @@ $(function() {
             },
             handleSubmit(result) {
                 console.log(result.title);
+            }
+        }
+    });
+
+
+    let authForm = new Vue({
+        el: "#auth-form",
+        data: {
+            loginShowed: true,
+            signupShowed: false
+        },
+        methods: {
+            showLogin() {
+                this.loginShowed = true;
+                this.signupShowed = false;
+            },
+            showSignup() {
+                this.loginShowed = false;
+                this.signupShowed = true;
             }
         }
     });
@@ -204,21 +226,35 @@ $(function() {
             $subcat = $item.find('> .categories-list-sub');
         
         $item.find('> .arrow').click(function() {
-            $item.toggleClass('parent-opened');
-
+            $item.toggleClass('active');
             showSubcat();
         });
 
         showSubcat();
 
         function showSubcat() {
-            if ($item.hasClass('parent-opened')) {
+            if ($item.hasClass('active')) {
                 $subcat.slideDown(200);
             } else {
                 $subcat.slideUp(200);
             }
         }
     });
+
+
+    $('.filter-collapse').each(function() {
+        let $item = $(this),
+            $title = $item.find('.filter-collapse__title'),
+            $content = $item.find('.filter-collapse__content');
+        
+        $title.click(function() {
+            $item.toggleClass('show');
+            $content.slideToggle(200);
+        });
+    });
+
+
+
 
     $('.product-card').each(function() {
         let $thumb = $(this).find('.product-card__thumb'),

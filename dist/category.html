@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.1.7">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.1.8">
   </head>
   <body>
     <header>
@@ -109,8 +109,7 @@
           </div>
           <div class="header-icons col-lg-3 col-auto ml-auto">
             <div class="header-icons__item account"><a href="" title="Личный кабинет" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#4e5b67" stroke-width="2"><circle cx="10" cy="5" r="4"/><path d="M2.353 16.103A6 6 0 0 1 8.045 12h3.91a6 6 0 0 1 5.692 4.103l.527 1.58A1 1 0 0 1 17.225 19H2.775a1 1 0 0 1-.949-1.316l.527-1.58z"/></svg></a>
-              <div class="account__dropdown dropdown-menu"><a class="high-link" href="">Вход</a>
-                <a class="high-link" href="">Личные данные</a>
+              <div class="account__dropdown dropdown-menu"><a class="high-link" href="javascript:;" data-fancybox data-src="#auth-form" data-touch="false">Личные данные</a>
                 <a class="high-link" href="">Оформленные заказы</a>
                 <a class="high-link" href="">Избранные товары</a>
                 <a class="high-link" href="">Адреса доставки</a>
@@ -219,7 +218,7 @@
               <div class="categories-list__title">Одежда</div>
               <div class="categories-list__item"><a href="">Платья</a></div>
               <div class="categories-list__item"><a href="">Блузы и рубашки</a></div>
-              <div class="categories-list__item parent parent-opened"><a href="">Джемперы и кардиганы</a>
+              <div class="categories-list__item parent active"><a href="">Джемперы и кардиганы</a>
                 <div class="arrow"></div>
                 <div class="categories-list-sub">
                   <div class="categories-list-sub__item current"><a href="">Свитеры</a></div>
@@ -242,12 +241,76 @@
             </div>
           </div>
           <div class="category-right col-lg-9">
-            <div class="category-filter">filter</div>
-            <div class="category-sort">sort</div>
+            <div class="filter" id="category-filter">
+              <div class="filter__header">Отфильтровать и упорядочить</div>
+              <div class="filter__content">
+                <div class="filter-collapse">
+                  <div class="filter-collapse__title">Коллекция</div>
+                  <div class="filter-collapse__content">
+                    <div class="filter-collapse__collections">
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="coll-1" type="checkbox">
+                        <label for="coll-1">
+                          <div class="checkbox__high-label">Прованс<span>Весна/Лето 2020</span></div>
+                        </label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="coll-2" type="checkbox">
+                        <label for="coll-2">Лигурия</label>
+                      </div>
+                    </div><a class="button button_blue-bordered" href="">Сбросить</a>
+                  </div>
+                </div>
+                <div class="filter-collapse">
+                  <div class="filter-collapse__title">Стиль</div>
+                  <div class="filter-collapse__content"></div>
+                </div>
+                <div class="filter-collapse">
+                  <div class="filter-collapse__title">Тематика</div>
+                  <div class="filter-collapse__content"></div>
+                </div>
+                <div class="filter-collapse">
+                  <div class="filter-collapse__title">Размер</div>
+                  <div class="filter-collapse__content">
+                    <div class="filter-collapse__checkbox-grid">
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="inp-1" type="checkbox">
+                        <label for="inp-1">40</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="inp-2" type="checkbox">
+                        <label for="inp-2">40</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="inp-4" type="checkbox">
+                        <label for="inp-4">40</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox disabled" id="inp-6" type="checkbox">
+                        <label for="inp-6">40</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="inp-8" type="checkbox">
+                        <label for="inp-8">Без размера</label>
+                      </div>
+                    </div><a class="button button_blue-bordered" href="">Сбросить</a>
+                  </div>
+                </div>
+                <div class="filter-collapse">
+                  <div class="filter-collapse__title">Цвет</div>
+                  <div class="filter-collapse__content"></div>
+                </div>
+              </div>
+              <div class="filter__footer"><a class="button button_blue-bordered" href="">Сбросить</a><a class="button button_blue-filled" href="">Применить</a></div>
+            </div>
+            <div class="category-sort"><a class="mobile-filter-button" href="javascript:;" data-fancybox data-src="#category-filter" data-touch="false">Отфильтровать и упорядочить</a>
+              <div class="order-by"><span>Упорядочить</span><a class="order-by__item default" href="">по умолчанию</a><a class="order-by__item asc selected" href="">новинки</a><a class="order-by__item" href="">популярность</a><a class="order-by__item desc" href="">цена</a><a class="order-by__item" href="">скидка</a></div>
+              <div class="view-type"><span>Вид:</span><a class="view-type__item view-type__item_3cols active" href=""><svg width="27" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H0v8h7V0zm10 0H9v8h8V0zm2 0h8v8h-8V0zM7 10H0v8h7v-8zm2 0h8v8H9v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_2cols" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M8 0H0v8h8V0zm10 0h-8v8h8V0zM0 10h8v8H0v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_1col" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h18v18H0z"/></svg></a></div>
+            </div>
             <div class="category-items row">
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href="">
+                  <div class="product-card__thumb"><a href="product.html">
                       <picture>
                         <source srcset="images/dev/prod-thumb2.webp" type="image/webp"><img src="images/dev/prod-thumb2.png" alt="">
                       </picture>
@@ -258,14 +321,14 @@
                     </div>
                   </div>
                   <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="">Блузон «Овация»</a>
+                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Блузон «Овация»</a>
                     <div class="product-card__price"><span>35 990 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href="">
+                  <div class="product-card__thumb"><a href="product.html">
                       <picture>
                         <source srcset="images/dev/prod-thumb3.webp" type="image/webp"><img src="images/dev/prod-thumb3.png" alt="">
                       </picture>
@@ -276,14 +339,14 @@
                     </div>
                   </div>
                   <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="">Платье «Поцелуй души» еще пара строк на всякий случай</a>
+                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Платье «Поцелуй души» еще пара строк на всякий случай</a>
                     <div class="product-card__price"><span>14 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href="">
+                  <div class="product-card__thumb"><a href="product.html">
                       <picture>
                         <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
                       </picture></a>
@@ -293,14 +356,14 @@
                     </div>
                   </div>
                   <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="">Пальто «Нежные струны»</a>
+                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
                     <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href="">
+                  <div class="product-card__thumb"><a href="product.html">
                       <picture>
                         <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
                       </picture></a>
@@ -310,14 +373,14 @@
                     </div>
                   </div>
                   <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="">Пальто «Нежные струны»</a>
+                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
                     <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href="">
+                  <div class="product-card__thumb"><a href="product.html">
                       <picture>
                         <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
                       </picture></a>
@@ -327,14 +390,14 @@
                     </div>
                   </div>
                   <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="">Пальто «Нежные струны»</a>
+                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
                     <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
                   </div>
                 </div>
               </div>
               <div class="col-md-4 col-6">
                 <div class="product-card">
-                  <div class="product-card__thumb"><a href="">
+                  <div class="product-card__thumb"><a href="product.html">
                       <picture>
                         <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
                       </picture></a>
@@ -344,7 +407,7 @@
                     </div>
                   </div>
                   <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="">Пальто «Нежные струны»</a>
+                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
                     <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
                   </div>
                 </div>
@@ -486,6 +549,64 @@
           <div class="search-city__item"><a href="">Ярославль</a></div>
         </div>
       </div>
+      <div class="auth-form modal" id="auth-form">
+        <div class="auth-form__type">
+          <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
+          <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
+        </div>
+        <div class="form form_login" :class="{ active: loginShowed }">
+          <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
+          <form id="login-form" action="">
+            <div class="input-item">
+              <input class="input" type="email">
+              <label>Email</label>
+            </div>
+            <div class="input-item">
+              <div class="show-password ab-i-password hidden"></div>
+              <input class="input" type="password">
+              <label>Пароль</label>
+            </div>
+            <div class="form__helpers input-item">
+              <input class="checkbox" id="remember-passwowrd" type="checkbox">
+              <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
+            </div>
+            <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          </form>
+          <div class="form-services">
+            <div class="form-services__title">Или войдите<br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+        </div>
+        <div class="form form_signup" :class="{ active: signupShowed }">
+          <div class="form-services">
+            <div class="form-services__title">Регистрация<br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+          <p>Или заполните поля ниже</p>
+          <form id="signup-form" action="">
+            <div class="input-item">
+              <input class="input" type="email">
+              <label>Email</label>
+            </div>
+            <div class="input-item">
+              <div class="show-password ab-i-password hidden"></div>
+              <input class="input" type="password">
+              <label>Пароль</label>
+            </div>
+            <div class="input-item">
+              <div class="show-password ab-i-password showed"></div>
+              <input class="input" type="password">
+              <label>Повторите пароль</label>
+            </div>
+            <div class="input-item">
+              <input class="checkbox" id="iwholesale" type="checkbox">
+              <label for="iwholesale">Я оптовый покупатель</label>
+            </div>
+            <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          </form>
+          <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
+        </div>
+      </div>
     </div>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/vue.min.js" defer></script>
@@ -494,6 +615,6 @@
     <script src="js/jquery.flickity-fade.min.js" defer></script>
     <script src="js/jquery.fancybox.min.js" defer></script>
     <script src="js/vue.autocomplete.min.js" defer></script>
-    <script src="js/scripts.js?v0.1.7" defer></script>
+    <script src="js/scripts.js?v0.1.8" defer></script>
   </body>
 </html>
