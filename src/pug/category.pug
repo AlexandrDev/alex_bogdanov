@@ -58,8 +58,8 @@ block content
                     .filter__header Отфильтровать и упорядочить
                     .filter__content
                         .filter-collapse
-                            .filter-collapse__title Коллекция
-                            .filter-collapse__content
+                            .filter-collapse__title(data-toggle="dropdown") Коллекция
+                            .filter-collapse__content.dropdown-menu
                                 .filter-collapse__collections
                                     .checkbox-block
                                         input#coll-1(type="checkbox").checkbox
@@ -72,14 +72,34 @@ block content
                                         label(for="coll-2") Лигурия
                                 a.button.button_blue-bordered(href="") Сбросить
                         .filter-collapse
-                            .filter-collapse__title Стиль
-                            .filter-collapse__content
+                            .filter-collapse__title(data-toggle="dropdown") Стиль
+                            .filter-collapse__content.dropdown-menu
+                                .checkbox-block
+                                    input#style1(type="checkbox").checkbox
+                                    label(for="style1") Городской
+                                .checkbox-block
+                                    input#style2(type="checkbox").checkbox
+                                    label(for="style2") Для дачи
+                                .checkbox-block
+                                    input#style3(type="checkbox").checkbox
+                                    label(for="style3") Не жалко запачкать
+                                a.button.button_blue-bordered(href="") Сбросить
                         .filter-collapse
-                            .filter-collapse__title Тематика
-                            .filter-collapse__content
+                            .filter-collapse__title(data-toggle="dropdown") Тематика
+                            .filter-collapse__content.dropdown-menu
+                                .checkbox-block
+                                    input#theme1(type="checkbox").checkbox
+                                    label(for="theme1") Муж выгнал из дома
+                                .checkbox-block
+                                    input#theme2(type="checkbox").checkbox
+                                    label(for="theme2") Корпорат в офисе
+                                .checkbox-block
+                                    input#theme3(type="checkbox").checkbox
+                                    label(for="theme3") Туса с подругами
+                                a.button.button_blue-bordered(href="") Сбросить
                         .filter-collapse
-                            .filter-collapse__title Размер
-                            .filter-collapse__content
+                            .filter-collapse__title(data-toggle="dropdown") Размер
+                            .filter-collapse__content.dropdown-menu
                                 .filter-collapse__checkbox-grid
                                     .checkbox-block
                                         input#inp-1(type="checkbox").checkbox
@@ -98,13 +118,21 @@ block content
                                         label(for="inp-8") Без размера
                                 a.button.button_blue-bordered(href="") Сбросить
                         .filter-collapse
-                            .filter-collapse__title Цвет
-                            .filter-collapse__content
-                    
+                            .filter-collapse__title(data-toggle="dropdown") Цвет
+                            .filter-collapse__content.dropdown-menu.dropdown-menu-right
+                                .checkbox-block
+                                    input#color1(type="checkbox").checkbox
+                                    label(for="color1") Белый
+                                .checkbox-block
+                                    input#color2(type="checkbox").checkbox
+                                    label(for="color2") Красный
+                                .checkbox-block
+                                    input#color3(type="checkbox").checkbox
+                                    label(for="color3") Фиолетовый
+                                a.button.button_blue-bordered(href="") Сбросить
                     .filter__footer
                         a.button.button_blue-bordered(href="") Сбросить
                         a.button.button_blue-filled(href="") Применить
-
                 .category-sort
                     a(href="javascript:;", data-fancybox data-src="#category-filter", data-touch="false").mobile-filter-button Отфильтровать и упорядочить
                     .order-by
@@ -117,13 +145,11 @@ block content
                     .view-type
                         span Вид:
                         a(href="").view-type__item.view-type__item_3cols.active
-                            include ../svg-to-css-compressed/view-type-3.svg
+                            include ../svg-min/view-type-3.svg
                         a(href="").view-type__item.view-type__item_2cols
-                            include ../svg-to-css-compressed/view-type-2.svg
+                            include ../svg-min/view-type-2.svg
                         a(href="").view-type__item.view-type__item_1col
-                            include ../svg-to-css-compressed/view-type-1.svg
-
-
+                            include ../svg-min/view-type-1.svg
 
                 .category-items.row
                     .col-md-4.col-6
@@ -142,7 +168,7 @@ block content
                     .pagination
                         .prev 
                             a(href="")
-                                include ./svg/pagination-prev.svg
+                                include ../svg-min/pagination-prev.svg
                                 span.command Ctrl, 
                                 | Предыдущая
                         .pages
@@ -167,7 +193,7 @@ block content
                         .next 
                             a(href="") Следующая
                                 span.command , Ctrl
-                                include ./svg/pagination-next.svg                   
+                                include ../svg-min/pagination-next.svg                   
 
         .category-description
             p Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут. Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.

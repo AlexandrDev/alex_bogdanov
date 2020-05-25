@@ -15,8 +15,85 @@ block content
                 a(href=category_link) Платья
             .breadcrumbs__item
                 span Платье «Зазеркалье»
-    
-    .product-wrapper
-        .container
 
-            h1.like-h1 Платье «Зазеркалье» в две строки
+        .next-prev
+            a(href="").next-prev__item.prev
+                include ../svg-min/pagination-prev.svg
+                | Предыдущая
+            span.det |
+            a(href="").next-prev__item.next
+                | Следующая
+                include ../svg-min/pagination-next.svg
+    
+    .product
+        .container
+            .row
+                .product-photo-slider.col-lg-6
+                    | ph slider
+                
+
+                .product-info.col-lg-6
+                    .product-info__top
+                        .product-info__article Арт. 12365478
+                        a(href="").share Поделиться
+                        
+                    h1.like-h1 Платье «Зазеркалье» в две строки
+                    
+                    .price-row
+                        .price
+                            span 14 000 ₽
+                            span.old 17 600 ₽
+                            
+                        .stock-status.in-stock
+                            | В наличии
+                        //- .stock-status.out-of-stock
+                        //-     | Нет в наличии
+                        //- .stock-status.low-stock
+                        //-     | Товар заканчивается
+                    
+                    .choise-size
+                        .choise-size__top
+                            | Выберите размер
+                            a(href="").choise-size__helper Какой у меня размер?
+                    
+
+                        .choise-size__list
+                            .choise-size__item
+                                input#size40(type="radio", name="size")
+                                label(for="size40") 40
+                            .choise-size__item
+                                input#size42(type="radio", name="size")
+                                label(for="size42") 42
+                            .choise-size__item
+                                input#size44(type="radio", name="size")
+                                label(for="size44") 44
+                            .choise-size__item
+                                input#size46(type="radio", name="size", disabled)
+                                label(for="size46") 46
+
+                    .buttons
+                        a(href="").button.button_blue-filled Добавить в корзину
+                        a(href="").add-to-wishlist Добавить в избранное
+                    
+
+                    .description
+                        p Любая девушка трепетно и воодушевленно относится к выбору наряда для выхода в свет. Важно продемонстрировать свою красоту и ослепить всех неповторимым нарядом. Платье с сеткой никого не оставляет равнодушным  –  модель формирует образ с лёгкой  размытостью границ, что придаёт ему загадки и притягательности. С платьем «Звон фиалки» девушка – всегда в центре внимания, взглядов, обсуждений.
+
+    
+    .product-slider-wrapper.filled-bottom
+        .container
+            .product-slider-title.like-h2 Дополните образ
+            .product-slider
+                - for (var x = 0; x < 5; x++)
+                    include ./components/_product-card-full.pug
+                .product-slider__navs
+                    .arrow.arrow-prev                    
+                        include ../svg-min/slider-arrow-prev_small.svg
+                    .arrow.arrow-next
+                        include ../svg-min/slider-arrow-next_small.svg
+    
+    .page-bottom-info.container
+        p 
+            | Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут.
+            br
+            | Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.

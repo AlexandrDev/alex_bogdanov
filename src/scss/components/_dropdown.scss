@@ -3,7 +3,7 @@
     top: 110% !important;
     opacity: 0;
     visibility: hidden;
-    transform: translate3d(0, 0, 0) !important;
+    transform: none !important;
     transition: top .2s, opacity .2s, visibility .2s;
     z-index: 100;
     &::before {
@@ -14,6 +14,11 @@
         pointer-events: none;
         z-index: -1;
         background: inherit;
+    }
+
+    &-right {
+        right: 0 !important;
+        left: auto !important;
     }
 
     &.show {

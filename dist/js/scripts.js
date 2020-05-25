@@ -203,11 +203,7 @@ $(function() {
                     $next.addClass('disabled');
                 } else {
                     $next.removeClass('disabled');
-                }
-                console.log(slides_count-1);
-                
-                console.log(index);
-                
+                }                
             });
 
             $prev.on('click', function() {
@@ -240,20 +236,6 @@ $(function() {
             }
         }
     });
-
-
-    $('.filter-collapse').each(function() {
-        let $item = $(this),
-            $title = $item.find('.filter-collapse__title'),
-            $content = $item.find('.filter-collapse__content');
-        
-        $title.click(function() {
-            $item.toggleClass('show');
-            $content.slideToggle(200);
-        });
-    });
-
-
 
 
     $('.product-card').each(function() {

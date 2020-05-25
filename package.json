@@ -1,7 +1,6 @@
 {
     "scripts": {
-        "gulp": "gulp",
-        "compressSvg": "gulp compressSvg"
+        "gulp": "gulp"
     },
     "devDependencies": {
         "gulp": "^4.0.2",

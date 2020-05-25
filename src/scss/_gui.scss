@@ -83,6 +83,7 @@ picture {
 
 .disabled {
     pointer-events: none;
+    opacity: 0.3;
 }
 
 .fancybox-bg {
@@ -174,7 +175,6 @@ h2, .like-h2 {
         }
         &.disabled {
             background: #2A71B1;
-            opacity: 0.15;
         }
     }
 

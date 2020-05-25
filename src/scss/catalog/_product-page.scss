@@ -1,0 +1,205 @@
+.page-product {
+    .product-slider-wrapper {
+        padding-bottom: 82px;
+        margin-bottom: 100px;
+    }
+
+    .page-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .next-prev {
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        line-height: 20px;
+
+        &__item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            svg path {
+                transition: stroke .16s ease;
+            }
+
+            &.prev svg {
+                margin-right: 7px;
+            }
+            &.next svg {
+                margin-left: 7px;
+            }
+
+            &:hover {
+                color: $blue;
+
+                svg path {
+                    stroke: $blue;
+                }
+            }
+        }
+
+        .det {
+            margin: 0 10px;
+        }
+    }
+}
+
+.product {
+    position: relative;
+
+    &-info {
+        padding-left: 50px;
+        margin-bottom: 120px;
+    
+        &__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    
+        &__article {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+
+        .price {
+            &-row {
+                display: flex;
+                align-items: center;
+                margin-bottom: 30px;
+            }
+    
+            font-size: 24px;
+            line-height: 30px;
+            color: $dark;
+    
+            span {
+                white-space: nowrap;
+            }
+    
+            .old {
+                text-decoration-line: line-through;
+                color: $blue;
+                margin-left: 20px;
+            }
+        }
+    
+        .stock-status {
+            font-size: 15px;
+            padding-left: 30px;
+            margin-left: 30px;
+            background-position: center left;
+            background-repeat: no-repeat;
+    
+            &.in-stock {
+    
+            }
+            &.out-of-stock {
+    
+            }
+            &.low-stock {
+    
+            }
+        }
+    
+        .choise-size {
+            &__top {
+                font-size: 15px;
+                color: $dark;
+                margin-bottom: 20px;
+            }
+
+            &__helper {
+                position: relative;
+                color: $gray;
+                margin-left: 21px;
+                border-bottom: 1px dashed;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 1px;
+                    height: 15px;
+                    position: absolute;
+                    top: 0;
+                    left: -11px;
+                    bottom: 0;
+                    margin: auto;
+                    background-color: rgba(78, 91, 103, 0.5);
+                    pointer-events: none;
+                }
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+
+            &__list {
+                display: flex;
+            }
+
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
+
+                input {
+                    display: none;
+                }
+
+                label {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                    background: #FFF;
+                    border: 1px dashed #67ADD7;
+                    border-radius: 30px;
+                    font-size: 15px;
+                    line-height: 38px;
+                    text-align: center;
+                    color: #4E5B67;
+                    cursor: pointer;
+                    transition: all .16s ease;
+                }
+
+                input:checked + label,
+                label:hover {
+                    background: #67ADD7;
+                    color: #ffffff;
+                }
+
+                label:active {
+                    background: #428CC3;
+                    border-color: #428CC3;
+                }
+
+                input:disabled + label {
+                    pointer-events: none;
+                    opacity: 0.3;
+                }
+            }
+        }
+    
+    
+        .buttons {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+    
+            .add-to-wishlist {
+                margin-left: 30px;
+            }
+        }
+    
+        .description {
+            font-size: 15px;
+            margin: 30px 0;
+        }
+    }
+}

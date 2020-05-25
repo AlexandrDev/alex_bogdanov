@@ -52,15 +52,13 @@ function images() {
         .pipe(gulp.dest(path.build.img))
 }
 
-function svgInCss() {
-    return gulp.src('src/svg-to-css/*.svg')
+function svg() {
+    return gulp.src('src/svg/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('src/svg-to-css-compressed'))
-        .pipe(gulp.src('src/svg-to-css-compressed/*.svg'))
-        .pipe(svgcss({
-            addSize: true
-        }))
-        .pipe(gulp.dest('src/svg-to-css-compressed'))
+        .pipe(gulp.dest('src/svg-min'))
+        .pipe(gulp.src('src/svg-min/*.svg'))
+        .pipe(svgcss())
+        .pipe(gulp.dest('src/svg-min'))
 }
 
 
@@ -68,7 +66,7 @@ function watch() {
     gulp.watch(path.watch.html, html)
     gulp.watch(path.watch.css, styles)
     gulp.watch(path.watch.img, images)
-    gulp.watch('src/svg-to-css/*.svg', svgInCss)
+    gulp.watch('src/svg/*', svg)
 }
 
-exports.default = gulp.parallel(html, styles, images, svgInCss, watch);
+exports.default = gulp.parallel(html, styles, images, svg, watch);
