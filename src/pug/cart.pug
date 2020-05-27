@@ -1,0 +1,14 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Корзина'
+    - var mainCls = 'page-cart'
+
+block content
+
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                span Корзина
+        h1.page-top__title.like-h1 Корзина

@@ -17,69 +17,110 @@ block content
                 span Платье «Зазеркалье»
 
         .next-prev
-            a(href="").next-prev__item.prev
+            a(href="").next-prev__item.prev.with-svg
                 include ../svg-min/pagination-prev.svg
                 | Предыдущая
             span.det |
-            a(href="").next-prev__item.next
+            a(href="").next-prev__item.next.with-svg
                 | Следующая
                 include ../svg-min/pagination-next.svg
     
     .product
         .container
             .row
-                .product-photo-slider.col-lg-6
-                    | ph slider
+                .product-photo-slider.col-xl-6
+                    .photo(style="height:3000px")
                 
 
-                .product-info.col-lg-6
-                    .product-info__top
-                        .product-info__article Арт. 12365478
-                        a(href="").share Поделиться
-                        
-                    h1.like-h1 Платье «Зазеркалье» в две строки
-                    
-                    .price-row
-                        .price
-                            span 14 000 ₽
-                            span.old 17 600 ₽
+                .product-right.col-xl-6
+                    .product-info
+                        .product-info__top
+                            .product-info__article Арт. 12365478
+                            a(href="").share.with-svg
+                                include ../svg-min/share.svg
+                                | Поделиться
                             
-                        .stock-status.in-stock
-                            | В наличии
-                        //- .stock-status.out-of-stock
-                        //-     | Нет в наличии
-                        //- .stock-status.low-stock
-                        //-     | Товар заканчивается
-                    
-                    .choise-size
-                        .choise-size__top
-                            | Выберите размер
-                            a(href="").choise-size__helper Какой у меня размер?
-                    
+                        h1.like-h1 Платье «Зазеркалье» в две строки
+                        
+                        .price-row
+                            .price
+                                span 14 000 ₽
+                                span.old 17 600 ₽
+                                
+                            .stock-status.in-stock В наличии
+                            //
+                                .stock-status.out-of-stock Нет в наличии
+                                .stock-status.low-stock Товар заканчивается
+                        
+                        .choise-size
+                            .choise-size__top
+                                | Выберите размер
+                                a(href="").choise-size__helper Какой у меня размер?
+                        
 
-                        .choise-size__list
-                            .choise-size__item
-                                input#size40(type="radio", name="size")
-                                label(for="size40") 40
-                            .choise-size__item
-                                input#size42(type="radio", name="size")
-                                label(for="size42") 42
-                            .choise-size__item
-                                input#size44(type="radio", name="size")
-                                label(for="size44") 44
-                            .choise-size__item
-                                input#size46(type="radio", name="size", disabled)
-                                label(for="size46") 46
+                            .choise-size__list
+                                .choise-size__item
+                                    input#size40(type="radio", name="size")
+                                    label(for="size40") 40
+                                .choise-size__item
+                                    input#size42(type="radio", name="size")
+                                    label(for="size42") 42
+                                .choise-size__item
+                                    input#size44(type="radio", name="size")
+                                    label(for="size44") 44
+                                .choise-size__item
+                                    input#size46(type="radio", name="size", disabled)
+                                    label(for="size46") 46
 
-                    .buttons
-                        a(href="").button.button_blue-filled Добавить в корзину
-                        a(href="").add-to-wishlist Добавить в избранное
-                    
+                        .buttons
+                            a(href="").button.button_blue-filled Добавить в корзину
+                            a(href="").add-to-wishlist.with-svg
+                                include ../svg-min/add-to-wishlist.svg
+                                span Добавить в избранное
+                            a(href="").check-stock.with-svg
+                                include ../svg-min/map-point.svg
+                                span Узнать о наличии товара в магазине
+                        
+                        .description
+                            p Любая девушка трепетно и воодушевленно относится к выбору наряда для выхода в свет. Важно продемонстрировать свою красоту и ослепить всех неповторимым нарядом. Платье с сеткой никого не оставляет равнодушным  –  модель формирует образ с лёгкой  размытостью границ, что придаёт ему загадки и притягательности. С платьем «Звон фиалки» девушка – всегда в центре внимания, взглядов, обсуждений.
 
-                    .description
-                        p Любая девушка трепетно и воодушевленно относится к выбору наряда для выхода в свет. Важно продемонстрировать свою красоту и ослепить всех неповторимым нарядом. Платье с сеткой никого не оставляет равнодушным  –  модель формирует образ с лёгкой  размытостью границ, что придаёт ему загадки и притягательности. С платьем «Звон фиалки» девушка – всегда в центре внимания, взглядов, обсуждений.
+                        .properties
+                            .properties__row
+                                .properties__name Состав изделия
+                                .properties__value 18% шелк, 18% хлопок 32% вискоза, 32% полиэстер
+                            .properties__row
+                                .properties__name Уход за изделием
+                                #properties-icons.properties-icons
+                                    .properties-icons__items
+                                        .icon.no-drying(v-on:mouseover="tooltip='Не использовать машинную сушку'" v-on:mouseleave="tooltip=''")
+                                        .icon.temp-30(v-on:mouseover="tooltip='Стирать при температуре не выше 30°C'" v-on:mouseleave="tooltip=''")
+                                        .icon.no-bleaching(v-on:mouseover="tooltip='Не отбеливать'" v-on:mouseleave="tooltip=''")
+                                        .icon.no-iron(v-on:mouseover="tooltip='Не гладить'" v-on:mouseleave="tooltip=''")
+                                        .icon.no-dry-cleaning(v-on:mouseover="tooltip='Не использовать химчистку'" v-on:mouseleave="tooltip=''")
+                                    .tooltip {{ tooltip }}
 
-    
+                    .product-advantages
+                        .item
+                            .item__img
+                                include ../svg-min/prod-adv-1.svg
+                            .item__content
+                                .item__title Бесплатная доставка по России
+                                .item__description У вас всегда есть возможность получить бесплатную доставку для заказов от 20 000 ₽
+                        .item
+                            .item__img
+                                include ../svg-min/prod-adv-2.svg
+                            .item__content
+                                .item__title Примерка
+                                .item__description Примеряйте и оплачивайте только подходящие товары. Вы можете примерить вещи перед покупкой и взять лишь те, которые вам подошли
+                        .item
+                            .item__img
+                                include ../svg-min/prod-adv-3.svg
+                            .item__content
+                                .item__title Безопасность
+                                .item__description Безопасность платежей гарантируется использованием SSL протокола. Данные вашей банковской карты надежно защищены при оплате онлайн
+
+
+
     .product-slider-wrapper.filled-bottom
         .container
             .product-slider-title.like-h2 Дополните образ

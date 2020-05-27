@@ -1,7 +1,8 @@
 $(function() {
 
     $(window).resize(function() {
-        set_sticky_header()
+        set_sticky_header();
+        setProdBlockPadding();
     });
 
     $(window).scroll(function() {
@@ -100,6 +101,13 @@ $(function() {
                 this.loginShowed = false;
                 this.signupShowed = true;
             }
+        }
+    });
+
+    let prod_props = new Vue({
+        el: "#properties-icons",
+        data: {
+            tooltip: ''
         }
     });
 
@@ -261,5 +269,14 @@ $(function() {
         );
 
     });
+
+
+    setProdBlockPadding();
+
+    function setProdBlockPadding() {
+        let adv_height = ($(window).width() > 1200) ? $('.product-advantages').height() : 0;
+
+        $('.page-product .product-info').css('padding-bottom', adv_height);
+    }
 
 });

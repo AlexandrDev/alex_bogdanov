@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Товар</title>
+    <title>Корзина</title>
     <meta charset="UTF-8">
     <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <script>function svp(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
@@ -201,202 +201,13 @@
         </div>
       </div>
     </header>
-    <div class="page-wrapper page-product">
+    <div class="page-wrapper page-cart">
       <div class="page-top container">
         <div class="breadcrumbs">
           <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
-          <div class="breadcrumbs__item"><a href="catalog.html">Каталог</a></div>
-          <div class="breadcrumbs__item"><a href="category.html">Платья</a></div>
-          <div class="breadcrumbs__item"><span>Платье «Зазеркалье»</span></div>
+          <div class="breadcrumbs__item"><span>Корзина</span></div>
         </div>
-        <div class="next-prev"><a class="next-prev__item prev with-svg" href="">
-            <svg width="16" height="9" stroke="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path d="M15.7 4.5H1m0 0L4.5 8M1 4.5L4.5 1"/></svg>Предыдущая</a><span class="det">|</span><a class="next-prev__item next with-svg" href="">
-            Следующая<svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" stroke="#4e5b67"><path d="M0 4.5h14.7m0 0L11.2 1m3.5 3.5L11.2 8"/></svg></a></div>
-      </div>
-      <div class="product">
-        <div class="container">
-          <div class="row">
-            <div class="product-photo-slider col-xl-6">
-              <div class="photo" style="height:3000px"></div>
-            </div>
-            <div class="product-right col-xl-6">
-              <div class="product-info">
-                <div class="product-info__top">
-                  <div class="product-info__article">Арт. 12365478</div><a class="share with-svg" href="">
-                    <svg width="22" height="22" fill="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.265 1.75a3.65 3.65 0 00-3.501 4.663L9.062 8.516a3.636 3.636 0 00-2.666-1.162A3.65 3.65 0 002.75 11a3.65 3.65 0 003.646 3.646c1.052 0 2-.448 2.666-1.161l3.702 2.102a3.65 3.65 0 003.5 4.663 3.65 3.65 0 003.646-3.646 3.65 3.65 0 00-3.645-3.646c-1.052 0-2 .448-2.666 1.161l-3.702-2.101a3.63 3.63 0 000-2.035l3.701-2.102a3.636 3.636 0 002.667 1.162 3.65 3.65 0 003.645-3.647 3.65 3.65 0 00-3.645-3.646zm-1.958 3.646a1.96 1.96 0 011.958-1.958 1.96 1.96 0 011.957 1.958 1.96 1.96 0 01-1.957 1.958 1.96 1.96 0 01-1.958-1.958zM4.438 11a1.96 1.96 0 011.958-1.957A1.96 1.96 0 018.354 11a1.96 1.96 0 01-1.958 1.958A1.96 1.96 0 014.438 11zm9.87 5.604a1.96 1.96 0 011.957-1.958 1.96 1.96 0 011.957 1.958 1.96 1.96 0 01-1.957 1.958 1.96 1.96 0 01-1.958-1.958z"/></svg>Поделиться</a>
-                </div>
-                <h1 class="like-h1">Платье «Зазеркалье» в две строки</h1>
-                <div class="price-row">
-                  <div class="price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
-                  <div class="stock-status in-stock">В наличии</div>
-                  <!--
-                  .stock-status.out-of-stock Нет в наличии
-                  .stock-status.low-stock Товар заканчивается
-                  
-                  -->
-                </div>
-                <div class="choise-size">
-                  <div class="choise-size__top">Выберите размер<a class="choise-size__helper" href="">Какой у меня размер?</a></div>
-                  <div class="choise-size__list">
-                    <div class="choise-size__item">
-                      <input id="size40" type="radio" name="size">
-                      <label for="size40">40</label>
-                    </div>
-                    <div class="choise-size__item">
-                      <input id="size42" type="radio" name="size">
-                      <label for="size42">42</label>
-                    </div>
-                    <div class="choise-size__item">
-                      <input id="size44" type="radio" name="size">
-                      <label for="size44">44</label>
-                    </div>
-                    <div class="choise-size__item">
-                      <input id="size46" type="radio" name="size" disabled>
-                      <label for="size46">46</label>
-                    </div>
-                  </div>
-                </div>
-                <div class="buttons"><a class="button button_blue-filled" href="">Добавить в корзину</a><a class="add-to-wishlist with-svg" href=""><svg width="35" height="38" viewBox="0 0 35 36" fill="#fff" stroke="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path d="M16.677 13.38a1 1 0 001.646 0c.807-1.171 2.038-1.88 3.38-1.88 2.275 0 4.297 2.09 4.297 4.9 0 .829-.405 1.859-1.175 3.012-.757 1.132-1.795 2.275-2.887 3.304a28.552 28.552 0 01-3.106 2.544c-.45.315-.832.554-1.118.71a4.117 4.117 0 01-.212.11 4.07 4.07 0 01-.213-.11 12.78 12.78 0 01-1.118-.717 28.987 28.987 0 01-3.108-2.56c-1.093-1.034-2.13-2.18-2.888-3.31C9.402 18.23 9 17.21 9 16.4c0-2.811 2.022-4.901 4.296-4.901 1.343 0 2.574.709 3.38 1.88zm.674 12.763s.003-.002.01-.003a.102.102 0 01-.01.003zm.291-.003a.083.083 0 010 0z" stroke-width="2" stroke-linejoin="round"/></svg><span>Добавить в избранное</span></a><a class="check-stock with-svg" href=""><svg width="35" height="35" fill="none" stroke="#4E5B67" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M17.7 17.94a2.276 2.276 0 01-2.273-2.274 2.276 2.276 0 012.273-2.272 2.276 2.276 0 012.272 2.272A2.277 2.277 0 0117.7 17.94z"/><path d="M24.912 18.391h0l-.003.007c-.198.534-.53 1.09-1.008 1.647l-.028.032-6.174 7.251-6.187-7.267h0l-.004-.005c-.483-.56-.819-1.12-1.02-1.664h0l-.003-.007c-.881-2.33-.55-4.978.902-7.08h0C12.841 9.2 15.133 8 17.7 8c2.566 0 4.858 1.201 6.312 3.305h0c1.453 2.102 1.784 4.75.9 7.086zm-14.346-7.654h-.001 0z"/></svg><span>Узнать о наличии товара в магазине</span></a></div>
-                <div class="description">
-                  <p>Любая девушка трепетно и воодушевленно относится к выбору наряда для выхода в свет. Важно продемонстрировать свою красоту и ослепить всех неповторимым нарядом. Платье с сеткой никого не оставляет равнодушным  –  модель формирует образ с лёгкой  размытостью границ, что придаёт ему загадки и притягательности. С платьем «Звон фиалки» девушка – всегда в центре внимания, взглядов, обсуждений.</p>
-                </div>
-                <div class="properties">
-                  <div class="properties__row">
-                    <div class="properties__name">Состав изделия</div>
-                    <div class="properties__value">18% шелк, 18% хлопок 32% вискоза, 32% полиэстер</div>
-                  </div>
-                  <div class="properties__row">
-                    <div class="properties__name">Уход за изделием</div>
-                    <div class="properties-icons" id="properties-icons">
-                      <div class="properties-icons__items">
-                        <div class="icon no-drying" v-on:mouseover="tooltip='Не использовать машинную сушку'" v-on:mouseleave="tooltip=''"></div>
-                        <div class="icon temp-30" v-on:mouseover="tooltip='Стирать при температуре не выше 30°C'" v-on:mouseleave="tooltip=''"></div>
-                        <div class="icon no-bleaching" v-on:mouseover="tooltip='Не отбеливать'" v-on:mouseleave="tooltip=''"></div>
-                        <div class="icon no-iron" v-on:mouseover="tooltip='Не гладить'" v-on:mouseleave="tooltip=''"></div>
-                        <div class="icon no-dry-cleaning" v-on:mouseover="tooltip='Не использовать химчистку'" v-on:mouseleave="tooltip=''"></div>
-                      </div>
-                      <div class="tooltip">{{ tooltip }}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="product-advantages">
-                <div class="item">
-                  <div class="item__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.488 6.798c1.191-.773 2.529-.99 3.919-.922 1.093.053 2.14.297 3.076.902l.006.004c.058.037.115.075.168.118.068.057.134.117.184.163l.05.044c1.061 1.06.825 2.552-.513 3.357-1.31.788-2.75.966-4.242.809-.975-.103-1.907-.357-2.721-.936-1.326-.942-1.297-2.65.073-3.54zm.957 2.039c.12.09.252.172.39.23 1.431.592 2.87.596 4.3.006.152-.063.28-.187.406-.312a3.2 3.2 0 01.18-.166 3.319 3.319 0 01-.18-.166c-.128-.123-.256-.247-.409-.311-1.395-.588-2.806-.588-4.214-.035-.129.05-.248.125-.337.18l-.083.049c-.271.252-.273.358-.053.525zM1.308 16.785c.061.006.123.012.184.012H3.55c1.905 0 3.81 0 5.715.007.231 0 .329-.08.422-.28 1.373-2.945 4.836-4.21 7.665-2.805 1.005.5 1.763 1.272 2.385 2.191.038.056.077.11.119.167l.058.081.255-.333c.177-.234.35-.461.534-.678 2.183-2.563 6.028-2.688 8.34-.24.327.347.582.763.836 1.178a17.874 17.874 0 00.336.535c.062.1.112.18.273.18 2.059-.006 4.117-.006 6.175-.007h2.023c.02 0 .04-.006.06-.012a.452.452 0 01.026-.008l.043.043-.007.303v.001c-.005.221-.01.442-.017.663-.043 1.394-.608 2.536-1.659 3.449a.518.518 0 00-.163.323c-.085 1.383-.681 2.498-1.734 3.385a.485.485 0 00-.153.298c-.235 2.614-2.121 4.341-4.75 4.336-.613 0-1.227-.003-1.84-.004-1.584-.004-3.168-.008-4.752-.005a.776.776 0 00-.463.158c-1.054.885-2.1 1.78-3.137 2.685-.168.146-.27.147-.431.007-.474-.41-.95-.816-1.425-1.223-.554-.475-1.11-.95-1.66-1.429a.755.755 0 00-.54-.209c-1.17.008-2.34.01-3.509.014h-.002c-.997.003-1.993.005-2.99.01-.86.005-1.664-.186-2.409-.619-.124-.071-.246-.146-.368-.22v-.001l-.17-.104-.774-.773a.314.314 0 01-.005-.028.127.127 0 00-.018-.056c-.572-.756-.869-1.609-.931-2.552-.007-.109-.097-.236-.185-.311-1.024-.88-1.608-1.977-1.697-3.334a.559.559 0 00-.17-.349c-1.046-.914-1.61-2.053-1.65-3.446l-.018-.654-.007-.31.043-.043.084.007zm10.393-.115c-1.022 1.524-1.121 3.155-.416 4.83.474 1.127 1.259 2.044 2.102 2.91 1.377 1.412 2.883 2.678 4.39 3.944.655.551 1.31 1.102 1.954 1.664.158.138.26.106.408-.021.61-.525 1.223-1.046 1.836-1.568h.001c.867-.738 1.734-1.475 2.593-2.221 1.164-1.01 2.282-2.067 3.191-3.323.89-1.23 1.403-2.566 1.196-4.117-.245-1.847-1.454-3.29-3.104-3.684-1.705-.409-3.291.289-4.291 1.946-.25.414-.453.857-.665 1.322-.1.219-.202.442-.312.67a32.872 32.872 0 01-.243-.01c-.203-.008-.43-.017-.658-.02h-.012c-.488-.007-.49-.007-.656-.466a7.45 7.45 0 00-1.105-2.045c-1.603-2.076-4.747-1.991-6.21.19zm18.066 6.495c.821-1.39 1.201-2.885 1.012-4.48l5.983.017c-.273.94-1.31 1.7-2.452 1.732-.604.017-1.208.012-1.812.007l-.343-.002a.675.675 0 01-.202-.045 1.205 1.205 0 00-.077-.024l-.003 1.858 3.122-.014a2.7 2.7 0 01-1.265 1.529c-.48.276-1.006.351-1.549.355-.495.003-.99.009-1.483.014l-.634.007.039 1.847 2.97-.065c-.205.905-1.145 1.77-2.177 1.805-1.22.041-2.442.019-3.667-.004h-.001c-.517-.01-1.034-.019-1.552-.024l.514-.472c.383-.351.768-.704 1.144-1.066.926-.896 1.774-1.861 2.433-2.975zM3.23 18.704c.316.985 1.338 1.713 2.5 1.736.475.01.95.008 1.425.006l.731-.002c.063 0 .126.006.171.01l.042.004.005 1.812-3.148-.002c.066.103.125.202.181.298.116.196.223.375.353.535.594.725 1.391 1.005 2.31 1 .497-.002.993.001 1.485.005l.649.003-.02 1.856-3.012-.053c.352 1.102 1.388 1.835 2.58 1.84 1.071.005 2.144 0 3.216-.005l1.279-.005c.043 0 .087-.003.137-.007l.083-.005-.028-.048a.193.193 0 00-.034-.05l-.203-.182-.18-.162c-1.169-1.064-2.316-2.148-3.233-3.449-1.059-1.503-1.647-3.145-1.463-5.012.006-.065-.007-.132-.006-.114l-5.82-.01z" fill="#67ADD7"/></svg></div>
-                  <div class="item__content">
-                    <div class="item__title">Бесплатная доставка по России</div>
-                    <div class="item__description">У вас всегда есть возможность получить бесплатную доставку для заказов от 20 000 ₽</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="item__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 33.654C11.437 35.287 15.587 36 19.684 36c4.096 0 8.246-.713 12.684-2.346l-7.876-11.88 2.411-5.787 1.674 1.004.964-1.607-8.92-5.352v-.568a2.818 2.818 0 001.876-2.652A2.816 2.816 0 0019.684 4a2.816 2.816 0 00-2.812 2.813h1.875a.939.939 0 011.875 0c0 .516-.42.937-.938.937h-.937v2.282l-8.92 5.351.964 1.608 1.674-1.004 2.412 5.787L7 33.654zm20.552-.475l-3.012-4.574-1.566 1.031 2.6 3.95a34.647 34.647 0 01-4.952.524v-4.672h-1.875v4.672a34.649 34.649 0 01-4.954-.524l2.6-3.95-1.565-1.03-3.012 4.573a34.527 34.527 0 01-1.917-.504l6.538-9.862h6.494l6.538 9.862c-.5.147-1.148.325-1.917.504zm-5.18-19.91a2.8 2.8 0 01-2.688 1.981 2.8 2.8 0 01-2.688-1.981l2.688-1.613 2.689 1.613zm-7.01.98a4.685 4.685 0 004.322 2.876 4.685 4.685 0 004.323-2.876l1.271.763-2.469 5.925h-6.25l-2.469-5.925 1.271-.763z" fill="#67ADD7"/></svg></div>
-                  <div class="item__content">
-                    <div class="item__title">Примерка</div>
-                    <div class="item__description">Примеряйте и оплачивайте только подходящие товары. Вы можете примерить вещи перед покупкой и взять лишь те, которые вам подошли</div>
-                  </div>
-                </div>
-                <div class="item">
-                  <div class="item__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.537 8.311c-3.077 0-8.676-.626-10.43-2.935a.794.794 0 00-1.305-.063C16.736 7.62 11.126 8.31 7.82 8.31a.822.822 0 00-.82.824v13.174c0 5.934 6.83 9.559 12.005 10.686.668.145 12.352-2.815 12.352-10.686V9.135a.822.822 0 00-.82-.824zm-.82 13.998c0 6.184-9.152 8.691-10.538 9.035C17.791 31 8.64 28.493 8.64 22.309V9.95c6.334-.146 9.493-1.971 10.75-2.96 2.53 2.238 6.955 2.883 10.325 2.96v12.36zM15.08 15.695v2.497h-.823a.822.822 0 00-.82.824v6.587c0 .455.367.823.82.823H24.1c.453 0 .82-.368.82-.823v-6.587a.822.822 0 00-.82-.824h-7.38v-2.498a2.44 2.44 0 012.483-2.442 2.441 2.441 0 012.434 2.442c0 .455.367.824.82.824.453 0 .82-.369.82-.824 0-2.255-1.827-4.09-4.074-4.09a4.085 4.085 0 00-4.123 4.09zm8.2 9.084h-8.203v-4.94h8.203v4.94zM20 22.31a.822.822 0 01-.82.824.822.822 0 01-.82-.824.821.821 0 111.64 0z" fill="#67ADD7"/></svg></div>
-                  <div class="item__content">
-                    <div class="item__title">Безопасность</div>
-                    <div class="item__description">Безопасность платежей гарантируется использованием SSL протокола. Данные вашей банковской карты надежно защищены при оплате онлайн</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="product-slider-wrapper filled-bottom">
-        <div class="container">
-          <div class="product-slider-title like-h2">Дополните образ</div>
-          <div class="product-slider">
-            <div class="product-card">
-              <div class="product-card__thumb"><a href="product.html">
-                  <picture>
-                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                  </picture></a>
-                <div class="product-card__buttons">
-                  <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                  <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                </div>
-              </div>
-              <div class="product-card__bottom">
-                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__thumb"><a href="product.html">
-                  <picture>
-                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                  </picture></a>
-                <div class="product-card__buttons">
-                  <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                  <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                </div>
-              </div>
-              <div class="product-card__bottom">
-                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__thumb"><a href="product.html">
-                  <picture>
-                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                  </picture></a>
-                <div class="product-card__buttons">
-                  <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                  <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                </div>
-              </div>
-              <div class="product-card__bottom">
-                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__thumb"><a href="product.html">
-                  <picture>
-                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                  </picture></a>
-                <div class="product-card__buttons">
-                  <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                  <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                </div>
-              </div>
-              <div class="product-card__bottom">
-                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
-              </div>
-            </div>
-            <div class="product-card">
-              <div class="product-card__thumb"><a href="product.html">
-                  <picture>
-                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                  </picture></a>
-                <div class="product-card__buttons">
-                  <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                  <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                </div>
-              </div>
-              <div class="product-card__bottom">
-                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__follow ab-i-follow" href=""></a>
-              </div>
-            </div>
-            <div class="product-slider__navs">
-              <div class="arrow arrow-prev">
-                                   <svg width="19" height="16" fill="#67add7"><path fill-rule="evenodd" d="M7.75 15.908l1.225-1.312-4.9-5.25H19V7.47H4.075l4.9-5.25L7.75.908l-7 7.5 7 7.5z"/></svg></div>
-              <div class="arrow arrow-next"><svg width="19" height="15" fill="#67add7"><path fill-rule="evenodd" d="M11.25 0l-1.225 1.313 4.9 5.25H0v1.875h14.925l-4.9 5.25L11.25 15l7-7.5-7-7.5z"/></svg></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="page-bottom-info container">
-        <p>
-           Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут.<br>Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.</p>
+        <h1 class="page-top__title like-h1">Корзина</h1>
       </div>
     </div>
     <footer>

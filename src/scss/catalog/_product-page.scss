@@ -8,6 +8,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     .next-prev {
@@ -17,13 +18,6 @@
         line-height: 20px;
 
         &__item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            svg path {
-                transition: stroke .16s ease;
-            }
 
             &.prev svg {
                 margin-right: 7px;
@@ -35,7 +29,7 @@
             &:hover {
                 color: $blue;
 
-                svg path {
+                svg {
                     stroke: $blue;
                 }
             }
@@ -49,11 +43,22 @@
 
 .product {
     position: relative;
+    margin-bottom: 120px;
+
+    &-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 50px;
+    }
 
     &-info {
-        padding-left: 50px;
-        margin-bottom: 120px;
-    
+        @media screen and (min-width:1200px) {
+            position: sticky;
+            top: 100px;
+        }
+        
+
         &__top {
             display: flex;
             align-items: center;
@@ -64,6 +69,20 @@
             font-weight: 500;
             font-size: 15px;
             line-height: 22px;
+        }
+
+        .share {
+            svg {
+                margin-right: 8px;
+            }
+
+            &:hover {
+                color: $blue;
+
+                svg {
+                    fill: $blue;
+                }
+            }
         }
 
 
@@ -91,19 +110,20 @@
     
         .stock-status {
             font-size: 15px;
+            line-height: 22px;
             padding-left: 30px;
             margin-left: 30px;
             background-position: center left;
             background-repeat: no-repeat;
     
             &.in-stock {
-    
+                background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z' fill='%23219653'/%3E%3C/svg%3E");
             }
             &.out-of-stock {
-    
+                background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4l5.6 5.6L5 17.6 6.4 19l5.6-5.6 5.6 5.6 1.4-1.4-5.6-5.6L19 6.4z' fill='%23EB5757'/%3E%3C/svg%3E");
             }
             &.low-stock {
-    
+                background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 5.86l-4.595-3.855-1.285 1.53 4.595 3.855L22 5.86zM7.88 3.53L6.595 2 2 5.855l1.285 1.53L7.88 3.53zm4.62 4.61H11v6l4.745 2.855.755-1.235-4-2.37V8.14zm-.505-4C7.02 4.14 3 8.17 3 13.14s4.02 9 8.995 9S21 18.11 21 13.14s-4.03-9-9.005-9zm.005 16c-3.865 0-7-3.135-7-7s3.135-7 7-7a7.001 7.001 0 010 14z' fill='%2367ADD7'/%3E%3C/svg%3E");
             }
         }
     
@@ -189,17 +209,148 @@
         .buttons {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             margin-top: 30px;
-            margin-bottom: 30px;
-    
-            .add-to-wishlist {
-                margin-left: 30px;
+
+            a {
+                margin-bottom: 30px;
+            }
+        }
+
+        .add-to-wishlist {
+            margin-left: 30px;
+
+            svg {
+                margin-right: 5px;
+            }
+
+            &:hover {
+                svg {
+                    fill: $gray;
+                }
+            }
+        }
+
+        .check-stock {
+            svg {
+                margin-right: 5px;
+            }
+
+            &:hover {
+                color: $blue;
+                svg {
+                    stroke: $blue;
+                }
             }
         }
     
         .description {
             font-size: 15px;
-            margin: 30px 0;
+            margin: 0 0 30px;
+
+            p {
+                margin-top: 0;
+            }
+        }
+
+        .properties {
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(78, 91, 103, 0.15);
+
+            &__row {
+                display: grid;
+                grid-template-columns: 120px auto;
+                grid-column-gap: 30px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 20px;
+            }
+
+            &__name {
+                opacity: 0.6;
+            }
+
+            &-icons {
+                display: flex;
+                align-items: start;
+                min-height: 48px;
+
+                &__items {
+                    display: flex;
+                    margin-right: 30px;
+                }
+
+                .icon {
+                    width: 18px;
+                    height: 18px;
+                    background-image: url(../images/product-props.png);
+                    background-position-y: center;
+                    background-size: auto 18px;
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+
+                    &.no-drying {
+                        background-position-x: 0;
+                    }
+                    &.temp-30 {
+                        background-position-x: -28px;
+                    }
+                    &.no-bleaching {
+                        background-position-x: -56px;
+                    }
+                    &.no-iron {
+                        background-position-x: -84px;
+                    }
+                    &.no-dry-cleaning {
+                        background-position-x: -112px;
+                    }
+                }
+
+                .tooltip {
+                    width: 170px;
+                    font-size: 13px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+
+    &-advantages {
+        .item {
+            display: flex;
+            align-items: start;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &__img {
+                width: 40px;
+                flex: 0 0 40px;
+                margin-right: 15px;
+            }
+
+            &__content {
+                margin-top: 5px;
+            }
+
+            &__title {
+                color: $dark;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 5px;
+            }
+
+            &__description {
+                font-size: 15px;
+                line-height: 20px;
+            }
         }
     }
 }
