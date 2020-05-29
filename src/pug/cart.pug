@@ -12,3 +12,67 @@ block content
             .breadcrumbs__item
                 span Корзина
         h1.page-top__title.like-h1 Корзина
+
+    .cart.container
+        .row
+            .cart__main.col-lg-8
+                .cart-table
+                    .cart-table-header
+                        .cart-table__image Товар
+                        .cart-table__name Описание
+                        .cart-table__size Размер
+                        .cart-table__quant Количество
+                        .cart-table__price Цена
+                        .cart-table__remove
+
+                    .cart-table-item
+                        .cart-table__image img
+                        .cart-table__name 
+                            | Блузон «Овация» в две строки
+                            .article Арт. 1234567
+                            a(href="").add-to-wishlist.ab-i-wishlist
+                        .cart-table__size 46
+                        .cart-table__quant 
+                        .cart-table__price 4545
+                        .cart-table__remove del
+
+
+                .add-as-gift
+                    .add-as-gift__title Вы хотите приобрести этот товар в качестве подарка?
+                    p Мы можем добавить подарочкую коробку за 300 ₽ и чек без указания цены к вашему заказу
+
+                    a(href="").link-add Добавить подарочную коробку
+
+
+
+            .right-sidebar.col-lg-4
+                .order-info
+                    .order-info__title.like-h3 Детали заказа
+
+                    a(href=order_link).order-info__button.button.button_blue-filled Оформить заказ
+
+                    .order-info__bottom-text Есть промокод? Введите его на следующем этапе.
+
+
+
+    
+    .advantages.container
+        .row
+            .advantages__item.col-lg-3.col-md-6
+                .advantages__img
+                    include ../svg-min/cart-adv-1.svg
+                .advantages__content Вам нужна помощь?
+                    br
+                    a(href="") 8 800 551-90-50
+            .advantages__item.col-lg-3.col-md-6
+                .advantages__img
+                    include ../svg-min/prod-adv-1.svg
+                .advantages__content Бесплатная доставка для заказов от 20 000 ₽
+            .advantages__item.col-lg-3.col-md-6
+                .advantages__img
+                    include ../svg-min/prod-adv-3.svg
+                .advantages__content Безопасный платеж с использованием SSL протокола 
+            .advantages__item.col-lg-3.col-md-6
+                .advantages__img
+                    include ../svg-min/cart-adv-2.svg
+                .advantages__content Простой возврат в течение 60 дней

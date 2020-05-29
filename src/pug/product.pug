@@ -73,7 +73,7 @@ block content
                                     label(for="size46") 46
 
                         .buttons
-                            a(href="").button.button_blue-filled Добавить в корзину
+                            a(href=cart_link).button.button_blue-filled Добавить в корзину
                             a(href="").add-to-wishlist.with-svg
                                 include ../svg-min/add-to-wishlist.svg
                                 span Добавить в избранное
@@ -99,25 +99,25 @@ block content
                                         .icon.no-dry-cleaning(v-on:mouseover="tooltip='Не использовать химчистку'" v-on:mouseleave="tooltip=''")
                                     .tooltip {{ tooltip }}
 
-                    .product-advantages
-                        .item
-                            .item__img
+                    .advantages
+                        .advantages__item
+                            .advantages__img
                                 include ../svg-min/prod-adv-1.svg
-                            .item__content
-                                .item__title Бесплатная доставка по России
-                                .item__description У вас всегда есть возможность получить бесплатную доставку для заказов от 20 000 ₽
-                        .item
-                            .item__img
+                            .advantages__content
+                                .advantages__title Бесплатная доставка по России
+                                | У вас всегда есть возможность получить бесплатную доставку для заказов от 20 000 ₽
+                        .advantages__item
+                            .advantages__img
                                 include ../svg-min/prod-adv-2.svg
-                            .item__content
-                                .item__title Примерка
-                                .item__description Примеряйте и оплачивайте только подходящие товары. Вы можете примерить вещи перед покупкой и взять лишь те, которые вам подошли
-                        .item
-                            .item__img
+                            .advantages__content
+                                .advantages__title Примерка
+                                | Примеряйте и оплачивайте только подходящие товары. Вы можете примерить вещи перед покупкой и взять лишь те, которые вам подошли
+                        .advantages__item
+                            .advantages__img
                                 include ../svg-min/prod-adv-3.svg
-                            .item__content
-                                .item__title Безопасность
-                                .item__description Безопасность платежей гарантируется использованием SSL протокола. Данные вашей банковской карты надежно защищены при оплате онлайн
+                            .advantages__content
+                                .advantages__title Безопасность
+                                | Безопасность платежей гарантируется использованием SSL протокола. Данные вашей банковской карты надежно защищены при оплате онлайн
 
 
 

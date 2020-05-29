@@ -4,7 +4,8 @@ let gulp = require('gulp'),
     gcmq = require('gulp-group-css-media-queries'),
     webp = require('gulp-webp'),
     imagemin = require('gulp-imagemin'),
-    svgcss = require('gulp-svg-css');
+    svgcss = require('gulp-svg-css'),
+    autoprefixer = require('gulp-autoprefixer');
 
 let path = {
     build: {
@@ -34,6 +35,7 @@ function html() {
 function styles() {
     return gulp.src(path.src.css)
         .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
         .pipe(gcmq())
         .pipe(gulp.dest(path.build.css))
 }

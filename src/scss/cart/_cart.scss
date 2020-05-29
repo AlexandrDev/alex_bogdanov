@@ -1,0 +1,80 @@
+.cart {
+    margin-bottom: 80px;
+
+    &-table {
+        &-header, &-item {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: 80px 1fr 100px 100px 90px 46px;
+            grid-column-gap: 30px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(78, 91, 103, 0.15);
+        }
+
+        &-header {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: rgba(78, 91, 103, 0.8);
+        }
+
+        &-item {
+
+        }
+
+        &__image {
+        }
+        &__name {
+            margin-left: -10px;
+        }
+        &__size {
+            text-align: center;
+        }
+        &__quant {
+            text-align: center;
+        }
+        &__price {
+            text-align: right;
+        }
+        &__remove {
+            text-align: right;
+        }
+
+    }
+
+    .add-as-gift {
+        margin-top: 25px;
+
+        &__title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            color: $dark;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 10px 0 20px;
+            font-size: 15px;
+            line-height: 22px;
+        }
+    }
+
+    @include laptop {
+        margin-bottom: 40px;
+        &__main {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include tablet {
+        margin-bottom: 30px;
+
+        .add-as-gift {
+            p {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

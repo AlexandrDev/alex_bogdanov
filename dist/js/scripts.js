@@ -274,7 +274,7 @@ $(function() {
     setProdBlockPadding();
 
     function setProdBlockPadding() {
-        let adv_height = ($(window).width() > 1200) ? $('.product-advantages').height() : 0;
+        let adv_height = ($(window).width() > 1200) ? $('.page-product .advantages').height() : 0;
 
         $('.page-product .product-info').css('padding-bottom', adv_height);
     }

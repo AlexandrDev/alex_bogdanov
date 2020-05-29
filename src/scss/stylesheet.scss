@@ -20,6 +20,7 @@
 @import 'components/form';
 @import 'components/page-top';
 @import 'components/product-slider';
+@import 'components/advantages';
 
 @import 'homepage/index';
 
@@ -29,6 +30,13 @@
 @import 'catalog/categories-list';
 @import 'catalog/product-card';
 @import 'catalog/product-page';
+
+
+@import 'components/order-info';
+
+@import 'cart/overrides';
+@import 'cart/cart';
+@import 'cart/empty';
 
 @import 'footer';
 @import 'footer/subscribe';

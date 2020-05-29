@@ -2,17 +2,38 @@
     position: relative;
     overflow: hidden;
 
+    &.filled-top::after,
     &.filled-bottom::after {
         content: '';
         display: block;
         position: absolute;
-        top: 40%;
         left: 0;
         right: 0;
-        bottom: 0;
         background-color: $light;
         z-index: -1;
     }
+
+    &.filled-bottom::after {
+        top: 40%;
+        bottom: 0;
+    }
+
+    &.filled-top {
+        padding-top: 70px;
+        &::after {
+            top: 0;
+            height: 350px;
+        }
+
+        @include laptop {
+            padding-top: 50px;
+            &::after {
+                height: 250px;
+            }
+        }
+    }
+
+    
 }
 
 .product-slider-title {

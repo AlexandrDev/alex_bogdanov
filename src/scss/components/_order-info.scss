@@ -1,0 +1,36 @@
+.order-info {
+    position: sticky;
+    top: 100px;
+    padding: 40px;
+    margin-left: 20px;
+    background: #E8F0F6;
+    border-radius: 25px 0px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+
+    &__bottom-text {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 25px;
+    }
+
+    @include laptop {
+        position: static;
+        margin-left: 0;
+    }
+
+    @include tablet {
+        padding: 35px 30px;
+
+        &__title {
+            margin-bottom: 20px;
+        }
+    }
+}

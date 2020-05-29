@@ -1,0 +1,34 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Корзина (пустая)'
+    - var mainCls = 'page-cart'
+
+block content
+
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                span Корзина
+        h1.page-top__title.like-h1 Корзина
+    
+    .cart-empty.container
+        picture
+            source(srcset="images/letter-a-130px.webp", type="image/webp")
+            img(src="images/letter-a-130px.png", alt="").cart-empty__image
+        .cart-empty__title.like-h3 В вашей корзине пока нет товаров
+        p Заполните ее одеждой и аксессуарами из нашей коллекции!
+        a(href=catalog_link).button.button_blue-filled Перейти в каталог
+    
+    .product-slider-wrapper.filled-top
+        .container
+            .product-slider-title.like-h2 Возможно вас заинтересует
+            .product-slider
+                - for (var x = 0; x < 5; x++)
+                    include ./components/_product-card-full.pug
+                .product-slider__navs
+                    .arrow.arrow-prev                    
+                        include ../svg-min/slider-arrow-prev_small.svg
+                    .arrow.arrow-next
+                        include ../svg-min/slider-arrow-next_small.svg

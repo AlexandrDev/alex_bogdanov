@@ -273,7 +273,7 @@
 
             &-icons {
                 display: flex;
-                align-items: start;
+                align-items: flex-start;
                 min-height: 48px;
 
                 &__items {
@@ -316,40 +316,6 @@
                     font-size: 13px;
                     line-height: 16px;
                 }
-            }
-        }
-    }
-
-    &-advantages {
-        .item {
-            display: flex;
-            align-items: start;
-
-            &:not(:last-child) {
-                margin-bottom: 20px;
-            }
-
-            &__img {
-                width: 40px;
-                flex: 0 0 40px;
-                margin-right: 15px;
-            }
-
-            &__content {
-                margin-top: 5px;
-            }
-
-            &__title {
-                color: $dark;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                margin-bottom: 5px;
-            }
-
-            &__description {
-                font-size: 15px;
-                line-height: 20px;
             }
         }
     }

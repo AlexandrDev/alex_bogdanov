@@ -1,0 +1,38 @@
+.cart-empty {
+    text-align: center;
+    margin-top: -70px;
+    margin-bottom: 120px;
+
+    &__image {
+        margin-bottom: 20px;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0 0 40px;
+    }
+
+
+    @include laptop {
+        margin-top: -50px;
+        margin-bottom: 80px;
+
+        &__image {
+            width: 70px;
+        }
+        &__title {
+            margin-bottom: 5px;
+        }
+    
+        p {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 20px;
+        }
+    }
+}

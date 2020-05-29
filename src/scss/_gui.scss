@@ -154,12 +154,20 @@ h2, .like-h2 {
     }
 }
 
+h3, .like-h3 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: #132434;
+}
+
 .link {
     color: $blue;
 }
 
 .button {
     display: inline-flex;
+    justify-content: center;
     align-items: center;
     font-weight: 500;
     font-size: 14px;
@@ -208,8 +216,9 @@ h2, .like-h2 {
     }
 }
 
-.link-detailed {
-    display: flex;
+.link-detailed,
+.link-add {
+    display: inline-flex;
     align-items: center;
     font-weight: 500;
     font-size: 16px;
@@ -223,7 +232,6 @@ h2, .like-h2 {
         border-radius: 50%;
         margin-right: 15px;
         background-color: $blue;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none'%3E%3Cpath fill-rule='evenodd' d='M6 0L4.95 1.05l4.2 4.2H0v1.5h9.15l-4.2 4.2L6 12l6-6-6-6z' fill='%23fff'/%3E%3C/svg%3E");
         background-position: center;
         background-repeat: no-repeat;
         transition: background-color .16s ease;
@@ -235,6 +243,14 @@ h2, .like-h2 {
     &:active::before {
         background-color: #2A71B1;
     }
+}
+
+.link-detailed::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none'%3E%3Cpath fill-rule='evenodd' d='M6 0L4.95 1.05l4.2 4.2H0v1.5h9.15l-4.2 4.2L6 12l6-6-6-6z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.link-add::before {
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='12' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 7v5h2V7h5V5H7V0H5v5H0v2h5z' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 .high-link {
