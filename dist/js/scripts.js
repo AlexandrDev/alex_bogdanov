@@ -180,7 +180,7 @@ $(function() {
 
 
 
-    let product_sliders = ['.product-slider'];
+    let product_sliders = ['.product-slider', '.new-products-slider'];
 
     product_sliders.forEach((slider) => {
         if (document.querySelector(slider)) {

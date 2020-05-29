@@ -1,14 +1,6 @@
 .new-products {
     margin-bottom: 100px;
 
-    @include laptop {
-        margin-bottom: 78px;
-    }
-
-    @include tablet {
-        margin-bottom: 60px;
-    }
-
     &-wrapper {
         overflow: hidden;
     }
@@ -27,25 +19,66 @@
         }
     }
 
-    &-slider {
-        @include laptop {
-            display: none;
+    &__bottom {
+        display: none;
+
+        .button {
+            margin-top: 40px;
+        }
+    }
+
+    @include laptop {
+        margin-bottom: 78px;
+    }
+
+    @include tablet {
+        margin-bottom: 60px;
+
+        &__left {
+            p, .button {
+                display: none;
+            }
+        }
+
+        &__bottom {
+            display: block;
         }
     }
 
 
+    &-slider .flickity-viewport {
+        width: calc(100% + (100vw - 1146px)/2);
+
+        @include desktop {
+            width: calc(100% + (100vw - 930px));
+        }
+        @include laptop {
+            width: calc(100% + (100vw - 720px));
+        }
+        @include tablet {
+            width: 100%;
+            overflow: visible;
+        }
+    }
+
     .product-card {
+        width: 238px;
+        margin-right: 20px;
+
         &__thumb {
             height: 380px;
             margin-bottom: 15px;
-    
-            @include desktop {
-                height: 295px;
-            }
         }
 
         &__name {
             padding-right: 24px;
+        }
+
+        @include desktop {
+            width: 190px;
+            &__thumb {
+                height: 295px;
+            }
         }
     }
 }
