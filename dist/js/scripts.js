@@ -1,5 +1,7 @@
 $(function() {
 
+    $('.dropdown-menu').show(); // fix transition
+
     $(window).resize(function() {
         set_sticky_header();
         setProdBlockPadding();

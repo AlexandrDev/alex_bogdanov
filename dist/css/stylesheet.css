@@ -1129,6 +1129,7 @@ header.sticky-header .header__logo {
 }
 
 .dropdown-menu {
+  display: none;
   position: absolute;
   top: 110% !important;
   opacity: 0;
