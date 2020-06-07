@@ -1,0 +1,12 @@
+.price {
+    color: $dark;
+
+    span {
+        white-space: nowrap;
+    }
+
+    .old {
+        text-decoration-line: line-through;
+        color: $blue;
+    }
+}

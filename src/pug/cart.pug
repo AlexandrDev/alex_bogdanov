@@ -15,26 +15,34 @@ block content
 
     .cart.container
         .row
-            .cart__main.col-lg-8
+            .cart__main.col-xl-8
                 .cart-table
-                    .cart-table-header
-                        .cart-table__image Товар
-                        .cart-table__name Описание
-                        .cart-table__size Размер
-                        .cart-table__quant Количество
-                        .cart-table__price Цена
-                        .cart-table__remove
+                    .cart-table__header
+                        .col-image Товар
+                        .col-name Описание
+                        .col-size Размер
+                        .col-quant Количество
+                        .col-price Цена
+                        .col-remove
 
-                    .cart-table-item
-                        .cart-table__image img
-                        .cart-table__name 
-                            | Блузон «Овация» в две строки
-                            .article Арт. 1234567
+                    .cart-table__item
+                        .col-image 
+                            img(src="", alt="").thumbnail
+                        .col-name 
+                            span Блузон «Овация» в две строки
+                            .sku Арт. 1234567
                             a(href="").add-to-wishlist.ab-i-wishlist
-                        .cart-table__size 46
-                        .cart-table__quant 
-                        .cart-table__price 4545
-                        .cart-table__remove del
+                        .col-size 46
+                        .col-quantity
+                            .quantity
+                                .quantity__btn.decrease
+                                input(type="number", value="1").quantity__input
+                                .quantity__btn.increase
+                        .col-price.price
+                            span 14 000 ₽
+                            span.old 17 600 ₽
+                        .col-remove 
+                            a(href="").remove-btn.ab-i-cart-remove
 
 
                 .add-as-gift
@@ -45,9 +53,19 @@ block content
 
 
 
-            .right-sidebar.col-lg-4
+            .right-sidebar.col-xl-4
                 .order-info
                     .order-info__title.like-h3 Детали заказа
+
+                    .order-info__list
+                        .item
+                            .item__title Товаров
+                            .item__value 2
+                        .item
+                            .item__title Всего товаров на сумму
+                            .item__value.price
+                                span 14 000 ₽
+                                span.old 17 600 ₽
 
                     a(href=order_link).order-info__button.button.button_blue-filled Оформить заказ
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.1.9d">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.1.10">
   </head>
   <body>
     <header>
@@ -119,8 +119,41 @@
             </div>
             <div class="header-icons__item following"><a href="" title="Избранное"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path d="M9.17 3.047a1 1 0 001.659 0C11.69 1.768 13.002 1 14.425 1 16.833 1 19 3.27 19 6.35c0 .92-.438 2.047-1.252 3.292-.8 1.225-1.897 2.46-3.05 3.57s-2.33 2.066-3.276 2.743l-1.18.768-.24.126-.24-.127c-.303-.17-.706-.432-1.18-.775-.948-.683-2.128-1.65-3.278-2.76s-2.25-2.352-3.05-3.575C1.436 8.368 1 7.25 1 6.35 1 3.27 3.167 1 5.575 1c1.423 0 2.734.768 3.596 2.047zm.682 13.865zm.29-.002z" stroke="#4e5b67" stroke-width="2" stroke-linejoin="round"/></svg>
                 <div class="counter">3</div></a></div>
-            <div class="header-icons__item mini-cart"><a href="cart.html" title="Корзина"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
-                <div class="counter">18</div></a></div>
+            <div class="header-icons__item mini-cart"><a href="" title="Корзина" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
+                <div class="counter">18</div></a>
+              <div class="mini-cart__dropdown dropdown-menu">
+                <div class="cart-table">
+                  <div class="cart-table__item">
+                    <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
+                    <div class="col-name"> <span>Блузон «Овация» в две строки</span>
+                      <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
+                    </div>
+                    <div class="col-size">46</div>
+                    <div class="col-quantity">
+                      <div class="quantity">
+                        <div class="quantity__btn decrease"></div>
+                        <input class="quantity__input" type="number" value="1">
+                        <div class="quantity__btn increase"></div>
+                      </div>
+                    </div>
+                    <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
+                    <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
+                  </div>
+                </div><a class="mini-cart__add-box link-add" href="">Добавить подарочную коробку</a>
+                <div class="mini-cart__totals">
+                  <div class="total totals__row">
+                    <div class="title">Всего товаров на сумму</div>
+                    <div class="value price"><span class="old">555 598 ₽</span><span>444 598 ₽</span></div>
+                  </div>
+                  <div class="totals__row">
+                    <div class="title">Доставка</div>
+                    <div class="value">500 ₽</div>
+                  </div>
+                </div>
+                <div class="mini-cart__buttons"><a class="button button_blue-bordered" href="cart.html">В корзину</a><a class="button button_blue-filled" href="checkout.html">Оформить</a></div>
+                <div class="mini-cart__empty">Ваша корзина пуста<a class="button button_blue-filled" href="catalog.html">Перейти в каталог</a></div>
+              </div>
+            </div>
             <div class="header-icons__item search"><a href="" title="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M18.906 18.02l-3.066-3.28a8.943 8.943 0 002.105-5.768C17.944 4.025 13.92 0 8.972 0S0 4.025 0 8.972s4.025 8.972 8.972 8.972c1.857 0 3.627-.56 5.14-1.624l3.107 3.32a1.16 1.16 0 00.843.359c.304 0 .592-.116.81-.326a1.17 1.17 0 00.032-1.655zM8.972 2C12.63 2 16 5.343 16 9s-3.37 7-7.028 7S2 12.63 2 8.972 5.315 2 8.972 2z" fill="#4e5b67"/></svg></a></div>
           </div>
         </div>
@@ -216,8 +249,16 @@
       <div class="product">
         <div class="container">
           <div class="row">
-            <div class="product-photo-slider col-xl-6">
-              <div class="photo" style="height:3000px"></div>
+            <div class="product-photo col-xl-6">
+              <div class="product-photo-slider">
+                <div class="slide"><img src="images/dev/prod_full_1.jpg" alt=""></div>
+                <div class="slide"><img src="images/dev/prod_full_2.jpg" alt=""></div>
+                <div class="slide"><img src="images/dev/prod_full_1.jpg" alt=""></div>
+                <div class="slide"><img src="images/dev/prod_full_2.jpg" alt=""></div>
+              </div>
+              <div class="slider-nav">
+                <div class="slider-nav__dots"></div>
+              </div>
             </div>
             <div class="product-right col-xl-6">
               <div class="product-info">
@@ -256,7 +297,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="buttons"><a class="button button_blue-filled" href="cart.html">Добавить в корзину</a><a class="add-to-wishlist with-svg" href=""><svg width="35" height="38" viewBox="0 0 35 36" fill="#fff" stroke="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path d="M16.677 13.38a1 1 0 001.646 0c.807-1.171 2.038-1.88 3.38-1.88 2.275 0 4.297 2.09 4.297 4.9 0 .829-.405 1.859-1.175 3.012-.757 1.132-1.795 2.275-2.887 3.304a28.552 28.552 0 01-3.106 2.544c-.45.315-.832.554-1.118.71a4.117 4.117 0 01-.212.11 4.07 4.07 0 01-.213-.11 12.78 12.78 0 01-1.118-.717 28.987 28.987 0 01-3.108-2.56c-1.093-1.034-2.13-2.18-2.888-3.31C9.402 18.23 9 17.21 9 16.4c0-2.811 2.022-4.901 4.296-4.901 1.343 0 2.574.709 3.38 1.88zm.674 12.763s.003-.002.01-.003a.102.102 0 01-.01.003zm.291-.003a.083.083 0 010 0z" stroke-width="2" stroke-linejoin="round"/></svg><span>Добавить в избранное</span></a><a class="check-stock with-svg" href=""><svg width="35" height="35" fill="none" stroke="#4E5B67" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M17.7 17.94a2.276 2.276 0 01-2.273-2.274 2.276 2.276 0 012.273-2.272 2.276 2.276 0 012.272 2.272A2.277 2.277 0 0117.7 17.94z"/><path d="M24.912 18.391h0l-.003.007c-.198.534-.53 1.09-1.008 1.647l-.028.032-6.174 7.251-6.187-7.267h0l-.004-.005c-.483-.56-.819-1.12-1.02-1.664h0l-.003-.007c-.881-2.33-.55-4.978.902-7.08h0C12.841 9.2 15.133 8 17.7 8c2.566 0 4.858 1.201 6.312 3.305h0c1.453 2.102 1.784 4.75.9 7.086zm-14.346-7.654h-.001 0z"/></svg><span>Узнать о наличии товара в магазине</span></a></div>
+                <div class="buttons"><a class="button button_blue-filled" href="cart.html">Добавить в корзину</a>
+                  <!-- a(href="javascript:;", data-fancybox, data-src="#arrival-notify").button.button_blue-filled Узнать о поступлении--><a class="add-to-wishlist with-svg" href=""><svg width="35" height="38" viewBox="0 0 35 36" fill="#fff" stroke="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path d="M16.677 13.38a1 1 0 001.646 0c.807-1.171 2.038-1.88 3.38-1.88 2.275 0 4.297 2.09 4.297 4.9 0 .829-.405 1.859-1.175 3.012-.757 1.132-1.795 2.275-2.887 3.304a28.552 28.552 0 01-3.106 2.544c-.45.315-.832.554-1.118.71a4.117 4.117 0 01-.212.11 4.07 4.07 0 01-.213-.11 12.78 12.78 0 01-1.118-.717 28.987 28.987 0 01-3.108-2.56c-1.093-1.034-2.13-2.18-2.888-3.31C9.402 18.23 9 17.21 9 16.4c0-2.811 2.022-4.901 4.296-4.901 1.343 0 2.574.709 3.38 1.88zm.674 12.763s.003-.002.01-.003a.102.102 0 01-.01.003zm.291-.003a.083.083 0 010 0z" stroke-width="2" stroke-linejoin="round"/></svg><span>Добавить в избранное</span></a>
+                  <!-- class=active, если добавлено--><a class="check-stock with-svg" href="javascript:;" data-fancybox data-src="#check-stock"><svg width="35" height="35" fill="none" stroke="#4E5B67" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M17.7 17.94a2.276 2.276 0 01-2.273-2.274 2.276 2.276 0 012.273-2.272 2.276 2.276 0 012.272 2.272A2.277 2.277 0 0117.7 17.94z"/><path d="M24.912 18.391h0l-.003.007c-.198.534-.53 1.09-1.008 1.647l-.028.032-6.174 7.251-6.187-7.267h0l-.004-.005c-.483-.56-.819-1.12-1.02-1.664h0l-.003-.007c-.881-2.33-.55-4.978.902-7.08h0C12.841 9.2 15.133 8 17.7 8c2.566 0 4.858 1.201 6.312 3.305h0c1.453 2.102 1.784 4.75.9 7.086zm-14.346-7.654h-.001 0z"/></svg><span>Узнать о наличии товара в магазине</span></a>
+                </div>
                 <div class="description">
                   <p>Любая девушка трепетно и воодушевленно относится к выбору наряда для выхода в свет. Важно продемонстрировать свою красоту и ослепить всех неповторимым нарядом. Платье с сеткой никого не оставляет равнодушным  –  модель формирует образ с лёгкой  размытостью границ, что придаёт ему загадки и притягательности. С платьем «Звон фиалки» девушка – всегда в центре внимания, взглядов, обсуждений.</p>
                 </div>
@@ -304,7 +348,7 @@
           </div>
         </div>
       </div>
-      <div class="product-slider-wrapper filled-bottom">
+      <div class="product-slider-wrapper additional-slider filled-bottom">
         <div class="container">
           <div class="product-slider-title like-h2">Дополните образ</div>
           <div class="product-slider">
@@ -320,7 +364,7 @@
               </div>
               <div class="product-card__bottom">
                 <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
               </div>
             </div>
             <div class="product-card">
@@ -335,7 +379,7 @@
               </div>
               <div class="product-card__bottom">
                 <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
               </div>
             </div>
             <div class="product-card">
@@ -350,7 +394,7 @@
               </div>
               <div class="product-card__bottom">
                 <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
               </div>
             </div>
             <div class="product-card">
@@ -365,7 +409,7 @@
               </div>
               <div class="product-card__bottom">
                 <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
               </div>
             </div>
             <div class="product-card">
@@ -380,7 +424,69 @@
               </div>
               <div class="product-card__bottom">
                 <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                <div class="product-card__price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+              </div>
+            </div>
+            <div class="product-slider__navs">
+              <div class="arrow arrow-prev">
+                                   <svg width="19" height="16" fill="#67add7"><path fill-rule="evenodd" d="M7.75 15.908l1.225-1.312-4.9-5.25H19V7.47H4.075l4.9-5.25L7.75.908l-7 7.5 7 7.5z"/></svg></div>
+              <div class="arrow arrow-next"><svg width="19" height="15" fill="#67add7"><path fill-rule="evenodd" d="M11.25 0l-1.225 1.313 4.9 5.25H0v1.875h14.925l-4.9 5.25L11.25 15l7-7.5-7-7.5z"/></svg></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-slider-wrapper uwatched-slider">
+        <div class="container">
+          <div class="product-slider-title like-h2">Вы смотрели</div>
+          <div class="product-slider">
+            <div class="product-card product-card_small">
+              <div class="product-card__thumb"><a href="product.html">
+                  <picture>
+                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                  </picture></a></div>
+              <div class="product-card__bottom">
+                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+              </div>
+            </div>
+            <div class="product-card product-card_small">
+              <div class="product-card__thumb"><a href="product.html">
+                  <picture>
+                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                  </picture></a></div>
+              <div class="product-card__bottom">
+                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+              </div>
+            </div>
+            <div class="product-card product-card_small">
+              <div class="product-card__thumb"><a href="product.html">
+                  <picture>
+                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                  </picture></a></div>
+              <div class="product-card__bottom">
+                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+              </div>
+            </div>
+            <div class="product-card product-card_small">
+              <div class="product-card__thumb"><a href="product.html">
+                  <picture>
+                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                  </picture></a></div>
+              <div class="product-card__bottom">
+                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+              </div>
+            </div>
+            <div class="product-card product-card_small">
+              <div class="product-card__thumb"><a href="product.html">
+                  <picture>
+                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                  </picture></a></div>
+              <div class="product-card__bottom">
+                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
               </div>
             </div>
             <div class="product-slider__navs">
@@ -394,6 +500,149 @@
       <div class="page-bottom-info container">
         <p>
            Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут.<br>Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.</p>
+      </div>
+      <div class="modal" id="arrival-notify">
+        <div class="modal-title">Оповещение</div>
+        <form class="form" action="">
+          <p>Введите адрес вашей электронной поты, и мы оповестим вас, когда товар снова поступит в продажу</p>
+          <div class="input-item">
+            <input class="input" type="email">
+            <label>Email</label>
+          </div>
+          <button class="form__button button button_blue-filled">Получить оповещение</button>
+          <div class="form__privacy">Отправляя данные формы, вы принимаете <a class="link" href="">Условия пользовательского соглашения</a></div>
+        </form>
+      </div>
+      <div class="m-check-stock modal" id="check-stock">
+        <div class="m-check-stock__search">
+          <div class="m-check-stock__product-info">
+            <div class="product-card">
+              <div class="product-card__thumb"><a href="product.html">
+                  <picture>
+                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                  </picture></a></div>
+              <div class="product-card__bottom">
+                <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+              </div>
+            </div>
+          </div>
+          <div class="m-check-stock__search-right">
+            <div class="modal-title">Узнать о наличии товара в магазине</div>
+            <form class="form" action="">
+              <p>Введите почтовый индекс или город, чтобы узнать, есть ли он в наличии в магазине</p>
+              <div class="input-item">   
+                <autocomplete :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
+              </div>
+              <button class="form__button button button_blue-filled">Показать наличие</button>
+            </form>
+          </div>
+        </div>
+        <div class="m-check-stock__select hidden">
+          <div class="m-check-stock__back">
+            <div class="back__arrow with-svg">
+               <svg width="19" height="15" fill="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 15l1.225-1.313-4.9-5.25H19V6.563H4.075l4.9-5.25L7.75 0l-7 7.5 7 7.5z"/></svg>Вернуться назад</div>
+          </div>
+          <div class="m-check-stock__select-grid">
+            <div class="m-check-stock__shops">
+              <div class="m-check-stock__shops-content">
+                <div class="item"><a class="item__title link" href="">Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29</a>
+                  <div class="choise-size">
+                    <div class="choise-size__top">Доступные размеры:</div>
+                    <div class="choise-size__list">
+                      <div class="choise-size__item">
+                        <input id="s1-size40" type="radio" name="size">
+                        <label for="size40">40</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size42" type="radio" name="size">
+                        <label for="size42">42</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size44" type="radio" name="size">
+                        <label for="size44">44</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size46" type="radio" name="size">
+                        <label for="size46">46</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item"><a class="item__title link" href="">Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29</a>
+                  <div class="choise-size">
+                    <div class="choise-size__top">Доступные размеры:</div>
+                    <div class="choise-size__list">
+                      <div class="choise-size__item">
+                        <input id="s1-size40" type="radio" name="size">
+                        <label for="size40">40</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size42" type="radio" name="size">
+                        <label for="size42">42</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size44" type="radio" name="size">
+                        <label for="size44">44</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size46" type="radio" name="size">
+                        <label for="size46">46</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item"><a class="item__title link" href="">Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29</a>
+                  <div class="choise-size">
+                    <div class="choise-size__top">Доступные размеры:</div>
+                    <div class="choise-size__list">
+                      <div class="choise-size__item">
+                        <input id="s1-size40" type="radio" name="size">
+                        <label for="size40">40</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size42" type="radio" name="size">
+                        <label for="size42">42</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size44" type="radio" name="size">
+                        <label for="size44">44</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size46" type="radio" name="size">
+                        <label for="size46">46</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="item"><a class="item__title link" href="">Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29</a>
+                  <div class="choise-size">
+                    <div class="choise-size__top">Доступные размеры:</div>
+                    <div class="choise-size__list">
+                      <div class="choise-size__item">
+                        <input id="s1-size40" type="radio" name="size">
+                        <label for="size40">40</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size42" type="radio" name="size">
+                        <label for="size42">42</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size44" type="radio" name="size">
+                        <label for="size44">44</label>
+                      </div>
+                      <div class="choise-size__item">
+                        <input id="s1-size46" type="radio" name="size">
+                        <label for="size46">46</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="m-check-stock__map">map</div>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -468,104 +717,98 @@
         </div>
       </div>
     </footer>
-    <div class="modals-hidden">
-      <div class="search-city modal" id="search-city">
-        <div class="modal-title">Выберите ваш город:</div>
-        <autocomplete class="search-city__autocomplete" :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
-        <div class="search-city__list">
-          <div class="search-city__item capital"><a href="">Москва</a></div>
-          <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
-          <div class="search-city__item"><a href="">Архангельск</a></div>
-          <div class="search-city__item"><a href="">Балаково</a></div>
-          <div class="search-city__item"><a href="">Барнаул</a></div>
-          <div class="search-city__item"><a href="">Благовещенск</a></div>
-          <div class="search-city__item"><a href="">Владивосток</a></div>
-          <div class="search-city__item"><a href="">Волгоград</a></div>
-          <div class="search-city__item"><a href="">Воронеж</a></div>
-          <div class="search-city__item"><a href="">Екатеринбург</a></div>
-          <div class="search-city__item"><a href="">Иркутск</a></div>
-          <div class="search-city__item"><a href="">Казань</a></div>
-          <div class="search-city__item"><a href="">Калининград</a></div>
-          <div class="search-city__item"><a href="">Кемерово</a></div>
-          <div class="search-city__item"><a href="">Краснодар</a></div>
-          <div class="search-city__item"><a href="">Красноярск</a></div>
-          <div class="search-city__item"><a href="">Липецк</a></div>
-          <div class="search-city__item"><a href="">Мурманск</a></div>
-          <div class="search-city__item"><a href="">Нижний Новгород</a></div>
-          <div class="search-city__item"><a href="">Новосибирск</a></div>
-          <div class="search-city__item"><a href="">Омск</a></div>
-          <div class="search-city__item"><a href="">Оренбург</a></div>
-          <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
-          <div class="search-city__item"><a href="">Рязань</a></div>
-          <div class="search-city__item"><a href="">Самара</a></div>
-          <div class="search-city__item"><a href="">Саратов</a></div>
-          <div class="search-city__item"><a href="">Сочи</a></div>
-          <div class="search-city__item"><a href="">Тюмень</a></div>
-          <div class="search-city__item"><a href="">Уфа</a></div>
-          <div class="search-city__item"><a href="">Хабаровск</a></div>
-          <div class="search-city__item"><a href="">Челябинск</a></div>
-          <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
-          <div class="search-city__item"><a href="">Ярославль</a></div>
-        </div>
+    <div class="search-city modal" id="search-city">
+      <div class="modal-title">Выберите ваш город:</div>
+      <autocomplete class="search-city__autocomplete" :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
+      <div class="search-city__list">
+        <div class="search-city__item capital"><a href="">Москва</a></div>
+        <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
+        <div class="search-city__item"><a href="">Архангельск</a></div>
+        <div class="search-city__item"><a href="">Балаково</a></div>
+        <div class="search-city__item"><a href="">Барнаул</a></div>
+        <div class="search-city__item"><a href="">Благовещенск</a></div>
+        <div class="search-city__item"><a href="">Владивосток</a></div>
+        <div class="search-city__item"><a href="">Волгоград</a></div>
+        <div class="search-city__item"><a href="">Воронеж</a></div>
+        <div class="search-city__item"><a href="">Екатеринбург</a></div>
+        <div class="search-city__item"><a href="">Иркутск</a></div>
+        <div class="search-city__item"><a href="">Казань</a></div>
+        <div class="search-city__item"><a href="">Калининград</a></div>
+        <div class="search-city__item"><a href="">Кемерово</a></div>
+        <div class="search-city__item"><a href="">Краснодар</a></div>
+        <div class="search-city__item"><a href="">Красноярск</a></div>
+        <div class="search-city__item"><a href="">Липецк</a></div>
+        <div class="search-city__item"><a href="">Мурманск</a></div>
+        <div class="search-city__item"><a href="">Нижний Новгород</a></div>
+        <div class="search-city__item"><a href="">Новосибирск</a></div>
+        <div class="search-city__item"><a href="">Омск</a></div>
+        <div class="search-city__item"><a href="">Оренбург</a></div>
+        <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
+        <div class="search-city__item"><a href="">Рязань</a></div>
+        <div class="search-city__item"><a href="">Самара</a></div>
+        <div class="search-city__item"><a href="">Саратов</a></div>
+        <div class="search-city__item"><a href="">Сочи</a></div>
+        <div class="search-city__item"><a href="">Тюмень</a></div>
+        <div class="search-city__item"><a href="">Уфа</a></div>
+        <div class="search-city__item"><a href="">Хабаровск</a></div>
+        <div class="search-city__item"><a href="">Челябинск</a></div>
+        <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
+        <div class="search-city__item"><a href="">Ярославль</a></div>
       </div>
-      <div class="auth-form modal" id="auth-form">
-        <div class="auth-form__type">
-          <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
-          <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
-        </div>
-        <div class="form form_login" :class="{ active: loginShowed }">
-          <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
-          <form id="login-form" action="">
-            <div class="input-item">
-              <input class="input" type="email">
-              <label>Email</label>
-            </div>
-            <div class="input-item">
-              <div class="show-password ab-i-password hidden"></div>
-              <input class="input" type="password">
-              <label>Пароль</label>
-            </div>
-            <div class="form__helpers input-item">
-              <input class="checkbox" id="remember-passwowrd" type="checkbox">
-              <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
-            </div>
-            <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-          </form>
-          <div class="form-services">
-            <div class="form-services__title">Или войдите<br>через сервисы</div>
-            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-          </div>
-        </div>
-        <div class="form form_signup" :class="{ active: signupShowed }">
-          <div class="form-services">
-            <div class="form-services__title">Регистрация<br>через сервисы</div>
-            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-          </div>
-          <p>Или заполните поля ниже</p>
-          <form id="signup-form" action="">
-            <div class="input-item">
-              <input class="input" type="email">
-              <label>Email</label>
-            </div>
-            <div class="input-item">
-              <div class="show-password ab-i-password hidden"></div>
-              <input class="input" type="password">
-              <label>Пароль</label>
-            </div>
-            <div class="input-item">
-              <div class="show-password ab-i-password showed"></div>
-              <input class="input" type="password">
-              <label>Повторите пароль</label>
-            </div>
-            <div class="input-item">
-              <input class="checkbox" id="iwholesale" type="checkbox">
-              <label for="iwholesale">Я оптовый покупатель</label>
-            </div>
-            <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-          </form>
-          <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
-        </div>
+    </div>
+    <div class="auth-form modal" id="auth-form">
+      <div class="auth-form__type">
+        <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
+        <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
       </div>
+      <form class="form form_login" id="login-form" :class="{ active: loginShowed }" action="">
+        <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
+        <div class="input-item">
+          <input class="input" type="email">
+          <label>Email</label>
+        </div>
+        <div class="input-item">
+          <div class="show-password ab-i-password hidden"></div>
+          <input class="input" type="password">
+          <label>Пароль</label>
+        </div>
+        <div class="form__helpers input-item">
+          <input class="checkbox" id="remember-passwowrd" type="checkbox">
+          <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
+        </div>
+        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+        <div class="form-services">
+          <div class="form-services__title">Или войдите <br>через сервисы</div>
+          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+        </div>
+      </form>
+      <form class="form form_signup" id="signup-form" action="" :class="{ active: signupShowed }">
+        <div class="form-services">
+          <div class="form-services__title">Регистрация <br>через сервисы</div>
+          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+        </div>
+        <p>Или заполните поля ниже</p>
+        <div class="input-item">
+          <input class="input" type="email">
+          <label>Email</label>
+        </div>
+        <div class="input-item">
+          <div class="show-password ab-i-password hidden"></div>
+          <input class="input" type="password">
+          <label>Пароль</label>
+        </div>
+        <div class="input-item">
+          <div class="show-password ab-i-password showed"></div>
+          <input class="input" type="password">
+          <label>Повторите пароль</label>
+        </div>
+        <div class="input-item">
+          <input class="checkbox" id="iwholesale" type="checkbox">
+          <label for="iwholesale">Я оптовый покупатель</label>
+        </div>
+        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+        <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
+      </form>
     </div>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/vue.min.js" defer></script>
@@ -574,6 +817,6 @@
     <script src="js/jquery.flickity-fade.min.js" defer></script>
     <script src="js/jquery.fancybox.min.js" defer></script>
     <script src="js/vue.autocomplete.min.js" defer></script>
-    <script src="js/scripts.js?v0.1.9d" defer></script>
+    <script src="js/scripts.js?v0.1.10" defer></script>
   </body>
 </html>

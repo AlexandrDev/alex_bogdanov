@@ -163,11 +163,11 @@
             border-width: 0 0 1px;
             &__content {
                 position: static !important;
-                display: none;
-                padding-top: 25px;
+                display: none !important;
+                padding: 25px 20px;
 
                 .show & {
-                    display: block;
+                    display: block !important;
                 }
 
                 .button {

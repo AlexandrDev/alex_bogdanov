@@ -71,4 +71,4 @@ function watch() {
     gulp.watch('src/svg/*', svg)
 }
 
-exports.default = gulp.parallel(html, styles, images, svg, watch);
+exports.default = gulp.parallel(html, styles, watch);

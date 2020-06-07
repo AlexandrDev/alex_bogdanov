@@ -28,9 +28,19 @@ block content
     .product
         .container
             .row
-                .product-photo-slider.col-xl-6
-                    .photo(style="height:3000px")
-                
+                .product-photo.col-xl-6
+                    .product-photo-slider
+                        .slide
+                            img(src="images/dev/prod_full_1.jpg", alt="")
+                        .slide
+                            img(src="images/dev/prod_full_2.jpg", alt="")
+                        .slide
+                            img(src="images/dev/prod_full_1.jpg", alt="")
+                        .slide
+                            img(src="images/dev/prod_full_2.jpg", alt="")
+
+                    .slider-nav
+                        .slider-nav__dots
 
                 .product-right.col-xl-6
                     .product-info
@@ -74,10 +84,12 @@ block content
 
                         .buttons
                             a(href=cart_link).button.button_blue-filled Добавить в корзину
+                            // a(href="javascript:;", data-fancybox, data-src="#arrival-notify").button.button_blue-filled Узнать о поступлении
                             a(href="").add-to-wishlist.with-svg
                                 include ../svg-min/add-to-wishlist.svg
                                 span Добавить в избранное
-                            a(href="").check-stock.with-svg
+                            // class=active, если добавлено
+                            a(href="javascript:;", data-fancybox, data-src="#check-stock").check-stock.with-svg
                                 include ../svg-min/map-point.svg
                                 span Узнать о наличии товара в магазине
                         
@@ -120,8 +132,7 @@ block content
                                 | Безопасность платежей гарантируется использованием SSL протокола. Данные вашей банковской карты надежно защищены при оплате онлайн
 
 
-
-    .product-slider-wrapper.filled-bottom
+    .product-slider-wrapper.additional-slider.filled-bottom
         .container
             .product-slider-title.like-h2 Дополните образ
             .product-slider
@@ -133,8 +144,130 @@ block content
                     .arrow.arrow-next
                         include ../svg-min/slider-arrow-next_small.svg
     
+    .product-slider-wrapper.uwatched-slider
+        .container
+            .product-slider-title.like-h2 Вы смотрели
+            .product-slider
+                - for (var x = 0; x < 5; x++)
+                    include ./components/_product-card_small.pug
+                .product-slider__navs
+                    .arrow.arrow-prev                    
+                        include ../svg-min/slider-arrow-prev_small.svg
+                    .arrow.arrow-next
+                        include ../svg-min/slider-arrow-next_small.svg
+
     .page-bottom-info.container
         p 
             | Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут.
             br
             | Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.
+
+
+    #arrival-notify.modal
+        .modal-title Оповещение
+        form.form(action="")
+            p Введите адрес вашей электронной поты, и мы оповестим вас, когда товар снова поступит в продажу
+
+            .input-item
+                input(type="email").input
+                label Email
+
+            button.form__button.button.button_blue-filled Получить оповещение
+
+            .form__privacy Отправляя данные формы, вы принимаете 
+                a(href="").link Условия пользовательского соглашения
+    
+
+    #check-stock.m-check-stock.modal
+        .m-check-stock__search
+            .m-check-stock__product-info
+                include ./components/_product-card_stock.pug
+
+            .m-check-stock__search-right
+                .modal-title Узнать о наличии товара в магазине
+                form.form(action="")
+                    p Введите почтовый индекс или город, чтобы узнать, есть ли он в наличии в магазине
+                    .input-item    
+                        autocomplete(:search="search", :get-result-value="getResultValue", :debounce-time="100", placeholder="Введите город", aria-label="Введите город", base-class="search-autocomplete", @submit="handleSubmit")
+
+                    button.form__button.button.button_blue-filled Показать наличие
+
+        .m-check-stock__select.hidden
+            .m-check-stock__back
+                .back__arrow.with-svg 
+                    include ../svg-min/back-arrow-checkStock.svg
+                    | Вернуться назад
+            .m-check-stock__select-grid
+                .m-check-stock__shops
+                    .m-check-stock__shops-content
+                        .item
+                            a(href="").item__title.link Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29
+                            .choise-size
+                                .choise-size__top Доступные размеры:
+                                .choise-size__list
+                                    .choise-size__item
+                                        input#s1-size40(type="radio", name="size")
+                                        label(for="size40") 40
+                                    .choise-size__item
+                                        input#s1-size42(type="radio", name="size")
+                                        label(for="size42") 42
+                                    .choise-size__item
+                                        input#s1-size44(type="radio", name="size")
+                                        label(for="size44") 44
+                                    .choise-size__item
+                                        input#s1-size46(type="radio", name="size")
+                                        label(for="size46") 46
+                        .item
+                            a(href="").item__title.link Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29
+                            .choise-size
+                                .choise-size__top Доступные размеры:
+                                .choise-size__list
+                                    .choise-size__item
+                                        input#s1-size40(type="radio", name="size")
+                                        label(for="size40") 40
+                                    .choise-size__item
+                                        input#s1-size42(type="radio", name="size")
+                                        label(for="size42") 42
+                                    .choise-size__item
+                                        input#s1-size44(type="radio", name="size")
+                                        label(for="size44") 44
+                                    .choise-size__item
+                                        input#s1-size46(type="radio", name="size")
+                                        label(for="size46") 46
+                        .item
+                            a(href="").item__title.link Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29
+                            .choise-size
+                                .choise-size__top Доступные размеры:
+                                .choise-size__list
+                                    .choise-size__item
+                                        input#s1-size40(type="radio", name="size")
+                                        label(for="size40") 40
+                                    .choise-size__item
+                                        input#s1-size42(type="radio", name="size")
+                                        label(for="size42") 42
+                                    .choise-size__item
+                                        input#s1-size44(type="radio", name="size")
+                                        label(for="size44") 44
+                                    .choise-size__item
+                                        input#s1-size46(type="radio", name="size")
+                                        label(for="size46") 46
+                        .item
+                            a(href="").item__title.link Магазин «BGD-Bogdanov», ТРЦ «Ладья» м. Митино, ул. Дубравная, 34/29
+                            .choise-size
+                                .choise-size__top Доступные размеры:
+                                .choise-size__list
+                                    .choise-size__item
+                                        input#s1-size40(type="radio", name="size")
+                                        label(for="size40") 40
+                                    .choise-size__item
+                                        input#s1-size42(type="radio", name="size")
+                                        label(for="size42") 42
+                                    .choise-size__item
+                                        input#s1-size44(type="radio", name="size")
+                                        label(for="size44") 44
+                                    .choise-size__item
+                                        input#s1-size46(type="radio", name="size")
+                                        label(for="size46") 46
+
+                .m-check-stock__map
+                    | map

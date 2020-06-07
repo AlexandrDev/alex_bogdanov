@@ -86,12 +86,50 @@ header
                         .counter 3
 
                 .header-icons__item.mini-cart
-                    //- a(href="", title="Корзина", data-toggle="dropdown")
-                    a(href=cart_link, title="Корзина")
+                    a(href="", title="Корзина", data-toggle="dropdown")
                         include ../../svg-min/menu-cart.svg
                         .counter 18
-                    //- .mini-cart__dropdown.dropdown-menu
-                    //-     | mini-cart
+                    //- a(href=cart_link, title="Корзина")
+                    .mini-cart__dropdown.dropdown-menu
+                        .cart-table
+                            .cart-table__item
+                                .col-image 
+                                    img(src="", alt="").thumbnail
+                                .col-name 
+                                    span Блузон «Овация» в две строки
+                                    .sku Арт. 1234567
+                                    a(href="").add-to-wishlist.ab-i-wishlist
+                                .col-size 46
+                                .col-quantity
+                                    .quantity
+                                        .quantity__btn.decrease
+                                        input(type="number", value="1").quantity__input
+                                        .quantity__btn.increase
+                                .col-price.price
+                                    span 14 000 ₽
+                                    span.old 17 600 ₽
+                                .col-remove 
+                                    a(href="").remove-btn.ab-i-cart-remove
+
+                        a(href="").mini-cart__add-box.link-add Добавить подарочную коробку
+
+                        .mini-cart__totals
+                            .total.totals__row
+                                .title Всего товаров на сумму
+                                .value.price
+                                    span.old 555 598 ₽
+                                    span 444 598 ₽
+                            .totals__row
+                                .title Доставка
+                                .value 500 ₽
+
+                        .mini-cart__buttons
+                            a(href=cart_link).button.button_blue-bordered В корзину
+                            a(href=order_link).button.button_blue-filled Оформить
+                        
+                        .mini-cart__empty
+                            | Ваша корзина пуста
+                            a(href=catalog_link).button.button_blue-filled Перейти в каталог
 
                 .header-icons__item.search
                     a(href="", title="Поиск")

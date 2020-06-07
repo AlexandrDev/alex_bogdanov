@@ -151,12 +151,8 @@
     }
 
     &__price {
-        color: $dark;
-
         .old {
             margin-left: 10px;
-            text-decoration-line: line-through;
-            color: $blue;
         }
     }
 
@@ -165,5 +161,24 @@
         top: 5px;
         right: 4px;
         display: block;
+    }
+
+
+    &_small {
+        display: flex;
+        
+        .product-card {
+            &__thumb {
+                width: 85px;
+                height: 127px;
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+            
+            &__wishlist {
+                position: static;
+                margin-top: 14px;
+            }
+        }
     }
 }

@@ -1,0 +1,82 @@
+.choise-size {
+    &__top {
+        font-size: 15px;
+        color: $dark;
+        margin-bottom: 20px;
+    }
+
+    &__helper {
+        position: relative;
+        color: $gray;
+        margin-left: 21px;
+        border-bottom: 1px dashed;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 15px;
+            position: absolute;
+            top: 0;
+            left: -11px;
+            bottom: 0;
+            margin: auto;
+            background-color: rgba(78, 91, 103, 0.5);
+            pointer-events: none;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -10px;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            display: block;
+            width: 40px;
+            height: 40px;
+            font-size: 15px;
+            line-height: 38px;
+            color: #4E5B67;
+            text-align: center;
+            background: #FFF;
+            border: 1px dashed #67ADD7;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all .16s ease;
+        }
+
+        input:checked + label,
+        label:hover {
+            background: #67ADD7;
+            border-color: #67ADD7;
+            color: #ffffff;
+        }
+
+        label:active {
+            background: #428CC3;
+            border-color: #428CC3;
+        }
+
+        input:disabled + label {
+            pointer-events: none;
+            opacity: 0.3;
+        }
+    }
+}

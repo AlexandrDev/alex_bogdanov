@@ -5,8 +5,10 @@
 
     &__dropdown {
         width: 410px;
+        max-width: 100vw;
         right: 15px;
         left: auto !important;
+        padding: 10px 25px 40px;
         background: #F1F6FA;
 
         &::before {
@@ -14,6 +16,116 @@
             right: 64px;
             width: 25px;
             height: 25px;
+        }
+    }
+
+    .cart-table {
+        margin-bottom: 20px;
+
+        &__header, 
+        .add-to-wishlist,
+        .col-size {
+            display: none;
+        }
+        
+        &__item {
+            grid-template-areas: "img name name name"
+                                "img quant price remove";
+            grid-template-columns: 70px 1fr auto auto;
+            grid-gap: 16px 10px;
+
+            .col {
+                &-name, &-price, &-remove, &-quantity {
+                    padding-top: 2px;
+                }
+            }
+        }
+
+        .col {
+            &-name {
+                margin-left: 0;
+            }
+            &-remove {
+                align-items: center;
+            }
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 105px;
+        }
+    }
+
+    &__add-box {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    &__totals {
+        margin-bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .totals__row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        font-size: 15px;
+        line-height: 20px;
+        color: #4E5B67;
+        margin-bottom: 10px;
+
+        .value {
+            color: #132434;
+            text-align: right;
+            margin-left: 10px;
+        }
+
+        &.total {
+            font-size: 16px;
+        }
+
+        .price {
+            span {
+                font-size: 17px;
+                font-weight: 600;
+            }
+            .old {
+                font-size: 15px;
+                font-weight: 500;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+        .button {
+            width: calc(50% - 5px);
+        }
+    }
+
+    &__empty {
+        padding-top: 20px;
+        text-align: center;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        color: #132434;
+
+        .button {
+            margin-top: 25px;
+        }
+    }
+
+    @include phone {
+        &__dropdown {
+            right: 0;
+            padding-left: 20px;
+            padding-right: 20px;
         }
     }
 }

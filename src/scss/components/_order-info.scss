@@ -7,7 +7,36 @@
     border-radius: 25px 0px;
 
     &__title {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+    }
+
+    &__list {
+        margin-bottom: 10px;
+
+        .item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            font-size: 16px;
+            line-height: 20px;
+            color: #4E5B67;
+            padding: 15px 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid rgba(78, 91, 103, 0.15);
+            }
+
+            &__title {
+                max-width: 60%;
+            }
+
+            &__value {
+                color: #132434;
+            }
+        }
+
+        .price span {
+            display: block;
+        }
     }
 
     &__button {
@@ -21,7 +50,7 @@
         margin-top: 25px;
     }
 
-    @include laptop {
+    @include desktop {
         position: static;
         margin-left: 0;
     }
@@ -30,7 +59,7 @@
         padding: 35px 30px;
 
         &__title {
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
     }
 }

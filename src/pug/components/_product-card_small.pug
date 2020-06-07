@@ -1,21 +1,12 @@
-.product-card
+.product-card.product-card_small
     .product-card__thumb
         a(href=product_link)
             picture
                 source(srcset="images/dev/prod-thumb.webp", type="image/webp")
                 img(src="images/dev/prod-thumb.png", alt="")
-        .product-card__buttons
-            .add-to-cart.ab-i-add2cart Добавить
-            .select-size
-                a(href="").select-size__item 40
-                a(href="").select-size__item 42
-                a(href="").select-size__item 44
-                a(href="").select-size__item 46
-                a(href="").select-size__item 48
-                a(href="").select-size__item 50
-                a(href="").select-size__item 52
 
     .product-card__bottom
+        .product-card__sku Арт. 1234567
         a(href=product_link).product-card__name Пальто «Нежные струны»
         .product-card__price.price
             span 27 000 ₽

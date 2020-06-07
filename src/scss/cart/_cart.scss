@@ -2,9 +2,10 @@
     margin-bottom: 80px;
 
     &-table {
-        &-header, &-item {
+        &__header, &__item {
             display: grid;
             grid-auto-flow: column;
+            grid-template-areas: "img name size quant price remove";
             grid-template-columns: 80px 1fr 100px 100px 90px 46px;
             grid-column-gap: 30px;
             padding-top: 15px;
@@ -12,35 +13,167 @@
             border-bottom: 1px solid rgba(78, 91, 103, 0.15);
         }
 
-        &-header {
+        &__header {
             font-weight: 500;
             font-size: 14px;
             line-height: 20px;
             color: rgba(78, 91, 103, 0.8);
         }
 
-        &-item {
+        &__item {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 20px;
+            color: $gray;
 
-        }
-
-        &__image {
-        }
-        &__name {
-            margin-left: -10px;
-        }
-        &__size {
-            text-align: center;
-        }
-        &__quant {
-            text-align: center;
-        }
-        &__price {
-            text-align: right;
-        }
-        &__remove {
-            text-align: right;
+            .col {
+                &-name, &-size, &-price, &-remove {
+                    padding-top: 15px;
+                }
+                &-quantity {
+                    padding-top: 5px;
+                }
+            }
         }
 
+        .col {
+            &-image {
+                grid-area: img;
+            }
+            &-name {
+                grid-area: name;
+                margin-left: -10px;
+            }
+            &-size {
+                grid-area: size;
+                text-align: center;
+            }
+            &-quantity {
+                grid-area: quant;
+                text-align: center;
+            }
+            &-price {
+                grid-area: price;
+                text-align: right;
+                font-size: 15px;
+                line-height: 20px;
+                span {
+                    display: block;
+                }
+            }
+            &-remove {
+                grid-area: remove;
+                display: flex;
+                align-items: flex-start;
+                justify-content: flex-end;
+            }
+        }
+
+        .thumbnail {
+            display: block;
+            width: 80px;
+            height: 120px;
+            object-fit: contain;
+            background: #F8F8FA;
+        }
+
+        .sku {
+            font-size: 14px;
+            line-height: 20px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        .add-to-wishlist {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100px;
+            height: 40px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid rgba(78, 91, 103, 0.2);
+            border-radius: 3px;
+            background: #fff;
+
+            &__input {
+                width: 30px;
+                height: 100%;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                text-align: center;
+                background: transparent;
+                color: #132434;
+                border: none;
+                outline: none;
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0; }
+            }
+
+            &__btn {
+                width: 20px;
+                height: 20px;
+                cursor: pointer;
+
+                &.decrease {
+                    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z'/%3E%3Cpath fill='%23A3A3AC' d='M5 9h10v2H5z'/%3E%3C/svg%3E");
+                }
+                &.increase {
+                    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M0 0h20v20H0z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 11v4h2v-4h4V9h-4V5H9v4H5v2h4z' fill='%23A3A3AC'/%3E%3C/svg%3E");
+                }
+            }
+        }
+
+        .remove-btn {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0 10px;
+        }
+
+
+        @include tablet {
+            &__header, 
+            .add-to-wishlist,
+            .col-size {
+                display: none;
+            }
+            
+            &__item {
+                grid-template-areas: "img name name name"
+                                    "img quant price remove";
+                grid-template-columns: 70px 1fr auto auto;
+                grid-gap: 16px 10px;
+
+                .col {
+                    &-name, &-price, &-remove, &-quantity {
+                        padding-top: 2px;
+                    }
+                }
+            }
+
+            .col {
+                &-name {
+                    margin-left: 0;
+                }
+                &-remove {
+                    align-items: center;
+                }
+            }
+
+            .thumbnail {
+                width: 70px;
+                height: 105px;
+            }
+        }
     }
 
     .add-as-gift {
@@ -61,7 +194,7 @@
         }
     }
 
-    @include laptop {
+    @include desktop {
         margin-bottom: 40px;
         &__main {
             margin-bottom: 40px;

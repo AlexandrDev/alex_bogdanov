@@ -1,18 +1,15 @@
 $(function() {
-
     $('.dropdown-menu').show(); // fix transition
 
-    $(window).resize(function() {
-        set_sticky_header();
-        setProdBlockPadding();
+
+    // dropdown's
+    $("[data-toggle='dropdown']").dropdown();
+    $('.filter-collapse, .mini-cart').on('click', '.dropdown-menu', function(e) {
+        e.stopPropagation();
     });
 
-    $(window).scroll(function() {
-        set_sticky_header()
-    });
 
-
-    // stisky-header
+    // stisky header
     let header_top_h = $('.header__top').height();
         
     set_sticky_header();
@@ -26,13 +23,7 @@ $(function() {
     }
     
 
-    $("[data-toggle='dropdown']").dropdown();
-
-    $('.filter-collapse').on('click', '.dropdown-menu', function(e) {
-        e.stopPropagation();
-    });
-
-
+    // Mobile hamburger
     $('.hamburger').click(function() {
         if ($('header').hasClass('menu-opened') ) {
             $('.mobile-menu-parent').removeClass('expanded');
@@ -41,6 +32,7 @@ $(function() {
     });
 
 
+    // Mobile menu
     let navExpand = [].slice.call(document.querySelectorAll('.mobile-menu-parent'));
 
     navExpand.forEach((item) => {
@@ -87,7 +79,38 @@ $(function() {
         }
     });
 
+    let checkStock = new Vue({
+        el: "#check-stock",
+        components: {
+            Autocomplete
+        },
+        methods: {
+            search(input) {
+                const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
+          
+                return new Promise(resolve => {
+                    if (input.length < 2) {
+                        return resolve([]);
+                    }
+          
+                    fetch(url).
+                    then(response => response.json()).
+                    then(data => {
+                        resolve(data.query.search);
+                    });
+                });
+            },
+            getResultValue(result) {
+                return result.title;
+            },
+            handleSubmit(result) {
+                console.log(result.title);
+            }
+        }
+    });
 
+
+    // Форма авторизации
     let authForm = new Vue({
         el: "#auth-form",
         data: {
@@ -106,6 +129,8 @@ $(function() {
         }
     });
 
+
+    // Свойства с подсказками в товаре
     let prod_props = new Vue({
         el: "#properties-icons",
         data: {
@@ -114,7 +139,7 @@ $(function() {
     });
 
 
-    // sliders with navigation
+    // Слайдеры с точками и counter'ом (в основном на главной)
     let sliders = ['#fw-slider', '.goods-pw-photo-slider', '.shops-slider'];
 
     sliders.forEach((slider) => {
@@ -169,6 +194,8 @@ $(function() {
         }
     });
 
+    
+    // объединённый слайдер товаров на главной в блоке брендов
     $('.goods-pw-description-slider').flickity({
         prevNextButtons: false,
         pageDots: false,
@@ -179,54 +206,60 @@ $(function() {
     });
 
 
-
+    // Слайдеры товаров (со стрелками)
     let product_sliders = ['.product-slider', '.new-products-slider'];
 
-    product_sliders.forEach((slider) => {
-        if (document.querySelector(slider)) {
-            let flkty = new Flickity( slider, {
-                prevNextButtons: false,
-                pageDots: false,
-                adaptiveHeight: true,
-                // contain: true,
-                cellAlign: 'left',
-                percentPosition: false,
-                cellSelector: '.product-card',
-            });
+    product_sliders.forEach((elem) => {
+        if (document.querySelectorAll(elem).length) {
 
-            let slides_count = flkty.slides.length;
+            let sliders = document.querySelectorAll(elem);
 
-            let $navs = $(slider).find('.product-slider__navs'),
-                $prev = $navs.find('.arrow-prev'),
-                $next = $navs.find('.arrow-next');
+            sliders.forEach((slider) => {
+                let flkty = new Flickity( slider, {
+                    prevNextButtons: false,
+                    pageDots: false,
+                    adaptiveHeight: true,
+                    // contain: true,
+                    cellAlign: 'left',
+                    percentPosition: false,
+                    cellSelector: '.product-card',
+                });
 
-            $prev.addClass('disabled');
+                let slides_count = flkty.slides.length;
 
-            flkty.on('select', function(index) {
-                if (index == 0) {
-                    $prev.addClass('disabled');
-                } else {
-                    $prev.removeClass('disabled');
-                }
-                
-                if (index == slides_count - 1) {
-                    $next.addClass('disabled');
-                } else {
-                    $next.removeClass('disabled');
-                }                
-            });
+                let $navs = $(slider).find('.product-slider__navs'),
+                    $prev = $navs.find('.arrow-prev'),
+                    $next = $navs.find('.arrow-next');
 
-            $prev.on('click', function() {
-                flkty.previous();
-            });
+                $prev.addClass('disabled');
 
-            $next.on('click', function() {
-                flkty.next();
-            });
+                flkty.on('select', function(index) {
+                    if (index == 0) {
+                        $prev.addClass('disabled');
+                    } else {
+                        $prev.removeClass('disabled');
+                    }
+                    
+                    if (index == slides_count - 1) {
+                        $next.addClass('disabled');
+                    } else {
+                        $next.removeClass('disabled');
+                    }                
+                });
+
+                $prev.on('click', function() {
+                    flkty.previous();
+                });
+
+                $next.on('click', function() {
+                    flkty.next();
+                });
+            })
         }
     });
 
 
+    // сайдбар категорий в каталоге
     $('.categories-list .parent').each(function() {
         let $item = $(this),
             $subcat = $item.find('> .categories-list-sub');
@@ -248,6 +281,7 @@ $(function() {
     });
 
 
+    // кнопка добавить в корзину и размеры превью товара
     $('.product-card').each(function() {
         let $thumb = $(this).find('.product-card__thumb'),
             $btns = $thumb.find('.product-card__buttons');
@@ -273,12 +307,63 @@ $(function() {
     });
 
 
-    setProdBlockPadding();
+    // Слайдер товара
+    if (document.querySelector('.product-photo-slider')) {
+        product_photo_slider();
+    }
+    function product_photo_slider() {
+        let slider_cls = '.product-photo-slider';
 
+        let flkty = new Flickity(slider_cls, {
+            contain: true,
+            cellAlign: 'left',
+            freeScroll: true,
+            prevNextButtons: false,
+            pageDots: false,
+            watchCSS: true,
+        });
+        
+
+        let slides_count = (flkty.slides) ? flkty.slides.length : $(slider_cls).find('> .slide').length;
+        
+        let $navs = $(slider_cls).parent().find('.slider-nav'),
+            $dotsContainer = $navs.find('.slider-nav__dots');
+    
+        for (let i = 0; i < slides_count; i++) {
+            let cls = (i == 0) ? 'dot current' : 'dot';
+    
+            $dotsContainer.append('<span class="' + cls + '"></span>');
+        }
+    
+        let $dots = $navs.find('.dot');
+    
+        // update selected dots
+        flkty.on('select', function() {            
+            $dots.filter('.current').removeClass('current');
+            $dots.eq(flkty.selectedIndex).addClass('current');
+        });
+    
+        $dots.on('click', function() {
+            flkty.select( $(this).index() );
+        });
+    }
+
+
+    // отступ липкого блока в товаре
+    setProdBlockPadding();
     function setProdBlockPadding() {
-        let adv_height = ($(window).width() > 1200) ? $('.page-product .advantages').height() : 0;
+        let adv_height = (window.innerWidth > 1200) ? $('.page-product .advantages').height() : 0;
 
         $('.page-product .product-info').css('padding-bottom', adv_height);
     }
 
+
+    $(window).resize(function() {
+        set_sticky_header();
+        setProdBlockPadding();
+    });
+
+    $(window).scroll(function() {
+        set_sticky_header()
+    });
 });
