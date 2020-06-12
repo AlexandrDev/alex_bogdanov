@@ -212,3 +212,24 @@
         }
     }
 }
+
+.add-address-form {
+    width: 870px;
+    padding-bottom: 50px;
+
+    .modal-title {
+        margin-bottom: 5px;
+    }
+    
+    .checkout-block {
+        margin-top: 0;
+        margin-bottom: 25px;
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .set-default-checkbox {
+        padding-top: 10px;
+    }
+
+}

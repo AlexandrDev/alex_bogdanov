@@ -1,5 +1,58 @@
 $(function() {
+    // vue search, authForms, tooltips
+    const wikiUrl = 'https://ru.wikipedia.org';
+    const params = 'action=query&list=search&format=json&origin=*';
+
+    let vueApp = new Vue({
+        el: "#app",
+        data: {
+            tooltip: '',
+            loginShowed: true,
+            signupShowed: false
+        },
+        components: {
+            Autocomplete
+        },
+        methods: {
+            searchCity(input) {
+                const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
+          
+                return new Promise(resolve => {
+                    if (input.length < 2) {
+                        return resolve([]);
+                    }
+          
+                    fetch(url).
+                    then(response => response.json()).
+                    then(data => {
+                        resolve(data.query.search);
+                    });
+                });
+            },
+            getCity(result) {
+                return result.title;
+            },
+            submitCity(result) {
+                console.log(result.title);
+            },
+            showLogin() {
+                this.loginShowed = true;
+                this.signupShowed = false;
+            },
+            showSignup() {
+                this.loginShowed = false;
+                this.signupShowed = true;
+            }
+        }
+    });
+
+
     $('.dropdown-menu').show(); // fix transition
+
+
+    $('select').select2({
+        placeholder: $(this).data('placeholder')
+    });
 
 
     // dropdown's
@@ -43,101 +96,7 @@ $(function() {
         });
         item.querySelector('.mobile-menu-back').addEventListener('click', () => item.classList.remove('expanded'));
     });
-
-
-    // autocomlete search region
-    const wikiUrl = 'https://ru.wikipedia.org';
-    const params = 'action=query&list=search&format=json&origin=*';
-
-    let searchCity = new Vue({
-        el: "#search-city",
-        components: {
-            Autocomplete
-        },
-        methods: {
-            search(input) {
-                const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
-          
-                return new Promise(resolve => {
-                    if (input.length < 2) {
-                        return resolve([]);
-                    }
-          
-                    fetch(url).
-                    then(response => response.json()).
-                    then(data => {
-                        resolve(data.query.search);
-                    });
-                });
-            },
-            getResultValue(result) {
-                return result.title;
-            },
-            handleSubmit(result) {
-                console.log(result.title);
-            }
-        }
-    });
-
-    let checkStock = new Vue({
-        el: "#check-stock",
-        components: {
-            Autocomplete
-        },
-        methods: {
-            search(input) {
-                const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
-          
-                return new Promise(resolve => {
-                    if (input.length < 2) {
-                        return resolve([]);
-                    }
-          
-                    fetch(url).
-                    then(response => response.json()).
-                    then(data => {
-                        resolve(data.query.search);
-                    });
-                });
-            },
-            getResultValue(result) {
-                return result.title;
-            },
-            handleSubmit(result) {
-                console.log(result.title);
-            }
-        }
-    });
-
-
-    // Форма авторизации
-    let authForm = new Vue({
-        el: "#auth-form",
-        data: {
-            loginShowed: true,
-            signupShowed: false
-        },
-        methods: {
-            showLogin() {
-                this.loginShowed = true;
-                this.signupShowed = false;
-            },
-            showSignup() {
-                this.loginShowed = false;
-                this.signupShowed = true;
-            }
-        }
-    });
-
-
-    // Свойства с подсказками в товаре
-    let prod_props = new Vue({
-        el: "#properties-icons",
-        data: {
-            tooltip: ''
-        }
-    });
-
+   
 
     // Слайдеры с точками и counter'ом (в основном на главной)
     let sliders = ['#fw-slider', '.goods-pw-photo-slider', '.shops-slider'];
@@ -156,37 +115,40 @@ $(function() {
             let $navs = $(slider).parent().find('.slider-nav'),
                 $dotsContainer = $navs.find('.slider-nav__dots');
 
-            for (let i = 0; i < slides_count; i++) {
-                let cls = (i == 0) ? 'dot current' : 'dot';
-
-                $dotsContainer.append('<span class="' + cls + '"></span>');
+            if (slides_count > 1) {
+                $navs.css('display', 'flex')
+            
+                for (let i = 0; i < slides_count; i++) {
+                    let cls = (i == 0) ? 'dot current' : 'dot';
+    
+                    $dotsContainer.append('<span class="' + cls + '"></span>');
+                }
+    
+                let $dots = $navs.find('.dot'),
+                    $counter = $navs.find('.counter');
+    
+                $counter.html(current_slide + '/' + addZero(slides_count));
+    
+                // update selected dots
+                flkty.on('select', function() {
+                    $dots.filter('.current').removeClass('current');
+                    $dots.eq(flkty.selectedIndex).addClass('current');
+                    
+                    $counter.html(addZero(flkty.selectedIndex + 1) + '/' + addZero(slides_count));
+                });
+    
+                $dots.on('click', function() {
+                    flkty.select( $(this).index() );
+                });
+    
+                $navs.find('.arrow-prev').on('click', function() {
+                    flkty.previous();
+                });
+    
+                $navs.find('.arrow-next').on('click', function() {
+                    flkty.next();
+                });
             }
-
-            let $dots = $navs.find('.dot'),
-                $counter = $navs.find('.counter');
-
-            $counter.html(current_slide + '/' + addZero(slides_count));
-
-            // update selected dots
-            flkty.on('select', function() {
-                $dots.filter('.current').removeClass('current');
-                $dots.eq(flkty.selectedIndex).addClass('current');
-                
-                $counter.html(addZero(flkty.selectedIndex + 1) + '/' + addZero(slides_count));
-            });
-
-            $dots.on('click', function() {
-                flkty.select( $(this).index() );
-            });
-
-            $navs.find('.arrow-prev').on('click', function() {
-                flkty.previous();
-            });
-
-            $navs.find('.arrow-next').on('click', function() {
-                flkty.next();
-            });
-
 
             function addZero(num) {
                 return (num >= 0 && num <= 9) ? '0' + num : num;
@@ -294,15 +256,18 @@ $(function() {
                 $btns.removeClass('show');
             }
         );
-
-        $btns.hover(
-            function() {
-                $btns.addClass('show_sizes');
-            },
-            function() {
-                $btns.removeClass('show_sizes');
-            }
-        );
+        
+        if ($(this).find('.select-size').length) {
+            $btns.hover(
+                function() {
+                    $btns.addClass('show_sizes');
+                },
+                function() {
+                    $btns.removeClass('show_sizes');
+                }
+            );
+        }
+        
 
     });
 
@@ -328,6 +293,8 @@ $(function() {
         
         let $navs = $(slider_cls).parent().find('.slider-nav'),
             $dotsContainer = $navs.find('.slider-nav__dots');
+
+        $navs.css('display', 'flex')
     
         for (let i = 0; i < slides_count; i++) {
             let cls = (i == 0) ? 'dot current' : 'dot';
@@ -357,6 +324,45 @@ $(function() {
         $('.page-product .product-info').css('padding-bottom', adv_height);
     }
 
+
+    // фон для radio
+    addRadioBg();
+
+    $('input[type="radio"]').change(function() {
+        addRadioBg();
+    });
+    
+    function addRadioBg() {
+        $('input[type="radio"]').each(function() {
+            let $radio_parent = $(this).parent('.radio-item');
+
+            if ($(this).is(':checked')) {
+                $radio_parent.addClass('checked');
+            } else {
+                $radio_parent.removeClass('checked');
+            }
+        });
+    }
+    
+
+    // количество в корзине
+    $('.quantity-js').each(function() {
+        let $input = $(this).find('input'),
+            count;
+
+        $(this).find('.decrease').click(function() {
+            count = $input.val();
+            if (count > 1) {
+                count--;
+            }
+            $input.val(count);
+        });
+        $(this).find('.increase').click(function() {
+            count = $input.val();
+            count++;
+            $input.val(count);
+        });
+    });
 
     $(window).resize(function() {
         set_sticky_header();

@@ -159,10 +159,18 @@ h3, .like-h3 {
     font-size: 22px;
     line-height: 28px;
     color: #132434;
+    @include laptop {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 .link {
     color: $blue;
+
+    &-underline {
+        border-bottom: 1px dashed;
+    }
 }
 
 .button {

@@ -1,7 +1,7 @@
 #search-city.search-city.modal
     .modal-title Выберите ваш город:
 
-    autocomplete(:search="search", :get-result-value="getResultValue", :debounce-time="100", placeholder="Введите город", aria-label="Введите город", base-class="search-autocomplete", @submit="handleSubmit").search-city__autocomplete
+    autocomplete(:search="searchCity", :get-result-value="getCity", :debounce-time="100", placeholder="Введите город", aria-label="Введите город", base-class="search-autocomplete", @submit="submitCity").search-city__autocomplete
 
     .search-city__list
         .search-city__item.capital
@@ -76,7 +76,7 @@
         .modal-title(@click="showLogin", :class="{ active: loginShowed }") Вход
         .modal-title(@click="showSignup", :class="{ active: signupShowed }") Регистрация
 
-    form#login-form.form.form_login(:class="{ active: loginShowed }", action="")
+    form.form.form_login(:class="{ active: loginShowed }", action="")
         p Авторизуйтесь, если вы уже зарегистрированы на нашем сайте
         .input-item
             input(type="email").input
@@ -101,7 +101,7 @@
                 a(href="").socials__link.ab-i-inst
                 a(href="").socials__link.ab-i-vk
 
-    form#signup-form.form.form_signup(action="", :class="{ active: signupShowed }")
+    form.form.form_signup(action="", :class="{ active: signupShowed }")
         .form-services
             .form-services__title Регистрация 
                 br

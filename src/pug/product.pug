@@ -188,7 +188,7 @@ block content
                 form.form(action="")
                     p Введите почтовый индекс или город, чтобы узнать, есть ли он в наличии в магазине
                     .input-item    
-                        autocomplete(:search="search", :get-result-value="getResultValue", :debounce-time="100", placeholder="Введите город", aria-label="Введите город", base-class="search-autocomplete", @submit="handleSubmit")
+                        autocomplete(:search="searchCity", :get-result-value="getCity", :debounce-time="100", placeholder="Введите город", aria-label="Введите город", base-class="search-autocomplete", @submit="submitCity")
 
                     button.form__button.button.button_blue-filled Показать наличие
 

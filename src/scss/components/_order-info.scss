@@ -32,6 +32,14 @@
             &__value {
                 color: #132434;
             }
+
+            &_total {
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 20px;
+                color: #132434;
+                padding-bottom: 0;
+            }
         }
 
         .price span {

@@ -10,669 +10,668 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.1.10">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.2.0">
   </head>
   <body>
-    <header>
-      <div class="header__top">
-        <div class="container">
-          <div class="row">
-            <div class="top-left col-lg-4">
-              <div class="language">
-                <div class="language-select" data-toggle="dropdown">
-                  <div class="language__icon language__icon_rus"></div>
-                  <div class="language__arrow"></div>
+    <div id="app">
+      <header>
+        <div class="header__top">
+          <div class="container">
+            <div class="row">
+              <div class="top-left col-lg-4">
+                <div class="language">
+                  <div class="language-select" data-toggle="dropdown">
+                    <div class="language__icon language__icon_rus"></div>
+                    <div class="language__arrow"></div>
+                  </div>
+                  <div class="language-dropdown dropdown-menu"><a class="language__item" href="">
+                      <div class="language__icon language__icon_rus"></div><span>Русский</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_eng"></div><span>English</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_esp"></div><span>Espanol</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_de"></div><span>German</span></a></div>
                 </div>
-                <div class="language-dropdown dropdown-menu"><a class="language__item" href="">
-                    <div class="language__icon language__icon_rus"></div><span>Русский</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_eng"></div><span>English</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_esp"></div><span>Espanol</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_de"></div><span>German</span></a></div>
-              </div>
-              <div class="city-select"> <span>Ваш город:</span><a class="city-select__link" data-toggle="dropdown">Санкт-Петербург</a>
-                <div class="city-select-dropdown dropdown-menu">
-                  <div class="title">Ваш город Москва?</div>
-                  <div class="buttons"><a class="button button_blue-filled" href="">Да</a><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#search-city">Выбрать другой город</a></div>
-                  <p>От выбранного города зависят наличие товаров и способы доставки.</p>
+                <div class="city-select"> <span>Ваш город:</span><a class="city-select__link" data-toggle="dropdown">Санкт-Петербург</a>
+                  <div class="city-select-dropdown dropdown-menu">
+                    <div class="title">Ваш город Москва?</div>
+                    <div class="buttons"><a class="button button_blue-filled" href="">Да</a><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#search-city">Выбрать другой город</a></div>
+                    <p>От выбранного города зависят наличие товаров и способы доставки.</p>
+                  </div>
                 </div>
               </div>
+              <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
             </div>
-            <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
           </div>
         </div>
-      </div>
-      <div class="header__main container">
-        <div class="header__main-row row">
-          <div class="hamburger col-auto d-xl-none">
-            <div class="hamburger-switcher">
-              <div class="hamburger__icon"><span></span><span></span><span></span></div>
+        <div class="header__main container">
+          <div class="header__main-row row">
+            <div class="hamburger col-auto d-xl-none">
+              <div class="hamburger-switcher">
+                <div class="hamburger__icon"><span></span><span></span><span></span></div>
+              </div>
             </div>
-          </div>
-          <div class="header__logo col-lg-3 col-auto mr-auto"><a href="homepage.html"><img src="images/logo.svg" alt="Alexander Bogdanov"></a></div>
-          <div class="header__menu d-none d-xl-block">
-            <div class="main-menu">
-              <div class="main-menu__link catalog-menu"><a href="" data-toggle="dropdown">Каталог</a>
-                <div class="catalog-menu__dropdown dropdown-menu">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Новое</a></div>
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Бестселлеры</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Специальные предложения</a></div>
-                      </div>
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Одежда</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Блузы и рубашки</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Брюки и шорты</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Верхняя одежда</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Джемперы</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Жакеты и бомберы</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Платья</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Юбки</a></div>
-                      </div>
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Аксессуары</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Шапки</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Палантины</a></div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="catalog-menu__link"><a class="head" href="">Коллекции</a></div>
-                        <div class="row">
-                          <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Прованс</div>
-                                <div class="collection-link__short">Весна/Лето 2020</div>
-                              </div></a><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Настроение города</div>
-                                <div class="collection-link__short">Осень 2019/Зима 2020</div>
-                              </div></a></div>
-                          <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Лигурия</div>
-                                <div class="collection-link__short">Весна/Лето 2019</div>
-                              </div></a><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Ломбардия</div>
-                                <div class="collection-link__short">Осень 2018/Зима 2019</div>
-                              </div></a></div>
+            <div class="header__logo col-lg-3 col-auto mr-auto"><a href="homepage.html"><img src="images/logo.svg" alt="Alexander Bogdanov"></a></div>
+            <div class="header__menu d-none d-xl-block">
+              <div class="main-menu">
+                <div class="main-menu__link catalog-menu"><a href="" data-toggle="dropdown">Каталог</a>
+                  <div class="catalog-menu__dropdown dropdown-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Новое</a></div>
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Бестселлеры</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Специальные предложения</a></div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Одежда</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Блузы и рубашки</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Брюки и шорты</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Верхняя одежда</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Джемперы</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Жакеты и бомберы</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Платья</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Юбки</a></div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Аксессуары</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Шапки</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Палантины</a></div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="catalog-menu__link"><a class="head" href="">Коллекции</a></div>
+                          <div class="row">
+                            <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Прованс</div>
+                                  <div class="collection-link__short">Весна/Лето 2020</div>
+                                </div></a><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Настроение города</div>
+                                  <div class="collection-link__short">Осень 2019/Зима 2020</div>
+                                </div></a></div>
+                            <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Лигурия</div>
+                                  <div class="collection-link__short">Весна/Лето 2019</div>
+                                </div></a><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Ломбардия</div>
+                                  <div class="collection-link__short">Осень 2018/Зима 2019</div>
+                                </div></a></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="main-menu__link"><a href="">О нас</a></div>
+                <div class="main-menu__link"><a href="">Lookbook</a></div>
+                <div class="main-menu__link"><a href="">Адреса магазинов</a></div>
               </div>
-              <div class="main-menu__link"><a href="">О нас</a></div>
-              <div class="main-menu__link"><a href="">Lookbook</a></div>
-              <div class="main-menu__link"><a href="">Адреса магазинов</a></div>
+            </div>
+            <div class="header-icons col-lg-3 col-auto ml-auto">
+              <div class="header-icons__item account"><a href="" title="Личный кабинет" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#4e5b67" stroke-width="2"><circle cx="10" cy="5" r="4"/><path d="M2.353 16.103A6 6 0 018.045 12h3.91a6 6 0 015.692 4.103l.527 1.58A1 1 0 0117.225 19H2.775a1 1 0 01-.949-1.316l.527-1.58z"/></svg></a>
+                <div class="account__dropdown dropdown-menu"><a class="high-link" href="javascript:;" data-fancybox data-src="#auth-form" data-touch="false">Личные данные</a>
+                  <a class="high-link" href="">Оформленные заказы</a>
+                  <a class="high-link" href="">Избранные товары</a>
+                  <a class="high-link" href="">Адреса доставки</a>
+                  <a class="high-link" href="">Подписки</a>
+                  <a class="high-link ab-i-logout" href="">Выйти</a>
+                </div>
+              </div>
+              <div class="header-icons__item following"><a href="" title="Избранное"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path d="M9.17 3.047a1 1 0 001.659 0C11.69 1.768 13.002 1 14.425 1 16.833 1 19 3.27 19 6.35c0 .92-.438 2.047-1.252 3.292-.8 1.225-1.897 2.46-3.05 3.57s-2.33 2.066-3.276 2.743l-1.18.768-.24.126-.24-.127c-.303-.17-.706-.432-1.18-.775-.948-.683-2.128-1.65-3.278-2.76s-2.25-2.352-3.05-3.575C1.436 8.368 1 7.25 1 6.35 1 3.27 3.167 1 5.575 1c1.423 0 2.734.768 3.596 2.047zm.682 13.865zm.29-.002z" stroke="#4e5b67" stroke-width="2" stroke-linejoin="round"/></svg>
+                  <div class="counter">3</div></a></div>
+              <div class="header-icons__item mini-cart"><a href="" title="Корзина" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
+                  <div class="counter">18</div></a>
+                <div class="mini-cart__dropdown dropdown-menu">
+                  <div class="cart-table">
+                    <div class="cart-table__item">
+                      <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
+                      <div class="col-name"> <span>Блузон «Овация» в две строки</span>
+                        <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
+                      </div>
+                      <div class="col-size">46</div>
+                      <div class="col-quantity">
+                        <div class="quantity quantity-js">
+                          <div class="quantity__btn decrease"></div>
+                          <input class="quantity__input" type="number" value="1">
+                          <div class="quantity__btn increase"></div>
+                        </div>
+                      </div>
+                      <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
+                      <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
+                    </div>
+                  </div><a class="mini-cart__add-box link-add" href="">Добавить подарочную коробку</a>
+                  <div class="mini-cart__totals">
+                    <div class="total totals__row">
+                      <div class="title">Всего товаров на сумму</div>
+                      <div class="value price"><span class="old">555 598 ₽</span><span>444 598 ₽</span></div>
+                    </div>
+                    <div class="totals__row">
+                      <div class="title">Доставка</div>
+                      <div class="value">500 ₽</div>
+                    </div>
+                  </div>
+                  <div class="mini-cart__buttons"><a class="button button_blue-bordered" href="cart.html">В корзину</a><a class="button button_blue-filled" href="checkout.html">Оформить</a></div>
+                  <div class="mini-cart__empty">Ваша корзина пуста<a class="button button_blue-filled" href="catalog.html">Перейти в каталог</a></div>
+                </div>
+              </div>
+              <div class="header-icons__item search"><a href="" title="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M18.906 18.02l-3.066-3.28a8.943 8.943 0 002.105-5.768C17.944 4.025 13.92 0 8.972 0S0 4.025 0 8.972s4.025 8.972 8.972 8.972c1.857 0 3.627-.56 5.14-1.624l3.107 3.32a1.16 1.16 0 00.843.359c.304 0 .592-.116.81-.326a1.17 1.17 0 00.032-1.655zM8.972 2C12.63 2 16 5.343 16 9s-3.37 7-7.028 7S2 12.63 2 8.972 5.315 2 8.972 2z" fill="#4e5b67"/></svg></a></div>
             </div>
           </div>
-          <div class="header-icons col-lg-3 col-auto ml-auto">
-            <div class="header-icons__item account"><a href="" title="Личный кабинет" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#4e5b67" stroke-width="2"><circle cx="10" cy="5" r="4"/><path d="M2.353 16.103A6 6 0 018.045 12h3.91a6 6 0 015.692 4.103l.527 1.58A1 1 0 0117.225 19H2.775a1 1 0 01-.949-1.316l.527-1.58z"/></svg></a>
-              <div class="account__dropdown dropdown-menu"><a class="high-link" href="javascript:;" data-fancybox data-src="#auth-form" data-touch="false">Личные данные</a>
-                <a class="high-link" href="">Оформленные заказы</a>
-                <a class="high-link" href="">Избранные товары</a>
-                <a class="high-link" href="">Адреса доставки</a>
-                <a class="high-link" href="">Подписки</a>
-                <a class="high-link ab-i-logout" href="">Выйти</a>
-              </div>
-            </div>
-            <div class="header-icons__item following"><a href="" title="Избранное"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path d="M9.17 3.047a1 1 0 001.659 0C11.69 1.768 13.002 1 14.425 1 16.833 1 19 3.27 19 6.35c0 .92-.438 2.047-1.252 3.292-.8 1.225-1.897 2.46-3.05 3.57s-2.33 2.066-3.276 2.743l-1.18.768-.24.126-.24-.127c-.303-.17-.706-.432-1.18-.775-.948-.683-2.128-1.65-3.278-2.76s-2.25-2.352-3.05-3.575C1.436 8.368 1 7.25 1 6.35 1 3.27 3.167 1 5.575 1c1.423 0 2.734.768 3.596 2.047zm.682 13.865zm.29-.002z" stroke="#4e5b67" stroke-width="2" stroke-linejoin="round"/></svg>
-                <div class="counter">3</div></a></div>
-            <div class="header-icons__item mini-cart"><a href="" title="Корзина" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
-                <div class="counter">18</div></a>
-              <div class="mini-cart__dropdown dropdown-menu">
-                <div class="cart-table">
-                  <div class="cart-table__item">
-                    <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
-                    <div class="col-name"> <span>Блузон «Овация» в две строки</span>
-                      <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
+          <div class="mobile-menu">
+            <div class="mobile-menu__content">
+              <div class="mobile-menu__items">
+                <div class="mobile-menu__top">
+                  <div class="city-select"><span>Ваш город:</span><a class="city-select__link" href="">Санкт-Петербург</a></div>
+                </div>
+                <div class="mobile-menu__item"><a href="category.html">Новое</a></div>
+                <div class="mobile-menu__item"><a href="category.html">Бестселлеры</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Одежда</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="category.html">Одежда</a>
                     </div>
-                    <div class="col-size">46</div>
-                    <div class="col-quantity">
-                      <div class="quantity">
-                        <div class="quantity__btn decrease"></div>
-                        <input class="quantity__input" type="number" value="1">
-                        <div class="quantity__btn increase"></div>
-                      </div>
-                    </div>
-                    <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
-                    <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
-                  </div>
-                </div><a class="mini-cart__add-box link-add" href="">Добавить подарочную коробку</a>
-                <div class="mini-cart__totals">
-                  <div class="total totals__row">
-                    <div class="title">Всего товаров на сумму</div>
-                    <div class="value price"><span class="old">555 598 ₽</span><span>444 598 ₽</span></div>
-                  </div>
-                  <div class="totals__row">
-                    <div class="title">Доставка</div>
-                    <div class="value">500 ₽</div>
+                    <div class="mobile-menu__item"><a href="category.html">Блузы и рубашки</a></div>
+                    <div class="mobile-menu__item"><a href="category.html">Брюки и шорты</a></div>
+                    <div class="mobile-menu__item"><a href="category.html">Верхняя одежда</a></div>
                   </div>
                 </div>
-                <div class="mini-cart__buttons"><a class="button button_blue-bordered" href="cart.html">В корзину</a><a class="button button_blue-filled" href="checkout.html">Оформить</a></div>
-                <div class="mini-cart__empty">Ваша корзина пуста<a class="button button_blue-filled" href="catalog.html">Перейти в каталог</a></div>
-              </div>
-            </div>
-            <div class="header-icons__item search"><a href="" title="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M18.906 18.02l-3.066-3.28a8.943 8.943 0 002.105-5.768C17.944 4.025 13.92 0 8.972 0S0 4.025 0 8.972s4.025 8.972 8.972 8.972c1.857 0 3.627-.56 5.14-1.624l3.107 3.32a1.16 1.16 0 00.843.359c.304 0 .592-.116.81-.326a1.17 1.17 0 00.032-1.655zM8.972 2C12.63 2 16 5.343 16 9s-3.37 7-7.028 7S2 12.63 2 8.972 5.315 2 8.972 2z" fill="#4e5b67"/></svg></a></div>
-          </div>
-        </div>
-        <div class="mobile-menu">
-          <div class="mobile-menu__content">
-            <div class="mobile-menu__items">
-              <div class="mobile-menu__top">
-                <div class="city-select"><span>Ваш город:</span><a class="city-select__link" href="">Санкт-Петербург</a></div>
-              </div>
-              <div class="mobile-menu__item"><a href="category.html">Новое</a></div>
-              <div class="mobile-menu__item"><a href="category.html">Бестселлеры</a></div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Одежда</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="category.html">Одежда</a>
-                  </div>
-                  <div class="mobile-menu__item"><a href="category.html">Блузы и рубашки</a></div>
-                  <div class="mobile-menu__item"><a href="category.html">Брюки и шорты</a></div>
-                  <div class="mobile-menu__item"><a href="category.html">Верхняя одежда</a></div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Аксессуары</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="category.html">Аксессуары</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="">Коллекции</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Коллекции</a>
-                  </div><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Прованс</div>
-                      <div class="collection-link__short">Весна/Лето 2020</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Настроение города</div>
-                      <div class="collection-link__short">Осень 2019/Зима 2020</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Лигурия</div>
-                      <div class="collection-link__short">Весна/Лето 2019</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Ломбардия</div>
-                      <div class="collection-link__short">Осень 2018/Зима 2019</div>
-                    </div></a>
-                </div>
-              </div>
-              <div class="mobile-menu__item"><a href="">Специальные предложения</a></div>
-              <div class="mobile-menu__item"><a href="">Lookbook</a></div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">О нас</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">О нас</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">Помощь</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Помощь</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">Партнерам</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Партнерам</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="socials socials_light"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="page-wrapper page-category">
-      <div class="page-top container">
-        <div class="breadcrumbs">
-          <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
-          <div class="breadcrumbs__item"><a href="catalog.html">Каталог</a></div>
-          <div class="breadcrumbs__item"><a href="category.html">Одежда</a></div>
-          <div class="breadcrumbs__item"><span>Джемперы и кардиганы</span></div>
-        </div>
-        <h1 class="page-top__title like-h1">Джемперы и кардиганы</h1>
-      </div>
-      <div class="category-wrapper container">
-        <div class="row">
-          <div class="sidebar col-lg-3 d-none d-lg-block">
-            <div class="categories-list">
-              <div class="categories-list__title">Одежда</div>
-              <div class="categories-list__item"><a href="">Платья</a></div>
-              <div class="categories-list__item"><a href="">Блузы и рубашки</a></div>
-              <div class="categories-list__item parent active"><a href="">Джемперы и кардиганы</a>
-                <div class="arrow"></div>
-                <div class="categories-list-sub">
-                  <div class="categories-list-sub__item current"><a href="">Свитеры</a></div>
-                  <div class="categories-list-sub__item"><a href="">Кардиганы</a></div>
-                </div>
-              </div>
-              <div class="categories-list__item"><a href="">Юбки</a></div>
-            </div>
-            <div class="categories-list">
-              <div class="categories-list__title">Аксессуары</div>
-              <div class="categories-list__item"><a href="">Палантины</a></div>
-              <div class="categories-list__item"><a href="">Снуды</a></div>
-              <div class="categories-list__item parent"><a href="">Сумки</a>
-                <div class="arrow"></div>
-                <div class="categories-list-sub">
-                  <div class="categories-list-sub__item"><a href="">Сумки</a></div>
-                  <div class="categories-list-sub__item"><a href="">Сумки</a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="category-right col-lg-9">
-            <div class="filter" id="category-filter">
-              <div class="filter__header">Отфильтровать и упорядочить</div>
-              <div class="filter__content">
-                <div class="filter-collapse">
-                  <div class="filter-collapse__title" data-toggle="dropdown">Коллекция</div>
-                  <div class="filter-collapse__content dropdown-menu">
-                    <div class="filter-collapse__collections">
-                      <div class="checkbox-block">
-                        <input class="checkbox" id="coll-1" type="checkbox">
-                        <label for="coll-1">
-                          <div class="checkbox__high-label">Прованс<span>Весна/Лето 2020</span></div>
-                        </label>
-                      </div>
-                      <div class="checkbox-block">
-                        <input class="checkbox" id="coll-2" type="checkbox">
-                        <label for="coll-2">Лигурия</label>
-                      </div>
-                    </div><a class="button button_blue-bordered" href="">Сбросить</a>
-                  </div>
-                </div>
-                <div class="filter-collapse">
-                  <div class="filter-collapse__title" data-toggle="dropdown">Стиль</div>
-                  <div class="filter-collapse__content dropdown-menu">
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="style1" type="checkbox">
-                      <label for="style1">Городской</label>
-                    </div>
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="style2" type="checkbox">
-                      <label for="style2">Для дачи</label>
-                    </div>
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="style3" type="checkbox">
-                      <label for="style3">Не жалко запачкать</label>
-                    </div><a class="button button_blue-bordered" href="">Сбросить</a>
-                  </div>
-                </div>
-                <div class="filter-collapse">
-                  <div class="filter-collapse__title" data-toggle="dropdown">Тематика</div>
-                  <div class="filter-collapse__content dropdown-menu">
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="theme1" type="checkbox">
-                      <label for="theme1">Муж выгнал из дома</label>
-                    </div>
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="theme2" type="checkbox">
-                      <label for="theme2">Корпорат в офисе</label>
-                    </div>
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="theme3" type="checkbox">
-                      <label for="theme3">Туса с подругами</label>
-                    </div><a class="button button_blue-bordered" href="">Сбросить</a>
-                  </div>
-                </div>
-                <div class="filter-collapse">
-                  <div class="filter-collapse__title" data-toggle="dropdown">Размер</div>
-                  <div class="filter-collapse__content dropdown-menu">
-                    <div class="filter-collapse__checkbox-grid">
-                      <div class="checkbox-block">
-                        <input class="checkbox" id="inp-1" type="checkbox">
-                        <label for="inp-1">40</label>
-                      </div>
-                      <div class="checkbox-block">
-                        <input class="checkbox" id="inp-2" type="checkbox">
-                        <label for="inp-2">40</label>
-                      </div>
-                      <div class="checkbox-block">
-                        <input class="checkbox" id="inp-4" type="checkbox">
-                        <label for="inp-4">40</label>
-                      </div>
-                      <div class="checkbox-block">
-                        <input class="checkbox disabled" id="inp-6" type="checkbox">
-                        <label for="inp-6">40</label>
-                      </div>
-                      <div class="checkbox-block">
-                        <input class="checkbox" id="inp-8" type="checkbox">
-                        <label for="inp-8">Без размера</label>
-                      </div>
-                    </div><a class="button button_blue-bordered" href="">Сбросить</a>
-                  </div>
-                </div>
-                <div class="filter-collapse">
-                  <div class="filter-collapse__title" data-toggle="dropdown">Цвет</div>
-                  <div class="filter-collapse__content dropdown-menu dropdown-menu-right">
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="color1" type="checkbox">
-                      <label for="color1">Белый</label>
-                    </div>
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="color2" type="checkbox">
-                      <label for="color2">Красный</label>
-                    </div>
-                    <div class="checkbox-block">
-                      <input class="checkbox" id="color3" type="checkbox">
-                      <label for="color3">Фиолетовый</label>
-                    </div><a class="button button_blue-bordered" href="">Сбросить</a>
-                  </div>
-                </div>
-              </div>
-              <div class="filter__footer"><a class="button button_blue-bordered" href="">Сбросить</a><a class="button button_blue-filled" href="">Применить</a></div>
-            </div>
-            <div class="category-sort"><a class="mobile-filter-button" href="javascript:;" data-fancybox data-src="#category-filter" data-touch="false">Отфильтровать и упорядочить</a>
-              <div class="order-by"><span>Упорядочить</span><a class="order-by__item default" href="">по умолчанию</a><a class="order-by__item asc selected" href="">новинки</a><a class="order-by__item" href="">популярность</a><a class="order-by__item desc" href="">цена</a><a class="order-by__item" href="">скидка</a></div>
-              <div class="view-type"><span>Вид:</span><a class="view-type__item view-type__item_3cols active" href=""><svg width="27" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H0v8h7V0zm10 0H9v8h8V0zm2 0h8v8h-8V0zM7 10H0v8h7v-8zm2 0h8v8H9v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_2cols" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M8 0H0v8h8V0zm10 0h-8v8h8V0zM0 10h8v8H0v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_1col" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h18v18H0z"/></svg></a></div>
-            </div>
-            <div class="category-items row">
-              <div class="col-md-4 col-6">
-                <div class="product-card">
-                  <div class="product-card__thumb"><a href="product.html">
-                      <picture>
-                        <source srcset="images/dev/prod-thumb2.webp" type="image/webp"><img src="images/dev/prod-thumb2.png" alt="">
-                      </picture>
-                      <div class="label label_best">Бестселлер</div></a>
-                    <div class="product-card__buttons">
-                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Аксессуары</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="category.html">Аксессуары</a>
                     </div>
                   </div>
-                  <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Блузон «Овация»</a>
-                    <div class="product-card__price price"><span>35 990 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                </div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="">Коллекции</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Коллекции</a>
+                    </div><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Прованс</div>
+                        <div class="collection-link__short">Весна/Лето 2020</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Настроение города</div>
+                        <div class="collection-link__short">Осень 2019/Зима 2020</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Лигурия</div>
+                        <div class="collection-link__short">Весна/Лето 2019</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Ломбардия</div>
+                        <div class="collection-link__short">Осень 2018/Зима 2019</div>
+                      </div></a>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-4 col-6">
-                <div class="product-card">
-                  <div class="product-card__thumb"><a href="product.html">
-                      <picture>
-                        <source srcset="images/dev/prod-thumb3.webp" type="image/webp"><img src="images/dev/prod-thumb3.png" alt="">
-                      </picture>
-                      <div class="label label_new">Новинка</div></a>
-                    <div class="product-card__buttons">
-                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                <div class="mobile-menu__item"><a href="">Специальные предложения</a></div>
+                <div class="mobile-menu__item"><a href="">Lookbook</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">О нас</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">О нас</a>
                     </div>
                   </div>
-                  <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Платье «Поцелуй души» еще пара строк на всякий случай</a>
-                    <div class="product-card__price price"><span>14 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-4 col-6">
-                <div class="product-card">
-                  <div class="product-card__thumb"><a href="product.html">
-                      <picture>
-                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                      </picture></a>
-                    <div class="product-card__buttons">
-                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">Помощь</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Помощь</a>
                     </div>
                   </div>
-                  <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                    <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                  </div>
                 </div>
-              </div>
-              <div class="col-md-4 col-6">
-                <div class="product-card">
-                  <div class="product-card__thumb"><a href="product.html">
-                      <picture>
-                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                      </picture></a>
-                    <div class="product-card__buttons">
-                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">Партнерам</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Партнерам</a>
                     </div>
                   </div>
-                  <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                    <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                  </div>
                 </div>
               </div>
-              <div class="col-md-4 col-6">
-                <div class="product-card">
-                  <div class="product-card__thumb"><a href="product.html">
-                      <picture>
-                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                      </picture></a>
-                    <div class="product-card__buttons">
-                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                    </div>
-                  </div>
-                  <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                    <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-6">
-                <div class="product-card">
-                  <div class="product-card__thumb"><a href="product.html">
-                      <picture>
-                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                      </picture></a>
-                    <div class="product-card__buttons">
-                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                    </div>
-                  </div>
-                  <div class="product-card__bottom">
-                    <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                    <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="category-navigation"><a class="loadmore" href=""> <i class="loadmore__icon ab-i-refresh"></i>Загрузить еще</a>
-              <div class="pagination">
-                <div class="prev"> <a href=""><svg width="16" height="9" stroke="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path d="M15.7 4.5H1m0 0L4.5 8M1 4.5L4.5 1"/></svg><span class="command">Ctrl, </span>Предыдущая</a></div>
-                <div class="pages">
-                  <div class="item"><a href="">1</a></div>
-                  <div class="item"><span>...</span></div>
-                  <div class="item"><a href="">5</a></div>
-                  <div class="item"><a href="">6</a></div>
-                  <div class="item"><a class="current" href="">7</a></div>
-                  <div class="item"><a href="">8</a></div>
-                  <div class="item"><a href="">9</a></div>
-                  <div class="item"><span>...</span></div>
-                  <div class="item"><a href="">13</a></div>
-                </div>
-                <div class="next"> <a href="">Следующая<span class="command">, Ctrl</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" stroke="#4e5b67"><path d="M0 4.5h14.7m0 0L11.2 1m3.5 3.5L11.2 8"/></svg></a></div>
-              </div>
+              <div class="socials socials_light"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
             </div>
           </div>
         </div>
-        <div class="category-description">
-          <p>Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут. Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.</p>
+      </header>
+      <div class="page-wrapper page-category">
+        <div class="page-top container">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
+            <div class="breadcrumbs__item"><a href="catalog.html">Каталог</a></div>
+            <div class="breadcrumbs__item"><a href="category.html">Одежда</a></div>
+            <div class="breadcrumbs__item"><span>Джемперы и кардиганы</span></div>
+          </div>
+          <h1 class="page-top__title like-h1">Джемперы и кардиганы</h1>
         </div>
-      </div>
-    </div>
-    <footer>
-      <div class="footer-top">
-        <div class="container">
+        <div class="category-wrapper container">
           <div class="row">
-            <div class="footer-menu col-lg-9">
-              <div class="row">
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">О нас</a></div>
-                  <div class="footer-menu__link"><a href="">О компании</a></div>
-                  <div class="footer-menu__link"><a href="">Александр Богданов</a></div>
-                  <div class="footer-menu__link"><a href="">История</a></div>
-                  <div class="footer-menu__link"><a href="">Пресса о нас</a></div>
-                  <div class="footer-menu__link"><a href="">Новости</a></div>
-                  <div class="footer-menu__link"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
-                  <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
-                  <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+            <div class="sidebar col-lg-3 d-none d-lg-block">
+              <div class="categories-list">
+                <div class="categories-list__title">Одежда</div>
+                <div class="categories-list__item"><a href="">Платья</a></div>
+                <div class="categories-list__item"><a href="">Блузы и рубашки</a></div>
+                <div class="categories-list__item parent active"><a href="">Джемперы и кардиганы</a>
+                  <div class="arrow"></div>
+                  <div class="categories-list-sub">
+                    <div class="categories-list-sub__item current"><a href="">Свитеры</a></div>
+                    <div class="categories-list-sub__item"><a href="">Кардиганы</a></div>
+                  </div>
                 </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Каталог</a></div>
-                  <div class="footer-menu__link"><a href="">Купить женскую одежду</a></div>
-                  <div class="footer-menu__link"><a href="">Платья</a></div>
-                  <div class="footer-menu__link"><a href="">Юбки</a></div>
-                  <div class="footer-menu__link"><a href="">Джемперы</a></div>
-                  <div class="footer-menu__link"><a href="">Жакеты и бомберы</a></div>
-                  <div class="footer-menu__link"><a href="">Блузы</a></div>
-                  <div class="footer-menu__link"><a href="">Рубашки</a></div>
-                  <div class="footer-menu__link"><a href="">Верхняя одежда</a></div>
-                  <div class="footer-menu__link"><a href="">Аксессуары</a></div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Помощь</a></div>
-                  <div class="footer-menu__link"><a href="">Как оформить заказ</a></div>
-                  <div class="footer-menu__link"><a href="">Как выбрать размер</a></div>
-                  <div class="footer-menu__link"><a href="">Оплата</a></div>
-                  <div class="footer-menu__link"><a href="">Доставка</a></div>
-                  <div class="footer-menu__link"><a href="">Возврат</a></div>
-                  <div class="footer-menu__link"><a href="">Конфиденциальность</a></div>
-                  <div class="footer-menu__link"><a href="">Мои заказы</a></div>
-                  <div class="footer-menu__link"><a href="">Уход за изделиями</a></div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
-                  <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
-                  <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                <div class="categories-list__item"><a href="">Юбки</a></div>
+              </div>
+              <div class="categories-list">
+                <div class="categories-list__title">Аксессуары</div>
+                <div class="categories-list__item"><a href="">Палантины</a></div>
+                <div class="categories-list__item"><a href="">Снуды</a></div>
+                <div class="categories-list__item parent"><a href="">Сумки</a>
+                  <div class="arrow"></div>
+                  <div class="categories-list-sub">
+                    <div class="categories-list-sub__item"><a href="">Сумки</a></div>
+                    <div class="categories-list-sub__item"><a href="">Сумки</a></div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="footer__right col-lg-3">
-              <div class="subscribe">
-                <div class="subscribe__title">Подпишитесь <br>на нашу рассылку</div>
-                <div class="subscribe__subtitle">Обещаем отправлять только важное и интересное</div>
-                <form class="subscribe-form" action="">
-                  <input class="subscribe-form__input" type="email" placeholder="Email">
-                  <button class="subscribe-form__button"><svg width="22" height="16" fill="none" stroke="#67add7" stroke-width="2"><rect x="1" y="1" width="20" height="14" rx="1"/><path d="M1.692 1.6l8.656 7.44a1 1 0 001.304 0l8.656-7.44M1.692 14.4L8.462 8m5.5 0l6.346 6.4"/></svg></button>
-                </form>
-                <div class="subscribe__privacy">Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности</div>
+            <div class="category-right col-lg-9">
+              <div class="filter" id="category-filter">
+                <div class="filter__header">Отфильтровать и упорядочить</div>
+                <div class="filter__content">
+                  <div class="filter-collapse">
+                    <div class="filter-collapse__title" data-toggle="dropdown">Коллекция</div>
+                    <div class="filter-collapse__content dropdown-menu">
+                      <div class="filter-collapse__collections">
+                        <div class="checkbox-block">
+                          <input class="checkbox" id="coll-1" type="checkbox">
+                          <label for="coll-1">
+                            <div class="checkbox__high-label">Прованс<span>Весна/Лето 2020</span></div>
+                          </label>
+                        </div>
+                        <div class="checkbox-block">
+                          <input class="checkbox" id="coll-2" type="checkbox">
+                          <label for="coll-2">Лигурия</label>
+                        </div>
+                      </div><a class="button button_blue-bordered" href="">Сбросить</a>
+                    </div>
+                  </div>
+                  <div class="filter-collapse">
+                    <div class="filter-collapse__title" data-toggle="dropdown">Стиль</div>
+                    <div class="filter-collapse__content dropdown-menu">
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="style1" type="checkbox">
+                        <label for="style1">Городской</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="style2" type="checkbox">
+                        <label for="style2">Для дачи</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="style3" type="checkbox">
+                        <label for="style3">Не жалко запачкать</label>
+                      </div><a class="button button_blue-bordered" href="">Сбросить</a>
+                    </div>
+                  </div>
+                  <div class="filter-collapse">
+                    <div class="filter-collapse__title" data-toggle="dropdown">Тематика</div>
+                    <div class="filter-collapse__content dropdown-menu">
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="theme1" type="checkbox">
+                        <label for="theme1">Муж выгнал из дома</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="theme2" type="checkbox">
+                        <label for="theme2">Корпорат в офисе</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="theme3" type="checkbox">
+                        <label for="theme3">Туса с подругами</label>
+                      </div><a class="button button_blue-bordered" href="">Сбросить</a>
+                    </div>
+                  </div>
+                  <div class="filter-collapse">
+                    <div class="filter-collapse__title" data-toggle="dropdown">Размер</div>
+                    <div class="filter-collapse__content dropdown-menu">
+                      <div class="filter-collapse__checkbox-grid">
+                        <div class="checkbox-block">
+                          <input class="checkbox" id="inp-1" type="checkbox">
+                          <label for="inp-1">40</label>
+                        </div>
+                        <div class="checkbox-block">
+                          <input class="checkbox" id="inp-2" type="checkbox">
+                          <label for="inp-2">40</label>
+                        </div>
+                        <div class="checkbox-block">
+                          <input class="checkbox" id="inp-4" type="checkbox">
+                          <label for="inp-4">40</label>
+                        </div>
+                        <div class="checkbox-block">
+                          <input class="checkbox disabled" id="inp-6" type="checkbox">
+                          <label for="inp-6">40</label>
+                        </div>
+                        <div class="checkbox-block">
+                          <input class="checkbox" id="inp-8" type="checkbox">
+                          <label for="inp-8">Без размера</label>
+                        </div>
+                      </div><a class="button button_blue-bordered" href="">Сбросить</a>
+                    </div>
+                  </div>
+                  <div class="filter-collapse">
+                    <div class="filter-collapse__title" data-toggle="dropdown">Цвет</div>
+                    <div class="filter-collapse__content dropdown-menu dropdown-menu-right">
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="color1" type="checkbox">
+                        <label for="color1">Белый</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="color2" type="checkbox">
+                        <label for="color2">Красный</label>
+                      </div>
+                      <div class="checkbox-block">
+                        <input class="checkbox" id="color3" type="checkbox">
+                        <label for="color3">Фиолетовый</label>
+                      </div><a class="button button_blue-bordered" href="">Сбросить</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter__footer"><a class="button button_blue-bordered" href="">Сбросить</a><a class="button button_blue-filled" href="">Применить</a></div>
               </div>
-              <div class="socials socials_dark"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+              <div class="category-sort"><a class="mobile-filter-button" href="javascript:;" data-fancybox data-src="#category-filter" data-touch="false">Отфильтровать и упорядочить</a>
+                <div class="order-by"><span>Упорядочить</span><a class="order-by__item default" href="">по умолчанию</a><a class="order-by__item asc selected" href="">новинки</a><a class="order-by__item" href="">популярность</a><a class="order-by__item desc" href="">цена</a><a class="order-by__item" href="">скидка</a></div>
+                <div class="view-type"><span>Вид:</span><a class="view-type__item view-type__item_3cols active" href=""><svg width="27" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H0v8h7V0zm10 0H9v8h8V0zm2 0h8v8h-8V0zM7 10H0v8h7v-8zm2 0h8v8H9v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_2cols" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M8 0H0v8h8V0zm10 0h-8v8h8V0zM0 10h8v8H0v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_1col" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h18v18H0z"/></svg></a></div>
+              </div>
+              <div class="category-items row">
+                <div class="col-md-4 col-6">
+                  <div class="product-card">
+                    <div class="product-card__thumb"><a href="product.html">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb2.webp" type="image/webp"><img src="images/dev/prod-thumb2.png" alt="">
+                        </picture>
+                        <div class="label label_best">Бестселлер</div></a>
+                      <div class="product-card__buttons"><a class="add-to-cart ab-i-add2cart" href="">Добавить</a></div>
+                    </div>
+                    <div class="product-card__bottom">
+                      <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Блузон «Овация»</a>
+                      <div class="product-card__price price"><span>35 990 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="product-card">
+                    <div class="product-card__thumb"><a href="product.html">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb3.webp" type="image/webp"><img src="images/dev/prod-thumb3.png" alt="">
+                        </picture>
+                        <div class="label label_new">Новинка</div></a>
+                      <div class="product-card__buttons">
+                        <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                        <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                      </div>
+                    </div>
+                    <div class="product-card__bottom">
+                      <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Платье «Поцелуй души» еще пара строк на всякий случай</a>
+                      <div class="product-card__price price"><span>14 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="product-card">
+                    <div class="product-card__thumb"><a href="product.html">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                        </picture></a>
+                      <div class="product-card__buttons">
+                        <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                        <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                      </div>
+                    </div>
+                    <div class="product-card__bottom">
+                      <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                      <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="product-card">
+                    <div class="product-card__thumb"><a href="product.html">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                        </picture></a>
+                      <div class="product-card__buttons">
+                        <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                        <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                      </div>
+                    </div>
+                    <div class="product-card__bottom">
+                      <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                      <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="product-card">
+                    <div class="product-card__thumb"><a href="product.html">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                        </picture></a>
+                      <div class="product-card__buttons">
+                        <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                        <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                      </div>
+                    </div>
+                    <div class="product-card__bottom">
+                      <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                      <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-6">
+                  <div class="product-card">
+                    <div class="product-card__thumb"><a href="product.html">
+                        <picture>
+                          <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                        </picture></a>
+                      <div class="product-card__buttons">
+                        <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                        <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                      </div>
+                    </div>
+                    <div class="product-card__bottom">
+                      <div class="product-card__sku">Арт. 1234567</div><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                      <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="category-navigation"><a class="loadmore" href=""> <i class="loadmore__icon ab-i-refresh"></i>Загрузить еще</a>
+                <div class="pagination">
+                  <div class="prev"> <a href=""><svg width="16" height="9" stroke="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path d="M15.7 4.5H1m0 0L4.5 8M1 4.5L4.5 1"/></svg><span class="command">Ctrl, </span>Предыдущая</a></div>
+                  <div class="pages">
+                    <div class="item"><a href="">1</a></div>
+                    <div class="item"><span>...</span></div>
+                    <div class="item"><a href="">5</a></div>
+                    <div class="item"><a href="">6</a></div>
+                    <div class="item"><a class="current" href="">7</a></div>
+                    <div class="item"><a href="">8</a></div>
+                    <div class="item"><a href="">9</a></div>
+                    <div class="item"><span>...</span></div>
+                    <div class="item"><a href="">13</a></div>
+                  </div>
+                  <div class="next"> <a href="">Следующая<span class="command">, Ctrl</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="9" stroke="#4e5b67"><path d="M0 4.5h14.7m0 0L11.2 1m3.5 3.5L11.2 8"/></svg></a></div>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="category-description">
+            <p>Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут. Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.</p>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-grid container"><a class="footer__logo" href=""><img src="images/logo_white.svg" alt="Alexander Bogdanov"></a>
-          <div class="footer__copyright">©  2020, Alexander Bogdanov. Все права защищены</div>
-          <div class="footer-bottom__links"><a href="">Политика конфиденциальности</a><span class="determiner">|</span><a href="">Условия продажи</a></div>
+      <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="footer-menu col-lg-9">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">О нас</a></div>
+                    <div class="footer-menu__link"><a href="">О компании</a></div>
+                    <div class="footer-menu__link"><a href="">Александр Богданов</a></div>
+                    <div class="footer-menu__link"><a href="">История</a></div>
+                    <div class="footer-menu__link"><a href="">Пресса о нас</a></div>
+                    <div class="footer-menu__link"><a href="">Новости</a></div>
+                    <div class="footer-menu__link"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
+                    <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
+                    <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Каталог</a></div>
+                    <div class="footer-menu__link"><a href="">Купить женскую одежду</a></div>
+                    <div class="footer-menu__link"><a href="">Платья</a></div>
+                    <div class="footer-menu__link"><a href="">Юбки</a></div>
+                    <div class="footer-menu__link"><a href="">Джемперы</a></div>
+                    <div class="footer-menu__link"><a href="">Жакеты и бомберы</a></div>
+                    <div class="footer-menu__link"><a href="">Блузы</a></div>
+                    <div class="footer-menu__link"><a href="">Рубашки</a></div>
+                    <div class="footer-menu__link"><a href="">Верхняя одежда</a></div>
+                    <div class="footer-menu__link"><a href="">Аксессуары</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Помощь</a></div>
+                    <div class="footer-menu__link"><a href="">Как оформить заказ</a></div>
+                    <div class="footer-menu__link"><a href="">Как выбрать размер</a></div>
+                    <div class="footer-menu__link"><a href="">Оплата</a></div>
+                    <div class="footer-menu__link"><a href="">Доставка</a></div>
+                    <div class="footer-menu__link"><a href="">Возврат</a></div>
+                    <div class="footer-menu__link"><a href="">Конфиденциальность</a></div>
+                    <div class="footer-menu__link"><a href="">Мои заказы</a></div>
+                    <div class="footer-menu__link"><a href="">Уход за изделиями</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
+                    <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
+                    <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__right col-lg-3">
+                <div class="subscribe">
+                  <div class="subscribe__title">Подпишитесь <br>на нашу рассылку</div>
+                  <div class="subscribe__subtitle">Обещаем отправлять только важное и интересное</div>
+                  <form class="subscribe-form" action="">
+                    <input class="subscribe-form__input" type="email" placeholder="Email">
+                    <button class="subscribe-form__button"><svg width="22" height="16" fill="none" stroke="#67add7" stroke-width="2"><rect x="1" y="1" width="20" height="14" rx="1"/><path d="M1.692 1.6l8.656 7.44a1 1 0 001.304 0l8.656-7.44M1.692 14.4L8.462 8m5.5 0l6.346 6.4"/></svg></button>
+                  </form>
+                  <div class="subscribe__privacy">Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности</div>
+                </div>
+                <div class="socials socials_dark"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-grid container"><a class="footer__logo" href=""><img src="images/logo_white.svg" alt="Alexander Bogdanov"></a>
+            <div class="footer__copyright">©  2020, Alexander Bogdanov. Все права защищены</div>
+            <div class="footer-bottom__links"><a href="">Политика конфиденциальности</a><span class="determiner">|</span><a href="">Условия продажи</a></div>
+          </div>
+        </div>
+      </footer>
+      <div class="search-city modal" id="search-city">
+        <div class="modal-title">Выберите ваш город:</div>
+        <autocomplete class="search-city__autocomplete" :search="searchCity" :get-result-value="getCity" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="submitCity"></autocomplete>
+        <div class="search-city__list">
+          <div class="search-city__item capital"><a href="">Москва</a></div>
+          <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
+          <div class="search-city__item"><a href="">Архангельск</a></div>
+          <div class="search-city__item"><a href="">Балаково</a></div>
+          <div class="search-city__item"><a href="">Барнаул</a></div>
+          <div class="search-city__item"><a href="">Благовещенск</a></div>
+          <div class="search-city__item"><a href="">Владивосток</a></div>
+          <div class="search-city__item"><a href="">Волгоград</a></div>
+          <div class="search-city__item"><a href="">Воронеж</a></div>
+          <div class="search-city__item"><a href="">Екатеринбург</a></div>
+          <div class="search-city__item"><a href="">Иркутск</a></div>
+          <div class="search-city__item"><a href="">Казань</a></div>
+          <div class="search-city__item"><a href="">Калининград</a></div>
+          <div class="search-city__item"><a href="">Кемерово</a></div>
+          <div class="search-city__item"><a href="">Краснодар</a></div>
+          <div class="search-city__item"><a href="">Красноярск</a></div>
+          <div class="search-city__item"><a href="">Липецк</a></div>
+          <div class="search-city__item"><a href="">Мурманск</a></div>
+          <div class="search-city__item"><a href="">Нижний Новгород</a></div>
+          <div class="search-city__item"><a href="">Новосибирск</a></div>
+          <div class="search-city__item"><a href="">Омск</a></div>
+          <div class="search-city__item"><a href="">Оренбург</a></div>
+          <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
+          <div class="search-city__item"><a href="">Рязань</a></div>
+          <div class="search-city__item"><a href="">Самара</a></div>
+          <div class="search-city__item"><a href="">Саратов</a></div>
+          <div class="search-city__item"><a href="">Сочи</a></div>
+          <div class="search-city__item"><a href="">Тюмень</a></div>
+          <div class="search-city__item"><a href="">Уфа</a></div>
+          <div class="search-city__item"><a href="">Хабаровск</a></div>
+          <div class="search-city__item"><a href="">Челябинск</a></div>
+          <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
+          <div class="search-city__item"><a href="">Ярославль</a></div>
         </div>
       </div>
-    </footer>
-    <div class="search-city modal" id="search-city">
-      <div class="modal-title">Выберите ваш город:</div>
-      <autocomplete class="search-city__autocomplete" :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
-      <div class="search-city__list">
-        <div class="search-city__item capital"><a href="">Москва</a></div>
-        <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
-        <div class="search-city__item"><a href="">Архангельск</a></div>
-        <div class="search-city__item"><a href="">Балаково</a></div>
-        <div class="search-city__item"><a href="">Барнаул</a></div>
-        <div class="search-city__item"><a href="">Благовещенск</a></div>
-        <div class="search-city__item"><a href="">Владивосток</a></div>
-        <div class="search-city__item"><a href="">Волгоград</a></div>
-        <div class="search-city__item"><a href="">Воронеж</a></div>
-        <div class="search-city__item"><a href="">Екатеринбург</a></div>
-        <div class="search-city__item"><a href="">Иркутск</a></div>
-        <div class="search-city__item"><a href="">Казань</a></div>
-        <div class="search-city__item"><a href="">Калининград</a></div>
-        <div class="search-city__item"><a href="">Кемерово</a></div>
-        <div class="search-city__item"><a href="">Краснодар</a></div>
-        <div class="search-city__item"><a href="">Красноярск</a></div>
-        <div class="search-city__item"><a href="">Липецк</a></div>
-        <div class="search-city__item"><a href="">Мурманск</a></div>
-        <div class="search-city__item"><a href="">Нижний Новгород</a></div>
-        <div class="search-city__item"><a href="">Новосибирск</a></div>
-        <div class="search-city__item"><a href="">Омск</a></div>
-        <div class="search-city__item"><a href="">Оренбург</a></div>
-        <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
-        <div class="search-city__item"><a href="">Рязань</a></div>
-        <div class="search-city__item"><a href="">Самара</a></div>
-        <div class="search-city__item"><a href="">Саратов</a></div>
-        <div class="search-city__item"><a href="">Сочи</a></div>
-        <div class="search-city__item"><a href="">Тюмень</a></div>
-        <div class="search-city__item"><a href="">Уфа</a></div>
-        <div class="search-city__item"><a href="">Хабаровск</a></div>
-        <div class="search-city__item"><a href="">Челябинск</a></div>
-        <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
-        <div class="search-city__item"><a href="">Ярославль</a></div>
+      <div class="auth-form modal" id="auth-form">
+        <div class="auth-form__type">
+          <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
+          <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
+        </div>
+        <form class="form form_login" :class="{ active: loginShowed }" action="">
+          <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
+          <div class="input-item">
+            <input class="input" type="email">
+            <label>Email</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password hidden"></div>
+            <input class="input" type="password">
+            <label>Пароль</label>
+          </div>
+          <div class="form__helpers input-item">
+            <input class="checkbox" id="remember-passwowrd" type="checkbox">
+            <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
+          </div>
+          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <div class="form-services">
+            <div class="form-services__title">Или войдите <br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+        </form>
+        <form class="form form_signup" action="" :class="{ active: signupShowed }">
+          <div class="form-services">
+            <div class="form-services__title">Регистрация <br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+          <p>Или заполните поля ниже</p>
+          <div class="input-item">
+            <input class="input" type="email">
+            <label>Email</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password hidden"></div>
+            <input class="input" type="password">
+            <label>Пароль</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password showed"></div>
+            <input class="input" type="password">
+            <label>Повторите пароль</label>
+          </div>
+          <div class="input-item">
+            <input class="checkbox" id="iwholesale" type="checkbox">
+            <label for="iwholesale">Я оптовый покупатель</label>
+          </div>
+          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
+        </form>
       </div>
-    </div>
-    <div class="auth-form modal" id="auth-form">
-      <div class="auth-form__type">
-        <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
-        <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
-      </div>
-      <form class="form form_login" id="login-form" :class="{ active: loginShowed }" action="">
-        <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
-        <div class="input-item">
-          <input class="input" type="email">
-          <label>Email</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password hidden"></div>
-          <input class="input" type="password">
-          <label>Пароль</label>
-        </div>
-        <div class="form__helpers input-item">
-          <input class="checkbox" id="remember-passwowrd" type="checkbox">
-          <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
-        </div>
-        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-        <div class="form-services">
-          <div class="form-services__title">Или войдите <br>через сервисы</div>
-          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-        </div>
-      </form>
-      <form class="form form_signup" id="signup-form" action="" :class="{ active: signupShowed }">
-        <div class="form-services">
-          <div class="form-services__title">Регистрация <br>через сервисы</div>
-          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-        </div>
-        <p>Или заполните поля ниже</p>
-        <div class="input-item">
-          <input class="input" type="email">
-          <label>Email</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password hidden"></div>
-          <input class="input" type="password">
-          <label>Пароль</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password showed"></div>
-          <input class="input" type="password">
-          <label>Повторите пароль</label>
-        </div>
-        <div class="input-item">
-          <input class="checkbox" id="iwholesale" type="checkbox">
-          <label for="iwholesale">Я оптовый покупатель</label>
-        </div>
-        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-        <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
-      </form>
     </div>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/vue.min.js" defer></script>
@@ -680,7 +679,8 @@
     <script src="js/jquery.flickity.pkgd.min.js" defer></script>
     <script src="js/jquery.flickity-fade.min.js" defer></script>
     <script src="js/jquery.fancybox.min.js" defer></script>
+    <script src="js/select2.min.js" defer></script>
     <script src="js/vue.autocomplete.min.js" defer></script>
-    <script src="js/scripts.js?v0.1.10" defer></script>
+    <script src="js/scripts.js?v0.2.0" defer></script>
   </body>
 </html>

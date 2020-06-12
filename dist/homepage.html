@@ -10,486 +10,262 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.1.10">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.2.0">
   </head>
   <body>
-    <header>
-      <div class="header__top">
-        <div class="container">
-          <div class="row">
-            <div class="top-left col-lg-4">
-              <div class="language">
-                <div class="language-select" data-toggle="dropdown">
-                  <div class="language__icon language__icon_rus"></div>
-                  <div class="language__arrow"></div>
+    <div id="app">
+      <header>
+        <div class="header__top">
+          <div class="container">
+            <div class="row">
+              <div class="top-left col-lg-4">
+                <div class="language">
+                  <div class="language-select" data-toggle="dropdown">
+                    <div class="language__icon language__icon_rus"></div>
+                    <div class="language__arrow"></div>
+                  </div>
+                  <div class="language-dropdown dropdown-menu"><a class="language__item" href="">
+                      <div class="language__icon language__icon_rus"></div><span>Русский</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_eng"></div><span>English</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_esp"></div><span>Espanol</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_de"></div><span>German</span></a></div>
                 </div>
-                <div class="language-dropdown dropdown-menu"><a class="language__item" href="">
-                    <div class="language__icon language__icon_rus"></div><span>Русский</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_eng"></div><span>English</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_esp"></div><span>Espanol</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_de"></div><span>German</span></a></div>
-              </div>
-              <div class="city-select"> <span>Ваш город:</span><a class="city-select__link" data-toggle="dropdown">Санкт-Петербург</a>
-                <div class="city-select-dropdown dropdown-menu">
-                  <div class="title">Ваш город Москва?</div>
-                  <div class="buttons"><a class="button button_blue-filled" href="">Да</a><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#search-city">Выбрать другой город</a></div>
-                  <p>От выбранного города зависят наличие товаров и способы доставки.</p>
+                <div class="city-select"> <span>Ваш город:</span><a class="city-select__link" data-toggle="dropdown">Санкт-Петербург</a>
+                  <div class="city-select-dropdown dropdown-menu">
+                    <div class="title">Ваш город Москва?</div>
+                    <div class="buttons"><a class="button button_blue-filled" href="">Да</a><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#search-city">Выбрать другой город</a></div>
+                    <p>От выбранного города зависят наличие товаров и способы доставки.</p>
+                  </div>
                 </div>
               </div>
+              <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
             </div>
-            <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
           </div>
         </div>
-      </div>
-      <div class="header__main container">
-        <div class="header__main-row row">
-          <div class="hamburger col-auto d-xl-none">
-            <div class="hamburger-switcher">
-              <div class="hamburger__icon"><span></span><span></span><span></span></div>
+        <div class="header__main container">
+          <div class="header__main-row row">
+            <div class="hamburger col-auto d-xl-none">
+              <div class="hamburger-switcher">
+                <div class="hamburger__icon"><span></span><span></span><span></span></div>
+              </div>
             </div>
-          </div>
-          <div class="header__logo col-lg-3 col-auto mr-auto"><a href="homepage.html"><img src="images/logo.svg" alt="Alexander Bogdanov"></a></div>
-          <div class="header__menu d-none d-xl-block">
-            <div class="main-menu">
-              <div class="main-menu__link catalog-menu"><a href="" data-toggle="dropdown">Каталог</a>
-                <div class="catalog-menu__dropdown dropdown-menu">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Новое</a></div>
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Бестселлеры</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Специальные предложения</a></div>
-                      </div>
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Одежда</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Блузы и рубашки</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Брюки и шорты</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Верхняя одежда</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Джемперы</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Жакеты и бомберы</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Платья</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Юбки</a></div>
-                      </div>
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Аксессуары</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Шапки</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Палантины</a></div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="catalog-menu__link"><a class="head" href="">Коллекции</a></div>
-                        <div class="row">
-                          <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Прованс</div>
-                                <div class="collection-link__short">Весна/Лето 2020</div>
-                              </div></a><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Настроение города</div>
-                                <div class="collection-link__short">Осень 2019/Зима 2020</div>
-                              </div></a></div>
-                          <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Лигурия</div>
-                                <div class="collection-link__short">Весна/Лето 2019</div>
-                              </div></a><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Ломбардия</div>
-                                <div class="collection-link__short">Осень 2018/Зима 2019</div>
-                              </div></a></div>
+            <div class="header__logo col-lg-3 col-auto mr-auto"><a href="homepage.html"><img src="images/logo.svg" alt="Alexander Bogdanov"></a></div>
+            <div class="header__menu d-none d-xl-block">
+              <div class="main-menu">
+                <div class="main-menu__link catalog-menu"><a href="" data-toggle="dropdown">Каталог</a>
+                  <div class="catalog-menu__dropdown dropdown-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Новое</a></div>
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Бестселлеры</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Специальные предложения</a></div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Одежда</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Блузы и рубашки</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Брюки и шорты</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Верхняя одежда</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Джемперы</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Жакеты и бомберы</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Платья</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Юбки</a></div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Аксессуары</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Шапки</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Палантины</a></div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="catalog-menu__link"><a class="head" href="">Коллекции</a></div>
+                          <div class="row">
+                            <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Прованс</div>
+                                  <div class="collection-link__short">Весна/Лето 2020</div>
+                                </div></a><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Настроение города</div>
+                                  <div class="collection-link__short">Осень 2019/Зима 2020</div>
+                                </div></a></div>
+                            <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Лигурия</div>
+                                  <div class="collection-link__short">Весна/Лето 2019</div>
+                                </div></a><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Ломбардия</div>
+                                  <div class="collection-link__short">Осень 2018/Зима 2019</div>
+                                </div></a></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="main-menu__link"><a href="">О нас</a></div>
-              <div class="main-menu__link"><a href="">Lookbook</a></div>
-              <div class="main-menu__link"><a href="">Адреса магазинов</a></div>
-            </div>
-          </div>
-          <div class="header-icons col-lg-3 col-auto ml-auto">
-            <div class="header-icons__item account"><a href="" title="Личный кабинет" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#4e5b67" stroke-width="2"><circle cx="10" cy="5" r="4"/><path d="M2.353 16.103A6 6 0 018.045 12h3.91a6 6 0 015.692 4.103l.527 1.58A1 1 0 0117.225 19H2.775a1 1 0 01-.949-1.316l.527-1.58z"/></svg></a>
-              <div class="account__dropdown dropdown-menu"><a class="high-link" href="javascript:;" data-fancybox data-src="#auth-form" data-touch="false">Личные данные</a>
-                <a class="high-link" href="">Оформленные заказы</a>
-                <a class="high-link" href="">Избранные товары</a>
-                <a class="high-link" href="">Адреса доставки</a>
-                <a class="high-link" href="">Подписки</a>
-                <a class="high-link ab-i-logout" href="">Выйти</a>
+                <div class="main-menu__link"><a href="">О нас</a></div>
+                <div class="main-menu__link"><a href="">Lookbook</a></div>
+                <div class="main-menu__link"><a href="">Адреса магазинов</a></div>
               </div>
             </div>
-            <div class="header-icons__item following"><a href="" title="Избранное"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path d="M9.17 3.047a1 1 0 001.659 0C11.69 1.768 13.002 1 14.425 1 16.833 1 19 3.27 19 6.35c0 .92-.438 2.047-1.252 3.292-.8 1.225-1.897 2.46-3.05 3.57s-2.33 2.066-3.276 2.743l-1.18.768-.24.126-.24-.127c-.303-.17-.706-.432-1.18-.775-.948-.683-2.128-1.65-3.278-2.76s-2.25-2.352-3.05-3.575C1.436 8.368 1 7.25 1 6.35 1 3.27 3.167 1 5.575 1c1.423 0 2.734.768 3.596 2.047zm.682 13.865zm.29-.002z" stroke="#4e5b67" stroke-width="2" stroke-linejoin="round"/></svg>
-                <div class="counter">3</div></a></div>
-            <div class="header-icons__item mini-cart"><a href="" title="Корзина" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
-                <div class="counter">18</div></a>
-              <div class="mini-cart__dropdown dropdown-menu">
-                <div class="cart-table">
-                  <div class="cart-table__item">
-                    <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
-                    <div class="col-name"> <span>Блузон «Овация» в две строки</span>
-                      <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
-                    </div>
-                    <div class="col-size">46</div>
-                    <div class="col-quantity">
-                      <div class="quantity">
-                        <div class="quantity__btn decrease"></div>
-                        <input class="quantity__input" type="number" value="1">
-                        <div class="quantity__btn increase"></div>
+            <div class="header-icons col-lg-3 col-auto ml-auto">
+              <div class="header-icons__item account"><a href="" title="Личный кабинет" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#4e5b67" stroke-width="2"><circle cx="10" cy="5" r="4"/><path d="M2.353 16.103A6 6 0 018.045 12h3.91a6 6 0 015.692 4.103l.527 1.58A1 1 0 0117.225 19H2.775a1 1 0 01-.949-1.316l.527-1.58z"/></svg></a>
+                <div class="account__dropdown dropdown-menu"><a class="high-link" href="javascript:;" data-fancybox data-src="#auth-form" data-touch="false">Личные данные</a>
+                  <a class="high-link" href="">Оформленные заказы</a>
+                  <a class="high-link" href="">Избранные товары</a>
+                  <a class="high-link" href="">Адреса доставки</a>
+                  <a class="high-link" href="">Подписки</a>
+                  <a class="high-link ab-i-logout" href="">Выйти</a>
+                </div>
+              </div>
+              <div class="header-icons__item following"><a href="" title="Избранное"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path d="M9.17 3.047a1 1 0 001.659 0C11.69 1.768 13.002 1 14.425 1 16.833 1 19 3.27 19 6.35c0 .92-.438 2.047-1.252 3.292-.8 1.225-1.897 2.46-3.05 3.57s-2.33 2.066-3.276 2.743l-1.18.768-.24.126-.24-.127c-.303-.17-.706-.432-1.18-.775-.948-.683-2.128-1.65-3.278-2.76s-2.25-2.352-3.05-3.575C1.436 8.368 1 7.25 1 6.35 1 3.27 3.167 1 5.575 1c1.423 0 2.734.768 3.596 2.047zm.682 13.865zm.29-.002z" stroke="#4e5b67" stroke-width="2" stroke-linejoin="round"/></svg>
+                  <div class="counter">3</div></a></div>
+              <div class="header-icons__item mini-cart"><a href="" title="Корзина" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
+                  <div class="counter">18</div></a>
+                <div class="mini-cart__dropdown dropdown-menu">
+                  <div class="cart-table">
+                    <div class="cart-table__item">
+                      <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
+                      <div class="col-name"> <span>Блузон «Овация» в две строки</span>
+                        <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
                       </div>
+                      <div class="col-size">46</div>
+                      <div class="col-quantity">
+                        <div class="quantity quantity-js">
+                          <div class="quantity__btn decrease"></div>
+                          <input class="quantity__input" type="number" value="1">
+                          <div class="quantity__btn increase"></div>
+                        </div>
+                      </div>
+                      <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
+                      <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
                     </div>
-                    <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
-                    <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
+                  </div><a class="mini-cart__add-box link-add" href="">Добавить подарочную коробку</a>
+                  <div class="mini-cart__totals">
+                    <div class="total totals__row">
+                      <div class="title">Всего товаров на сумму</div>
+                      <div class="value price"><span class="old">555 598 ₽</span><span>444 598 ₽</span></div>
+                    </div>
+                    <div class="totals__row">
+                      <div class="title">Доставка</div>
+                      <div class="value">500 ₽</div>
+                    </div>
                   </div>
-                </div><a class="mini-cart__add-box link-add" href="">Добавить подарочную коробку</a>
-                <div class="mini-cart__totals">
-                  <div class="total totals__row">
-                    <div class="title">Всего товаров на сумму</div>
-                    <div class="value price"><span class="old">555 598 ₽</span><span>444 598 ₽</span></div>
-                  </div>
-                  <div class="totals__row">
-                    <div class="title">Доставка</div>
-                    <div class="value">500 ₽</div>
+                  <div class="mini-cart__buttons"><a class="button button_blue-bordered" href="cart.html">В корзину</a><a class="button button_blue-filled" href="checkout.html">Оформить</a></div>
+                  <div class="mini-cart__empty">Ваша корзина пуста<a class="button button_blue-filled" href="catalog.html">Перейти в каталог</a></div>
+                </div>
+              </div>
+              <div class="header-icons__item search"><a href="" title="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M18.906 18.02l-3.066-3.28a8.943 8.943 0 002.105-5.768C17.944 4.025 13.92 0 8.972 0S0 4.025 0 8.972s4.025 8.972 8.972 8.972c1.857 0 3.627-.56 5.14-1.624l3.107 3.32a1.16 1.16 0 00.843.359c.304 0 .592-.116.81-.326a1.17 1.17 0 00.032-1.655zM8.972 2C12.63 2 16 5.343 16 9s-3.37 7-7.028 7S2 12.63 2 8.972 5.315 2 8.972 2z" fill="#4e5b67"/></svg></a></div>
+            </div>
+          </div>
+          <div class="mobile-menu">
+            <div class="mobile-menu__content">
+              <div class="mobile-menu__items">
+                <div class="mobile-menu__top">
+                  <div class="city-select"><span>Ваш город:</span><a class="city-select__link" href="">Санкт-Петербург</a></div>
+                </div>
+                <div class="mobile-menu__item"><a href="category.html">Новое</a></div>
+                <div class="mobile-menu__item"><a href="category.html">Бестселлеры</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Одежда</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="category.html">Одежда</a>
+                    </div>
+                    <div class="mobile-menu__item"><a href="category.html">Блузы и рубашки</a></div>
+                    <div class="mobile-menu__item"><a href="category.html">Брюки и шорты</a></div>
+                    <div class="mobile-menu__item"><a href="category.html">Верхняя одежда</a></div>
                   </div>
                 </div>
-                <div class="mini-cart__buttons"><a class="button button_blue-bordered" href="cart.html">В корзину</a><a class="button button_blue-filled" href="checkout.html">Оформить</a></div>
-                <div class="mini-cart__empty">Ваша корзина пуста<a class="button button_blue-filled" href="catalog.html">Перейти в каталог</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Аксессуары</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="category.html">Аксессуары</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="">Коллекции</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Коллекции</a>
+                    </div><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Прованс</div>
+                        <div class="collection-link__short">Весна/Лето 2020</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Настроение города</div>
+                        <div class="collection-link__short">Осень 2019/Зима 2020</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Лигурия</div>
+                        <div class="collection-link__short">Весна/Лето 2019</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Ломбардия</div>
+                        <div class="collection-link__short">Осень 2018/Зима 2019</div>
+                      </div></a>
+                  </div>
+                </div>
+                <div class="mobile-menu__item"><a href="">Специальные предложения</a></div>
+                <div class="mobile-menu__item"><a href="">Lookbook</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">О нас</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">О нас</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">Помощь</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Помощь</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">Партнерам</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Партнерам</a>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <div class="socials socials_light"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
             </div>
-            <div class="header-icons__item search"><a href="" title="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M18.906 18.02l-3.066-3.28a8.943 8.943 0 002.105-5.768C17.944 4.025 13.92 0 8.972 0S0 4.025 0 8.972s4.025 8.972 8.972 8.972c1.857 0 3.627-.56 5.14-1.624l3.107 3.32a1.16 1.16 0 00.843.359c.304 0 .592-.116.81-.326a1.17 1.17 0 00.032-1.655zM8.972 2C12.63 2 16 5.343 16 9s-3.37 7-7.028 7S2 12.63 2 8.972 5.315 2 8.972 2z" fill="#4e5b67"/></svg></a></div>
           </div>
         </div>
-        <div class="mobile-menu">
-          <div class="mobile-menu__content">
-            <div class="mobile-menu__items">
-              <div class="mobile-menu__top">
-                <div class="city-select"><span>Ваш город:</span><a class="city-select__link" href="">Санкт-Петербург</a></div>
-              </div>
-              <div class="mobile-menu__item"><a href="category.html">Новое</a></div>
-              <div class="mobile-menu__item"><a href="category.html">Бестселлеры</a></div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Одежда</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="category.html">Одежда</a>
-                  </div>
-                  <div class="mobile-menu__item"><a href="category.html">Блузы и рубашки</a></div>
-                  <div class="mobile-menu__item"><a href="category.html">Брюки и шорты</a></div>
-                  <div class="mobile-menu__item"><a href="category.html">Верхняя одежда</a></div>
+      </header>
+      <div class="page-wrapper homepage">
+        <div class="fw-slider-wrapper">
+          <div class="fw-slider" id="fw-slider">
+            <div class="fw-slide">
+              <div class="fw-slide__container container">
+                <div class="fw-slide__content">
+                  <div class="fw-slide__label">Одежда <br>для утонченных женщин</div>
+                  <div class="fw-slide__title">Новая коллекция</div><a class="fw-slide__button button button_blue-filled" href="catalog.html">Посмотреть в каталоге</a>
                 </div>
               </div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Аксессуары</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="category.html">Аксессуары</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="">Коллекции</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Коллекции</a>
-                  </div><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Прованс</div>
-                      <div class="collection-link__short">Весна/Лето 2020</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Настроение города</div>
-                      <div class="collection-link__short">Осень 2019/Зима 2020</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Лигурия</div>
-                      <div class="collection-link__short">Весна/Лето 2019</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Ломбардия</div>
-                      <div class="collection-link__short">Осень 2018/Зима 2019</div>
-                    </div></a>
-                </div>
-              </div>
-              <div class="mobile-menu__item"><a href="">Специальные предложения</a></div>
-              <div class="mobile-menu__item"><a href="">Lookbook</a></div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">О нас</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">О нас</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">Помощь</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Помощь</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">Партнерам</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Партнерам</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="socials socials_light"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="page-wrapper homepage">
-      <div class="fw-slider-wrapper">
-        <div class="fw-slider" id="fw-slider">
-          <div class="fw-slide">
-            <div class="fw-slide__container container">
-              <div class="fw-slide__content">
-                <div class="fw-slide__label">Одежда <br>для утонченных женщин</div>
-                <div class="fw-slide__title">Новая коллекция</div><a class="fw-slide__button button button_blue-filled" href="catalog.html">Посмотреть в каталоге</a>
-              </div>
-            </div>
-            <picture class="fw-slide__background">
-              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg">
-              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.webp" type="image/webp">
-              <source srcset="images/dev/fw-slide.webp" type="image/webp"><img src="images/dev/fw-slide.jpg" alt="sldie">
-            </picture>
-          </div>
-          <div class="fw-slide">
-            <div class="fw-slide__container container">
-              <div class="fw-slide__content">
-                <div class="fw-slide__label">Одежда <br>для утонченных женщин</div>
-                <div class="fw-slide__title">Новая коллекция</div><a class="fw-slide__button button button_blue-filled" href="catalog.html">Посмотреть в каталоге</a>
-              </div>
-            </div>
-            <picture class="fw-slide__background">
-              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg">
-              <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.webp" type="image/webp">
-              <source srcset="images/dev/fw-slide.webp" type="image/webp"><img src="images/dev/fw-slide.jpg" alt="sldie">
-            </picture>
-          </div>
-        </div>
-        <div class="fw-slider__nav container">
-          <div class="slider-nav">
-            <div class="slider-nav__arrows">
-              <div class="arrow arrow-prev"><svg width="27" height="14"><path fill-rule="evenodd" d="M7 14l1.225-1.225-4.9-4.9H26.25v-1.75H3.325l4.9-4.9L7 0 0 7l7 7z" fill="#67add7"/></svg></div>
-              <div class="counter"></div>
-              <div class="arrow arrow-next"><svg width="27" height="14"><path fill-rule="evenodd" d="M19.5 0l-1.225 1.225 4.9 4.9H.25v1.75h22.925l-4.9 4.9L19.5 14l7-7-7-7z" fill="#67add7"/></svg></div>
-            </div>
-            <div class="slider-nav__dots"></div>
-          </div>
-        </div>
-      </div>
-      <div class="advantages container">
-        <div class="row">
-          <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-1.svg" alt="">
-            <div class="advantages__text">Собственные уникальные принты</div>
-          </div>
-          <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-2.svg" alt="">
-            <div class="advantages__text">Авторская вышивка для каждого изделия</div>
-          </div>
-          <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-3.svg" alt="">
-            <div class="advantages__text">Произведенные во Франции кружева</div>
-          </div>
-          <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-4.svg" alt="">
-            <div class="advantages__text">Лучшая фурнитура из Италии</div>
-          </div>
-        </div>
-      </div>
-      <div class="watch-catalog-wrapper container">
-        <div class="watch-catalog">
-          <div class="b-heading">Акварельный Прованс</div>
-          <div class="watch-catalog__content">
-            <div class="watch-catalog__short">Весна/Лето 2020</div>
-            <div class="watch-catalog__image-mask">
-              <picture>
-                <source srcset="images/catalog-preview.webp" type="image/webp"><img class="watch-catalog__image" src="images/catalog-preview.png" alt="">
-              </picture>
-            </div><a class="link-detailed" href="">Листать полный каталог</a>
-          </div>
-        </div>
-      </div>
-      <div class="new-products-wrapper">
-        <div class="new-products container">
-          <div class="row">
-            <div class="new-products__left col-md-4">
-              <div class="b-heading">Новинки</div>
-              <p>Каждая модель – маленькое произведение искусства, подлинник автора, без копий, реплик и прямых заимствований.</p><a class="button button_blue-filled" href="">Посмотреть все</a>
-            </div>
-            <div class="new-products-slider col-md-8">
-              <div class="product-card">
-                <div class="product-card__thumb"><a href="product.html">
-                    <picture>
-                      <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                    </picture></a>
-                  <div class="product-card__buttons">
-                    <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                    <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                  </div>
-                </div>
-                <div class="product-card__bottom"><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                  <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card__thumb"><a href="product.html">
-                    <picture>
-                      <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                    </picture></a>
-                  <div class="product-card__buttons">
-                    <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                    <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                  </div>
-                </div>
-                <div class="product-card__bottom"><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                  <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                </div>
-              </div>
-              <div class="product-card">
-                <div class="product-card__thumb"><a href="product.html">
-                    <picture>
-                      <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
-                    </picture></a>
-                  <div class="product-card__buttons">
-                    <div class="add-to-cart ab-i-add2cart">Добавить</div>
-                    <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
-                  </div>
-                </div>
-                <div class="product-card__bottom"><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
-                  <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
-                </div>
-              </div>
-            </div>
-            <div class="new-products__bottom col-12"><a class="button button_blue-filled" href="">Посмотреть все</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="founder-quote">
-        <div class="container">
-          <div class="row">
-            <div class="founder-quote__photo col-md-5">
-              <picture>
-                <source srcset="images/alexandr-bogdanov.webp" type="image/webp"><img src="images/alexandr-bogdanov.png" alt="">
+              <picture class="fw-slide__background">
+                <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg">
+                <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.webp" type="image/webp">
+                <source srcset="images/dev/fw-slide.webp" type="image/webp"><img src="images/dev/fw-slide.jpg" alt="sldie">
               </picture>
             </div>
-            <div class="founder-quote__text col-md-7">
-              <div class="b-heading"> <img class="founder-quote__quote-icon" src="images/quote.svg" alt="">Женщинам,<br>которые предпочитают не эпатировать, а очаровывать</div>
-              <p>Моя одежда адресована достаточно утонченным, интеллигентным женщинам. Женщинам, чьё эстетическое «я» строится на оттенках, на полутонах. Женщинам, которые предпочитают не эпатировать, а очаровывать. У меня есть и яркие коллекции, но основа – нежные, пастельно-акварельные вещи. Они позволяют лучше передать нюансы текстуры, деталировки. В таких вещах лучше виден рисунок волокон, лучше видна строчка – все те чарующие мелочи, которые помогают влюбляться в одежду. Получается такой парадокс: будучи весьма спокойной по основному тону, вещь становится яркой. Но яркой в деталях, в нюансах.</p>
-              <div class="founder-quote__about">
-                <picture>
-                  <source srcset="images/alexandr-bogdanov_thumb.webp" type="image/webp"><img src="images/alexandr-bogdanov_thumb.png" alt="">
-                </picture>
-                <div class="text">Александр Богданов / Основатель и Главный Дизайнер</div>
+            <div class="fw-slide">
+              <div class="fw-slide__container container">
+                <div class="fw-slide__content">
+                  <div class="fw-slide__label">Одежда <br>для утонченных женщин</div>
+                  <div class="fw-slide__title">Новая коллекция</div><a class="fw-slide__button button button_blue-filled" href="catalog.html">Посмотреть в каталоге</a>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="inspiration-wrapper">
-        <div class="inspiration container">
-          <div class="row">
-            <div class="inspiration__content col-lx-5 col-lg-6 col-md-8">
-              <div class="b-heading">Вдохновение</div>
-              <p>Иллюстрации пастелью лично от Александра Богданова для каждой капсулы коллекции</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-              <picture>
-                <source srcset="images/inspiration-gallery.webp" type="image/webp"><img class="inspiration__gallery" src="images/inspiration-gallery.jpg" alt="">
+              <picture class="fw-slide__background">
+                <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.jpg">
+                <source media="(max-width: 600px)" srcset="images/dev/fw-slide-600.webp" type="image/webp">
+                <source srcset="images/dev/fw-slide.webp" type="image/webp"><img src="images/dev/fw-slide.jpg" alt="sldie">
               </picture>
             </div>
           </div>
-          <picture>
-            <source media="(max-width:767px)" srcset="images/inspiration-poster_mob.png">
-            <source media="(max-width:767px)" srcset="images/inspiration-poster_mob.webp" type="image/webp">
-            <source srcset="images/inspiration-poster.webp" type="image/webp"><img class="inspiration__poster" src="images/inspiration-poster.png" alt="">
-          </picture>
-        </div>
-      </div>
-      <div class="made-form">
-        <div class="container">
-          <picture class="made-form__image">
-            <source media="(max-width: 1200px)" srcset="images/h-block-materials-woman-320.png">
-            <source media="(max-width: 1200px)" srcset="images/h-block-materials-woman-320.webp" type="image/webp">
-            <source srcset="images/h-block-materials-woman.webp" type="image/webp"><img src="images/h-block-materials-woman.png" alt="">
-          </picture>
-          <div class="row justify-content-between">
-            <div class="made-form__materials col-xl-4 col-md-6">
-              <div class="b-heading">Материалы</div>
-              <div class="made-form__items">
-                <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="32" fill="none"><path d="M37.71 8.55a3.57 3.57 0 00-1-2.482c.62-.645 1-1.52 1-2.482A3.59 3.59 0 0034.123 0H13.434a6.08 6.08 0 00-6.069 6.069 6.04 6.04 0 001.394 3.865H3.587A3.59 3.59 0 000 13.521c0 .962.38 1.837 1 2.482-.62.645-1 1.52-1 2.482a3.59 3.59 0 001.82 3.12A6.05 6.05 0 000 25.931 6.08 6.08 0 006.069 32h28.054a3.59 3.59 0 003.587-3.587 3.57 3.57 0 00-1-2.482c.62-.645 1-1.52 1-2.482a3.59 3.59 0 00-1.82-3.12 6.05 6.05 0 00-.004-8.658 3.59 3.59 0 001.823-3.121zM13.434 2.2h20.688A1.38 1.38 0 0135.5 3.587a1.38 1.38 0 01-1.377 1.378H13.556v2.2h20.567A1.38 1.38 0 0135.5 8.551a1.38 1.38 0 01-1.377 1.377H13.434c-2.128 0-3.86-1.73-3.86-3.86s1.73-3.86 3.86-3.86zM3.587 19.862a1.38 1.38 0 01-1.377-1.377 1.38 1.38 0 011.377-1.377H31.52v-2.2H3.587A1.38 1.38 0 012.21 13.53a1.38 1.38 0 011.377-1.377H31.64c2.128 0 3.86 1.73 3.86 3.86s-1.73 3.86-3.86 3.86H3.587zm30.536 2.2a1.38 1.38 0 011.377 1.377 1.38 1.38 0 01-1.377 1.377H6.2v2.21h27.933a1.38 1.38 0 011.377 1.378 1.38 1.38 0 01-1.377 1.377H6.07c-2.128 0-3.86-1.73-3.86-3.86s1.73-3.86 3.86-3.86h28.054z" fill="#67add7"/></svg><span>Трикотажные полотна из Италии</span></div>
-                <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><path fill-rule="evenodd" d="M9.422 3.077v3.077l.422.42c.232.23.422.444.422.474s.024.054.053.054c.082 0 1.424 1.358 1.424 1.44 0 .097-3.102 3.2-3.2 3.2-.072 0-1.3-1.196-1.3-1.266a3.96 3.96 0 00-.634-.633c-.02 0-.13-.095-.245-.21l-.207-.21H0v6.223l1.16 1.16L2.32 18c0 .02-.522.558-1.16 1.195L0 20.355v6.223h6.153l1.16-1.16 1.23-1.16c.098 0 3.2 3.102 3.2 3.2 0 .046-.405.475-1.16 1.23l-1.16 1.16V36h6.223l1.16-1.16L18 33.68c.02 0 .558.522 1.195 1.16l1.16 1.16h6.223v-6.157l-.176-.17c-.097-.094-.176-.188-.176-.21 0-.048-.585-.635-.633-.635-.07 0-1.336-1.3-1.336-1.37 0-.097 3.102-3.2 3.2-3.2.083 0 1.723 1.622 1.723 1.705 0 .03.024.053.054.053s.18.127.333.28l.278.28H36v-6.223l-1.16-1.16L33.68 18c0-.02.522-.558 1.16-1.195l1.16-1.16V9.422h-6.153l-1.16 1.16-1.23 1.16c-.046 0-.608-.538-1.635-1.564l-1.564-1.635c0-.046.405-.475 1.16-1.23l1.16-1.16V0h-6.223l-1.16 1.16L18 2.32c-.02 0-.558-.522-1.195-1.16L15.645 0H9.422v3.077zm6.205-.142l.826.897c0 .046-.54.61-1.564 1.635l-1.6 1.564c-.02 0-.423-.388-.897-.86l-.86-.86v-3.2h3.27l.826.826zm8.842.774v1.6l-.86.86-.897.86c-.02 0-.74-.704-1.6-1.564L19.548 3.83c0-.045.296-.368.817-.894l.817-.823 3.287-.006v1.6zm-4.834 3.234l1.6 1.6-1.6 1.6-1.635 1.6c-.02 0-.755-.72-1.635-1.6l-1.6-1.6 1.59-1.597 1.635-1.6c.024-.002.764.717 1.644 1.597zM14.89 11.62l1.564 1.635c0 .074-3.094 3.2-3.167 3.2-.02 0-.1-.063-.173-.14s-.152-.14-.173-.14c-.05 0-2.534-2.484-2.534-2.533 0-.02-.08-.115-.177-.2l-.177-.172 1.592-1.598 1.636-1.6c.024-.002.748.7 1.608 1.56zm9.457.035l1.6 1.635c0 .02-.704.74-1.564 1.6l-1.635 1.564c-.097 0-3.2-3.102-3.2-3.2 0-.076 3.075-3.19 3.155-3.196.024-.002.764.717 1.643 1.597zm-18.176.738l.86.897c0 .02-.704.74-1.564 1.6l-1.635 1.564c-.045 0-.367-.296-.897-.826L2.11 14.8v-3.27h3.2l.86.86zm27.72.774V14.8l-.826.826-.897.826c-.046 0-.61-.54-1.635-1.564l-1.564-1.6c0-.02.384-.422.852-.894l.852-.858 3.217-.006v1.635zm-23.748 3.2l1.6 1.635c0 .02-.72.755-1.6 1.635l-1.6 1.6-1.6-1.6L5.344 18c0-.027 3.15-3.22 3.19-3.232.005-.002.73.717 1.608 1.597zm8.72-.774l.826.88c0 .03.024.053.053.053.058 0 1.494 1.42 1.494 1.477A106.42 106.42 0 0118 21.234c-.047 0-1.265-1.22-1.265-1.266s-.586-.633-.633-.633-1.336-1.29-1.336-1.336 3.172-3.228 3.226-3.232c.024-.002.416.37.87.823zm10.195.774l1.6 1.635c0 .02-.72.755-1.6 1.635l-1.6 1.6-1.6-1.6-1.6-1.635a180.5 180.5 0 013.191-3.232 155.21 155.21 0 011.608 1.597zm-23.6 4.746l1.564 1.6c0 .02-.388.423-.86.897l-.86.86h-3.2V21.2l.817-.823.897-.826c.06-.002.473.39 1.644 1.56zm9.422 0l1.564 1.635c0 .046-.542.613-1.564 1.635l-1.6 1.564a106.76 106.76 0 01-3.234-3.234c0-.02.7-.738 1.556-1.597l1.635-1.564c.06-.002.473.39 1.644 1.56zm9.492 0l1.564 1.6c0 .02-.72.756-1.6 1.636l-1.6 1.6-.137-.142c-.075-.078-.154-.142-.175-.142-.05 0-2.534-2.484-2.534-2.533 0-.02-.08-.115-.176-.21s-.176-.188-.176-.21.7-.74 1.556-1.6l1.635-1.564c.06-.002.473.39 1.644 1.56zm8.684-.738l.826.826v3.27h-3.2l-.86-.86-.86-.897c0-.02.7-.738 1.556-1.597l1.635-1.564c.058-.002.297.215.905.823zm-13.43 5.484l1.6 1.6-1.6 1.6-1.635 1.6c-.02 0-.755-.72-1.635-1.6l-1.6-1.6 1.59-1.597 1.635-1.6c.024-.002.764.717 1.644 1.597zm-4.746 4.676l1.564 1.635c0 .045-.296.367-.826.897l-.826.826h-3.27v-3.2l.853-.858.897-.86c.024-.002.748.7 1.608 1.562zm8.72-.703l.86.86v3.2H21.2l-.826-.826-.826-.896c0-.076 3.075-3.19 3.155-3.197.024-.002.432.385.905.858z" fill="#67add7"/></svg><span>Специально созданные переплетения для комфорта в движении</span></div>
-                <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" fill="none"><path fill-rule="evenodd" d="M34.945 0c-7.1 0-13.144 4.673-15.167 11.096a3.14 3.14 0 00-.724-.367V7.88a6.54 6.54 0 013.636-5.883A1.056 1.056 0 0021.747.11 8.67 8.67 0 0018 3.735 8.67 8.67 0 0014.253.112a1.055 1.055 0 10-.943 1.887 6.54 6.54 0 013.636 5.883v2.847a3.22 3.22 0 00-.382.165c-.118.06-.232.128-.342.203C14.198 4.673 8.164 0 1.055 0 .472 0 0 .472 0 1.055c0 4.01 1.536 7.828 4.338 10.8a6.157 6.157 0 00-.05.792c0 2.2 1.127 4.14 2.834 5.273a6.327 6.327 0 003.494 11.601c2.4 0 4.51-1.355 5.578-3.342.44.74 1.027 1.232 1.805 1.232s1.364-.493 1.805-1.232a6.335 6.335 0 005.578 3.342c3.49 0 6.328-2.84 6.328-6.328 0-2.2-1.127-4.14-2.834-5.273a6.326 6.326 0 002.785-6.065C34.464 8.883 36 5.066 36 1.055 36 .472 35.528 0 34.945 0zM6.398 12.657a4.25 4.25 0 01.099-.915c.078-.352-.03-.72-.285-.975-2.377-2.37-3.795-5.394-4.058-8.614 7.087.56 12.682 6.476 12.682 13.668v1.055h-4.22a4.225 4.225 0 01-4.22-4.22zm8.437 10.547c0 2.326-1.892 4.22-4.22 4.22s-4.22-1.893-4.22-4.22 1.893-4.22 4.22-4.22h4.22v4.22zM18 25.123c-.766-1.282-.958-4.027-1.026-4.995v-.003l-.03-.337V13.71a1.056 1.056 0 012.11 0v6.076c-.01.042-.022.196-.038.427-.076 1.04-.265 3.652-1.016 4.908zm11.602-1.92c0 2.326-1.893 4.22-4.22 4.22s-4.22-1.893-4.22-4.22v-4.22h4.22a4.225 4.225 0 014.22 4.22zm.186-12.436a1.053 1.053 0 00-.285.975 4.25 4.25 0 01.099.915 4.225 4.225 0 01-4.22 4.22h-4.22V15.82c0-7.192 5.595-13.11 12.682-13.668-.263 3.22-1.68 6.245-4.058 8.614zM11.672 23.203a1.055 1.055 0 100-2.11 1.055 1.055 0 000 2.11zm13.71-1.055a1.055 1.055 0 11-2.11 0 1.055 1.055 0 012.11 0z" fill="#67add7"/></svg><span>Натуральные матер иалы: шелк, визкоза, хлопок, лён</span></div>
-              </div>
-            </div>
-            <div class="made-form__details col-xl-4 col-md-6">
-              <div class="b-heading">Детали</div>
-              <div class="made-form__items">
-                <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="33" fill="none"><path fill-rule="evenodd" d="M18 2.348a1.174 1.174 0 10-.001-2.349A1.174 1.174 0 0018 2.348zM12.52 5.87a1.174 1.174 0 11-2.349-.001 1.174 1.174 0 012.349.001zm13.696 0a1.173 1.173 0 11-1.172-1.174c.648 0 1.174.526 1.174 1.174zM30.3 21.824c3.09 1.078 5.22 3.046 5.327 3.145.495.463.496 1.25 0 1.715-.168.157-4.163 3.838-9.215 3.838-1.137 0-2.22-.187-3.218-.477-1.38 1.57-4.2 2.557-4.83 2.767a1.18 1.18 0 01-.51.05 1.17 1.17 0 01-.222-.05c-.64-.2-3.45-1.198-4.83-2.767-.998.29-2.08.477-3.218.477-5.052 0-9.047-3.682-9.215-3.838a1.174 1.174 0 010-1.715 16.5 16.5 0 015.327-3.145c-2.743-3.954-2.49-9.108-2.477-9.354a1.173 1.173 0 011.11-1.106c.202-.01 4.47-.213 8.266 1.68 1.32-3.947 4.464-6.737 4.63-6.884a1.174 1.174 0 011.546 0c.168.147 3.31 2.937 4.63 6.884 3.795-1.893 8.064-1.7 8.265-1.68a1.175 1.175 0 011.11 1.106c.014.246.266 5.4-2.477 9.354zm-8.668-5.39c0-3.39-2.368-6.38-3.632-7.737-1.264 1.36-3.635 4.362-3.635 7.737 0 3.39 2.368 6.38 3.632 7.737 1.264-1.36 3.635-4.362 3.635-7.737zm-18.566 9.39c1.346.95 3.79 2.348 6.52 2.348 1.892 0 3.648-.673 4.995-1.402-2.175-.332-4.97-1.13-7.153-3.017-1.824.455-3.383 1.38-4.36 2.07zM5.58 13.72c.095 1.818.59 5.448 2.92 7.822.027.02.07.06.128.118.515.496 2.325 2.242 6.55 2.824-2.043-2.614-3.448-5.76-3.107-9.06-2.283-1.31-4.997-1.633-6.49-1.705zm9.657 15.36c.717.496 1.767 1.01 2.762 1.37.996-.362 2.045-.875 2.763-1.37A17.22 17.22 0 0118 27.351a17.23 17.23 0 01-2.762 1.732zm15.185-15.36c-1.493.07-4.21.393-6.494 1.705.34 3.293-1.058 6.435-3.103 9.054 4.232-.587 6.034-2.325 6.547-2.82l.127-.117c2.34-2.385 2.832-6.007 2.923-7.822zm-9.005 13.05c1.348.73 3.104 1.402 4.996 1.402 2.727 0 5.173-1.398 6.52-2.348-.978-.7-2.536-1.616-4.36-2.07-2.185 1.886-4.978 2.685-7.154 3.017z" fill="#67add7"/></svg><span>Уникальные трикотажные детали</span></div>
-                <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none"><path d="M.085 1.435l4.487 10.287c.003.008.008.015.01.022a1 1 0 00.187.274l.017.02 5.493 5.493c-3.096 2.87-6.524 6.683-8.624 10.31-1.812 3.13-2.14 5.308-.972 6.475s3.345.84 6.474-.972c3.625-2.1 7.44-5.525 10.3-8.624l8.778 8.777c2.003 2.004 5.246 2.004 7.25 0s2.004-5.246 0-7.25l-9.803-9.802c.588-1.07.997-2.024 1.218-2.842a6.54 6.54 0 00.091-.385c1.787.598 3.84.19 5.26-1.232 1.427-1.427 2.353-3.25 2.677-5.273s.017-4.04-.886-5.847C31.917.59 31.698.001 31 .001c-.566 0-1.025.46-1.025 1.025 0 1.11-.865 2.062-1.927 2.12-1.678.094-2.827.02-4.203.92a5.13 5.13 0 00-2.052 5.927 6.59 6.59 0 00-.385.092c-.818.222-1.77.63-2.842 1.218l-6.518-6.52a1.204 1.204 0 00-.293-.204c-.008-.003-.014-.008-.022-.01L1.435.086a1.026 1.026 0 00-1.35 1.349zM6.132 31.57c-2.448 1.417-3.776 1.518-3.997 1.297C2 32.73 1.82 31.652 3.432 28.87c.677-1.17 1.55-2.432 2.573-3.733l3.86 3.86c-1.3 1.024-2.563 1.896-3.733 2.573zm5.322-3.884l-4.14-4.14c.438-.508.896-1.02 1.37-1.53l4.298 4.298c-.5.475-1.02.933-1.53 1.37zM29.88 25.53l2.167 2.167c1.202 1.202 1.202 3.148 0 4.35s-3.148 1.202-4.35 0L25.53 29.88l4.35-4.35zm-2.906-2.894l1.45 1.45-4.344 4.344-1.45-1.45 4.344-4.344zM25.53 21.18l-4.35 4.35-2.34-2.34c1.45-1.678 2.74-3.368 3.764-4.936l2.927 2.927zm-.573-15.396c.843-.552 1.454-.492 3.193-.59a4.018 4.018 0 002.75-1.322c.403 2.387-.342 4.917-2.087 6.66a3.08 3.08 0 11-3.857-4.751zm-5.723 7.49c2.567-1.464 3.63-1.4 3.778-1.292.573.78-1.925 6.28-8.553 12.907l-4.35-4.35c2.705-2.705 5.804-5.305 9.125-7.265zm-2.488-.88c-1.568 1.024-3.258 2.315-4.936 3.764l-4.85-4.85 4.35-4.35 5.435 5.435zM9.524 5.85L5.85 9.524 3.01 3.01l6.514 2.84z" fill="#67add7"/></svg><span>Авторские принты, нарисованные Александром Богдановым</span></div>
-                <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><path fill-rule="evenodd" d="M35.562 17.144l-.904-.655c-1.755-1.276-3.038-2.21-5.177-3.244.855-2.457 1.103-4.225 1.4-6.337l.098-.69a1.055 1.055 0 00-1.193-1.193l-.723.102c-2.02.28-3.832.534-6.305 1.394C21.72 4.38 20.783 3.092 19.5 1.34l-.016-.022-.638-.88C18.658.163 18.34 0 18 0s-.658.163-.856.438l-.655.903c-1.277 1.756-2.2 3.04-3.245 5.178-2.457-.855-4.225-1.103-6.336-1.4l-.692-.098a1.055 1.055 0 00-1.193 1.193l.102.727c.282 2.024.534 3.828 1.394 6.3-2.14 1.035-3.427 1.97-5.176 3.243l-.905.656a1.055 1.055 0 000 1.712l.907.657C3.1 20.79 4.382 21.722 6.52 22.756c-.855 2.458-1.103 4.226-1.4 6.338l-.097.7c-.1.696.5 1.293 1.193 1.193l.723-.102c2.02-.28 3.832-.534 6.305-1.394 1.035 2.14 1.97 3.427 3.244 5.177l.016.022.64.883c.42.584 1.29.584 1.712 0l.655-.903c1.277-1.756 2.2-3.04 3.245-5.178 2.457.855 4.225 1.103 6.336 1.4h.002l.7.097a1.056 1.056 0 001.193-1.193l-.102-.726c-.282-2.024-.534-3.83-1.394-6.3 2.14-1.036 3.428-1.972 5.177-3.244l.905-.656a1.055 1.055 0 000-1.712zM28.69 7.31l-.03.215c-.14.998-.378 2.697-1.12 4.876a26.34 26.34 0 00-2.984-.957A26.181 26.181 0 0023.6 8.46c2.163-.737 3.83-.972 4.9-1.123l.19-.027zM18 2.86l.282.388c.766 1.055 1.593 2.194 2.505 4.048l-1.344.64-.808.43-.198.11-.167.095-.27.157a26.467 26.467 0 00-2.786-1.434c.892-1.813 1.663-2.88 2.56-4.122L18 2.86zm-5.6 5.6c-.376.97-.695 1.965-.956 2.984a26.39 26.39 0 00-2.984.956c-.738-2.168-.975-3.847-1.122-4.9l-.028-.2.22.03c.974.136 2.687.376 4.872 1.12zM2.86 18l.386-.28c1.056-.767 2.195-1.594 4.05-2.507.42.952.898 1.882 1.434 2.786a26.565 26.565 0 00-1.434 2.786c-1.813-.892-2.88-1.664-4.123-2.56L2.86 18zM7.3 28.7c.132-.922.347-2.73 1.15-5.09.97.376 1.966.695 2.984.956.26 1.02.58 2.014.956 2.984-2.165.737-3.833.973-4.903 1.123L7.3 28.7zM18 33.14l-.28-.386c-.767-1.056-1.594-2.195-2.507-4.05.952-.42 1.882-.898 2.786-1.434a26.384 26.384 0 002.787 1.434c-.892 1.812-1.663 2.88-2.56 4.12L18 33.14zm4.654-9.695a24.56 24.56 0 01-1.02 3.325 24.335 24.335 0 01-3.074-1.63 1.057 1.057 0 00-1.12 0 24.465 24.465 0 01-3.074 1.63 23.908 23.908 0 01-1.02-3.325c-.09-.393-.398-.7-.79-.79a24.56 24.56 0 01-3.325-1.02 24.35 24.35 0 011.629-3.073 1.057 1.057 0 000-1.12 24.35 24.35 0 01-1.629-3.074 24.35 24.35 0 013.325-1.021c.393-.09.7-.398.79-.79a24.38 24.38 0 011.021-3.326 24.465 24.465 0 013.074 1.63c.342.214.776.214 1.12 0a24.36 24.36 0 013.074-1.629 24.35 24.35 0 011.021 3.326c.09.393.398.7.79.79 1.14.263 2.25.605 3.326 1.02a24.465 24.465 0 01-1.63 3.074 1.057 1.057 0 000 1.12 24.35 24.35 0 011.629 3.073 24.35 24.35 0 01-3.326 1.021c-.393.09-.7.398-.79.79zm.945 4.094c.376-.97.695-1.966.956-2.984 1.02-.26 2.014-.58 2.984-.956.738 2.168.975 3.848 1.122 4.9l.028.2-.216-.03c-.973-.136-2.687-.375-4.875-1.12zm5.105-6.753A26.183 26.183 0 0027.27 18a26.467 26.467 0 001.434-2.786c1.812.89 2.88 1.663 4.12 2.56l.315.227-.235.17-.15.1c-1.056.767-2.195 1.594-4.05 2.507zM18 19.055a1.055 1.055 0 100-2.11 1.055 1.055 0 000 2.11zM12.726 18a5.28 5.28 0 015.273-5.273A5.28 5.28 0 0123.273 18a5.28 5.28 0 01-5.274 5.274A5.28 5.28 0 0112.726 18zm2.1 0a3.17 3.17 0 003.164 3.164A3.17 3.17 0 0021.163 18a3.17 3.17 0 00-3.164-3.164A3.17 3.17 0 0014.835 18z" fill="#67add7"/></svg><span>Авторские вышитые шевроны</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="style-samples container">
-        <div class="row">
-          <div class="style-samples__left col-lg-4">
-            <div class="b-heading">Романтика<br>ваших чувств</div>
-            <p>Каждая модель — маленькое произведение искусства, подлинник автора, без копий, реплик и прямых заимствований.</p><a class="button button_blue-filled" href="">В каталог</a>
-          </div>
-          <div class="col-lg-8">
-            <div class="style-samples__items">
-              <div class="style-samples__item"><img class="style-samples__image" src="images/style-sample_1.jpg" alt="">
-                <div class="style-samples__label">Повседневный Стиль</div>
-              </div>
-              <div class="style-samples__item"><img class="style-samples__image" src="images/style-sample_2.jpg" alt="">
-                <div class="style-samples__label">Деловой стиль</div>
-              </div>
-              <div class="style-samples__item"><img class="style-samples__image" src="images/style-sample_3.jpg" alt="">
-                <div class="style-samples__label">Чистый стиль</div>
-              </div>
-            </div>
-          </div>
-        </div><a class="button button_blue-filled" href="">В каталог</a>
-      </div>
-      <div class="goods-pw container">
-        <div class="row">
-          <div class="goods-pw__description col-md-7">
-            <div class="b-heading">Alexander Bogdanov — бренд, понимающий женщин</div>
-            <div class="goods-pw-description-slider">
-              <div class="item"><a class="item__photo" href="product.html">
-                  <picture>
-                    <source srcset="images/dev/0b58f76f59365cbb23933f1895be115f.webp" type="image/webp"><img src="images/dev/0b58f76f59365cbb23933f1895be115f.png" alt="Платье «Миндальный цвет» в две строки">
-                  </picture></a>
-                <div class="item__right">
-                  <div class="item__title">Платье «Миндальный цвет» в две строки</div>
-                  <div class="item__price">28 700 ₽</div>
-                  <div class="item__description">Характер платья задаёт ткань – крупнофактурное кружево нежных серо-розовых оттенков. Состав и оттенки делают материал тактильно приятным, подчёркивают элитарность кружева.</div><a class="link-detailed" href="product.html">Подробнее</a>
-                </div>
-              </div>
-              <div class="item"><a class="item__photo" href="product.html">
-                  <picture>
-                    <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="Пальто «Нежные струны»">
-                  </picture></a>
-                <div class="item__right">
-                  <div class="item__title">Пальто «Нежные струны»</div>
-                  <div class="item__price">27 000 ₽</div>
-                  <div class="item__description">Характер платья задаёт ткань – крупнофактурное кружево нежных серо-розовых оттенков. Состав и оттенки делают материал тактильно приятным, подчёркивают элитарность кружева.</div><a class="link-detailed" href="product.html">Подробнее</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="goods-pw__photo col-md-5">
-            <div class="goods-pw-photo-slider">
-              <div class="item">
-                <picture>
-                  <source srcset="images/dev/8O2A1936+min.webp" type="image/webp"><img src="images/dev/8O2A1936+min.jpg" alt="">
-                </picture>
-              </div>
-              <div class="item">
-                <picture>
-                  <source srcset="images/dev/8O2A1936+min.webp" type="image/webp"><img src="images/dev/8O2A1936+min.jpg" alt="">
-                </picture>
-              </div>
-            </div>
+          <div class="fw-slider__nav container">
             <div class="slider-nav">
               <div class="slider-nav__arrows">
                 <div class="arrow arrow-prev"><svg width="27" height="14"><path fill-rule="evenodd" d="M7 14l1.225-1.225-4.9-4.9H26.25v-1.75H3.325l4.9-4.9L7 0 0 7l7 7z" fill="#67add7"/></svg></div>
@@ -500,17 +276,220 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="shops">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="shops__left col-lg-4">
-              <div class="b-heading">Более <br>200 магазинов <br>в России</div><a class="button button_blue-filled" href="">Посмотреть на карте</a>
+        <div class="advantages container">
+          <div class="row">
+            <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-1.svg" alt="">
+              <div class="advantages__text">Собственные уникальные принты</div>
             </div>
-            <div class="shops__slider col-lg-8">
-              <div class="shops-slider">
-                <div class="shops-slider__slide grid--2-left"><img src="images/dev/image 15.jpg" alt=""><img src="images/dev/image 18.jpg" alt=""><img src="images/dev/image 16.jpg" alt=""></div>
-                <div class="shops-slider__slide grid--2-left"><img src="images/dev/image 15.jpg" alt=""><img src="images/dev/image 18.jpg" alt=""><img src="images/dev/image 16.jpg" alt=""></div>
+            <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-2.svg" alt="">
+              <div class="advantages__text">Авторская вышивка для каждого изделия</div>
+            </div>
+            <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-3.svg" alt="">
+              <div class="advantages__text">Произведенные во Франции кружева</div>
+            </div>
+            <div class="advantages__item col-md-3"><img class="advantages__icon" src="images/advantages-4.svg" alt="">
+              <div class="advantages__text">Лучшая фурнитура из Италии</div>
+            </div>
+          </div>
+        </div>
+        <div class="watch-catalog-wrapper container">
+          <div class="watch-catalog">
+            <div class="b-heading">Акварельный Прованс</div>
+            <div class="watch-catalog__content">
+              <div class="watch-catalog__short">Весна/Лето 2020</div>
+              <div class="watch-catalog__image-mask">
+                <picture>
+                  <source srcset="images/catalog-preview.webp" type="image/webp"><img class="watch-catalog__image" src="images/catalog-preview.png" alt="">
+                </picture>
+              </div><a class="link-detailed" href="">Листать полный каталог</a>
+            </div>
+          </div>
+        </div>
+        <div class="new-products-wrapper">
+          <div class="new-products container">
+            <div class="row">
+              <div class="new-products__left col-md-4">
+                <div class="b-heading">Новинки</div>
+                <p>Каждая модель – маленькое произведение искусства, подлинник автора, без копий, реплик и прямых заимствований.</p><a class="button button_blue-filled" href="">Посмотреть все</a>
+              </div>
+              <div class="new-products-slider col-md-8">
+                <div class="product-card">
+                  <div class="product-card__thumb"><a href="product.html">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                      </picture></a>
+                    <div class="product-card__buttons">
+                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                    </div>
+                  </div>
+                  <div class="product-card__bottom"><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                    <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-card__thumb"><a href="product.html">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                      </picture></a>
+                    <div class="product-card__buttons">
+                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                    </div>
+                  </div>
+                  <div class="product-card__bottom"><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                    <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                  </div>
+                </div>
+                <div class="product-card">
+                  <div class="product-card__thumb"><a href="product.html">
+                      <picture>
+                        <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="">
+                      </picture></a>
+                    <div class="product-card__buttons">
+                      <div class="add-to-cart ab-i-add2cart">Добавить</div>
+                      <div class="select-size"><a class="select-size__item" href="">40</a><a class="select-size__item" href="">42</a><a class="select-size__item" href="">44</a><a class="select-size__item" href="">46</a><a class="select-size__item" href="">48</a><a class="select-size__item" href="">50</a><a class="select-size__item" href="">52</a></div>
+                    </div>
+                  </div>
+                  <div class="product-card__bottom"><a class="product-card__name" href="product.html">Пальто «Нежные струны»</a>
+                    <div class="product-card__price price"><span>27 000 ₽</span><span class="old">30 000 ₽</span></div><a class="product-card__wishlist ab-i-wishlist" href=""></a>
+                  </div>
+                </div>
+              </div>
+              <div class="new-products__bottom col-12"><a class="button button_blue-filled" href="">Посмотреть все</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="founder-quote">
+          <div class="container">
+            <div class="row">
+              <div class="founder-quote__photo col-md-5">
+                <picture>
+                  <source srcset="images/alexandr-bogdanov.webp" type="image/webp"><img src="images/alexandr-bogdanov.png" alt="">
+                </picture>
+              </div>
+              <div class="founder-quote__text col-md-7">
+                <div class="b-heading"> <img class="founder-quote__quote-icon" src="images/quote.svg" alt="">Женщинам,<br>которые предпочитают не эпатировать, а очаровывать</div>
+                <p>Моя одежда адресована достаточно утонченным, интеллигентным женщинам. Женщинам, чьё эстетическое «я» строится на оттенках, на полутонах. Женщинам, которые предпочитают не эпатировать, а очаровывать. У меня есть и яркие коллекции, но основа – нежные, пастельно-акварельные вещи. Они позволяют лучше передать нюансы текстуры, деталировки. В таких вещах лучше виден рисунок волокон, лучше видна строчка – все те чарующие мелочи, которые помогают влюбляться в одежду. Получается такой парадокс: будучи весьма спокойной по основному тону, вещь становится яркой. Но яркой в деталях, в нюансах.</p>
+                <div class="founder-quote__about">
+                  <picture>
+                    <source srcset="images/alexandr-bogdanov_thumb.webp" type="image/webp"><img src="images/alexandr-bogdanov_thumb.png" alt="">
+                  </picture>
+                  <div class="text">Александр Богданов / Основатель и Главный Дизайнер</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inspiration-wrapper">
+          <div class="inspiration container">
+            <div class="row">
+              <div class="inspiration__content col-lx-5 col-lg-6 col-md-8">
+                <div class="b-heading">Вдохновение</div>
+                <p>Иллюстрации пастелью лично от Александра Богданова для каждой капсулы коллекции</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <picture>
+                  <source srcset="images/inspiration-gallery.webp" type="image/webp"><img class="inspiration__gallery" src="images/inspiration-gallery.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+            <picture>
+              <source media="(max-width:767px)" srcset="images/inspiration-poster_mob.png">
+              <source media="(max-width:767px)" srcset="images/inspiration-poster_mob.webp" type="image/webp">
+              <source srcset="images/inspiration-poster.webp" type="image/webp"><img class="inspiration__poster" src="images/inspiration-poster.png" alt="">
+            </picture>
+          </div>
+        </div>
+        <div class="made-form">
+          <div class="container">
+            <picture class="made-form__image">
+              <source media="(max-width: 1200px)" srcset="images/h-block-materials-woman-320.png">
+              <source media="(max-width: 1200px)" srcset="images/h-block-materials-woman-320.webp" type="image/webp">
+              <source srcset="images/h-block-materials-woman.webp" type="image/webp"><img src="images/h-block-materials-woman.png" alt="">
+            </picture>
+            <div class="row justify-content-between">
+              <div class="made-form__materials col-xl-4 col-md-6">
+                <div class="b-heading">Материалы</div>
+                <div class="made-form__items">
+                  <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="38" height="32" fill="none"><path d="M37.71 8.55a3.57 3.57 0 00-1-2.482c.62-.645 1-1.52 1-2.482A3.59 3.59 0 0034.123 0H13.434a6.08 6.08 0 00-6.069 6.069 6.04 6.04 0 001.394 3.865H3.587A3.59 3.59 0 000 13.521c0 .962.38 1.837 1 2.482-.62.645-1 1.52-1 2.482a3.59 3.59 0 001.82 3.12A6.05 6.05 0 000 25.931 6.08 6.08 0 006.069 32h28.054a3.59 3.59 0 003.587-3.587 3.57 3.57 0 00-1-2.482c.62-.645 1-1.52 1-2.482a3.59 3.59 0 00-1.82-3.12 6.05 6.05 0 00-.004-8.658 3.59 3.59 0 001.823-3.121zM13.434 2.2h20.688A1.38 1.38 0 0135.5 3.587a1.38 1.38 0 01-1.377 1.378H13.556v2.2h20.567A1.38 1.38 0 0135.5 8.551a1.38 1.38 0 01-1.377 1.377H13.434c-2.128 0-3.86-1.73-3.86-3.86s1.73-3.86 3.86-3.86zM3.587 19.862a1.38 1.38 0 01-1.377-1.377 1.38 1.38 0 011.377-1.377H31.52v-2.2H3.587A1.38 1.38 0 012.21 13.53a1.38 1.38 0 011.377-1.377H31.64c2.128 0 3.86 1.73 3.86 3.86s-1.73 3.86-3.86 3.86H3.587zm30.536 2.2a1.38 1.38 0 011.377 1.377 1.38 1.38 0 01-1.377 1.377H6.2v2.21h27.933a1.38 1.38 0 011.377 1.378 1.38 1.38 0 01-1.377 1.377H6.07c-2.128 0-3.86-1.73-3.86-3.86s1.73-3.86 3.86-3.86h28.054z" fill="#67add7"/></svg><span>Трикотажные полотна из Италии</span></div>
+                  <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><path fill-rule="evenodd" d="M9.422 3.077v3.077l.422.42c.232.23.422.444.422.474s.024.054.053.054c.082 0 1.424 1.358 1.424 1.44 0 .097-3.102 3.2-3.2 3.2-.072 0-1.3-1.196-1.3-1.266a3.96 3.96 0 00-.634-.633c-.02 0-.13-.095-.245-.21l-.207-.21H0v6.223l1.16 1.16L2.32 18c0 .02-.522.558-1.16 1.195L0 20.355v6.223h6.153l1.16-1.16 1.23-1.16c.098 0 3.2 3.102 3.2 3.2 0 .046-.405.475-1.16 1.23l-1.16 1.16V36h6.223l1.16-1.16L18 33.68c.02 0 .558.522 1.195 1.16l1.16 1.16h6.223v-6.157l-.176-.17c-.097-.094-.176-.188-.176-.21 0-.048-.585-.635-.633-.635-.07 0-1.336-1.3-1.336-1.37 0-.097 3.102-3.2 3.2-3.2.083 0 1.723 1.622 1.723 1.705 0 .03.024.053.054.053s.18.127.333.28l.278.28H36v-6.223l-1.16-1.16L33.68 18c0-.02.522-.558 1.16-1.195l1.16-1.16V9.422h-6.153l-1.16 1.16-1.23 1.16c-.046 0-.608-.538-1.635-1.564l-1.564-1.635c0-.046.405-.475 1.16-1.23l1.16-1.16V0h-6.223l-1.16 1.16L18 2.32c-.02 0-.558-.522-1.195-1.16L15.645 0H9.422v3.077zm6.205-.142l.826.897c0 .046-.54.61-1.564 1.635l-1.6 1.564c-.02 0-.423-.388-.897-.86l-.86-.86v-3.2h3.27l.826.826zm8.842.774v1.6l-.86.86-.897.86c-.02 0-.74-.704-1.6-1.564L19.548 3.83c0-.045.296-.368.817-.894l.817-.823 3.287-.006v1.6zm-4.834 3.234l1.6 1.6-1.6 1.6-1.635 1.6c-.02 0-.755-.72-1.635-1.6l-1.6-1.6 1.59-1.597 1.635-1.6c.024-.002.764.717 1.644 1.597zM14.89 11.62l1.564 1.635c0 .074-3.094 3.2-3.167 3.2-.02 0-.1-.063-.173-.14s-.152-.14-.173-.14c-.05 0-2.534-2.484-2.534-2.533 0-.02-.08-.115-.177-.2l-.177-.172 1.592-1.598 1.636-1.6c.024-.002.748.7 1.608 1.56zm9.457.035l1.6 1.635c0 .02-.704.74-1.564 1.6l-1.635 1.564c-.097 0-3.2-3.102-3.2-3.2 0-.076 3.075-3.19 3.155-3.196.024-.002.764.717 1.643 1.597zm-18.176.738l.86.897c0 .02-.704.74-1.564 1.6l-1.635 1.564c-.045 0-.367-.296-.897-.826L2.11 14.8v-3.27h3.2l.86.86zm27.72.774V14.8l-.826.826-.897.826c-.046 0-.61-.54-1.635-1.564l-1.564-1.6c0-.02.384-.422.852-.894l.852-.858 3.217-.006v1.635zm-23.748 3.2l1.6 1.635c0 .02-.72.755-1.6 1.635l-1.6 1.6-1.6-1.6L5.344 18c0-.027 3.15-3.22 3.19-3.232.005-.002.73.717 1.608 1.597zm8.72-.774l.826.88c0 .03.024.053.053.053.058 0 1.494 1.42 1.494 1.477A106.42 106.42 0 0118 21.234c-.047 0-1.265-1.22-1.265-1.266s-.586-.633-.633-.633-1.336-1.29-1.336-1.336 3.172-3.228 3.226-3.232c.024-.002.416.37.87.823zm10.195.774l1.6 1.635c0 .02-.72.755-1.6 1.635l-1.6 1.6-1.6-1.6-1.6-1.635a180.5 180.5 0 013.191-3.232 155.21 155.21 0 011.608 1.597zm-23.6 4.746l1.564 1.6c0 .02-.388.423-.86.897l-.86.86h-3.2V21.2l.817-.823.897-.826c.06-.002.473.39 1.644 1.56zm9.422 0l1.564 1.635c0 .046-.542.613-1.564 1.635l-1.6 1.564a106.76 106.76 0 01-3.234-3.234c0-.02.7-.738 1.556-1.597l1.635-1.564c.06-.002.473.39 1.644 1.56zm9.492 0l1.564 1.6c0 .02-.72.756-1.6 1.636l-1.6 1.6-.137-.142c-.075-.078-.154-.142-.175-.142-.05 0-2.534-2.484-2.534-2.533 0-.02-.08-.115-.176-.21s-.176-.188-.176-.21.7-.74 1.556-1.6l1.635-1.564c.06-.002.473.39 1.644 1.56zm8.684-.738l.826.826v3.27h-3.2l-.86-.86-.86-.897c0-.02.7-.738 1.556-1.597l1.635-1.564c.058-.002.297.215.905.823zm-13.43 5.484l1.6 1.6-1.6 1.6-1.635 1.6c-.02 0-.755-.72-1.635-1.6l-1.6-1.6 1.59-1.597 1.635-1.6c.024-.002.764.717 1.644 1.597zm-4.746 4.676l1.564 1.635c0 .045-.296.367-.826.897l-.826.826h-3.27v-3.2l.853-.858.897-.86c.024-.002.748.7 1.608 1.562zm8.72-.703l.86.86v3.2H21.2l-.826-.826-.826-.896c0-.076 3.075-3.19 3.155-3.197.024-.002.432.385.905.858z" fill="#67add7"/></svg><span>Специально созданные переплетения для комфорта в движении</span></div>
+                  <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="30" fill="none"><path fill-rule="evenodd" d="M34.945 0c-7.1 0-13.144 4.673-15.167 11.096a3.14 3.14 0 00-.724-.367V7.88a6.54 6.54 0 013.636-5.883A1.056 1.056 0 0021.747.11 8.67 8.67 0 0018 3.735 8.67 8.67 0 0014.253.112a1.055 1.055 0 10-.943 1.887 6.54 6.54 0 013.636 5.883v2.847a3.22 3.22 0 00-.382.165c-.118.06-.232.128-.342.203C14.198 4.673 8.164 0 1.055 0 .472 0 0 .472 0 1.055c0 4.01 1.536 7.828 4.338 10.8a6.157 6.157 0 00-.05.792c0 2.2 1.127 4.14 2.834 5.273a6.327 6.327 0 003.494 11.601c2.4 0 4.51-1.355 5.578-3.342.44.74 1.027 1.232 1.805 1.232s1.364-.493 1.805-1.232a6.335 6.335 0 005.578 3.342c3.49 0 6.328-2.84 6.328-6.328 0-2.2-1.127-4.14-2.834-5.273a6.326 6.326 0 002.785-6.065C34.464 8.883 36 5.066 36 1.055 36 .472 35.528 0 34.945 0zM6.398 12.657a4.25 4.25 0 01.099-.915c.078-.352-.03-.72-.285-.975-2.377-2.37-3.795-5.394-4.058-8.614 7.087.56 12.682 6.476 12.682 13.668v1.055h-4.22a4.225 4.225 0 01-4.22-4.22zm8.437 10.547c0 2.326-1.892 4.22-4.22 4.22s-4.22-1.893-4.22-4.22 1.893-4.22 4.22-4.22h4.22v4.22zM18 25.123c-.766-1.282-.958-4.027-1.026-4.995v-.003l-.03-.337V13.71a1.056 1.056 0 012.11 0v6.076c-.01.042-.022.196-.038.427-.076 1.04-.265 3.652-1.016 4.908zm11.602-1.92c0 2.326-1.893 4.22-4.22 4.22s-4.22-1.893-4.22-4.22v-4.22h4.22a4.225 4.225 0 014.22 4.22zm.186-12.436a1.053 1.053 0 00-.285.975 4.25 4.25 0 01.099.915 4.225 4.225 0 01-4.22 4.22h-4.22V15.82c0-7.192 5.595-13.11 12.682-13.668-.263 3.22-1.68 6.245-4.058 8.614zM11.672 23.203a1.055 1.055 0 100-2.11 1.055 1.055 0 000 2.11zm13.71-1.055a1.055 1.055 0 11-2.11 0 1.055 1.055 0 012.11 0z" fill="#67add7"/></svg><span>Натуральные матер иалы: шелк, визкоза, хлопок, лён</span></div>
+                </div>
+              </div>
+              <div class="made-form__details col-xl-4 col-md-6">
+                <div class="b-heading">Детали</div>
+                <div class="made-form__items">
+                  <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="33" fill="none"><path fill-rule="evenodd" d="M18 2.348a1.174 1.174 0 10-.001-2.349A1.174 1.174 0 0018 2.348zM12.52 5.87a1.174 1.174 0 11-2.349-.001 1.174 1.174 0 012.349.001zm13.696 0a1.173 1.173 0 11-1.172-1.174c.648 0 1.174.526 1.174 1.174zM30.3 21.824c3.09 1.078 5.22 3.046 5.327 3.145.495.463.496 1.25 0 1.715-.168.157-4.163 3.838-9.215 3.838-1.137 0-2.22-.187-3.218-.477-1.38 1.57-4.2 2.557-4.83 2.767a1.18 1.18 0 01-.51.05 1.17 1.17 0 01-.222-.05c-.64-.2-3.45-1.198-4.83-2.767-.998.29-2.08.477-3.218.477-5.052 0-9.047-3.682-9.215-3.838a1.174 1.174 0 010-1.715 16.5 16.5 0 015.327-3.145c-2.743-3.954-2.49-9.108-2.477-9.354a1.173 1.173 0 011.11-1.106c.202-.01 4.47-.213 8.266 1.68 1.32-3.947 4.464-6.737 4.63-6.884a1.174 1.174 0 011.546 0c.168.147 3.31 2.937 4.63 6.884 3.795-1.893 8.064-1.7 8.265-1.68a1.175 1.175 0 011.11 1.106c.014.246.266 5.4-2.477 9.354zm-8.668-5.39c0-3.39-2.368-6.38-3.632-7.737-1.264 1.36-3.635 4.362-3.635 7.737 0 3.39 2.368 6.38 3.632 7.737 1.264-1.36 3.635-4.362 3.635-7.737zm-18.566 9.39c1.346.95 3.79 2.348 6.52 2.348 1.892 0 3.648-.673 4.995-1.402-2.175-.332-4.97-1.13-7.153-3.017-1.824.455-3.383 1.38-4.36 2.07zM5.58 13.72c.095 1.818.59 5.448 2.92 7.822.027.02.07.06.128.118.515.496 2.325 2.242 6.55 2.824-2.043-2.614-3.448-5.76-3.107-9.06-2.283-1.31-4.997-1.633-6.49-1.705zm9.657 15.36c.717.496 1.767 1.01 2.762 1.37.996-.362 2.045-.875 2.763-1.37A17.22 17.22 0 0118 27.351a17.23 17.23 0 01-2.762 1.732zm15.185-15.36c-1.493.07-4.21.393-6.494 1.705.34 3.293-1.058 6.435-3.103 9.054 4.232-.587 6.034-2.325 6.547-2.82l.127-.117c2.34-2.385 2.832-6.007 2.923-7.822zm-9.005 13.05c1.348.73 3.104 1.402 4.996 1.402 2.727 0 5.173-1.398 6.52-2.348-.978-.7-2.536-1.616-4.36-2.07-2.185 1.886-4.978 2.685-7.154 3.017z" fill="#67add7"/></svg><span>Уникальные трикотажные детали</span></div>
+                  <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none"><path d="M.085 1.435l4.487 10.287c.003.008.008.015.01.022a1 1 0 00.187.274l.017.02 5.493 5.493c-3.096 2.87-6.524 6.683-8.624 10.31-1.812 3.13-2.14 5.308-.972 6.475s3.345.84 6.474-.972c3.625-2.1 7.44-5.525 10.3-8.624l8.778 8.777c2.003 2.004 5.246 2.004 7.25 0s2.004-5.246 0-7.25l-9.803-9.802c.588-1.07.997-2.024 1.218-2.842a6.54 6.54 0 00.091-.385c1.787.598 3.84.19 5.26-1.232 1.427-1.427 2.353-3.25 2.677-5.273s.017-4.04-.886-5.847C31.917.59 31.698.001 31 .001c-.566 0-1.025.46-1.025 1.025 0 1.11-.865 2.062-1.927 2.12-1.678.094-2.827.02-4.203.92a5.13 5.13 0 00-2.052 5.927 6.59 6.59 0 00-.385.092c-.818.222-1.77.63-2.842 1.218l-6.518-6.52a1.204 1.204 0 00-.293-.204c-.008-.003-.014-.008-.022-.01L1.435.086a1.026 1.026 0 00-1.35 1.349zM6.132 31.57c-2.448 1.417-3.776 1.518-3.997 1.297C2 32.73 1.82 31.652 3.432 28.87c.677-1.17 1.55-2.432 2.573-3.733l3.86 3.86c-1.3 1.024-2.563 1.896-3.733 2.573zm5.322-3.884l-4.14-4.14c.438-.508.896-1.02 1.37-1.53l4.298 4.298c-.5.475-1.02.933-1.53 1.37zM29.88 25.53l2.167 2.167c1.202 1.202 1.202 3.148 0 4.35s-3.148 1.202-4.35 0L25.53 29.88l4.35-4.35zm-2.906-2.894l1.45 1.45-4.344 4.344-1.45-1.45 4.344-4.344zM25.53 21.18l-4.35 4.35-2.34-2.34c1.45-1.678 2.74-3.368 3.764-4.936l2.927 2.927zm-.573-15.396c.843-.552 1.454-.492 3.193-.59a4.018 4.018 0 002.75-1.322c.403 2.387-.342 4.917-2.087 6.66a3.08 3.08 0 11-3.857-4.751zm-5.723 7.49c2.567-1.464 3.63-1.4 3.778-1.292.573.78-1.925 6.28-8.553 12.907l-4.35-4.35c2.705-2.705 5.804-5.305 9.125-7.265zm-2.488-.88c-1.568 1.024-3.258 2.315-4.936 3.764l-4.85-4.85 4.35-4.35 5.435 5.435zM9.524 5.85L5.85 9.524 3.01 3.01l6.514 2.84z" fill="#67add7"/></svg><span>Авторские принты, нарисованные Александром Богдановым</span></div>
+                  <div class="made-form__item"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none"><path fill-rule="evenodd" d="M35.562 17.144l-.904-.655c-1.755-1.276-3.038-2.21-5.177-3.244.855-2.457 1.103-4.225 1.4-6.337l.098-.69a1.055 1.055 0 00-1.193-1.193l-.723.102c-2.02.28-3.832.534-6.305 1.394C21.72 4.38 20.783 3.092 19.5 1.34l-.016-.022-.638-.88C18.658.163 18.34 0 18 0s-.658.163-.856.438l-.655.903c-1.277 1.756-2.2 3.04-3.245 5.178-2.457-.855-4.225-1.103-6.336-1.4l-.692-.098a1.055 1.055 0 00-1.193 1.193l.102.727c.282 2.024.534 3.828 1.394 6.3-2.14 1.035-3.427 1.97-5.176 3.243l-.905.656a1.055 1.055 0 000 1.712l.907.657C3.1 20.79 4.382 21.722 6.52 22.756c-.855 2.458-1.103 4.226-1.4 6.338l-.097.7c-.1.696.5 1.293 1.193 1.193l.723-.102c2.02-.28 3.832-.534 6.305-1.394 1.035 2.14 1.97 3.427 3.244 5.177l.016.022.64.883c.42.584 1.29.584 1.712 0l.655-.903c1.277-1.756 2.2-3.04 3.245-5.178 2.457.855 4.225 1.103 6.336 1.4h.002l.7.097a1.056 1.056 0 001.193-1.193l-.102-.726c-.282-2.024-.534-3.83-1.394-6.3 2.14-1.036 3.428-1.972 5.177-3.244l.905-.656a1.055 1.055 0 000-1.712zM28.69 7.31l-.03.215c-.14.998-.378 2.697-1.12 4.876a26.34 26.34 0 00-2.984-.957A26.181 26.181 0 0023.6 8.46c2.163-.737 3.83-.972 4.9-1.123l.19-.027zM18 2.86l.282.388c.766 1.055 1.593 2.194 2.505 4.048l-1.344.64-.808.43-.198.11-.167.095-.27.157a26.467 26.467 0 00-2.786-1.434c.892-1.813 1.663-2.88 2.56-4.122L18 2.86zm-5.6 5.6c-.376.97-.695 1.965-.956 2.984a26.39 26.39 0 00-2.984.956c-.738-2.168-.975-3.847-1.122-4.9l-.028-.2.22.03c.974.136 2.687.376 4.872 1.12zM2.86 18l.386-.28c1.056-.767 2.195-1.594 4.05-2.507.42.952.898 1.882 1.434 2.786a26.565 26.565 0 00-1.434 2.786c-1.813-.892-2.88-1.664-4.123-2.56L2.86 18zM7.3 28.7c.132-.922.347-2.73 1.15-5.09.97.376 1.966.695 2.984.956.26 1.02.58 2.014.956 2.984-2.165.737-3.833.973-4.903 1.123L7.3 28.7zM18 33.14l-.28-.386c-.767-1.056-1.594-2.195-2.507-4.05.952-.42 1.882-.898 2.786-1.434a26.384 26.384 0 002.787 1.434c-.892 1.812-1.663 2.88-2.56 4.12L18 33.14zm4.654-9.695a24.56 24.56 0 01-1.02 3.325 24.335 24.335 0 01-3.074-1.63 1.057 1.057 0 00-1.12 0 24.465 24.465 0 01-3.074 1.63 23.908 23.908 0 01-1.02-3.325c-.09-.393-.398-.7-.79-.79a24.56 24.56 0 01-3.325-1.02 24.35 24.35 0 011.629-3.073 1.057 1.057 0 000-1.12 24.35 24.35 0 01-1.629-3.074 24.35 24.35 0 013.325-1.021c.393-.09.7-.398.79-.79a24.38 24.38 0 011.021-3.326 24.465 24.465 0 013.074 1.63c.342.214.776.214 1.12 0a24.36 24.36 0 013.074-1.629 24.35 24.35 0 011.021 3.326c.09.393.398.7.79.79 1.14.263 2.25.605 3.326 1.02a24.465 24.465 0 01-1.63 3.074 1.057 1.057 0 000 1.12 24.35 24.35 0 011.629 3.073 24.35 24.35 0 01-3.326 1.021c-.393.09-.7.398-.79.79zm.945 4.094c.376-.97.695-1.966.956-2.984 1.02-.26 2.014-.58 2.984-.956.738 2.168.975 3.848 1.122 4.9l.028.2-.216-.03c-.973-.136-2.687-.375-4.875-1.12zm5.105-6.753A26.183 26.183 0 0027.27 18a26.467 26.467 0 001.434-2.786c1.812.89 2.88 1.663 4.12 2.56l.315.227-.235.17-.15.1c-1.056.767-2.195 1.594-4.05 2.507zM18 19.055a1.055 1.055 0 100-2.11 1.055 1.055 0 000 2.11zM12.726 18a5.28 5.28 0 015.273-5.273A5.28 5.28 0 0123.273 18a5.28 5.28 0 01-5.274 5.274A5.28 5.28 0 0112.726 18zm2.1 0a3.17 3.17 0 003.164 3.164A3.17 3.17 0 0021.163 18a3.17 3.17 0 00-3.164-3.164A3.17 3.17 0 0014.835 18z" fill="#67add7"/></svg><span>Авторские вышитые шевроны</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="style-samples container">
+          <div class="row">
+            <div class="style-samples__left col-lg-4">
+              <div class="b-heading">Романтика<br>ваших чувств</div>
+              <p>Каждая модель — маленькое произведение искусства, подлинник автора, без копий, реплик и прямых заимствований.</p><a class="button button_blue-filled" href="">В каталог</a>
+            </div>
+            <div class="col-lg-8">
+              <div class="style-samples__items">
+                <div class="style-samples__item"><img class="style-samples__image" src="images/style-sample_1.jpg" alt="">
+                  <div class="style-samples__label">Повседневный Стиль</div>
+                </div>
+                <div class="style-samples__item"><img class="style-samples__image" src="images/style-sample_2.jpg" alt="">
+                  <div class="style-samples__label">Деловой стиль</div>
+                </div>
+                <div class="style-samples__item"><img class="style-samples__image" src="images/style-sample_3.jpg" alt="">
+                  <div class="style-samples__label">Чистый стиль</div>
+                </div>
+              </div>
+            </div>
+          </div><a class="button button_blue-filled" href="">В каталог</a>
+        </div>
+        <div class="goods-pw container">
+          <div class="row">
+            <div class="goods-pw__description col-md-7">
+              <div class="b-heading">Alexander Bogdanov — бренд, понимающий женщин</div>
+              <div class="goods-pw-description-slider">
+                <div class="item"><a class="item__photo" href="product.html">
+                    <picture>
+                      <source srcset="images/dev/0b58f76f59365cbb23933f1895be115f.webp" type="image/webp"><img src="images/dev/0b58f76f59365cbb23933f1895be115f.png" alt="Платье «Миндальный цвет» в две строки">
+                    </picture></a>
+                  <div class="item__right">
+                    <div class="item__title">Платье «Миндальный цвет» в две строки</div>
+                    <div class="item__price">28 700 ₽</div>
+                    <div class="item__description">Характер платья задаёт ткань – крупнофактурное кружево нежных серо-розовых оттенков. Состав и оттенки делают материал тактильно приятным, подчёркивают элитарность кружева.</div><a class="link-detailed" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+                <div class="item"><a class="item__photo" href="product.html">
+                    <picture>
+                      <source srcset="images/dev/prod-thumb.webp" type="image/webp"><img src="images/dev/prod-thumb.png" alt="Пальто «Нежные струны»">
+                    </picture></a>
+                  <div class="item__right">
+                    <div class="item__title">Пальто «Нежные струны»</div>
+                    <div class="item__price">27 000 ₽</div>
+                    <div class="item__description">Характер платья задаёт ткань – крупнофактурное кружево нежных серо-розовых оттенков. Состав и оттенки делают материал тактильно приятным, подчёркивают элитарность кружева.</div><a class="link-detailed" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="goods-pw__photo col-md-5">
+              <div class="goods-pw-photo-slider">
+                <div class="item">
+                  <picture>
+                    <source srcset="images/dev/8O2A1936+min.webp" type="image/webp"><img src="images/dev/8O2A1936+min.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="item">
+                  <picture>
+                    <source srcset="images/dev/8O2A1936+min.webp" type="image/webp"><img src="images/dev/8O2A1936+min.jpg" alt="">
+                  </picture>
+                </div>
               </div>
               <div class="slider-nav">
                 <div class="slider-nav__arrows">
@@ -523,177 +502,200 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="about-company container">
-        <div class="b-heading">О компании</div>
-        <p>Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут.</p>
-        <p>Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.</p>
-      </div>
-    </div>
-    <footer>
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="footer-menu col-lg-9">
-              <div class="row">
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">О нас</a></div>
-                  <div class="footer-menu__link"><a href="">О компании</a></div>
-                  <div class="footer-menu__link"><a href="">Александр Богданов</a></div>
-                  <div class="footer-menu__link"><a href="">История</a></div>
-                  <div class="footer-menu__link"><a href="">Пресса о нас</a></div>
-                  <div class="footer-menu__link"><a href="">Новости</a></div>
-                  <div class="footer-menu__link"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
-                  <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
-                  <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+        <div class="shops">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="shops__left col-lg-4">
+                <div class="b-heading">Более <br>200 магазинов <br>в России</div><a class="button button_blue-filled" href="">Посмотреть на карте</a>
+              </div>
+              <div class="shops__slider col-lg-8">
+                <div class="shops-slider">
+                  <div class="shops-slider__slide grid--2-left"><img src="images/dev/image 15.jpg" alt=""><img src="images/dev/image 18.jpg" alt=""><img src="images/dev/image 16.jpg" alt=""></div>
+                  <div class="shops-slider__slide grid--2-left"><img src="images/dev/image 15.jpg" alt=""><img src="images/dev/image 18.jpg" alt=""><img src="images/dev/image 16.jpg" alt=""></div>
                 </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Каталог</a></div>
-                  <div class="footer-menu__link"><a href="">Купить женскую одежду</a></div>
-                  <div class="footer-menu__link"><a href="">Платья</a></div>
-                  <div class="footer-menu__link"><a href="">Юбки</a></div>
-                  <div class="footer-menu__link"><a href="">Джемперы</a></div>
-                  <div class="footer-menu__link"><a href="">Жакеты и бомберы</a></div>
-                  <div class="footer-menu__link"><a href="">Блузы</a></div>
-                  <div class="footer-menu__link"><a href="">Рубашки</a></div>
-                  <div class="footer-menu__link"><a href="">Верхняя одежда</a></div>
-                  <div class="footer-menu__link"><a href="">Аксессуары</a></div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Помощь</a></div>
-                  <div class="footer-menu__link"><a href="">Как оформить заказ</a></div>
-                  <div class="footer-menu__link"><a href="">Как выбрать размер</a></div>
-                  <div class="footer-menu__link"><a href="">Оплата</a></div>
-                  <div class="footer-menu__link"><a href="">Доставка</a></div>
-                  <div class="footer-menu__link"><a href="">Возврат</a></div>
-                  <div class="footer-menu__link"><a href="">Конфиденциальность</a></div>
-                  <div class="footer-menu__link"><a href="">Мои заказы</a></div>
-                  <div class="footer-menu__link"><a href="">Уход за изделиями</a></div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
-                  <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
-                  <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                <div class="slider-nav">
+                  <div class="slider-nav__arrows">
+                    <div class="arrow arrow-prev"><svg width="27" height="14"><path fill-rule="evenodd" d="M7 14l1.225-1.225-4.9-4.9H26.25v-1.75H3.325l4.9-4.9L7 0 0 7l7 7z" fill="#67add7"/></svg></div>
+                    <div class="counter"></div>
+                    <div class="arrow arrow-next"><svg width="27" height="14"><path fill-rule="evenodd" d="M19.5 0l-1.225 1.225 4.9 4.9H.25v1.75h22.925l-4.9 4.9L19.5 14l7-7-7-7z" fill="#67add7"/></svg></div>
+                  </div>
+                  <div class="slider-nav__dots"></div>
                 </div>
               </div>
-            </div>
-            <div class="footer__right col-lg-3">
-              <div class="subscribe">
-                <div class="subscribe__title">Подпишитесь <br>на нашу рассылку</div>
-                <div class="subscribe__subtitle">Обещаем отправлять только важное и интересное</div>
-                <form class="subscribe-form" action="">
-                  <input class="subscribe-form__input" type="email" placeholder="Email">
-                  <button class="subscribe-form__button"><svg width="22" height="16" fill="none" stroke="#67add7" stroke-width="2"><rect x="1" y="1" width="20" height="14" rx="1"/><path d="M1.692 1.6l8.656 7.44a1 1 0 001.304 0l8.656-7.44M1.692 14.4L8.462 8m5.5 0l6.346 6.4"/></svg></button>
-                </form>
-                <div class="subscribe__privacy">Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности</div>
-              </div>
-              <div class="socials socials_dark"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-grid container"><a class="footer__logo" href=""><img src="images/logo_white.svg" alt="Alexander Bogdanov"></a>
-          <div class="footer__copyright">©  2020, Alexander Bogdanov. Все права защищены</div>
-          <div class="footer-bottom__links"><a href="">Политика конфиденциальности</a><span class="determiner">|</span><a href="">Условия продажи</a></div>
+        <div class="about-company container">
+          <div class="b-heading">О компании</div>
+          <p>Любую вещь из каталога интернет-магазина alexanderbogdanov.com всегда можно заказать с бесплатной доставкой по всей России и примерить перед оплатой. Это позволяет быть уверенной в том, что модель идеально подойдет. Курьер может доставить несколько моделей на выбор, а покупательница заплатить только за те, которые идеально подойдут.</p>
+          <p>Оплатить покупки из интернет-магазина alexanderbogdanov.com можно любым удобным способом: наличными курьеру после примерки, банковской картой прямо на сайте, а также наложенным платежом. У каждого курьера в наличии мобильный терминал для оплаты по карте прямо у вас дома, после примерки. Интернет-магазин alexanderbogdanov.com очень внимательно относится к удовлетворенности своих клиентов. Поэтому товар, который был куплен, но не подошел можно вернуть в течение 14 дней после покупки.</p>
         </div>
       </div>
-    </footer>
-    <div class="search-city modal" id="search-city">
-      <div class="modal-title">Выберите ваш город:</div>
-      <autocomplete class="search-city__autocomplete" :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
-      <div class="search-city__list">
-        <div class="search-city__item capital"><a href="">Москва</a></div>
-        <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
-        <div class="search-city__item"><a href="">Архангельск</a></div>
-        <div class="search-city__item"><a href="">Балаково</a></div>
-        <div class="search-city__item"><a href="">Барнаул</a></div>
-        <div class="search-city__item"><a href="">Благовещенск</a></div>
-        <div class="search-city__item"><a href="">Владивосток</a></div>
-        <div class="search-city__item"><a href="">Волгоград</a></div>
-        <div class="search-city__item"><a href="">Воронеж</a></div>
-        <div class="search-city__item"><a href="">Екатеринбург</a></div>
-        <div class="search-city__item"><a href="">Иркутск</a></div>
-        <div class="search-city__item"><a href="">Казань</a></div>
-        <div class="search-city__item"><a href="">Калининград</a></div>
-        <div class="search-city__item"><a href="">Кемерово</a></div>
-        <div class="search-city__item"><a href="">Краснодар</a></div>
-        <div class="search-city__item"><a href="">Красноярск</a></div>
-        <div class="search-city__item"><a href="">Липецк</a></div>
-        <div class="search-city__item"><a href="">Мурманск</a></div>
-        <div class="search-city__item"><a href="">Нижний Новгород</a></div>
-        <div class="search-city__item"><a href="">Новосибирск</a></div>
-        <div class="search-city__item"><a href="">Омск</a></div>
-        <div class="search-city__item"><a href="">Оренбург</a></div>
-        <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
-        <div class="search-city__item"><a href="">Рязань</a></div>
-        <div class="search-city__item"><a href="">Самара</a></div>
-        <div class="search-city__item"><a href="">Саратов</a></div>
-        <div class="search-city__item"><a href="">Сочи</a></div>
-        <div class="search-city__item"><a href="">Тюмень</a></div>
-        <div class="search-city__item"><a href="">Уфа</a></div>
-        <div class="search-city__item"><a href="">Хабаровск</a></div>
-        <div class="search-city__item"><a href="">Челябинск</a></div>
-        <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
-        <div class="search-city__item"><a href="">Ярославль</a></div>
+      <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="footer-menu col-lg-9">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">О нас</a></div>
+                    <div class="footer-menu__link"><a href="">О компании</a></div>
+                    <div class="footer-menu__link"><a href="">Александр Богданов</a></div>
+                    <div class="footer-menu__link"><a href="">История</a></div>
+                    <div class="footer-menu__link"><a href="">Пресса о нас</a></div>
+                    <div class="footer-menu__link"><a href="">Новости</a></div>
+                    <div class="footer-menu__link"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
+                    <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
+                    <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Каталог</a></div>
+                    <div class="footer-menu__link"><a href="">Купить женскую одежду</a></div>
+                    <div class="footer-menu__link"><a href="">Платья</a></div>
+                    <div class="footer-menu__link"><a href="">Юбки</a></div>
+                    <div class="footer-menu__link"><a href="">Джемперы</a></div>
+                    <div class="footer-menu__link"><a href="">Жакеты и бомберы</a></div>
+                    <div class="footer-menu__link"><a href="">Блузы</a></div>
+                    <div class="footer-menu__link"><a href="">Рубашки</a></div>
+                    <div class="footer-menu__link"><a href="">Верхняя одежда</a></div>
+                    <div class="footer-menu__link"><a href="">Аксессуары</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Помощь</a></div>
+                    <div class="footer-menu__link"><a href="">Как оформить заказ</a></div>
+                    <div class="footer-menu__link"><a href="">Как выбрать размер</a></div>
+                    <div class="footer-menu__link"><a href="">Оплата</a></div>
+                    <div class="footer-menu__link"><a href="">Доставка</a></div>
+                    <div class="footer-menu__link"><a href="">Возврат</a></div>
+                    <div class="footer-menu__link"><a href="">Конфиденциальность</a></div>
+                    <div class="footer-menu__link"><a href="">Мои заказы</a></div>
+                    <div class="footer-menu__link"><a href="">Уход за изделиями</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
+                    <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
+                    <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__right col-lg-3">
+                <div class="subscribe">
+                  <div class="subscribe__title">Подпишитесь <br>на нашу рассылку</div>
+                  <div class="subscribe__subtitle">Обещаем отправлять только важное и интересное</div>
+                  <form class="subscribe-form" action="">
+                    <input class="subscribe-form__input" type="email" placeholder="Email">
+                    <button class="subscribe-form__button"><svg width="22" height="16" fill="none" stroke="#67add7" stroke-width="2"><rect x="1" y="1" width="20" height="14" rx="1"/><path d="M1.692 1.6l8.656 7.44a1 1 0 001.304 0l8.656-7.44M1.692 14.4L8.462 8m5.5 0l6.346 6.4"/></svg></button>
+                  </form>
+                  <div class="subscribe__privacy">Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности</div>
+                </div>
+                <div class="socials socials_dark"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-grid container"><a class="footer__logo" href=""><img src="images/logo_white.svg" alt="Alexander Bogdanov"></a>
+            <div class="footer__copyright">©  2020, Alexander Bogdanov. Все права защищены</div>
+            <div class="footer-bottom__links"><a href="">Политика конфиденциальности</a><span class="determiner">|</span><a href="">Условия продажи</a></div>
+          </div>
+        </div>
+      </footer>
+      <div class="search-city modal" id="search-city">
+        <div class="modal-title">Выберите ваш город:</div>
+        <autocomplete class="search-city__autocomplete" :search="searchCity" :get-result-value="getCity" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="submitCity"></autocomplete>
+        <div class="search-city__list">
+          <div class="search-city__item capital"><a href="">Москва</a></div>
+          <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
+          <div class="search-city__item"><a href="">Архангельск</a></div>
+          <div class="search-city__item"><a href="">Балаково</a></div>
+          <div class="search-city__item"><a href="">Барнаул</a></div>
+          <div class="search-city__item"><a href="">Благовещенск</a></div>
+          <div class="search-city__item"><a href="">Владивосток</a></div>
+          <div class="search-city__item"><a href="">Волгоград</a></div>
+          <div class="search-city__item"><a href="">Воронеж</a></div>
+          <div class="search-city__item"><a href="">Екатеринбург</a></div>
+          <div class="search-city__item"><a href="">Иркутск</a></div>
+          <div class="search-city__item"><a href="">Казань</a></div>
+          <div class="search-city__item"><a href="">Калининград</a></div>
+          <div class="search-city__item"><a href="">Кемерово</a></div>
+          <div class="search-city__item"><a href="">Краснодар</a></div>
+          <div class="search-city__item"><a href="">Красноярск</a></div>
+          <div class="search-city__item"><a href="">Липецк</a></div>
+          <div class="search-city__item"><a href="">Мурманск</a></div>
+          <div class="search-city__item"><a href="">Нижний Новгород</a></div>
+          <div class="search-city__item"><a href="">Новосибирск</a></div>
+          <div class="search-city__item"><a href="">Омск</a></div>
+          <div class="search-city__item"><a href="">Оренбург</a></div>
+          <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
+          <div class="search-city__item"><a href="">Рязань</a></div>
+          <div class="search-city__item"><a href="">Самара</a></div>
+          <div class="search-city__item"><a href="">Саратов</a></div>
+          <div class="search-city__item"><a href="">Сочи</a></div>
+          <div class="search-city__item"><a href="">Тюмень</a></div>
+          <div class="search-city__item"><a href="">Уфа</a></div>
+          <div class="search-city__item"><a href="">Хабаровск</a></div>
+          <div class="search-city__item"><a href="">Челябинск</a></div>
+          <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
+          <div class="search-city__item"><a href="">Ярославль</a></div>
+        </div>
       </div>
-    </div>
-    <div class="auth-form modal" id="auth-form">
-      <div class="auth-form__type">
-        <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
-        <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
+      <div class="auth-form modal" id="auth-form">
+        <div class="auth-form__type">
+          <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
+          <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
+        </div>
+        <form class="form form_login" :class="{ active: loginShowed }" action="">
+          <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
+          <div class="input-item">
+            <input class="input" type="email">
+            <label>Email</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password hidden"></div>
+            <input class="input" type="password">
+            <label>Пароль</label>
+          </div>
+          <div class="form__helpers input-item">
+            <input class="checkbox" id="remember-passwowrd" type="checkbox">
+            <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
+          </div>
+          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <div class="form-services">
+            <div class="form-services__title">Или войдите <br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+        </form>
+        <form class="form form_signup" action="" :class="{ active: signupShowed }">
+          <div class="form-services">
+            <div class="form-services__title">Регистрация <br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+          <p>Или заполните поля ниже</p>
+          <div class="input-item">
+            <input class="input" type="email">
+            <label>Email</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password hidden"></div>
+            <input class="input" type="password">
+            <label>Пароль</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password showed"></div>
+            <input class="input" type="password">
+            <label>Повторите пароль</label>
+          </div>
+          <div class="input-item">
+            <input class="checkbox" id="iwholesale" type="checkbox">
+            <label for="iwholesale">Я оптовый покупатель</label>
+          </div>
+          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
+        </form>
       </div>
-      <form class="form form_login" id="login-form" :class="{ active: loginShowed }" action="">
-        <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
-        <div class="input-item">
-          <input class="input" type="email">
-          <label>Email</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password hidden"></div>
-          <input class="input" type="password">
-          <label>Пароль</label>
-        </div>
-        <div class="form__helpers input-item">
-          <input class="checkbox" id="remember-passwowrd" type="checkbox">
-          <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
-        </div>
-        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-        <div class="form-services">
-          <div class="form-services__title">Или войдите <br>через сервисы</div>
-          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-        </div>
-      </form>
-      <form class="form form_signup" id="signup-form" action="" :class="{ active: signupShowed }">
-        <div class="form-services">
-          <div class="form-services__title">Регистрация <br>через сервисы</div>
-          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-        </div>
-        <p>Или заполните поля ниже</p>
-        <div class="input-item">
-          <input class="input" type="email">
-          <label>Email</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password hidden"></div>
-          <input class="input" type="password">
-          <label>Пароль</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password showed"></div>
-          <input class="input" type="password">
-          <label>Повторите пароль</label>
-        </div>
-        <div class="input-item">
-          <input class="checkbox" id="iwholesale" type="checkbox">
-          <label for="iwholesale">Я оптовый покупатель</label>
-        </div>
-        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-        <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
-      </form>
     </div>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/vue.min.js" defer></script>
@@ -701,7 +703,8 @@
     <script src="js/jquery.flickity.pkgd.min.js" defer></script>
     <script src="js/jquery.flickity-fade.min.js" defer></script>
     <script src="js/jquery.fancybox.min.js" defer></script>
+    <script src="js/select2.min.js" defer></script>
     <script src="js/vue.autocomplete.min.js" defer></script>
-    <script src="js/scripts.js?v0.1.10" defer></script>
+    <script src="js/scripts.js?v0.2.0" defer></script>
   </body>
 </html>

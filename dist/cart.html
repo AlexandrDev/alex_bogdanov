@@ -10,475 +10,477 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.1.10">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.2.0">
   </head>
   <body>
-    <header>
-      <div class="header__top">
-        <div class="container">
-          <div class="row">
-            <div class="top-left col-lg-4">
-              <div class="language">
-                <div class="language-select" data-toggle="dropdown">
-                  <div class="language__icon language__icon_rus"></div>
-                  <div class="language__arrow"></div>
+    <div id="app">
+      <header>
+        <div class="header__top">
+          <div class="container">
+            <div class="row">
+              <div class="top-left col-lg-4">
+                <div class="language">
+                  <div class="language-select" data-toggle="dropdown">
+                    <div class="language__icon language__icon_rus"></div>
+                    <div class="language__arrow"></div>
+                  </div>
+                  <div class="language-dropdown dropdown-menu"><a class="language__item" href="">
+                      <div class="language__icon language__icon_rus"></div><span>Русский</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_eng"></div><span>English</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_esp"></div><span>Espanol</span></a><a class="language__item" href="">
+                      <div class="language__icon language__icon_de"></div><span>German</span></a></div>
                 </div>
-                <div class="language-dropdown dropdown-menu"><a class="language__item" href="">
-                    <div class="language__icon language__icon_rus"></div><span>Русский</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_eng"></div><span>English</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_esp"></div><span>Espanol</span></a><a class="language__item" href="">
-                    <div class="language__icon language__icon_de"></div><span>German</span></a></div>
-              </div>
-              <div class="city-select"> <span>Ваш город:</span><a class="city-select__link" data-toggle="dropdown">Санкт-Петербург</a>
-                <div class="city-select-dropdown dropdown-menu">
-                  <div class="title">Ваш город Москва?</div>
-                  <div class="buttons"><a class="button button_blue-filled" href="">Да</a><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#search-city">Выбрать другой город</a></div>
-                  <p>От выбранного города зависят наличие товаров и способы доставки.</p>
+                <div class="city-select"> <span>Ваш город:</span><a class="city-select__link" data-toggle="dropdown">Санкт-Петербург</a>
+                  <div class="city-select-dropdown dropdown-menu">
+                    <div class="title">Ваш город Москва?</div>
+                    <div class="buttons"><a class="button button_blue-filled" href="">Да</a><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#search-city">Выбрать другой город</a></div>
+                    <p>От выбранного города зависят наличие товаров и способы доставки.</p>
+                  </div>
                 </div>
               </div>
+              <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
             </div>
-            <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
           </div>
         </div>
-      </div>
-      <div class="header__main container">
-        <div class="header__main-row row">
-          <div class="hamburger col-auto d-xl-none">
-            <div class="hamburger-switcher">
-              <div class="hamburger__icon"><span></span><span></span><span></span></div>
+        <div class="header__main container">
+          <div class="header__main-row row">
+            <div class="hamburger col-auto d-xl-none">
+              <div class="hamburger-switcher">
+                <div class="hamburger__icon"><span></span><span></span><span></span></div>
+              </div>
             </div>
-          </div>
-          <div class="header__logo col-lg-3 col-auto mr-auto"><a href="homepage.html"><img src="images/logo.svg" alt="Alexander Bogdanov"></a></div>
-          <div class="header__menu d-none d-xl-block">
-            <div class="main-menu">
-              <div class="main-menu__link catalog-menu"><a href="" data-toggle="dropdown">Каталог</a>
-                <div class="catalog-menu__dropdown dropdown-menu">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Новое</a></div>
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Бестселлеры</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Специальные предложения</a></div>
-                      </div>
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Одежда</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Блузы и рубашки</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Брюки и шорты</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Верхняя одежда</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Джемперы</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Жакеты и бомберы</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Платья</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Юбки</a></div>
-                      </div>
-                      <div class="col-lg-2">
-                        <div class="catalog-menu__link"><a class="head" href="category.html">Аксессуары</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Шапки</a></div>
-                        <div class="catalog-menu__link"><a href="category.html">Палантины</a></div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="catalog-menu__link"><a class="head" href="">Коллекции</a></div>
-                        <div class="row">
-                          <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Прованс</div>
-                                <div class="collection-link__short">Весна/Лето 2020</div>
-                              </div></a><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Настроение города</div>
-                                <div class="collection-link__short">Осень 2019/Зима 2020</div>
-                              </div></a></div>
-                          <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Лигурия</div>
-                                <div class="collection-link__short">Весна/Лето 2019</div>
-                              </div></a><a class="collection-link" href=""><img src="" alt="">
-                              <div class="collection-link__info">
-                                <div class="collection-link__title">Ломбардия</div>
-                                <div class="collection-link__short">Осень 2018/Зима 2019</div>
-                              </div></a></div>
+            <div class="header__logo col-lg-3 col-auto mr-auto"><a href="homepage.html"><img src="images/logo.svg" alt="Alexander Bogdanov"></a></div>
+            <div class="header__menu d-none d-xl-block">
+              <div class="main-menu">
+                <div class="main-menu__link catalog-menu"><a href="" data-toggle="dropdown">Каталог</a>
+                  <div class="catalog-menu__dropdown dropdown-menu">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Новое</a></div>
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Бестселлеры</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Специальные предложения</a></div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Одежда</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Блузы и рубашки</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Брюки и шорты</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Верхняя одежда</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Джемперы</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Жакеты и бомберы</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Платья</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Юбки</a></div>
+                        </div>
+                        <div class="col-lg-2">
+                          <div class="catalog-menu__link"><a class="head" href="category.html">Аксессуары</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Шапки</a></div>
+                          <div class="catalog-menu__link"><a href="category.html">Палантины</a></div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="catalog-menu__link"><a class="head" href="">Коллекции</a></div>
+                          <div class="row">
+                            <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Прованс</div>
+                                  <div class="collection-link__short">Весна/Лето 2020</div>
+                                </div></a><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Настроение города</div>
+                                  <div class="collection-link__short">Осень 2019/Зима 2020</div>
+                                </div></a></div>
+                            <div class="col-6"><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Лигурия</div>
+                                  <div class="collection-link__short">Весна/Лето 2019</div>
+                                </div></a><a class="collection-link" href=""><img src="" alt="">
+                                <div class="collection-link__info">
+                                  <div class="collection-link__title">Ломбардия</div>
+                                  <div class="collection-link__short">Осень 2018/Зима 2019</div>
+                                </div></a></div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="main-menu__link"><a href="">О нас</a></div>
-              <div class="main-menu__link"><a href="">Lookbook</a></div>
-              <div class="main-menu__link"><a href="">Адреса магазинов</a></div>
-            </div>
-          </div>
-          <div class="header-icons col-lg-3 col-auto ml-auto">
-            <div class="header-icons__item account"><a href="" title="Личный кабинет" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#4e5b67" stroke-width="2"><circle cx="10" cy="5" r="4"/><path d="M2.353 16.103A6 6 0 018.045 12h3.91a6 6 0 015.692 4.103l.527 1.58A1 1 0 0117.225 19H2.775a1 1 0 01-.949-1.316l.527-1.58z"/></svg></a>
-              <div class="account__dropdown dropdown-menu"><a class="high-link" href="javascript:;" data-fancybox data-src="#auth-form" data-touch="false">Личные данные</a>
-                <a class="high-link" href="">Оформленные заказы</a>
-                <a class="high-link" href="">Избранные товары</a>
-                <a class="high-link" href="">Адреса доставки</a>
-                <a class="high-link" href="">Подписки</a>
-                <a class="high-link ab-i-logout" href="">Выйти</a>
+                <div class="main-menu__link"><a href="">О нас</a></div>
+                <div class="main-menu__link"><a href="">Lookbook</a></div>
+                <div class="main-menu__link"><a href="">Адреса магазинов</a></div>
               </div>
             </div>
-            <div class="header-icons__item following"><a href="" title="Избранное"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path d="M9.17 3.047a1 1 0 001.659 0C11.69 1.768 13.002 1 14.425 1 16.833 1 19 3.27 19 6.35c0 .92-.438 2.047-1.252 3.292-.8 1.225-1.897 2.46-3.05 3.57s-2.33 2.066-3.276 2.743l-1.18.768-.24.126-.24-.127c-.303-.17-.706-.432-1.18-.775-.948-.683-2.128-1.65-3.278-2.76s-2.25-2.352-3.05-3.575C1.436 8.368 1 7.25 1 6.35 1 3.27 3.167 1 5.575 1c1.423 0 2.734.768 3.596 2.047zm.682 13.865zm.29-.002z" stroke="#4e5b67" stroke-width="2" stroke-linejoin="round"/></svg>
-                <div class="counter">3</div></a></div>
-            <div class="header-icons__item mini-cart"><a href="" title="Корзина" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
-                <div class="counter">18</div></a>
-              <div class="mini-cart__dropdown dropdown-menu">
-                <div class="cart-table">
-                  <div class="cart-table__item">
-                    <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
-                    <div class="col-name"> <span>Блузон «Овация» в две строки</span>
-                      <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
-                    </div>
-                    <div class="col-size">46</div>
-                    <div class="col-quantity">
-                      <div class="quantity">
-                        <div class="quantity__btn decrease"></div>
-                        <input class="quantity__input" type="number" value="1">
-                        <div class="quantity__btn increase"></div>
+            <div class="header-icons col-lg-3 col-auto ml-auto">
+              <div class="header-icons__item account"><a href="" title="Личный кабинет" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#4e5b67" stroke-width="2"><circle cx="10" cy="5" r="4"/><path d="M2.353 16.103A6 6 0 018.045 12h3.91a6 6 0 015.692 4.103l.527 1.58A1 1 0 0117.225 19H2.775a1 1 0 01-.949-1.316l.527-1.58z"/></svg></a>
+                <div class="account__dropdown dropdown-menu"><a class="high-link" href="javascript:;" data-fancybox data-src="#auth-form" data-touch="false">Личные данные</a>
+                  <a class="high-link" href="">Оформленные заказы</a>
+                  <a class="high-link" href="">Избранные товары</a>
+                  <a class="high-link" href="">Адреса доставки</a>
+                  <a class="high-link" href="">Подписки</a>
+                  <a class="high-link ab-i-logout" href="">Выйти</a>
+                </div>
+              </div>
+              <div class="header-icons__item following"><a href="" title="Избранное"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" fill="none"><path d="M9.17 3.047a1 1 0 001.659 0C11.69 1.768 13.002 1 14.425 1 16.833 1 19 3.27 19 6.35c0 .92-.438 2.047-1.252 3.292-.8 1.225-1.897 2.46-3.05 3.57s-2.33 2.066-3.276 2.743l-1.18.768-.24.126-.24-.127c-.303-.17-.706-.432-1.18-.775-.948-.683-2.128-1.65-3.278-2.76s-2.25-2.352-3.05-3.575C1.436 8.368 1 7.25 1 6.35 1 3.27 3.167 1 5.575 1c1.423 0 2.734.768 3.596 2.047zm.682 13.865zm.29-.002z" stroke="#4e5b67" stroke-width="2" stroke-linejoin="round"/></svg>
+                  <div class="counter">3</div></a></div>
+              <div class="header-icons__item mini-cart"><a href="" title="Корзина" data-toggle="dropdown"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="none" stroke="#4e5b67" stroke-width="2"><path d="M2.096 6.94A1 1 0 013.094 6h13.812a1 1 0 01.998.94l.97 16a1 1 0 01-.999 1.06H2.125a1 1 0 01-.998-1.061l.97-16z"/><path d="M14 10.842V5a4 4 0 00-4-4h0a4 4 0 00-4 4v5.842"/></svg>
+                  <div class="counter">18</div></a>
+                <div class="mini-cart__dropdown dropdown-menu">
+                  <div class="cart-table">
+                    <div class="cart-table__item">
+                      <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
+                      <div class="col-name"> <span>Блузон «Овация» в две строки</span>
+                        <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
                       </div>
+                      <div class="col-size">46</div>
+                      <div class="col-quantity">
+                        <div class="quantity quantity-js">
+                          <div class="quantity__btn decrease"></div>
+                          <input class="quantity__input" type="number" value="1">
+                          <div class="quantity__btn increase"></div>
+                        </div>
+                      </div>
+                      <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
+                      <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
                     </div>
-                    <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
-                    <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
+                  </div><a class="mini-cart__add-box link-add" href="">Добавить подарочную коробку</a>
+                  <div class="mini-cart__totals">
+                    <div class="total totals__row">
+                      <div class="title">Всего товаров на сумму</div>
+                      <div class="value price"><span class="old">555 598 ₽</span><span>444 598 ₽</span></div>
+                    </div>
+                    <div class="totals__row">
+                      <div class="title">Доставка</div>
+                      <div class="value">500 ₽</div>
+                    </div>
                   </div>
-                </div><a class="mini-cart__add-box link-add" href="">Добавить подарочную коробку</a>
-                <div class="mini-cart__totals">
-                  <div class="total totals__row">
-                    <div class="title">Всего товаров на сумму</div>
-                    <div class="value price"><span class="old">555 598 ₽</span><span>444 598 ₽</span></div>
-                  </div>
-                  <div class="totals__row">
-                    <div class="title">Доставка</div>
-                    <div class="value">500 ₽</div>
-                  </div>
-                </div>
-                <div class="mini-cart__buttons"><a class="button button_blue-bordered" href="cart.html">В корзину</a><a class="button button_blue-filled" href="checkout.html">Оформить</a></div>
-                <div class="mini-cart__empty">Ваша корзина пуста<a class="button button_blue-filled" href="catalog.html">Перейти в каталог</a></div>
-              </div>
-            </div>
-            <div class="header-icons__item search"><a href="" title="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M18.906 18.02l-3.066-3.28a8.943 8.943 0 002.105-5.768C17.944 4.025 13.92 0 8.972 0S0 4.025 0 8.972s4.025 8.972 8.972 8.972c1.857 0 3.627-.56 5.14-1.624l3.107 3.32a1.16 1.16 0 00.843.359c.304 0 .592-.116.81-.326a1.17 1.17 0 00.032-1.655zM8.972 2C12.63 2 16 5.343 16 9s-3.37 7-7.028 7S2 12.63 2 8.972 5.315 2 8.972 2z" fill="#4e5b67"/></svg></a></div>
-          </div>
-        </div>
-        <div class="mobile-menu">
-          <div class="mobile-menu__content">
-            <div class="mobile-menu__items">
-              <div class="mobile-menu__top">
-                <div class="city-select"><span>Ваш город:</span><a class="city-select__link" href="">Санкт-Петербург</a></div>
-              </div>
-              <div class="mobile-menu__item"><a href="category.html">Новое</a></div>
-              <div class="mobile-menu__item"><a href="category.html">Бестселлеры</a></div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Одежда</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="category.html">Одежда</a>
-                  </div>
-                  <div class="mobile-menu__item"><a href="category.html">Блузы и рубашки</a></div>
-                  <div class="mobile-menu__item"><a href="category.html">Брюки и шорты</a></div>
-                  <div class="mobile-menu__item"><a href="category.html">Верхняя одежда</a></div>
+                  <div class="mini-cart__buttons"><a class="button button_blue-bordered" href="cart.html">В корзину</a><a class="button button_blue-filled" href="checkout.html">Оформить</a></div>
+                  <div class="mini-cart__empty">Ваша корзина пуста<a class="button button_blue-filled" href="catalog.html">Перейти в каталог</a></div>
                 </div>
               </div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Аксессуары</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="category.html">Аксессуары</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"> <a href="">Коллекции</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Коллекции</a>
-                  </div><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Прованс</div>
-                      <div class="collection-link__short">Весна/Лето 2020</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Настроение города</div>
-                      <div class="collection-link__short">Осень 2019/Зима 2020</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Лигурия</div>
-                      <div class="collection-link__short">Весна/Лето 2019</div>
-                    </div></a><a class="collection-link" href=""><img src="" alt="">
-                    <div class="collection-link__info">
-                      <div class="collection-link__title">Ломбардия</div>
-                      <div class="collection-link__short">Осень 2018/Зима 2019</div>
-                    </div></a>
-                </div>
-              </div>
-              <div class="mobile-menu__item"><a href="">Специальные предложения</a></div>
-              <div class="mobile-menu__item"><a href="">Lookbook</a></div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">О нас</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">О нас</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">Помощь</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Помощь</a>
-                  </div>
-                </div>
-              </div>
-              <div class="mobile-menu__item mobile-menu-parent"><a href="">Партнерам</a>
-                <div class="submenu">
-                  <div class="mobile-menu__top">
-                    <div class="mobile-menu-back"></div><a href="">Партнерам</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="socials socials_light"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <div class="page-wrapper page-cart">
-      <div class="page-top container">
-        <div class="breadcrumbs">
-          <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
-          <div class="breadcrumbs__item"><span>Корзина</span></div>
-        </div>
-        <h1 class="page-top__title like-h1">Корзина</h1>
-      </div>
-      <div class="cart container">
-        <div class="row">
-          <div class="cart__main col-xl-8">
-            <div class="cart-table">
-              <div class="cart-table__header">
-                <div class="col-image">Товар</div>
-                <div class="col-name">Описание</div>
-                <div class="col-size">Размер</div>
-                <div class="col-quant">Количество</div>
-                <div class="col-price">Цена</div>
-                <div class="col-remove"></div>
-              </div>
-              <div class="cart-table__item">
-                <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
-                <div class="col-name"> <span>Блузон «Овация» в две строки</span>
-                  <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
-                </div>
-                <div class="col-size">46</div>
-                <div class="col-quantity">
-                  <div class="quantity">
-                    <div class="quantity__btn decrease"></div>
-                    <input class="quantity__input" type="number" value="1">
-                    <div class="quantity__btn increase"></div>
-                  </div>
-                </div>
-                <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
-                <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
-              </div>
-            </div>
-            <div class="add-as-gift">
-              <div class="add-as-gift__title">Вы хотите приобрести этот товар в качестве подарка?</div>
-              <p>Мы можем добавить подарочкую коробку за 300 ₽ и чек без указания цены к вашему заказу</p><a class="link-add" href="">Добавить подарочную коробку</a>
+              <div class="header-icons__item search"><a href="" title="Поиск"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path d="M18.906 18.02l-3.066-3.28a8.943 8.943 0 002.105-5.768C17.944 4.025 13.92 0 8.972 0S0 4.025 0 8.972s4.025 8.972 8.972 8.972c1.857 0 3.627-.56 5.14-1.624l3.107 3.32a1.16 1.16 0 00.843.359c.304 0 .592-.116.81-.326a1.17 1.17 0 00.032-1.655zM8.972 2C12.63 2 16 5.343 16 9s-3.37 7-7.028 7S2 12.63 2 8.972 5.315 2 8.972 2z" fill="#4e5b67"/></svg></a></div>
             </div>
           </div>
-          <div class="right-sidebar col-xl-4">
-            <div class="order-info">
-              <div class="order-info__title like-h3">Детали заказа</div>
-              <div class="order-info__list">
-                <div class="item">
-                  <div class="item__title">Товаров</div>
-                  <div class="item__value">2</div>
+          <div class="mobile-menu">
+            <div class="mobile-menu__content">
+              <div class="mobile-menu__items">
+                <div class="mobile-menu__top">
+                  <div class="city-select"><span>Ваш город:</span><a class="city-select__link" href="">Санкт-Петербург</a></div>
                 </div>
-                <div class="item">
-                  <div class="item__title">Всего товаров на сумму</div>
-                  <div class="item__value price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
+                <div class="mobile-menu__item"><a href="category.html">Новое</a></div>
+                <div class="mobile-menu__item"><a href="category.html">Бестселлеры</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Одежда</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="category.html">Одежда</a>
+                    </div>
+                    <div class="mobile-menu__item"><a href="category.html">Блузы и рубашки</a></div>
+                    <div class="mobile-menu__item"><a href="category.html">Брюки и шорты</a></div>
+                    <div class="mobile-menu__item"><a href="category.html">Верхняя одежда</a></div>
+                  </div>
                 </div>
-              </div><a class="order-info__button button button_blue-filled" href="checkout.html">Оформить заказ</a>
-              <div class="order-info__bottom-text">Есть промокод? Введите его на следующем этапе.</div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="category.html">Аксессуары</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="category.html">Аксессуары</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-menu__item mobile-menu-parent"> <a href="">Коллекции</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Коллекции</a>
+                    </div><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Прованс</div>
+                        <div class="collection-link__short">Весна/Лето 2020</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Настроение города</div>
+                        <div class="collection-link__short">Осень 2019/Зима 2020</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Лигурия</div>
+                        <div class="collection-link__short">Весна/Лето 2019</div>
+                      </div></a><a class="collection-link" href=""><img src="" alt="">
+                      <div class="collection-link__info">
+                        <div class="collection-link__title">Ломбардия</div>
+                        <div class="collection-link__short">Осень 2018/Зима 2019</div>
+                      </div></a>
+                  </div>
+                </div>
+                <div class="mobile-menu__item"><a href="">Специальные предложения</a></div>
+                <div class="mobile-menu__item"><a href="">Lookbook</a></div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">О нас</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">О нас</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">Помощь</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Помощь</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="mobile-menu__item mobile-menu-parent"><a href="">Партнерам</a>
+                  <div class="submenu">
+                    <div class="mobile-menu__top">
+                      <div class="mobile-menu-back"></div><a href="">Партнерам</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="socials socials_light"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="advantages container">
-        <div class="row">
-          <div class="advantages__item col-lg-3 col-md-6">
-            <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.916 16.613v-.697A10.91 10.91 0 0020 5C13.98 5 9.084 9.897 9.084 15.916v.697a5.636 5.636 0 00-4.076 5.73c.16 2.987 2.667 5.324 5.615 5.324a2.627 2.627 0 002.632-2.627v-6.014a2.625 2.625 0 00-2.407-2.618v-.492c0-5.046 4.106-9.151 9.152-9.151a9.146 9.146 0 019.152 9.151v.492a2.625 2.625 0 00-2.407 2.618v6.014a2.626 2.626 0 002.407 2.617c0 2.388-1.87 4.049-3.968 4.049h-1.92a2.415 2.415 0 00-2.244-1.53h-2.04a2.415 2.415 0 00-2.411 2.412A2.415 2.415 0 0018.98 35h2.04c1.018 0 1.89-.635 2.243-1.53h1.921a5.74 5.74 0 005.732-5.732v-.29c2.252-.649 3.945-2.674 4.076-5.106a5.637 5.637 0 00-4.075-5.73zM11.49 19.026v6.014c0 .446-.343.872-.935.861a3.879 3.879 0 01-3.784-3.653 3.866 3.866 0 013.862-4.084h.016a.855.855 0 01.841.861zm9.53 14.21h-2.04a.648.648 0 010-1.295h2.04a.648.648 0 010 1.294zm12.21-10.988a3.879 3.879 0 01-3.785 3.653c-.582.012-.935-.406-.935-.861v-6.014c0-.474.377-.86.838-.862h.018a3.866 3.866 0 013.864 4.084z" fill="#67ADD7"/><path d="M20.663 26.738l4.326-4.125a3.18 3.18 0 000-4.65c-1.24-1.182-3.388-1.42-4.989.107-1.58-1.506-3.73-1.307-4.99-.107a3.18 3.18 0 000 4.65l4.327 4.125a.97.97 0 001.326 0zm-4.327-7.512a1.632 1.632 0 012.227 0l.774.739a.97.97 0 001.325 0l.775-.739a1.632 1.632 0 012.227 0 1.452 1.452 0 010 2.123L20 24.843l-3.664-3.494a1.452 1.452 0 010-2.123z" fill="#67ADD7"/></svg></div>
-            <div class="advantages__content">Вам нужна помощь?<br><a href="">8 800 551-90-50</a></div>
+      </header>
+      <div class="page-wrapper page-cart">
+        <div class="page-top container">
+          <div class="breadcrumbs">
+            <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
+            <div class="breadcrumbs__item"><span>Корзина</span></div>
           </div>
-          <div class="advantages__item col-lg-3 col-md-6">
-            <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.488 6.798c1.191-.773 2.529-.99 3.919-.922 1.093.053 2.14.297 3.076.902l.006.004c.058.037.115.075.168.118.068.057.134.117.184.163l.05.044c1.061 1.06.825 2.552-.513 3.357-1.31.788-2.75.966-4.242.809-.975-.103-1.907-.357-2.721-.936-1.326-.942-1.297-2.65.073-3.54zm.957 2.039c.12.09.252.172.39.23 1.431.592 2.87.596 4.3.006.152-.063.28-.187.406-.312a3.2 3.2 0 01.18-.166 3.319 3.319 0 01-.18-.166c-.128-.123-.256-.247-.409-.311-1.395-.588-2.806-.588-4.214-.035-.129.05-.248.125-.337.18l-.083.049c-.271.252-.273.358-.053.525zM1.308 16.785c.061.006.123.012.184.012H3.55c1.905 0 3.81 0 5.715.007.231 0 .329-.08.422-.28 1.373-2.945 4.836-4.21 7.665-2.805 1.005.5 1.763 1.272 2.385 2.191.038.056.077.11.119.167l.058.081.255-.333c.177-.234.35-.461.534-.678 2.183-2.563 6.028-2.688 8.34-.24.327.347.582.763.836 1.178a17.874 17.874 0 00.336.535c.062.1.112.18.273.18 2.059-.006 4.117-.006 6.175-.007h2.023c.02 0 .04-.006.06-.012a.452.452 0 01.026-.008l.043.043-.007.303v.001c-.005.221-.01.442-.017.663-.043 1.394-.608 2.536-1.659 3.449a.518.518 0 00-.163.323c-.085 1.383-.681 2.498-1.734 3.385a.485.485 0 00-.153.298c-.235 2.614-2.121 4.341-4.75 4.336-.613 0-1.227-.003-1.84-.004-1.584-.004-3.168-.008-4.752-.005a.776.776 0 00-.463.158c-1.054.885-2.1 1.78-3.137 2.685-.168.146-.27.147-.431.007-.474-.41-.95-.816-1.425-1.223-.554-.475-1.11-.95-1.66-1.429a.755.755 0 00-.54-.209c-1.17.008-2.34.01-3.509.014h-.002c-.997.003-1.993.005-2.99.01-.86.005-1.664-.186-2.409-.619-.124-.071-.246-.146-.368-.22v-.001l-.17-.104-.774-.773a.314.314 0 01-.005-.028.127.127 0 00-.018-.056c-.572-.756-.869-1.609-.931-2.552-.007-.109-.097-.236-.185-.311-1.024-.88-1.608-1.977-1.697-3.334a.559.559 0 00-.17-.349c-1.046-.914-1.61-2.053-1.65-3.446l-.018-.654-.007-.31.043-.043.084.007zm10.393-.115c-1.022 1.524-1.121 3.155-.416 4.83.474 1.127 1.259 2.044 2.102 2.91 1.377 1.412 2.883 2.678 4.39 3.944.655.551 1.31 1.102 1.954 1.664.158.138.26.106.408-.021.61-.525 1.223-1.046 1.836-1.568h.001c.867-.738 1.734-1.475 2.593-2.221 1.164-1.01 2.282-2.067 3.191-3.323.89-1.23 1.403-2.566 1.196-4.117-.245-1.847-1.454-3.29-3.104-3.684-1.705-.409-3.291.289-4.291 1.946-.25.414-.453.857-.665 1.322-.1.219-.202.442-.312.67a32.872 32.872 0 01-.243-.01c-.203-.008-.43-.017-.658-.02h-.012c-.488-.007-.49-.007-.656-.466a7.45 7.45 0 00-1.105-2.045c-1.603-2.076-4.747-1.991-6.21.19zm18.066 6.495c.821-1.39 1.201-2.885 1.012-4.48l5.983.017c-.273.94-1.31 1.7-2.452 1.732-.604.017-1.208.012-1.812.007l-.343-.002a.675.675 0 01-.202-.045 1.205 1.205 0 00-.077-.024l-.003 1.858 3.122-.014a2.7 2.7 0 01-1.265 1.529c-.48.276-1.006.351-1.549.355-.495.003-.99.009-1.483.014l-.634.007.039 1.847 2.97-.065c-.205.905-1.145 1.77-2.177 1.805-1.22.041-2.442.019-3.667-.004h-.001c-.517-.01-1.034-.019-1.552-.024l.514-.472c.383-.351.768-.704 1.144-1.066.926-.896 1.774-1.861 2.433-2.975zM3.23 18.704c.316.985 1.338 1.713 2.5 1.736.475.01.95.008 1.425.006l.731-.002c.063 0 .126.006.171.01l.042.004.005 1.812-3.148-.002c.066.103.125.202.181.298.116.196.223.375.353.535.594.725 1.391 1.005 2.31 1 .497-.002.993.001 1.485.005l.649.003-.02 1.856-3.012-.053c.352 1.102 1.388 1.835 2.58 1.84 1.071.005 2.144 0 3.216-.005l1.279-.005c.043 0 .087-.003.137-.007l.083-.005-.028-.048a.193.193 0 00-.034-.05l-.203-.182-.18-.162c-1.169-1.064-2.316-2.148-3.233-3.449-1.059-1.503-1.647-3.145-1.463-5.012.006-.065-.007-.132-.006-.114l-5.82-.01z" fill="#67ADD7"/></svg></div>
-            <div class="advantages__content">Бесплатная доставка для заказов от 20 000 ₽</div>
-          </div>
-          <div class="advantages__item col-lg-3 col-md-6">
-            <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.537 8.311c-3.077 0-8.676-.626-10.43-2.935a.794.794 0 00-1.305-.063C16.736 7.62 11.126 8.31 7.82 8.31a.822.822 0 00-.82.824v13.174c0 5.934 6.83 9.559 12.005 10.686.668.145 12.352-2.815 12.352-10.686V9.135a.822.822 0 00-.82-.824zm-.82 13.998c0 6.184-9.152 8.691-10.538 9.035C17.791 31 8.64 28.493 8.64 22.309V9.95c6.334-.146 9.493-1.971 10.75-2.96 2.53 2.238 6.955 2.883 10.325 2.96v12.36zM15.08 15.695v2.497h-.823a.822.822 0 00-.82.824v6.587c0 .455.367.823.82.823H24.1c.453 0 .82-.368.82-.823v-6.587a.822.822 0 00-.82-.824h-7.38v-2.498a2.44 2.44 0 012.483-2.442 2.441 2.441 0 012.434 2.442c0 .455.367.824.82.824.453 0 .82-.369.82-.824 0-2.255-1.827-4.09-4.074-4.09a4.085 4.085 0 00-4.123 4.09zm8.2 9.084h-8.203v-4.94h8.203v4.94zM20 22.31a.822.822 0 01-.82.824.822.822 0 01-.82-.824.821.821 0 111.64 0z" fill="#67ADD7"/></svg></div>
-            <div class="advantages__content">Безопасный платеж с использованием SSL протокола </div>
-          </div>
-          <div class="advantages__item col-lg-3 col-md-6">
-            <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.251 8.686C27.19 5.664 23.117 4 18.786 4h-.95v2.428a13.765 13.765 0 00-8.798 3.952C6.434 12.95 5 16.366 5 20c0 3.634 1.434 7.05 4.038 9.62.157.155.317.305.48.452l-1.524 1.906.745.58C11.625 34.81 15.099 36 18.786 36c4.331 0 8.403-1.664 11.465-4.686C33.313 28.292 35 24.274 35 20s-1.687-8.292-4.749-11.314zm-19.57 22.959l2.979-3.724h11.206v-1.875h-1.27v-4.72L20.91 20l2.686-1.325v-4.721h1.27v-1.875h-5.13V5.905a14.293 14.293 0 019.171 4.107C31.611 12.68 33.1 16.227 33.1 20c0 3.773-1.489 7.32-4.193 9.988-2.703 2.668-6.297 4.137-10.12 4.137-2.937 0-5.72-.854-8.106-2.48zM6.9 20c0-6.152 4.824-11.212 10.935-11.692v3.771h-5.13v1.875h1.27v4.72L16.662 20l-2.686 1.325V24.5l-3.273 4.091C8.365 26.448 6.9 23.39 6.9 20zm14.795 2.484v3.562h-5.82v-3.562l2.91-1.436 2.91 1.436zm-2.91-3.532l-2.91-1.436v-3.562h5.82v3.562l-2.91 1.436z" fill="#67ADD7"/></svg></div>
-            <div class="advantages__content">Простой возврат в течение 60 дней</div>
-          </div>
+          <h1 class="page-top__title like-h1">Корзина</h1>
         </div>
-      </div>
-    </div>
-    <footer>
-      <div class="footer-top">
-        <div class="container">
+        <div class="cart container">
           <div class="row">
-            <div class="footer-menu col-lg-9">
-              <div class="row">
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">О нас</a></div>
-                  <div class="footer-menu__link"><a href="">О компании</a></div>
-                  <div class="footer-menu__link"><a href="">Александр Богданов</a></div>
-                  <div class="footer-menu__link"><a href="">История</a></div>
-                  <div class="footer-menu__link"><a href="">Пресса о нас</a></div>
-                  <div class="footer-menu__link"><a href="">Новости</a></div>
-                  <div class="footer-menu__link"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
-                  <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
-                  <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+            <div class="cart__main col-xl-8">
+              <div class="cart-table">
+                <div class="cart-table__header">
+                  <div class="col-image">Товар</div>
+                  <div class="col-name">Описание</div>
+                  <div class="col-size">Размер</div>
+                  <div class="col-quant">Количество</div>
+                  <div class="col-price">Цена</div>
+                  <div class="col-remove"></div>
                 </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Каталог</a></div>
-                  <div class="footer-menu__link"><a href="">Купить женскую одежду</a></div>
-                  <div class="footer-menu__link"><a href="">Платья</a></div>
-                  <div class="footer-menu__link"><a href="">Юбки</a></div>
-                  <div class="footer-menu__link"><a href="">Джемперы</a></div>
-                  <div class="footer-menu__link"><a href="">Жакеты и бомберы</a></div>
-                  <div class="footer-menu__link"><a href="">Блузы</a></div>
-                  <div class="footer-menu__link"><a href="">Рубашки</a></div>
-                  <div class="footer-menu__link"><a href="">Верхняя одежда</a></div>
-                  <div class="footer-menu__link"><a href="">Аксессуары</a></div>
+                <div class="cart-table__item">
+                  <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
+                  <div class="col-name"> <span>Блузон «Овация» в две строки</span>
+                    <div class="sku">Арт. 1234567</div><a class="add-to-wishlist ab-i-wishlist" href=""></a>
+                  </div>
+                  <div class="col-size">46</div>
+                  <div class="col-quantity">
+                    <div class="quantity quantity-js">
+                      <div class="quantity__btn decrease"></div>
+                      <input class="quantity__input" type="number" value="1">
+                      <div class="quantity__btn increase"></div>
+                    </div>
+                  </div>
+                  <div class="col-price price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
+                  <div class="col-remove"> <a class="remove-btn ab-i-cart-remove" href=""></a></div>
                 </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Помощь</a></div>
-                  <div class="footer-menu__link"><a href="">Как оформить заказ</a></div>
-                  <div class="footer-menu__link"><a href="">Как выбрать размер</a></div>
-                  <div class="footer-menu__link"><a href="">Оплата</a></div>
-                  <div class="footer-menu__link"><a href="">Доставка</a></div>
-                  <div class="footer-menu__link"><a href="">Возврат</a></div>
-                  <div class="footer-menu__link"><a href="">Конфиденциальность</a></div>
-                  <div class="footer-menu__link"><a href="">Мои заказы</a></div>
-                  <div class="footer-menu__link"><a href="">Уход за изделиями</a></div>
-                </div>
-                <div class="col-lg-3">
-                  <div class="footer-menu__title"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Партнерам</a></div>
-                  <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
-                  <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
-                  <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
-                </div>
+              </div>
+              <div class="add-as-gift">
+                <div class="add-as-gift__title">Вы хотите приобрести этот товар в качестве подарка?</div>
+                <p>Мы можем добавить подарочкую коробку за 300 ₽ и чек без указания цены к вашему заказу</p><a class="link-add" href="">Добавить подарочную коробку</a>
               </div>
             </div>
-            <div class="footer__right col-lg-3">
-              <div class="subscribe">
-                <div class="subscribe__title">Подпишитесь <br>на нашу рассылку</div>
-                <div class="subscribe__subtitle">Обещаем отправлять только важное и интересное</div>
-                <form class="subscribe-form" action="">
-                  <input class="subscribe-form__input" type="email" placeholder="Email">
-                  <button class="subscribe-form__button"><svg width="22" height="16" fill="none" stroke="#67add7" stroke-width="2"><rect x="1" y="1" width="20" height="14" rx="1"/><path d="M1.692 1.6l8.656 7.44a1 1 0 001.304 0l8.656-7.44M1.692 14.4L8.462 8m5.5 0l6.346 6.4"/></svg></button>
-                </form>
-                <div class="subscribe__privacy">Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности</div>
+            <div class="right-sidebar col-xl-4">
+              <div class="order-info">
+                <div class="order-info__title like-h3">Детали заказа</div>
+                <div class="order-info__list">
+                  <div class="item">
+                    <div class="item__title">Товаров</div>
+                    <div class="item__value">2</div>
+                  </div>
+                  <div class="item">
+                    <div class="item__title">Всего товаров на сумму</div>
+                    <div class="item__value price"><span>14 000 ₽</span><span class="old">17 600 ₽</span></div>
+                  </div>
+                </div><a class="order-info__button button button_blue-filled" href="checkout.html">Оформить заказ</a>
+                <div class="order-info__bottom-text">Есть промокод? Введите его на следующем этапе.</div>
               </div>
-              <div class="socials socials_dark"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="advantages container">
+          <div class="row">
+            <div class="advantages__item col-lg-3 col-md-6">
+              <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.916 16.613v-.697A10.91 10.91 0 0020 5C13.98 5 9.084 9.897 9.084 15.916v.697a5.636 5.636 0 00-4.076 5.73c.16 2.987 2.667 5.324 5.615 5.324a2.627 2.627 0 002.632-2.627v-6.014a2.625 2.625 0 00-2.407-2.618v-.492c0-5.046 4.106-9.151 9.152-9.151a9.146 9.146 0 019.152 9.151v.492a2.625 2.625 0 00-2.407 2.618v6.014a2.626 2.626 0 002.407 2.617c0 2.388-1.87 4.049-3.968 4.049h-1.92a2.415 2.415 0 00-2.244-1.53h-2.04a2.415 2.415 0 00-2.411 2.412A2.415 2.415 0 0018.98 35h2.04c1.018 0 1.89-.635 2.243-1.53h1.921a5.74 5.74 0 005.732-5.732v-.29c2.252-.649 3.945-2.674 4.076-5.106a5.637 5.637 0 00-4.075-5.73zM11.49 19.026v6.014c0 .446-.343.872-.935.861a3.879 3.879 0 01-3.784-3.653 3.866 3.866 0 013.862-4.084h.016a.855.855 0 01.841.861zm9.53 14.21h-2.04a.648.648 0 010-1.295h2.04a.648.648 0 010 1.294zm12.21-10.988a3.879 3.879 0 01-3.785 3.653c-.582.012-.935-.406-.935-.861v-6.014c0-.474.377-.86.838-.862h.018a3.866 3.866 0 013.864 4.084z" fill="#67ADD7"/><path d="M20.663 26.738l4.326-4.125a3.18 3.18 0 000-4.65c-1.24-1.182-3.388-1.42-4.989.107-1.58-1.506-3.73-1.307-4.99-.107a3.18 3.18 0 000 4.65l4.327 4.125a.97.97 0 001.326 0zm-4.327-7.512a1.632 1.632 0 012.227 0l.774.739a.97.97 0 001.325 0l.775-.739a1.632 1.632 0 012.227 0 1.452 1.452 0 010 2.123L20 24.843l-3.664-3.494a1.452 1.452 0 010-2.123z" fill="#67ADD7"/></svg></div>
+              <div class="advantages__content">Вам нужна помощь?<br><a href="">8 800 551-90-50</a></div>
+            </div>
+            <div class="advantages__item col-lg-3 col-md-6">
+              <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.488 6.798c1.191-.773 2.529-.99 3.919-.922 1.093.053 2.14.297 3.076.902l.006.004c.058.037.115.075.168.118.068.057.134.117.184.163l.05.044c1.061 1.06.825 2.552-.513 3.357-1.31.788-2.75.966-4.242.809-.975-.103-1.907-.357-2.721-.936-1.326-.942-1.297-2.65.073-3.54zm.957 2.039c.12.09.252.172.39.23 1.431.592 2.87.596 4.3.006.152-.063.28-.187.406-.312a3.2 3.2 0 01.18-.166 3.319 3.319 0 01-.18-.166c-.128-.123-.256-.247-.409-.311-1.395-.588-2.806-.588-4.214-.035-.129.05-.248.125-.337.18l-.083.049c-.271.252-.273.358-.053.525zM1.308 16.785c.061.006.123.012.184.012H3.55c1.905 0 3.81 0 5.715.007.231 0 .329-.08.422-.28 1.373-2.945 4.836-4.21 7.665-2.805 1.005.5 1.763 1.272 2.385 2.191.038.056.077.11.119.167l.058.081.255-.333c.177-.234.35-.461.534-.678 2.183-2.563 6.028-2.688 8.34-.24.327.347.582.763.836 1.178a17.874 17.874 0 00.336.535c.062.1.112.18.273.18 2.059-.006 4.117-.006 6.175-.007h2.023c.02 0 .04-.006.06-.012a.452.452 0 01.026-.008l.043.043-.007.303v.001c-.005.221-.01.442-.017.663-.043 1.394-.608 2.536-1.659 3.449a.518.518 0 00-.163.323c-.085 1.383-.681 2.498-1.734 3.385a.485.485 0 00-.153.298c-.235 2.614-2.121 4.341-4.75 4.336-.613 0-1.227-.003-1.84-.004-1.584-.004-3.168-.008-4.752-.005a.776.776 0 00-.463.158c-1.054.885-2.1 1.78-3.137 2.685-.168.146-.27.147-.431.007-.474-.41-.95-.816-1.425-1.223-.554-.475-1.11-.95-1.66-1.429a.755.755 0 00-.54-.209c-1.17.008-2.34.01-3.509.014h-.002c-.997.003-1.993.005-2.99.01-.86.005-1.664-.186-2.409-.619-.124-.071-.246-.146-.368-.22v-.001l-.17-.104-.774-.773a.314.314 0 01-.005-.028.127.127 0 00-.018-.056c-.572-.756-.869-1.609-.931-2.552-.007-.109-.097-.236-.185-.311-1.024-.88-1.608-1.977-1.697-3.334a.559.559 0 00-.17-.349c-1.046-.914-1.61-2.053-1.65-3.446l-.018-.654-.007-.31.043-.043.084.007zm10.393-.115c-1.022 1.524-1.121 3.155-.416 4.83.474 1.127 1.259 2.044 2.102 2.91 1.377 1.412 2.883 2.678 4.39 3.944.655.551 1.31 1.102 1.954 1.664.158.138.26.106.408-.021.61-.525 1.223-1.046 1.836-1.568h.001c.867-.738 1.734-1.475 2.593-2.221 1.164-1.01 2.282-2.067 3.191-3.323.89-1.23 1.403-2.566 1.196-4.117-.245-1.847-1.454-3.29-3.104-3.684-1.705-.409-3.291.289-4.291 1.946-.25.414-.453.857-.665 1.322-.1.219-.202.442-.312.67a32.872 32.872 0 01-.243-.01c-.203-.008-.43-.017-.658-.02h-.012c-.488-.007-.49-.007-.656-.466a7.45 7.45 0 00-1.105-2.045c-1.603-2.076-4.747-1.991-6.21.19zm18.066 6.495c.821-1.39 1.201-2.885 1.012-4.48l5.983.017c-.273.94-1.31 1.7-2.452 1.732-.604.017-1.208.012-1.812.007l-.343-.002a.675.675 0 01-.202-.045 1.205 1.205 0 00-.077-.024l-.003 1.858 3.122-.014a2.7 2.7 0 01-1.265 1.529c-.48.276-1.006.351-1.549.355-.495.003-.99.009-1.483.014l-.634.007.039 1.847 2.97-.065c-.205.905-1.145 1.77-2.177 1.805-1.22.041-2.442.019-3.667-.004h-.001c-.517-.01-1.034-.019-1.552-.024l.514-.472c.383-.351.768-.704 1.144-1.066.926-.896 1.774-1.861 2.433-2.975zM3.23 18.704c.316.985 1.338 1.713 2.5 1.736.475.01.95.008 1.425.006l.731-.002c.063 0 .126.006.171.01l.042.004.005 1.812-3.148-.002c.066.103.125.202.181.298.116.196.223.375.353.535.594.725 1.391 1.005 2.31 1 .497-.002.993.001 1.485.005l.649.003-.02 1.856-3.012-.053c.352 1.102 1.388 1.835 2.58 1.84 1.071.005 2.144 0 3.216-.005l1.279-.005c.043 0 .087-.003.137-.007l.083-.005-.028-.048a.193.193 0 00-.034-.05l-.203-.182-.18-.162c-1.169-1.064-2.316-2.148-3.233-3.449-1.059-1.503-1.647-3.145-1.463-5.012.006-.065-.007-.132-.006-.114l-5.82-.01z" fill="#67ADD7"/></svg></div>
+              <div class="advantages__content">Бесплатная доставка для заказов от 20 000 ₽</div>
+            </div>
+            <div class="advantages__item col-lg-3 col-md-6">
+              <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M30.537 8.311c-3.077 0-8.676-.626-10.43-2.935a.794.794 0 00-1.305-.063C16.736 7.62 11.126 8.31 7.82 8.31a.822.822 0 00-.82.824v13.174c0 5.934 6.83 9.559 12.005 10.686.668.145 12.352-2.815 12.352-10.686V9.135a.822.822 0 00-.82-.824zm-.82 13.998c0 6.184-9.152 8.691-10.538 9.035C17.791 31 8.64 28.493 8.64 22.309V9.95c6.334-.146 9.493-1.971 10.75-2.96 2.53 2.238 6.955 2.883 10.325 2.96v12.36zM15.08 15.695v2.497h-.823a.822.822 0 00-.82.824v6.587c0 .455.367.823.82.823H24.1c.453 0 .82-.368.82-.823v-6.587a.822.822 0 00-.82-.824h-7.38v-2.498a2.44 2.44 0 012.483-2.442 2.441 2.441 0 012.434 2.442c0 .455.367.824.82.824.453 0 .82-.369.82-.824 0-2.255-1.827-4.09-4.074-4.09a4.085 4.085 0 00-4.123 4.09zm8.2 9.084h-8.203v-4.94h8.203v4.94zM20 22.31a.822.822 0 01-.82.824.822.822 0 01-.82-.824.821.821 0 111.64 0z" fill="#67ADD7"/></svg></div>
+              <div class="advantages__content">Безопасный платеж с использованием SSL протокола </div>
+            </div>
+            <div class="advantages__item col-lg-3 col-md-6">
+              <div class="advantages__img"><svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30.251 8.686C27.19 5.664 23.117 4 18.786 4h-.95v2.428a13.765 13.765 0 00-8.798 3.952C6.434 12.95 5 16.366 5 20c0 3.634 1.434 7.05 4.038 9.62.157.155.317.305.48.452l-1.524 1.906.745.58C11.625 34.81 15.099 36 18.786 36c4.331 0 8.403-1.664 11.465-4.686C33.313 28.292 35 24.274 35 20s-1.687-8.292-4.749-11.314zm-19.57 22.959l2.979-3.724h11.206v-1.875h-1.27v-4.72L20.91 20l2.686-1.325v-4.721h1.27v-1.875h-5.13V5.905a14.293 14.293 0 019.171 4.107C31.611 12.68 33.1 16.227 33.1 20c0 3.773-1.489 7.32-4.193 9.988-2.703 2.668-6.297 4.137-10.12 4.137-2.937 0-5.72-.854-8.106-2.48zM6.9 20c0-6.152 4.824-11.212 10.935-11.692v3.771h-5.13v1.875h1.27v4.72L16.662 20l-2.686 1.325V24.5l-3.273 4.091C8.365 26.448 6.9 23.39 6.9 20zm14.795 2.484v3.562h-5.82v-3.562l2.91-1.436 2.91 1.436zm-2.91-3.532l-2.91-1.436v-3.562h5.82v3.562l-2.91 1.436z" fill="#67ADD7"/></svg></div>
+              <div class="advantages__content">Простой возврат в течение 60 дней</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom-grid container"><a class="footer__logo" href=""><img src="images/logo_white.svg" alt="Alexander Bogdanov"></a>
-          <div class="footer__copyright">©  2020, Alexander Bogdanov. Все права защищены</div>
-          <div class="footer-bottom__links"><a href="">Политика конфиденциальности</a><span class="determiner">|</span><a href="">Условия продажи</a></div>
+      <footer>
+        <div class="footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="footer-menu col-lg-9">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">О нас</a></div>
+                    <div class="footer-menu__link"><a href="">О компании</a></div>
+                    <div class="footer-menu__link"><a href="">Александр Богданов</a></div>
+                    <div class="footer-menu__link"><a href="">История</a></div>
+                    <div class="footer-menu__link"><a href="">Пресса о нас</a></div>
+                    <div class="footer-menu__link"><a href="">Новости</a></div>
+                    <div class="footer-menu__link"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
+                    <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
+                    <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Каталог</a></div>
+                    <div class="footer-menu__link"><a href="">Купить женскую одежду</a></div>
+                    <div class="footer-menu__link"><a href="">Платья</a></div>
+                    <div class="footer-menu__link"><a href="">Юбки</a></div>
+                    <div class="footer-menu__link"><a href="">Джемперы</a></div>
+                    <div class="footer-menu__link"><a href="">Жакеты и бомберы</a></div>
+                    <div class="footer-menu__link"><a href="">Блузы</a></div>
+                    <div class="footer-menu__link"><a href="">Рубашки</a></div>
+                    <div class="footer-menu__link"><a href="">Верхняя одежда</a></div>
+                    <div class="footer-menu__link"><a href="">Аксессуары</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Помощь</a></div>
+                    <div class="footer-menu__link"><a href="">Как оформить заказ</a></div>
+                    <div class="footer-menu__link"><a href="">Как выбрать размер</a></div>
+                    <div class="footer-menu__link"><a href="">Оплата</a></div>
+                    <div class="footer-menu__link"><a href="">Доставка</a></div>
+                    <div class="footer-menu__link"><a href="">Возврат</a></div>
+                    <div class="footer-menu__link"><a href="">Конфиденциальность</a></div>
+                    <div class="footer-menu__link"><a href="">Мои заказы</a></div>
+                    <div class="footer-menu__link"><a href="">Уход за изделиями</a></div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="footer-menu__title"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Партнерам</a></div>
+                    <div class="footer-menu__link"><a href="">Франчайзинг</a></div>
+                    <div class="footer-menu__link"><a href="">Зарубежные партнеры</a></div>
+                    <div class="footer-menu__link"><a href="">Оптовые партнеры</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__right col-lg-3">
+                <div class="subscribe">
+                  <div class="subscribe__title">Подпишитесь <br>на нашу рассылку</div>
+                  <div class="subscribe__subtitle">Обещаем отправлять только важное и интересное</div>
+                  <form class="subscribe-form" action="">
+                    <input class="subscribe-form__input" type="email" placeholder="Email">
+                    <button class="subscribe-form__button"><svg width="22" height="16" fill="none" stroke="#67add7" stroke-width="2"><rect x="1" y="1" width="20" height="14" rx="1"/><path d="M1.692 1.6l8.656 7.44a1 1 0 001.304 0l8.656-7.44M1.692 14.4L8.462 8m5.5 0l6.346 6.4"/></svg></button>
+                  </form>
+                  <div class="subscribe__privacy">Отправляя данные формы, вы соглашаетесь с условиями политикой конфиденциальности</div>
+                </div>
+                <div class="socials socials_dark"><a class="socials__link ab-i-yt" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom-grid container"><a class="footer__logo" href=""><img src="images/logo_white.svg" alt="Alexander Bogdanov"></a>
+            <div class="footer__copyright">©  2020, Alexander Bogdanov. Все права защищены</div>
+            <div class="footer-bottom__links"><a href="">Политика конфиденциальности</a><span class="determiner">|</span><a href="">Условия продажи</a></div>
+          </div>
+        </div>
+      </footer>
+      <div class="search-city modal" id="search-city">
+        <div class="modal-title">Выберите ваш город:</div>
+        <autocomplete class="search-city__autocomplete" :search="searchCity" :get-result-value="getCity" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="submitCity"></autocomplete>
+        <div class="search-city__list">
+          <div class="search-city__item capital"><a href="">Москва</a></div>
+          <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
+          <div class="search-city__item"><a href="">Архангельск</a></div>
+          <div class="search-city__item"><a href="">Балаково</a></div>
+          <div class="search-city__item"><a href="">Барнаул</a></div>
+          <div class="search-city__item"><a href="">Благовещенск</a></div>
+          <div class="search-city__item"><a href="">Владивосток</a></div>
+          <div class="search-city__item"><a href="">Волгоград</a></div>
+          <div class="search-city__item"><a href="">Воронеж</a></div>
+          <div class="search-city__item"><a href="">Екатеринбург</a></div>
+          <div class="search-city__item"><a href="">Иркутск</a></div>
+          <div class="search-city__item"><a href="">Казань</a></div>
+          <div class="search-city__item"><a href="">Калининград</a></div>
+          <div class="search-city__item"><a href="">Кемерово</a></div>
+          <div class="search-city__item"><a href="">Краснодар</a></div>
+          <div class="search-city__item"><a href="">Красноярск</a></div>
+          <div class="search-city__item"><a href="">Липецк</a></div>
+          <div class="search-city__item"><a href="">Мурманск</a></div>
+          <div class="search-city__item"><a href="">Нижний Новгород</a></div>
+          <div class="search-city__item"><a href="">Новосибирск</a></div>
+          <div class="search-city__item"><a href="">Омск</a></div>
+          <div class="search-city__item"><a href="">Оренбург</a></div>
+          <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
+          <div class="search-city__item"><a href="">Рязань</a></div>
+          <div class="search-city__item"><a href="">Самара</a></div>
+          <div class="search-city__item"><a href="">Саратов</a></div>
+          <div class="search-city__item"><a href="">Сочи</a></div>
+          <div class="search-city__item"><a href="">Тюмень</a></div>
+          <div class="search-city__item"><a href="">Уфа</a></div>
+          <div class="search-city__item"><a href="">Хабаровск</a></div>
+          <div class="search-city__item"><a href="">Челябинск</a></div>
+          <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
+          <div class="search-city__item"><a href="">Ярославль</a></div>
         </div>
       </div>
-    </footer>
-    <div class="search-city modal" id="search-city">
-      <div class="modal-title">Выберите ваш город:</div>
-      <autocomplete class="search-city__autocomplete" :search="search" :get-result-value="getResultValue" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="handleSubmit"></autocomplete>
-      <div class="search-city__list">
-        <div class="search-city__item capital"><a href="">Москва</a></div>
-        <div class="search-city__item capital"><a href="">Санкт-Петербург</a></div>
-        <div class="search-city__item"><a href="">Архангельск</a></div>
-        <div class="search-city__item"><a href="">Балаково</a></div>
-        <div class="search-city__item"><a href="">Барнаул</a></div>
-        <div class="search-city__item"><a href="">Благовещенск</a></div>
-        <div class="search-city__item"><a href="">Владивосток</a></div>
-        <div class="search-city__item"><a href="">Волгоград</a></div>
-        <div class="search-city__item"><a href="">Воронеж</a></div>
-        <div class="search-city__item"><a href="">Екатеринбург</a></div>
-        <div class="search-city__item"><a href="">Иркутск</a></div>
-        <div class="search-city__item"><a href="">Казань</a></div>
-        <div class="search-city__item"><a href="">Калининград</a></div>
-        <div class="search-city__item"><a href="">Кемерово</a></div>
-        <div class="search-city__item"><a href="">Краснодар</a></div>
-        <div class="search-city__item"><a href="">Красноярск</a></div>
-        <div class="search-city__item"><a href="">Липецк</a></div>
-        <div class="search-city__item"><a href="">Мурманск</a></div>
-        <div class="search-city__item"><a href="">Нижний Новгород</a></div>
-        <div class="search-city__item"><a href="">Новосибирск</a></div>
-        <div class="search-city__item"><a href="">Омск</a></div>
-        <div class="search-city__item"><a href="">Оренбург</a></div>
-        <div class="search-city__item"><a href="">Ростов-на-Дону</a></div>
-        <div class="search-city__item"><a href="">Рязань</a></div>
-        <div class="search-city__item"><a href="">Самара</a></div>
-        <div class="search-city__item"><a href="">Саратов</a></div>
-        <div class="search-city__item"><a href="">Сочи</a></div>
-        <div class="search-city__item"><a href="">Тюмень</a></div>
-        <div class="search-city__item"><a href="">Уфа</a></div>
-        <div class="search-city__item"><a href="">Хабаровск</a></div>
-        <div class="search-city__item"><a href="">Челябинск</a></div>
-        <div class="search-city__item"><a href="">Южно-Сахалинск</a></div>
-        <div class="search-city__item"><a href="">Ярославль</a></div>
+      <div class="auth-form modal" id="auth-form">
+        <div class="auth-form__type">
+          <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
+          <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
+        </div>
+        <form class="form form_login" :class="{ active: loginShowed }" action="">
+          <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
+          <div class="input-item">
+            <input class="input" type="email">
+            <label>Email</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password hidden"></div>
+            <input class="input" type="password">
+            <label>Пароль</label>
+          </div>
+          <div class="form__helpers input-item">
+            <input class="checkbox" id="remember-passwowrd" type="checkbox">
+            <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
+          </div>
+          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <div class="form-services">
+            <div class="form-services__title">Или войдите <br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+        </form>
+        <form class="form form_signup" action="" :class="{ active: signupShowed }">
+          <div class="form-services">
+            <div class="form-services__title">Регистрация <br>через сервисы</div>
+            <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
+          </div>
+          <p>Или заполните поля ниже</p>
+          <div class="input-item">
+            <input class="input" type="email">
+            <label>Email</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password hidden"></div>
+            <input class="input" type="password">
+            <label>Пароль</label>
+          </div>
+          <div class="input-item">
+            <div class="show-password ab-i-password showed"></div>
+            <input class="input" type="password">
+            <label>Повторите пароль</label>
+          </div>
+          <div class="input-item">
+            <input class="checkbox" id="iwholesale" type="checkbox">
+            <label for="iwholesale">Я оптовый покупатель</label>
+          </div>
+          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
+        </form>
       </div>
-    </div>
-    <div class="auth-form modal" id="auth-form">
-      <div class="auth-form__type">
-        <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
-        <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
-      </div>
-      <form class="form form_login" id="login-form" :class="{ active: loginShowed }" action="">
-        <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
-        <div class="input-item">
-          <input class="input" type="email">
-          <label>Email</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password hidden"></div>
-          <input class="input" type="password">
-          <label>Пароль</label>
-        </div>
-        <div class="form__helpers input-item">
-          <input class="checkbox" id="remember-passwowrd" type="checkbox">
-          <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
-        </div>
-        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-        <div class="form-services">
-          <div class="form-services__title">Или войдите <br>через сервисы</div>
-          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-        </div>
-      </form>
-      <form class="form form_signup" id="signup-form" action="" :class="{ active: signupShowed }">
-        <div class="form-services">
-          <div class="form-services__title">Регистрация <br>через сервисы</div>
-          <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
-        </div>
-        <p>Или заполните поля ниже</p>
-        <div class="input-item">
-          <input class="input" type="email">
-          <label>Email</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password hidden"></div>
-          <input class="input" type="password">
-          <label>Пароль</label>
-        </div>
-        <div class="input-item">
-          <div class="show-password ab-i-password showed"></div>
-          <input class="input" type="password">
-          <label>Повторите пароль</label>
-        </div>
-        <div class="input-item">
-          <input class="checkbox" id="iwholesale" type="checkbox">
-          <label for="iwholesale">Я оптовый покупатель</label>
-        </div>
-        <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
-        <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
-      </form>
     </div>
     <script src="js/jquery.min.js" defer></script>
     <script src="js/vue.min.js" defer></script>
@@ -486,7 +488,8 @@
     <script src="js/jquery.flickity.pkgd.min.js" defer></script>
     <script src="js/jquery.flickity-fade.min.js" defer></script>
     <script src="js/jquery.fancybox.min.js" defer></script>
+    <script src="js/select2.min.js" defer></script>
     <script src="js/vue.autocomplete.min.js" defer></script>
-    <script src="js/scripts.js?v0.1.10" defer></script>
+    <script src="js/scripts.js?v0.2.0" defer></script>
   </body>
 </html>
