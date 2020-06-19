@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.2.0">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.2.1">
   </head>
   <body>
     <div id="app">
@@ -535,64 +535,73 @@
           <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
           <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
         </div>
-        <form class="form form_login" :class="{ active: loginShowed }" action="">
+        <div class="form form_login" :class="{ active: loginShowed }">
           <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
-          <div class="input-item">
-            <input class="input" type="email">
-            <label>Email</label>
-          </div>
-          <div class="input-item">
-            <div class="show-password ab-i-password hidden"></div>
-            <input class="input" type="password">
-            <label>Пароль</label>
-          </div>
-          <div class="form__helpers input-item">
-            <input class="checkbox" id="remember-passwowrd" type="checkbox">
-            <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
-          </div>
-          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <validateform inline-template>
+            <form @submit.prevent="submit" novalidate>
+              <div class="input-item">
+                <input class="input" type="email" v-model.trim="$v.email.$model" :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]">
+                <label>Email</label>
+              </div>
+              <div class="input-item">
+                <div class="show-password ab-i-password hidden"></div>
+                <input class="input" type="password" v-model.trim="$v.password.$model" :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]">
+                <label>Пароль</label>
+              </div>
+              <div class="form__helpers input-item">
+                <input class="checkbox" id="remember-passwowrd" type="checkbox">
+                <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
+              </div>
+              <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+            </form>
+          </validateform>
           <div class="form-services">
             <div class="form-services__title">Или войдите <br>через сервисы</div>
             <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
           </div>
-        </form>
-        <form class="form form_signup" action="" :class="{ active: signupShowed }">
+        </div>
+        <div class="form_signup" :class="{ active: signupShowed }">
           <div class="form-services">
             <div class="form-services__title">Регистрация <br>через сервисы</div>
             <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
           </div>
           <p>Или заполните поля ниже</p>
-          <div class="input-item">
-            <input class="input" type="email">
-            <label>Email</label>
-          </div>
-          <div class="input-item">
-            <div class="show-password ab-i-password hidden"></div>
-            <input class="input" type="password">
-            <label>Пароль</label>
-          </div>
-          <div class="input-item">
-            <div class="show-password ab-i-password showed"></div>
-            <input class="input" type="password">
-            <label>Повторите пароль</label>
-          </div>
-          <div class="input-item">
-            <input class="checkbox" id="iwholesale" type="checkbox">
-            <label for="iwholesale">Я оптовый покупатель</label>
-          </div>
-          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <validateform inline-template>
+            <form @submit.prevent="submit" novalidate>
+              <div class="input-item">
+                <input class="input" type="email" v-model.trim="$v.email.$model" :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]">
+                <label>Email</label>
+              </div>
+              <div class="input-item">
+                <input class="input" type="password" v-model.trim="$v.password.$model" :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]">
+                <label>Пароль</label>
+              </div>
+              <div class="input-item">
+                <div class="show-password ab-i-password hidden"></div>
+                <input class="input" type="password" v-model.trim="$v.repeatPassword.$model" :class="[{filled : $v.repeatPassword.$model}, {invalid : $v.repeatPassword.$error}]">
+                <label>Повторите пароль</label>
+              </div>
+              <div class="input-item">
+                <input class="checkbox" id="iwholesale" type="checkbox">
+                <label for="iwholesale">Я оптовый покупатель</label>
+              </div>
+              <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+            </form>
+          </validateform>
           <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
-        </form>
+        </div>
       </div>
     </div>
     <script src="js/jquery.min.js" defer></script>
-    <script src="js/vue.min.js" defer></script>
     <script src="js/jquery.bootstrap.custom.min.js" defer></script>
     <script src="js/jquery.flickity.pkgd.min.js" defer></script>
     <script src="js/jquery.flickity-fade.min.js" defer></script>
     <script src="js/jquery.fancybox.min.js" defer></script>
-    <script src="js/select2.min.js" defer></script>
+    <script src="js/select2.min.js" defer>       </script>
+    <script src="js/vue.min.js" defer></script>
     <script src="js/vue.autocomplete.min.js" defer></script>
-    <script src="js/scripts.js?v0.2.0" defer></script>
+    <script src="js/vue.validators.min.js" defer></script>
+    <script src="js/vue.vuelidate.min.js" defer></script>
+    <script src="js/scripts.js?v0.2.1" defer></script>
   </body>
 </html>

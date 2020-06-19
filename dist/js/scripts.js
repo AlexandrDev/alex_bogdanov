@@ -1,4 +1,34 @@
 $(function() {
+
+    Vue.use(window.vuelidate.default);
+    const { required, email, sameAs } = window.validators;
+
+    Vue.component("validateform", {
+        data() {
+            return {
+                email: '',
+                password: '',
+                repeatPassword: '',
+            }
+        },
+        validations: {
+            email: { required, email },
+            password: { required },
+            repeatPassword: {
+                sameAsPassword: sameAs('password')
+            }
+        },
+        methods: {
+            submit() {
+                this.$v.$touch()
+                if (!this.$v.$invalid) {
+                    console.log('submit!')
+                }
+            }
+        }
+    });
+
+
     // vue search, authForms, tooltips
     const wikiUrl = 'https://ru.wikipedia.org';
     const params = 'action=query&list=search&format=json&origin=*';
@@ -8,7 +38,7 @@ $(function() {
         data: {
             tooltip: '',
             loginShowed: true,
-            signupShowed: false
+            signupShowed: false,
         },
         components: {
             Autocomplete
@@ -46,8 +76,10 @@ $(function() {
         }
     });
 
+    
 
-    $('.dropdown-menu').show(); // fix transition
+
+    $('.dropdown-menu, .mobile-menu').show(); // fix transition
 
 
     $('select').select2({
@@ -363,6 +395,20 @@ $(function() {
             $input.val(count);
         });
     });
+
+
+    // saved shipping address in checkout
+    let $saved_block = $('.checkout-shipping-saved .block');
+
+    $saved_block.each(function() {
+        $(this).click(function() {
+            $saved_block.removeClass('checked');
+            $saved_block.find('> input').attr('checked', false);
+            $(this).addClass('checked');
+            $(this).find('> input').attr('checked', true);
+        });
+    });
+
 
     $(window).resize(function() {
         set_sticky_header();

@@ -5,7 +5,7 @@ block variables
 - var product_link = 'product.html'
 - var cart_link = 'cart.html'
 - var order_link = 'checkout.html'
-- var version = 'v0.2.0'
+- var version = 'v0.2.1'
 
 doctype html
 html(lang="ru")
@@ -34,12 +34,14 @@ html(lang="ru")
             include _forms.pug
 
         script(src="js/jquery.min.js", defer)
-        script(src="js/vue.min.js", defer)
         script(src="js/jquery.bootstrap.custom.min.js", defer)
         script(src="js/jquery.flickity.pkgd.min.js", defer)
         script(src="js/jquery.flickity-fade.min.js", defer)
         script(src="js/jquery.fancybox.min.js", defer)
-        script(src="js/select2.min.js", defer)
+        script(src="js/select2.min.js", defer)        
+        script(src="js/vue.min.js", defer)
         script(src="js/vue.autocomplete.min.js", defer)
+        script(src="js/vue.validators.min.js", defer)
+        script(src="js/vue.vuelidate.min.js", defer)
         script(src="js/scripts.js?" + version, defer)
         block scripts

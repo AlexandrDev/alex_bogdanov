@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.2.0">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.2.1">
   </head>
   <body>
     <div id="app">
@@ -385,26 +385,22 @@
                 <div class="checkout-shipping-saved">
                   <div class="row">
                     <div class="col-md-6">
-                      <div class="block">
-                        <div class="block__top checked">
-                          <input type="radio" hidden>
-                          <div class="block__select-icon"></div>
-                          <div class="block__title">Жираф Полосатый</div>
-                          <div class="block__phone">+7 912 345-67-89</div>
-                          <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div>
-                        </div><a class="block__edit-address with-svg" href="">
+                      <div class="block checked">
+                        <input type="radio" hidden>
+                        <div class="block__select-icon"></div>
+                        <div class="block__title">Жираф Полосатый</div>
+                        <div class="block__phone">+7 912 345-67-89</div>
+                        <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div><a class="block__edit-address with-svg" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false">
                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.24 2.59c.788-.787 2.142-.786 2.927 0l2.727 2.729c.39.39.606.911.606 1.463 0 .553-.215 1.073-.606 1.464l-12.33 12.23a.707.707 0 01-.302.177l-6.364 1.82a.704.704 0 01-.871-.871l1.818-6.37a.71.71 0 01.178-.302L16.24 2.59zm.999 1.012l-1.81 1.825 3.644 3.643 1.826-1.81a.653.653 0 00.192-.465.653.653 0 00-.193-.466L18.17 3.602a.681.681 0 00-.932 0zm-2.801 2.826l-8.225 8.3h.128c.267 0 .51.15.63.388l.472.945 8.314-8.314-1.32-1.319zM8.439 17.057l.944.472c.239.12.39.363.39.63v.128l8.299-8.225-1.32-1.319-8.313 8.314zm-.075 2.389v-.852l-1.429-.714a.705.705 0 01-.315-.315l-.715-1.429h-.85l-.53 1.852 1.987 1.987 1.852-.53zm-4.282.092l-.351 1.232 1.23-.352-.879-.88zm8.871 1.212h7v1.5h-7v-1.5z" fill="#67ADD7"/></svg><span>Редактировать адрес</span></a>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="block">
-                        <div class="block__top">
-                          <input type="radio" name="shipping-address" hidden>
-                          <div class="block__select-icon"></div>
-                          <div class="block__title">Жираф Полосатый</div>
-                          <div class="block__phone">+7 912 345-67-89</div>
-                          <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div>
-                        </div><a class="block__edit-address with-svg" href="">
+                        <input type="radio" name="shipping-address" hidden>
+                        <div class="block__select-icon"></div>
+                        <div class="block__title">Жираф Полосатый</div>
+                        <div class="block__phone">+7 912 345-67-89</div>
+                        <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div><a class="block__edit-address with-svg" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false">
                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.24 2.59c.788-.787 2.142-.786 2.927 0l2.727 2.729c.39.39.606.911.606 1.463 0 .553-.215 1.073-.606 1.464l-12.33 12.23a.707.707 0 01-.302.177l-6.364 1.82a.704.704 0 01-.871-.871l1.818-6.37a.71.71 0 01.178-.302L16.24 2.59zm.999 1.012l-1.81 1.825 3.644 3.643 1.826-1.81a.653.653 0 00.192-.465.653.653 0 00-.193-.466L18.17 3.602a.681.681 0 00-.932 0zm-2.801 2.826l-8.225 8.3h.128c.267 0 .51.15.63.388l.472.945 8.314-8.314-1.32-1.319zM8.439 17.057l.944.472c.239.12.39.363.39.63v.128l8.299-8.225-1.32-1.319-8.313 8.314zm-.075 2.389v-.852l-1.429-.714a.705.705 0 01-.315-.315l-.715-1.429h-.85l-.53 1.852 1.987 1.987 1.852-.53zm-4.282.092l-.351 1.232 1.23-.352-.879-.88zm8.871 1.212h7v1.5h-7v-1.5z" fill="#67ADD7"/></svg><span>Редактировать адрес</span></a>
                       </div>
                     </div>
@@ -669,64 +665,73 @@
           <div class="modal-title" @click="showLogin" :class="{ active: loginShowed }">Вход</div>
           <div class="modal-title" @click="showSignup" :class="{ active: signupShowed }">Регистрация</div>
         </div>
-        <form class="form form_login" :class="{ active: loginShowed }" action="">
+        <div class="form form_login" :class="{ active: loginShowed }">
           <p>Авторизуйтесь, если вы уже зарегистрированы на нашем сайте</p>
-          <div class="input-item">
-            <input class="input" type="email">
-            <label>Email</label>
-          </div>
-          <div class="input-item">
-            <div class="show-password ab-i-password hidden"></div>
-            <input class="input" type="password">
-            <label>Пароль</label>
-          </div>
-          <div class="form__helpers input-item">
-            <input class="checkbox" id="remember-passwowrd" type="checkbox">
-            <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
-          </div>
-          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <validateform inline-template>
+            <form @submit.prevent="submit" novalidate>
+              <div class="input-item">
+                <input class="input" type="email" v-model.trim="$v.email.$model" :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]">
+                <label>Email</label>
+              </div>
+              <div class="input-item">
+                <div class="show-password ab-i-password hidden"></div>
+                <input class="input" type="password" v-model.trim="$v.password.$model" :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]">
+                <label>Пароль</label>
+              </div>
+              <div class="form__helpers input-item">
+                <input class="checkbox" id="remember-passwowrd" type="checkbox">
+                <label for="remember-passwowrd">Запомнить меня</label><a class="link" href="">Забыли пароль?</a>
+              </div>
+              <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+            </form>
+          </validateform>
           <div class="form-services">
             <div class="form-services__title">Или войдите <br>через сервисы</div>
             <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
           </div>
-        </form>
-        <form class="form form_signup" action="" :class="{ active: signupShowed }">
+        </div>
+        <div class="form_signup" :class="{ active: signupShowed }">
           <div class="form-services">
             <div class="form-services__title">Регистрация <br>через сервисы</div>
             <div class="socials socials_light"><a class="socials__link ab-i-ggl" href=""></a><a class="socials__link ab-i-fb" href=""></a><a class="socials__link ab-i-inst" href=""></a><a class="socials__link ab-i-vk" href=""></a></div>
           </div>
           <p>Или заполните поля ниже</p>
-          <div class="input-item">
-            <input class="input" type="email">
-            <label>Email</label>
-          </div>
-          <div class="input-item">
-            <div class="show-password ab-i-password hidden"></div>
-            <input class="input" type="password">
-            <label>Пароль</label>
-          </div>
-          <div class="input-item">
-            <div class="show-password ab-i-password showed"></div>
-            <input class="input" type="password">
-            <label>Повторите пароль</label>
-          </div>
-          <div class="input-item">
-            <input class="checkbox" id="iwholesale" type="checkbox">
-            <label for="iwholesale">Я оптовый покупатель</label>
-          </div>
-          <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+          <validateform inline-template>
+            <form @submit.prevent="submit" novalidate>
+              <div class="input-item">
+                <input class="input" type="email" v-model.trim="$v.email.$model" :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]">
+                <label>Email</label>
+              </div>
+              <div class="input-item">
+                <input class="input" type="password" v-model.trim="$v.password.$model" :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]">
+                <label>Пароль</label>
+              </div>
+              <div class="input-item">
+                <div class="show-password ab-i-password hidden"></div>
+                <input class="input" type="password" v-model.trim="$v.repeatPassword.$model" :class="[{filled : $v.repeatPassword.$model}, {invalid : $v.repeatPassword.$error}]">
+                <label>Повторите пароль</label>
+              </div>
+              <div class="input-item">
+                <input class="checkbox" id="iwholesale" type="checkbox">
+                <label for="iwholesale">Я оптовый покупатель</label>
+              </div>
+              <button class="form__button button button_blue-filled">Войти в личный кабинет</button>
+            </form>
+          </validateform>
           <div class="form__privacy">Регистрируя аккаунт, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
-        </form>
+        </div>
       </div>
     </div>
     <script src="js/jquery.min.js" defer></script>
-    <script src="js/vue.min.js" defer></script>
     <script src="js/jquery.bootstrap.custom.min.js" defer></script>
     <script src="js/jquery.flickity.pkgd.min.js" defer></script>
     <script src="js/jquery.flickity-fade.min.js" defer></script>
     <script src="js/jquery.fancybox.min.js" defer></script>
-    <script src="js/select2.min.js" defer></script>
+    <script src="js/select2.min.js" defer>       </script>
+    <script src="js/vue.min.js" defer></script>
     <script src="js/vue.autocomplete.min.js" defer></script>
-    <script src="js/scripts.js?v0.2.0" defer></script>
+    <script src="js/vue.validators.min.js" defer></script>
+    <script src="js/vue.vuelidate.min.js" defer></script>
+    <script src="js/scripts.js?v0.2.1" defer></script>
   </body>
 </html>

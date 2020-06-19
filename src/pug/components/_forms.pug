@@ -76,21 +76,24 @@
         .modal-title(@click="showLogin", :class="{ active: loginShowed }") Вход
         .modal-title(@click="showSignup", :class="{ active: signupShowed }") Регистрация
 
-    form.form.form_login(:class="{ active: loginShowed }", action="")
+    .form.form_login(:class="{ active: loginShowed }")
         p Авторизуйтесь, если вы уже зарегистрированы на нашем сайте
-        .input-item
-            input(type="email").input
-            label Email
-        .input-item
-            .show-password.ab-i-password.hidden
-            input(type="password").input
-            label Пароль
-        .form__helpers.input-item
-            input#remember-passwowrd(type="checkbox").checkbox
-            label(for="remember-passwowrd") Запомнить меня
-            a(href="").link Забыли пароль?
-        button.form__button.button.button_blue-filled Войти в личный кабинет
 
+        validateform(inline-template)
+            form(@submit.prevent="submit", novalidate)
+                .input-item
+                    input(type="email", v-model.trim="$v.email.$model", :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
+                    label Email
+                .input-item
+                    .show-password.ab-i-password.hidden
+                    input(type="password", v-model.trim="$v.password.$model", :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]").input
+                    label Пароль
+                .form__helpers.input-item
+                    input#remember-passwowrd(type="checkbox").checkbox
+                    label(for="remember-passwowrd") Запомнить меня
+                    a(href="").link Забыли пароль?
+                button.form__button.button.button_blue-filled Войти в личный кабинет
+        
         .form-services
             .form-services__title Или войдите 
                 br
@@ -101,7 +104,7 @@
                 a(href="").socials__link.ab-i-inst
                 a(href="").socials__link.ab-i-vk
 
-    form.form.form_signup(action="", :class="{ active: signupShowed }")
+    .form_signup(:class="{ active: signupShowed }")
         .form-services
             .form-services__title Регистрация 
                 br
@@ -114,21 +117,22 @@
 
         p Или заполните поля ниже
 
-        .input-item
-            input(type="email").input
-            label Email
-        .input-item
-            .show-password.ab-i-password.hidden
-            input(type="password").input
-            label Пароль
-        .input-item
-            .show-password.ab-i-password.showed
-            input(type="password").input
-            label Повторите пароль
-        .input-item
-            input#iwholesale(type="checkbox").checkbox
-            label(for="iwholesale") Я оптовый покупатель
-        button.form__button.button.button_blue-filled Войти в личный кабинет
+        validateform(inline-template)
+            form(@submit.prevent="submit", novalidate)
+                .input-item
+                    input(type="email", v-model.trim="$v.email.$model", :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
+                    label Email
+                .input-item
+                    input(type="password", v-model.trim="$v.password.$model", :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]").input
+                    label Пароль
+                .input-item
+                    .show-password.ab-i-password.hidden
+                    input(type="password", v-model.trim="$v.repeatPassword.$model", :class="[{filled : $v.repeatPassword.$model}, {invalid : $v.repeatPassword.$error}]").input
+                    label Повторите пароль
+                .input-item
+                    input#iwholesale(type="checkbox").checkbox
+                    label(for="iwholesale") Я оптовый покупатель
+                button.form__button.button.button_blue-filled Войти в личный кабинет
 
         .form__privacy Регистрируя аккаунт, вы принимаете 
             a(href="").link Условия пользовательского соглашения 
