@@ -188,6 +188,7 @@ h3, .like-h3 {
     height: 54px;
     border-radius: 30px;
     transition: background .16s ease;
+    cursor: pointer;
 
     &_blue-filled {
         background: $blue;

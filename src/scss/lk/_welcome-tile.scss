@@ -1,0 +1,15 @@
+.welcome-tile {
+    height: 100%;
+    padding-top: 90px;
+    padding-left: 50px;
+    background: url('../images/account-welcome.png') bottom center no-repeat, #E8F0F6;
+
+    &__text {
+        max-width: 410px;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+}

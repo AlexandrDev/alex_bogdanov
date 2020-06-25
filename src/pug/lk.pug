@@ -1,0 +1,27 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Личный кабинет'
+    - var mainCls = 'page-account'
+
+block content
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                span Личный кабинет
+        h1.page-top__title.like-h1 Личный кабинет
+
+
+    .container
+        .row
+            .col-lg-4.col-xl-3
+                include ./components/_account-sidebar
+
+            .page-account__left.col-lg-8.col-xl-9.d-none.d-lg-block
+                .welcome-tile
+                    .welcome-tile__text
+                        .welcome-tile__title.like-h2 Мы рады, что вы к нам зашли!
+                        p Здесь вы можете посмотреть ваши недавние заказы, настроить адрес доставки, а также изменить пароль и основную информацию.
+            
+

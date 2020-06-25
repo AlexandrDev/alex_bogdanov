@@ -1,0 +1,42 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Избранные товары - Личный кабинет'
+    - var mainCls = 'page-account'
+
+block content
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                a(href=lk_link) Личный кабинет
+            .breadcrumbs__item
+                span Избранные товары
+        h1.page-top__title.like-h1 Избранные товары
+
+    .container
+        .row
+            .col-xl-3.d-none.d-xl-block
+                include ./components/_account-sidebar
+
+            .page-account__left.col-xl-9
+                .account-wishlist
+                    .account-wishlist__top
+                        p Здесь собраны понравившиеся Вам модели.
+
+                        .view-type
+                            a(href="").view-type__item.view-type__item_3cols.active
+                                include ../svg-min/view-type-3.svg
+                            a(href="").view-type__item.view-type__item_2cols
+                                include ../svg-min/view-type-2.svg
+                            a(href="").view-type__item.view-type__item_1col
+                                include ../svg-min/view-type-1.svg
+
+                    .category-items.row
+                        .col-md-4.col-6
+                            include ./components/_product-card-best.pug
+                        .col-md-4.col-6
+                            include ./components/_product-card-new.pug
+                        - for (var x = 0; x < 3; x++)
+                            .col-md-4.col-6
+                                include ./components/_product-card-full.pug               

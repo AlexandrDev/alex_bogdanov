@@ -84,7 +84,7 @@ block content
 
                         .buttons
                             a(href=cart_link).button.button_blue-filled Добавить в корзину
-                            // a(href="javascript:;", data-fancybox, data-src="#arrival-notify").button.button_blue-filled Узнать о поступлении
+                            a(href="javascript:;", data-fancybox, data-src="#arrival-notify").button.button_blue-filled Узнать о поступлении
                             a(href="").add-to-wishlist.with-svg
                                 include ../svg-min/add-to-wishlist.svg
                                 span Добавить в избранное
@@ -165,11 +165,11 @@ block content
 
     #arrival-notify.modal
         .modal-title Оповещение
-        form.form(action="")
+        form#arrival-notify-form.form(@submit.prevent="submit", novalidate)
             p Введите адрес вашей электронной поты, и мы оповестим вас, когда товар снова поступит в продажу
 
             .input-item
-                input(type="email").input
+                input(type="email", v-model.trim="$v.email.$model", :class="[{invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
                 label Email
 
             button.form__button.button.button_blue-filled Получить оповещение

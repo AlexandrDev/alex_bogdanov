@@ -73,26 +73,24 @@
 
 #auth-form.auth-form.modal
     .auth-form__type
-        .modal-title(@click="showLogin", :class="{ active: loginShowed }") Вход
-        .modal-title(@click="showSignup", :class="{ active: signupShowed }") Регистрация
+        .modal-title.active(data-form="login") Вход
+        .modal-title(data-form="signup") Регистрация
 
-    .form.form_login(:class="{ active: loginShowed }")
+    .form.form_login.active
         p Авторизуйтесь, если вы уже зарегистрированы на нашем сайте
-
-        validateform(inline-template)
-            form(@submit.prevent="submit", novalidate)
-                .input-item
-                    input(type="email", v-model.trim="$v.email.$model", :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
-                    label Email
-                .input-item
-                    .show-password.ab-i-password.hidden
-                    input(type="password", v-model.trim="$v.password.$model", :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]").input
-                    label Пароль
-                .form__helpers.input-item
-                    input#remember-passwowrd(type="checkbox").checkbox
-                    label(for="remember-passwowrd") Запомнить меня
-                    a(href="").link Забыли пароль?
-                button.form__button.button.button_blue-filled Войти в личный кабинет
+        form#login-form(@submit.prevent="submit", novalidate)
+            .input-item
+                input(type="email", v-model.trim="$v.email.$model", :class="[{invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
+                label Email
+            .input-item
+                .show-password.ab-i-password
+                input(type="password", v-model.trim="$v.password.$model", :class="[{invalid : $v.password.$error}]").input.input_password
+                label Пароль
+            .form__helpers.input-item
+                input#remember-passwowrd(type="checkbox").checkbox
+                label(for="remember-passwowrd") Запомнить меня
+                a(href="javascript:;", data-fancybox, data-src="#password-recovery").link Забыли пароль?
+            button.form__button.button.button_blue-filled Войти в личный кабинет
         
         .form-services
             .form-services__title Или войдите 
@@ -104,7 +102,7 @@
                 a(href="").socials__link.ab-i-inst
                 a(href="").socials__link.ab-i-vk
 
-    .form_signup(:class="{ active: signupShowed }")
+    .form.form_signup
         .form-services
             .form-services__title Регистрация 
                 br
@@ -116,24 +114,60 @@
                 a(href="").socials__link.ab-i-vk
 
         p Или заполните поля ниже
-
-        validateform(inline-template)
-            form(@submit.prevent="submit", novalidate)
-                .input-item
-                    input(type="email", v-model.trim="$v.email.$model", :class="[{filled : $v.email.$model}, {invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
-                    label Email
-                .input-item
-                    input(type="password", v-model.trim="$v.password.$model", :class="[{filled : $v.password.$model}, {invalid : $v.password.$error}]").input
-                    label Пароль
-                .input-item
-                    .show-password.ab-i-password.hidden
-                    input(type="password", v-model.trim="$v.repeatPassword.$model", :class="[{filled : $v.repeatPassword.$model}, {invalid : $v.repeatPassword.$error}]").input
-                    label Повторите пароль
-                .input-item
-                    input#iwholesale(type="checkbox").checkbox
-                    label(for="iwholesale") Я оптовый покупатель
-                button.form__button.button.button_blue-filled Войти в личный кабинет
+        form#signup-form(@submit.prevent="submit", novalidate)
+            .input-item
+                input(type="email", v-model.trim="$v.email.$model", :class="[{invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
+                label Email
+            .input-item
+                .show-password.ab-i-password
+                input(type="password", v-model.trim="$v.password.$model", :class="[{invalid : $v.password.$error}]").input.input_password
+                label Пароль
+            .input-item
+                .show-password.ab-i-password
+                input(type="password", v-model.trim="$v.repeatPassword.$model", :class="[{invalid : $v.repeatPassword.$error}]").input.input_password
+                label Повторите пароль
+            .input-item
+                input#iwholesale(type="checkbox").checkbox
+                label(for="iwholesale") Я оптовый покупатель
+            button.form__button.button.button_blue-filled Зарегистрироваться
 
         .form__privacy Регистрируя аккаунт, вы принимаете 
             a(href="").link Условия пользовательского соглашения 
             | «Alexander Bogdanov».
+
+#password-recovery.password-recovery.modal
+    .modal-title Восстановление пароля
+    
+    p Введите логин или e-mail, который вы указали при регистрации, и мы отправим вам ссылку для смены пароля.
+
+    form#recovery-form(@submit.prevent="submit", novalidate).form
+        .input-item
+            input(type="text", v-model.trim="$v.login.$model", :class="[{invalid : $v.login.$error}, {valid : !this.$v.login.$invalid}]").input
+            label Логин
+
+        .input-or-det 
+            span или
+        
+        .input-item
+            input(type="email", v-model.trim="$v.email.$model", :class="[{invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
+            label Email
+        
+        
+        button.form__button.button.button_blue-filled Отправить
+
+        .form__back
+            a(href="javascript:;", data-fancybox, data-src="#auth-form").link Я вспомнил пароль
+
+#subscribe-success.subscribe-success.modal
+    .modal-thumb 
+        picture
+            source(srcset="images/form-success.webp", type="image/webp")
+            img(src="images/form-success.png", alt="")
+
+    .modal-title Вы подписались
+        br
+        | на нашу рассылку
+    
+    p Благодарим за внимание к нашей компании, обещаем отправлять только важный и интересный контент.
+
+    .modal-close.button.button_blue-filled Хорошо

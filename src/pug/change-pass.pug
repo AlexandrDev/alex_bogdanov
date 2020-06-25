@@ -1,0 +1,32 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Смена пароля'
+
+block content
+    .container
+        .row 
+            .col-lg-8.offset-lg-2
+                .page-top
+                    h1.page-top__title.like-h1 Смена пароля
+
+                p Вы здесь потому, что забыли свой пароль для доступа и желаете установить новый. Пожалуйста, введите далее свой новый пароль два раза.
+
+                .row
+                    .col-md-6
+                        form#change-password(@submit.prevent="submit", novalidate).form
+                            .input-item
+                                input(type="email", v-model.trim="$v.email.$model", :class="[{invalid : $v.email.$error}, {valid : !this.$v.email.$invalid}]").input
+                                label Email
+                            .input-item
+                                .show-password.ab-i-password
+                                input(type="password", v-model.trim="$v.password.$model", :class="[{invalid : $v.password.$error}]").input.input_password
+                                label Пароль
+                            .input-item
+                                .show-password.ab-i-password
+                                input(type="password", v-model.trim="$v.repeatPassword.$model", :class="[{invalid : $v.repeatPassword.$error}]").input.input_password
+                                label Повторите пароль
+                            
+                            button.button.button_blue-filled Изменить пароль
+                    
+                    .col-md-6
+                        .change-pass__info Пароль должен содержать не менее восьми символов. Это может быть любая комбинация букв латинского алфавита, цифр и других символов.

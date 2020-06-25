@@ -32,6 +32,10 @@
         }
     }
 
+    &-thumb {
+        margin-top: -20px;
+    }
+
     &-title {
         font-family: Literata;
         font-weight: 500;
@@ -232,4 +236,23 @@
         padding-top: 10px;
     }
 
+}
+
+.password-recovery {
+    .form {
+        margin-bottom: 60px;
+
+        &__button {
+            margin-bottom: 30px;
+        }
+
+        &__back {
+            text-align: center;
+        }
+    }
+}
+
+.subscribe-success {
+    text-align: center;
+    padding-bottom: 80px;
 }

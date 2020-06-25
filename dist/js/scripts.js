@@ -1,19 +1,55 @@
 $(function() {
+    $.fn.authFormType = function() {
+        let $container = this,
+            $title = $container.find('.modal-title');
+            
+        $title.click(function() {
+            $title.removeClass('active');
+            $container.find('.form').removeClass('active');
+
+            $(this).addClass('active');
+            $container.find('.form_' + $(this).data('form')).addClass('active');
+        });
+    };
+
+    $('#auth-form').authFormType();
+
 
     Vue.use(window.vuelidate.default);
-    const { required, email, sameAs } = window.validators;
+    const { required, email, minLength, sameAs } = window.validators;
 
-    Vue.component("validateform", {
-        data() {
-            return {
-                email: '',
-                password: '',
-                repeatPassword: '',
-            }
+    const passMinLength = 8;
+
+    let loginForm = new Vue({
+        el: "#login-form",
+        data: {
+            email: '',
+            password: '',
         },
         validations: {
             email: { required, email },
-            password: { required },
+            password: { required, minLength: minLength(passMinLength) },
+        },
+        methods: {
+            submit() {
+                this.$v.$touch()
+                if (!this.$v.$invalid) {
+                    console.log('submit!')
+                }
+            }
+        }
+    });
+
+    let signupForm = new Vue({
+        el: "#signup-form",
+        data: {
+            email: '',
+            password: '',
+            repeatPassword: '',
+        },
+        validations: {
+            email: { required, email },
+            password: { required, minLength: minLength(passMinLength) },
             repeatPassword: {
                 sameAsPassword: sameAs('password')
             }
@@ -28,18 +64,75 @@ $(function() {
         }
     });
 
+    let recoveryForm = new Vue({
+        el: "#recovery-form",
+        data: {
+            login: '',
+            email: ''
+        },
+        validations: {
+            login: {required  },
+            email: { required, email },
+        },
+        methods: {
+            submit() {
+                this.$v.$touch()
+                if (!this.$v.$invalid) {
+                    console.log('submit!')
+                }
+            }
+        }
+    });
 
-    // vue search, authForms, tooltips
+    let changePasswordForm = new Vue({
+        el: "#change-password",
+        data: {
+            email: '',
+            password: '',
+            repeatPassword: '',
+        },
+        validations: {
+            email: { required, email },
+            password: { required, minLength: minLength(passMinLength) },
+            repeatPassword: {
+                sameAsPassword: sameAs('password')
+            }
+        },
+        methods: {
+            submit() {
+                this.$v.$touch()
+                if (!this.$v.$invalid) {
+                    console.log('submit!')
+                }
+            }
+        }
+    });
+
+    let arrivalNotifyForm = new Vue({
+        el: "#arrival-notify-form",
+        data: {
+            email: ''
+        },
+        validations: {
+            email: { required, email },
+        },
+        methods: {
+            submit() {
+                this.$v.$touch()
+                if (!this.$v.$invalid) {
+                    console.log('submit!')
+                }
+            }
+        }
+    });
+
+
+    // vue search
     const wikiUrl = 'https://ru.wikipedia.org';
     const params = 'action=query&list=search&format=json&origin=*';
 
-    let vueApp = new Vue({
-        el: "#app",
-        data: {
-            tooltip: '',
-            loginShowed: true,
-            signupShowed: false,
-        },
+    let searchCity = new Vue({
+        el: "#search-city",
         components: {
             Autocomplete
         },
@@ -64,21 +157,70 @@ $(function() {
             },
             submitCity(result) {
                 console.log(result.title);
-            },
-            showLogin() {
-                this.loginShowed = true;
-                this.signupShowed = false;
-            },
-            showSignup() {
-                this.loginShowed = false;
-                this.signupShowed = true;
             }
         }
     });
 
+    let checkStock = new Vue({
+        el: "#check-stock",
+        components: {
+            Autocomplete
+        },
+        methods: {
+            searchCity(input) {
+                const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
+          
+                return new Promise(resolve => {
+                    if (input.length < 2) {
+                        return resolve([]);
+                    }
+          
+                    fetch(url).
+                    then(response => response.json()).
+                    then(data => {
+                        resolve(data.query.search);
+                    });
+                });
+            },
+            getCity(result) {
+                return result.title;
+            },
+            submitCity(result) {
+                console.log(result.title);
+            }
+        }
+    });
+
+
+    let propertiesIcons = new Vue({
+        el: "#properties-icons",
+        data: {
+            tooltip: ''
+        }
+    });
+
+
+    // form inputs
+    $('.input').each(function() {
+        let _this = $(this);
+
+        checkInput(_this);
+
+        $(_this).on('keyup', function () {
+            checkInput(_this);
+        });
+    });
+
+    function checkInput(_this) {
+        if ($(_this).val() === '') {
+            // $(_this).removeClass('invalid');
+            $(_this).removeClass('filled');
+        } else {
+            $(_this).addClass('filled');
+        }
+    }
+
     
-
-
     $('.dropdown-menu, .mobile-menu').show(); // fix transition
 
 
@@ -348,6 +490,42 @@ $(function() {
     }
 
 
+
+    $.fn.productVerticalSlider = function() {
+        let $slider = $(this),
+            $dots = $('.slider-nav .dot');
+
+        if ($slider.length) {
+            $dots.click(function() {
+                let index = $(this).index();
+
+                setDots(index)
+
+                $('html, body').stop().animate({
+                    scrollTop: $slider.find('.slide').eq(index).offset().top - 100
+                }, 600);
+                
+            });
+
+            // if ($(window).scrollTop() >= header_top_h) {
+            //     $('header').addClass("sticky-header");
+            // } else {
+            //     $('header').removeClass("sticky-header");
+            // }
+
+            function setDots(index) {
+                $dots.removeClass('current');
+                $dots.eq(index).addClass('current');
+            }
+        }
+    };
+    
+
+    if (window.innerWidth >= 1200) {
+        $('.product-photo').productVerticalSlider();
+    }
+
+
     // отступ липкого блока в товаре
     setProdBlockPadding();
     function setProdBlockPadding() {
@@ -396,7 +574,6 @@ $(function() {
         });
     });
 
-
     // saved shipping address in checkout
     let $saved_block = $('.checkout-shipping-saved .block');
 
@@ -410,12 +587,30 @@ $(function() {
     });
 
 
+    // show-hide password
+    $('.show-password').click(function() {
+        let $inp_pass = $(this).parent().find('input');
+
+        $(this).toggleClass('showed');
+
+        $inp_pass.attr('type', function(index, attr){
+            return attr == 'password' ? 'text' : 'password';
+        });
+    });
+
+
     $(window).resize(function() {
-        set_sticky_header();
-        setProdBlockPadding();
+        set_sticky_header()
+        setProdBlockPadding()
     });
 
     $(window).scroll(function() {
         set_sticky_header()
     });
+
+    $('.modal-close').click(function() {
+        $.fancybox.close();
+    });
+
+    $.fancybox.defaults.closeExisting = true;
 });

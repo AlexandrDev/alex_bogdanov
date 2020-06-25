@@ -1,0 +1,36 @@
+.change-pass__info {
+    margin-top: 25px;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4E5B67;
+
+    @include laptop {
+        padding-left: 0;
+    }
+}
+
+.page-account {
+    &__left {
+        padding-top: 50px;
+    }
+
+    @include desktop {
+        &__left {
+            padding-top: 0;
+        }
+    }
+
+    @include laptop {
+        .page-top {
+            margin-bottom: 40px;
+        }
+    }
+
+    @include tablet {
+        .page-top {
+            margin-bottom: 30px;
+        }
+    }
+}

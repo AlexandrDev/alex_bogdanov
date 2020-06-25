@@ -5,7 +5,8 @@ block variables
 - var product_link = 'product.html'
 - var cart_link = 'cart.html'
 - var order_link = 'checkout.html'
-- var version = 'v0.2.1'
+- var lk_link = 'lk.html'
+- var version = 'v0.3.0'
 
 doctype html
 html(lang="ru")
@@ -23,15 +24,14 @@ html(lang="ru")
         link(rel="stylesheet" href='css/stylesheet.css?' + version)
         block styles
     body
-        #app
-            include _header.pug
+        include _header.pug
 
-            .page-wrapper(class="" + mainCls)
-                block content
+        .page-wrapper(class="" + mainCls)
+            block content
 
-            include _footer.pug
+        include _footer.pug
 
-            include _forms.pug
+        include _forms.pug
 
         script(src="js/jquery.min.js", defer)
         script(src="js/jquery.bootstrap.custom.min.js", defer)

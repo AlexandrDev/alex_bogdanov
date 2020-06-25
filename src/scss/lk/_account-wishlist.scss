@@ -1,0 +1,12 @@
+.account-wishlist {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 26px;
+
+        p {
+            margin: 0;
+        }
+    }
+}

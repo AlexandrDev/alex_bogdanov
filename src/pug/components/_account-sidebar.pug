@@ -1,0 +1,40 @@
+.account-sidebar
+    .account-sidebar__header
+        // .avatar.avatar_letters
+            | ЛТ
+        .avatar
+            img(src="images/style-sample_2.jpg", alt="").avatar__img
+
+        .welcome-text Здравствуйте, 
+            span.username Лила Туранга
+
+    .account-sidebar__menu
+        .item
+            a(href="").item__link.active Личные данные
+        .item
+            a(href="").item__link Оформленные заказы
+        .item
+            a(href="").item__link Избранные товары
+        .item
+            a(href="").item__link Адреса доставки
+        .item
+            a(href="").item__link Подписки
+
+        .item.item_logout
+            a(href="").item__link.ab-i-logout Выйти
+    
+    .account-sidebar__contacts
+        .title Вам нужна помощь?
+
+        .contacts-group
+            .contacts-group__icon
+                include ../../svg-min/phone-blue.svg
+            .contacts-group__text Позвоните нам по тел.:
+                br
+                a(href="tel:8 800 551-90-50") 8 800 551-90-50
+        .contacts-group
+            .contacts-group__icon
+                include ../../svg-min/email-blue.svg
+            .contacts-group__text Или напишите на e-mail:
+                br
+                a(href="mailto:shop@bgd-bogdanov.com") shop@bgd-bogdanov.com
