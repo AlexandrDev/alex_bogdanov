@@ -1,0 +1,97 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Личные данные - Личный кабинет'
+    - var mainCls = 'page-account'
+
+block content
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                a(href=lk_link) Личный кабинет
+            .breadcrumbs__item
+                span Личные данные
+        h1.page-top__title.like-h1 Личные данные
+
+
+    .container
+        .row
+            .col-xl-3.d-none.d-xl-block
+                include ./components/_account-sidebar
+
+            .page-account__left.col-xl-9
+                .personal-info.page-account__block
+                    .like-h3 Персональная информация
+                    p Вы в любой момент можете обновить вашу учетную запись и внести любые изменения в приведенные ниже данные.
+                    
+                    form(action="")
+                        .row
+                            .col-md-6
+                                .input-item
+                                    input(type="text").input
+                                    label Имя
+                            .col-md-6
+                                .input-item
+                                    input(type="text").input
+                                    label Фамилия
+                            .col-md-6
+                                .input-item
+                                    input(type="tel").input
+                                    label Номер телефона
+                            .col-md-6
+                                .input-item
+                                    input(type="email").input
+                                    label Email
+                            .col-md-6
+                                .input-item.personal-info__birthday
+                                    .birthday__label Дата рождения (дд/мм/гггг)
+                                    .birthday__day
+                                        select(name="", data-placeholder="День")
+                                            option
+                                            option(value="asd1") 31
+                                            option(value="asd2") asd2
+                                            option(value="asd3") asd3
+                                    .birthday__mounth
+                                        select(name="", data-placeholder="Месяц")
+                                            option
+                                            option(value="asd1") Сентябрь
+                                            option(value="asd2") asd2
+                                            option(value="asd3") asd3
+                                    .birthday__year
+                                        select(name="", data-placeholder="Год")
+                                            option
+                                            option(value="asd1") 2020
+                                            option(value="asd2") asd2
+                                            option(value="asd3") asd3
+                            .col-md-6
+                                .personal-info__sex.radio-group
+                                    .radio-group__title Ваш пол
+                                    .radio-item
+                                        input#c-radio-1(type="radio", name="sex", checked).radio
+                                        label(for="c-radio-1") Женский
+                                    .radio-item
+                                        input#c-radio-2(type="radio", name="sex").radio
+                                        label(for="c-radio-2") Мужской
+                        button.button.button_blue-filled Сохранить изменения
+                
+                .change-password
+                    .like-h3 Изменение пароля
+                    p Пароль должен содержать не менее восьми символов. Это может быть любая комбинация букв латинского алфавита, цифр и других символов.
+                    
+                    form(action="")
+                        .row
+                            .col-lg-6
+                                .input-item
+                                    .show-password.ab-i-password
+                                    input(type="password", v-model.trim="$v.oldPassword.$model", :class="[{invalid : $v.oldPassword.$error}]").input.input_password
+                                    label Текущий пароль
+                                .input-item
+                                    .show-password.ab-i-password
+                                    input(type="password", v-model.trim="$v.newPassword.$model", :class="[{invalid : $v.newPassword.$error}]").input.input_password
+                                    label Новый пароль
+                                .input-item
+                                    input(type="password", v-model.trim="$v.repeatPassword.$model", :class="[{invalid : $v.repeatPassword.$error}]").input.input_password
+                                    label Повторите пароль
+
+                                button.button.button_blue-filled Сохранить изменения

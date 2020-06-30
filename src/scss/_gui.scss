@@ -97,7 +97,10 @@ picture {
 
 .fancybox-bg {
     background: $light;
-    opacity: 0.8;
+    
+    .fancybox-is-open & {
+        opacity: 0.8;
+    }
 }
 
 .page-wrapper {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Личный кабинет</title>
+    <title>Оформленные заказы - Личный кабинет</title>
     <meta charset="UTF-8">
     <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <script>function svp(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
@@ -238,13 +238,14 @@
       <div class="page-top container">
         <div class="breadcrumbs">
           <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
-          <div class="breadcrumbs__item"><span>Личный кабинет</span></div>
+          <div class="breadcrumbs__item"><a href="lk.html">Личный кабинет</a></div>
+          <div class="breadcrumbs__item"><span>Оформленные заказы</span></div>
         </div>
-        <h1 class="page-top__title like-h1">Личный кабинет</h1>
+        <h1 class="page-top__title like-h1">Оформленные заказы</h1>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-xl-3">
+          <div class="col-xl-3 d-none d-xl-block">
             <div class="account-sidebar">
               <div class="account-sidebar__header">
                 <!-- .avatar.avatar_letters| ЛТ
@@ -273,12 +274,32 @@
               </div>
             </div>
           </div>
-          <div class="page-account__left col-lg-8 col-xl-9 d-none d-lg-block">
-            <div class="welcome-tile">
-              <div class="welcome-tile__text">
-                <div class="welcome-tile__title like-h2">Мы рады, что вы к нам зашли!</div>
-                <p>Здесь вы можете посмотреть ваши недавние заказы, настроить адрес доставки, а также изменить пароль и основную информацию.</p>
+          <div class="page-account__left col-xl-9">
+            <div class="like-h3">Оформленные заказы</div>
+            <p>Узнавайте о состоянии осуществленных вами заказов. Если заказы отправлены по вашему адресу, то вы можете посмотреть ссылки для их отслеживания.</p>
+            <div class="orders row">
+              <div class="orders__col col-lg-6">
+                <div class="order-item">
+                  <div class="order-item__gallery"></div>
+                  <div class="order-item__info">
+                    <div class="order-item__number">№ 430510846</div>
+                    <div class="order-item__details">
+                      <p>15 мая 2020</p>
+                      <p>222 000 ₽</p>
+                    </div>
+                    <div class="order-status">Ждет оплаты</div>
+                  </div><a class="order-item__view" href=""></a>
+                </div>
               </div>
+            </div>
+            <div class="order-detail">
+              <div class="page-account__back"><a class="back-arrow" href="">
+                  <svg width="19" height="15" fill="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 15l1.225-1.313-4.9-5.25H19V6.563H4.075l4.9-5.25L7.75 0l-7 7.5 7 7.5z"/></svg>Вернуться назад</a></div>
+              <div class="order-detail__title like-h3">Детали заказа № 150010846 от 3 апреля 2018
+                <div class="order-status">Ждет оплаты</div>
+              </div>
+              <div class="order-detail__"></div>
+              <div class="order-detail__table"></div>
             </div>
           </div>
         </div>

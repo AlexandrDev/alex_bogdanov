@@ -16,6 +16,7 @@ $(function() {
 
 
     Vue.use(window.vuelidate.default);
+    Vue.use(VueMask.VueMaskPlugin);
     const { required, email, minLength, sameAs } = window.validators;
 
     const passMinLength = 8;
@@ -34,6 +35,33 @@ $(function() {
             submit() {
                 this.$v.$touch()
                 if (!this.$v.$invalid) {
+                    console.log('submit!')
+                }
+            }
+        }
+    });
+
+    let callbackForm = new Vue({
+        el: "#callback-form",
+        data: {
+            name: '',
+            phone: '',
+        },
+        validations: {
+            name: { required },
+            phone: { required, minLength: minLength(16) },
+        },
+        methods: {
+            phoneFocus() {
+                if (this.phone === '') {
+                    this.phone = '+7 ';
+                }
+                
+            },
+            submit() {
+                this.$v.$touch()
+                if (!this.$v.$invalid) {
+                    showSuccess()
                     console.log('submit!')
                 }
             }
@@ -128,9 +156,6 @@ $(function() {
 
 
     // vue search
-    const wikiUrl = 'https://ru.wikipedia.org';
-    const params = 'action=query&list=search&format=json&origin=*';
-
     let searchCity = new Vue({
         el: "#search-city",
         components: {
@@ -138,6 +163,9 @@ $(function() {
         },
         methods: {
             searchCity(input) {
+                const wikiUrl = 'https://ru.wikipedia.org';
+                const params = 'action=query&list=search&format=json&origin=*';
+
                 const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
           
                 return new Promise(resolve => {
@@ -168,6 +196,9 @@ $(function() {
         },
         methods: {
             searchCity(input) {
+                const wikiUrl = 'https://ru.wikipedia.org';
+                const params = 'action=query&list=search&format=json&origin=*';
+
                 const url = `${wikiUrl}/w/api.php?${params}&srsearch=${encodeURI(input)}`;
           
                 return new Promise(resolve => {
@@ -206,14 +237,13 @@ $(function() {
 
         checkInput(_this);
 
-        $(_this).on('keyup', function () {
+        $(_this).on('keyup focus', function () {
             checkInput(_this);
         });
     });
 
     function checkInput(_this) {
         if ($(_this).val() === '') {
-            // $(_this).removeClass('invalid');
             $(_this).removeClass('filled');
         } else {
             $(_this).addClass('filled');
@@ -575,7 +605,7 @@ $(function() {
     });
 
     // saved shipping address in checkout
-    let $saved_block = $('.checkout-shipping-saved .block');
+    let $saved_block = $('.shipping-saved-js .block');
 
     $saved_block.each(function() {
         $(this).click(function() {
@@ -597,6 +627,15 @@ $(function() {
             return attr == 'password' ? 'text' : 'password';
         });
     });
+
+    
+    function showSuccess() {
+        $.fancybox.close();
+        $.fancybox.open({
+            src: '#callback-success', 
+            modal: true
+        });
+    }
 
 
     $(window).resize(function() {

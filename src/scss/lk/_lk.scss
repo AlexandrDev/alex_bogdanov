@@ -1,19 +1,156 @@
-.change-pass__info {
-    margin-top: 25px;
-    padding-left: 30px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #4E5B67;
+.change-password {
+    &__info {
+        margin-top: 25px;
+        padding-left: 30px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #4E5B67;
+    
+        @include laptop {
+            padding-left: 0;
+        }
+    }
 
-    @include laptop {
-        padding-left: 0;
+    .button {
+        margin-top: 25px;
     }
 }
 
 .page-account {
     &__left {
         padding-top: 50px;
+    }
+
+    &__back {
+        margin-bottom: 30px;
+    }
+
+    .back-arrow {
+        display: inline-block;
+        color: #4E5B67;
+        cursor: pointer;
+        transition: color .16s ease;
+        
+        &:hover {
+            color: $blue;
+
+            svg {
+                fill: $blue
+            }
+        }
+
+        svg {
+            margin-top: -2px;
+            margin-right: 15px;
+        }
+    }
+
+
+    &__block {
+        &:not(:last-child) {
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(78, 91, 103, 0.15);
+            margin-bottom: 50px;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .button {
+            margin-top: 25px;
+        }
+    }
+
+    .personal-info {
+        &__birthday {
+            position: relative;
+            display: flex;
+            border: 1px solid rgba(78, 91, 103, 0.2);
+            border-radius: 3px;
+
+            .select2-selection {
+                border: none;
+            }
+        }
+
+        .birthday {
+            &__label {
+                position: absolute;
+                top: -13px;
+                left: 10px;
+                font-size: 14px;
+                line-height: 24px;
+                padding: 0 10px;
+                color: rgba(78, 91, 103, 0.6);
+                background-color: #fff;
+                pointer-events: none;
+                z-index: 10;
+            }
+
+            &__day, &__mounth, &__year {
+                flex-shrink: 0;
+                flex-basis: 0;
+                z-index: 1;
+            }
+
+            &__day {
+                flex-grow: 1;
+            }
+
+            &__mounth {
+                flex-grow: 1.64;
+
+                .select2-selection {
+                    border-width: 0 1px 0 1px;
+                    border-style: solid;
+                    border-color: rgba(78, 91, 103, 0.2);
+                    border-radius: 0;
+                }
+            }
+
+            &__year {
+                flex-grow: 1;
+            }
+        }
+
+        &__sex {
+            display: flex;
+            align-items: center;
+            height: 54px;
+
+            .radio-item {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @include tablet {
+                display: block;
+                height: auto;
+
+                .radio-item {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .shipping-address-saved {
+        margin-top: 50px;
+
+        .block {
+            padding-right: 80px;
+        }
+    }
+
+
+    @media screen  and (min-width: 1200px) {
+        &__block {
+            form {
+                margin-right: 11%;
+            }
+        }
     }
 
     @include desktop {
@@ -34,3 +171,4 @@
         }
     }
 }
+

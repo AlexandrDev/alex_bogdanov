@@ -1,6 +1,7 @@
 extends ./components/_layout.pug
 block variables
     - var title = 'Смена пароля'
+    - var mainCls = ''
 
 block content
     .container
@@ -11,7 +12,7 @@ block content
 
                 p Вы здесь потому, что забыли свой пароль для доступа и желаете установить новый. Пожалуйста, введите далее свой новый пароль два раза.
 
-                .row
+                .change-password.row
                     .col-md-6
                         form#change-password(@submit.prevent="submit", novalidate).form
                             .input-item
@@ -29,4 +30,4 @@ block content
                             button.button.button_blue-filled Изменить пароль
                     
                     .col-md-6
-                        .change-pass__info Пароль должен содержать не менее восьми символов. Это может быть любая комбинация букв латинского алфавита, цифр и других символов.
+                        .change-password__info Пароль должен содержать не менее восьми символов. Это может быть любая комбинация букв латинского алфавита, цифр и других символов.

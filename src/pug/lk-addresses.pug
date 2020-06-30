@@ -1,0 +1,185 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Адреса доставки - Личный кабинет'
+    - var mainCls = 'page-account'
+
+block content
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                a(href=lk_link) Личный кабинет
+            .breadcrumbs__item
+                span Адреса доставки
+        h1.page-top__title.like-h1 Адреса доставки
+
+
+    .container
+        .row
+            .col-xl-3.d-none.d-xl-block
+                include ./components/_account-sidebar
+
+            .page-account__left.col-xl-9
+                .page-account__block
+                    .shipping-address
+                        .like-h3 Управление адресами
+                        p Управляйте всеми адресами для доставки по вашему усмотрению (ваш домашний адрес, место работы, адрес родителей и т. д.). Это позволит вам избежать необходимости при каждом следующем заказе заново заполнять адрес для доставки.
+                        form(action="")
+                            .row
+                                .col-md-6
+                                    .input-item
+                                        input(type="text").input
+                                        label Имя
+                                .col-md-6
+                                    .input-item
+                                        input(type="text").input
+                                        label Фамилия
+                                .col-md-6
+                                    .input-item
+                                        input(type="tel").input
+                                        label Номер телефона
+                            hr
+                            .row
+                                .col-md-6
+                                    .input-item
+                                        select(name="", data-placeholder="Область/Район")
+                                            option
+                                            option(value="asd1") asd1
+                                            option(value="asd2") asd2
+                                            option(value="asd3") asd3
+                                .col-md-6
+                                    .input-item
+                                        select(name="", data-placeholder="Населенный пункт")
+                                            option
+                                            option(value="asd") asd
+                                            option(value="asd") asd
+                                            option(value="asd") asd
+                                .col-xl-6.col-lg-12.col-md-6
+                                    .input-item
+                                        input(type="text").input
+                                        label Улица/Переулок
+                                .col-xl-6.col-lg-12.col-md-6
+                                    .inputs__house-num
+                                        .input-item
+                                            input(type="text").input
+                                            label № дома/корпуса
+                                        .input-item
+                                            input(type="text").input
+                                            label № квартиры
+                                .col-md-6
+                                    .input-item
+                                        input(type="text").input
+                                        label Почтовый индекс
+                            .input-item
+                                input#setAddressDefault(type="checkbox").checkbox
+                                label(for="setAddressDefault") Сделать адресом по умолчанию
+
+                            button.button.button_blue-filled Добавить адрес
+                    br
+                    // другая страница
+                    br
+                    .shipping-address
+                        .like-h3 Управление адресами
+                        p Управляйте всеми адресами для доставки по вашему усмотрению (ваш домашний адрес, место работы, адрес родителей и т. д.). Это позволит вам избежать необходимости при каждом следующем заказе заново заполнять адрес для доставки.
+
+                        a(href="").button.button_blue-filled Добавить адрес
+
+                        .shipping-address-saved
+                            .row
+                                .col-md-6
+                                    .block.checked
+                                        .block__edit-icons
+                                            a(href="").edit-icon.ab-i-edit
+                                            a(href="").edit-icon.ab-i-cart-remove
+
+                                        .block__title Жираф Полосатый
+
+                                        .block__phone +7 912 345-67-89
+
+                                        .block__address г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки
+
+                                        .block__edit-address
+                                            input#setAddressDefault1(type="radio", name="saved-def").checkbox
+                                            label(for="setAddressDefault1") Сделать адресом по умолчанию
+                                .col-md-6
+                                    .block
+                                        .block__edit-icons
+                                            a(href="").edit-icon.ab-i-edit
+                                            a(href="").edit-icon.ab-i-cart-remove
+
+                                        .block__title Жираф Полосатый
+
+                                        .block__phone +7 912 345-67-89
+
+                                        .block__address г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки
+
+                                        .block__edit-address
+                                            input#setAddressDefault2(type="radio", name="saved-def").checkbox
+                                            label(for="setAddressDefault2") Сделать адресом по умолчанию
+                    br
+                    // другая страница
+                    br
+                    .shipping-address
+                        .page-account__back
+                            a(href="").back-arrow
+                                include ../svg-min/back-arrow-checkStock.svg
+                                | Вернуться назад
+
+                        .like-h3 Изменить адрес
+                        p Если вы хотите изменить адрес для доставки, связанный с вашим аккаунтом, обновите поля ниже.
+
+                        .shipping-address
+                            form(action="")
+                                .row
+                                    .col-md-6
+                                        .input-item
+                                            input(type="text").input
+                                            label Имя
+                                    .col-md-6
+                                        .input-item
+                                            input(type="text").input
+                                            label Фамилия
+                                    .col-md-6
+                                        .input-item
+                                            input(type="tel").input
+                                            label Номер телефона
+                                hr
+                                .row
+                                    .col-md-6
+                                        .input-item
+                                            select(name="", data-placeholder="Область/Район")
+                                                option
+                                                option(value="asd1") asd1
+                                                option(value="asd2") asd2
+                                                option(value="asd3") asd3
+                                    .col-md-6
+                                        .input-item
+                                            select(name="", data-placeholder="Населенный пункт")
+                                                option
+                                                option(value="asd") asd
+                                                option(value="asd") asd
+                                                option(value="asd") asd
+                                    .col-xl-6.col-lg-12.col-md-6
+                                        .input-item
+                                            input(type="text").input
+                                            label Улица/Переулок
+                                    .col-xl-6.col-lg-12.col-md-6
+                                        .inputs__house-num
+                                            .input-item
+                                                input(type="text").input
+                                                label № дома/корпуса
+                                            .input-item
+                                                input(type="text").input
+                                                label № квартиры
+                                    .col-md-6
+                                        .input-item
+                                            input(type="text").input
+                                            label Почтовый индекс
+                                .input-item
+                                    input#setAddressDefault3(type="checkbox").checkbox
+                                    label(for="setAddressDefault3") Сделать адресом по умолчанию
+
+                            .shipping-address__buttons
+                                button.button.button_blue-filled Изменить адрес
+                                button.button.button_blue-bordered Удалить адрес

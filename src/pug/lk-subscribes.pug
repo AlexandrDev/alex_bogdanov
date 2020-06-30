@@ -1,0 +1,23 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Подписки - Личный кабинет'
+    - var mainCls = 'page-account'
+
+block content
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                a(href=lk_link) Личный кабинет
+            .breadcrumbs__item
+                span Подписки
+        h1.page-top__title.like-h1 Подписки
+
+
+    .container
+        .row
+            .col-xl-3.d-none.d-xl-block
+                include ./components/_account-sidebar
+
+            .page-account__left.col-xl-9

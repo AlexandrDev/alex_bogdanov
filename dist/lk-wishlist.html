@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.3.0">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.4.0">
   </head>
   <body>
     <header>
@@ -37,7 +37,7 @@
                 </div>
               </div>
             </div>
-            <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
+            <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href="javascript:;" data-fancybox data-src="#callback"><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
           </div>
         </div>
       </div>
@@ -254,11 +254,11 @@
                 <div class="welcome-text">Здравствуйте, <span class="username">Лила Туранга</span></div>
               </div>
               <div class="account-sidebar__menu">
-                <div class="item"><a class="item__link active" href="">Личные данные</a></div>
-                <div class="item"><a class="item__link" href="">Оформленные заказы</a></div>
-                <div class="item"><a class="item__link" href="">Избранные товары</a></div>
-                <div class="item"><a class="item__link" href="">Адреса доставки</a></div>
-                <div class="item"><a class="item__link" href="">Подписки</a></div>
+                <div class="item"><a class="item__link active" href="lk-info.html">Личные данные</a></div>
+                <div class="item"><a class="item__link" href="lk-orders.html">Оформленные заказы</a></div>
+                <div class="item"><a class="item__link" href="lk-wishlist.html">Избранные товары</a></div>
+                <div class="item"><a class="item__link" href="lk-addresses.html">Адреса доставки</a></div>
+                <div class="item"><a class="item__link" href="lk-subscribes.html">Подписки</a></div>
                 <div class="item item_logout"><a class="item__link ab-i-logout" href="">Выйти</a></div>
               </div>
               <div class="account-sidebar__contacts">
@@ -482,6 +482,22 @@
         <div class="search-city__item"><a href="">Ярославль</a></div>
       </div>
     </div>
+    <div class="modal" id="callback">
+      <div class="modal-title">Обратный звонок</div>
+      <p>Оставьте Ваши контактные данные и мы Вам перезвоним</p>
+      <form class="form" id="callback-form" @submit.prevent="submit" novalidate>
+        <div class="input-item">
+          <input class="input" type="text" v-model.trim="$v.name.$model" :class="[{invalid : $v.name.$error}, {valid : !this.$v.name.$invalid}]">
+          <label>Имя</label>
+        </div>
+        <div class="input-item">
+          <input class="input" type="tel" v-mask="'+7 ### ###-##-##'" v-model.trim="$v.phone.$model" :class="[{invalid : $v.phone.$error}, {valid : !this.$v.phone.$invalid}]" @focus="phoneFocus">
+          <label>Телефон</label>
+        </div>
+        <button class="form__button button button_blue-filled">Отправить</button>
+      </form>
+      <div class="form__privacy">Отправляя форму, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
+    </div>
     <div class="auth-form modal" id="auth-form">
       <div class="auth-form__type">
         <div class="modal-title active" data-form="login">Вход</div>
@@ -557,7 +573,17 @@
         <div class="form__back"><a class="link" href="javascript:;" data-fancybox data-src="#auth-form">Я вспомнил пароль</a></div>
       </form>
     </div>
-    <div class="subscribe-success modal" id="subscribe-success">
+    <div class="modal-success modal" id="callback-success">
+      <div class="modal-thumb"> 
+        <picture>
+          <source srcset="images/form-success.webp" type="image/webp"><img src="images/form-success.png" alt="">
+        </picture>
+      </div>
+      <div class="modal-title">Заявка отправлена</div>
+      <p>Наши менеджеры скоро Вам перезвонят</p>
+      <div class="modal-close button button_blue-filled">Хорошо</div>
+    </div>
+    <div class="modal-success modal" id="subscribe-success">
       <div class="modal-thumb"> 
         <picture>
           <source srcset="images/form-success.webp" type="image/webp"><img src="images/form-success.png" alt="">
@@ -577,6 +603,7 @@
     <script src="js/vue.autocomplete.min.js" defer></script>
     <script src="js/vue.validators.min.js" defer></script>
     <script src="js/vue.vuelidate.min.js" defer></script>
-    <script src="js/scripts.js?v0.3.0" defer></script>
+    <script src="js/vue.v-mask.min.js" defer></script>
+    <script src="js/scripts.js?v0.4.0" defer></script>
   </body>
 </html>

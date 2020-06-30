@@ -1,0 +1,167 @@
+.shipping-address {
+    hr {
+        height: 1px;
+        border: 0;
+        margin: 25px 0 0;
+        background:rgba(78, 91, 103, 0.15);
+    }
+
+    .inputs__house-num {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .input-item {
+            width: calc(50% - 5px);
+        }
+    }
+
+    &__buttons {
+        .button:not(:first-child) {
+            margin-left: 15px;
+        }
+
+        @include phone {
+            .button {
+                width: 100%;
+
+                &:not(:first-child) {
+                    margin-top: 15px;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &-saved {
+        margin-top: 30px;
+        margin-bottom: -20px;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
+
+        .row {
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        [class*='col'] {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .block {
+            position: relative;
+            background: #FFFFFF;
+            border: 1px solid rgba(78, 91, 103, 0.2);
+            border-radius: 3px;
+            margin-bottom: 20px;
+            padding: 30px 30px 0;
+            
+            &__select-icon {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                flex: 0 0 30px;
+                width: 30px;
+                height: 30px;
+                border: 1px solid rgba(78, 91, 103, 0.2);
+                border-radius: 50%;
+                cursor: pointer;
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 16px;
+                    height: 8px;
+                    position: absolute;
+                    top: 8px;
+                    left: 6px;
+                    border-left: 2px solid #fff;
+                    border-bottom: 2px solid #fff;
+                    transform: rotate(-45deg);
+                }
+            }
+            &.checked .block__select-icon {
+                border-color: #67ADD7;
+                background-color: #67ADD7;
+            }
+
+            &__edit-icons {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .edit-icon {
+                display: block;
+                width: 20px;
+                height: 20px;
+                margin-bottom: 30px;
+            }
+
+
+            &__title {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 22px;
+                color: #132434;
+                margin-bottom: 10px;
+            }
+            &__phone {
+                font-size: 16px;
+                line-height: 24px;
+                color: #4E5B67;
+                margin-bottom: 15px;
+            }
+            &__address {
+                font-size: 15px;
+                line-height: 22px;
+                color: #4E5B67;
+            }
+            
+            &__edit-address {
+                display: inline-flex;
+                margin: 25px 0 30px;
+                i {
+                    margin-right: 10px;
+                }
+
+                a:hover {
+                    color: $blue;
+                }
+            }
+        }
+
+
+        .add-address {
+            align-self: center;
+            text-align: center;
+            margin: 40px 0 60px;
+
+            p {
+                margin-top: 0;
+            }
+
+            @include tablet {
+                margin: 0;
+                text-align: left;
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    &-shops {
+        margin-top: 30px;
+
+        .shops-search {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.3.0">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.4.0">
   </head>
   <body>
     <header>
@@ -37,7 +37,7 @@
                 </div>
               </div>
             </div>
-            <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href=""><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
+            <div class="top-menu col-lg-8"><a class="top-menu__link" href=""><i class="ab-i-freeship"></i><span>Бесплатная доставка</span></a><a class="top-menu__link" href=""><i class="ab-i-primerka"></i><span>Примерка перед покупкой</span></a><a class="top-menu__link" href="javascript:;" data-fancybox data-src="#callback"><i class="ab-i-callus"></i><span>Связаться с нами</span></a></div>
           </div>
         </div>
       </div>
@@ -258,62 +258,20 @@
               </div>
             </div>
             <div class="promocode"><a class="promocode__link link-underline" href="">Применен промокод</a></div>
-            <div class="checkout-block">
-              <div class="checkout-block__title like-h3">Контактная информация</div>
-              <div class="checkout-block__inputs row">
-                <div class="col-md-6">
-                  <div class="input-item">
-                    <input class="input" type="text">
-                    <label>Имя</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="input-item">
-                    <input class="input" type="tel">
-                    <label>Номер телефона</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="input-item">
-                    <input class="input" type="text">
-                    <label>Фамилия</label>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="input-item">
-                    <input class="input" type="email">
-                    <label>Email</label>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="checkout-block">
-              <div class="checkout-block__title-flex">
-                <div class="checkout-block__title like-h3">Способ доставки</div><a class="shipping-zones-link link-underline" href="">Время доставки зависит от зоны</a>
-              </div>
-              <div class="checkout-block__radios">
-                <div class="radio-item">
-                  <input class="radio" id="c-radio-1" type="radio" name="shipping" checked>
-                  <label for="c-radio-1">Самовывоз из розничного магазина</label>
-                </div>
-                <div class="radio-item">
-                  <input class="radio" id="c-radio-2" type="radio" name="shipping">
-                  <label for="c-radio-2">Курьерская служба</label>
-                </div>
-                <div class="radio-item">
-                  <input class="radio" id="c-radio-3" type="radio" name="shipping">
-                  <label for="c-radio-3">Почта России</label>
-                </div>
-              </div>
-            </div>
-            <div class="checkout-block checkout-shipping">
-              <div class="checkout-block__title like-h3">Где вы хотите получить свой заказ?</div>
-              <div class="checkout-block__inputs">
-                <div class="row">
+            <form action="">
+              <div class="checkout-block">
+                <div class="checkout-block__title like-h3">Контактная информация</div>
+                <div class="checkout-block__inputs row">
                   <div class="col-md-6">
                     <div class="input-item">
                       <input class="input" type="text">
                       <label>Имя</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-item">
+                      <input class="input" type="tel">
+                      <label>Номер телефона</label>
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -324,124 +282,170 @@
                   </div>
                   <div class="col-md-6">
                     <div class="input-item">
-                      <input class="input" type="tel">
-                      <label>Номер телефона</label>
+                      <input class="input" type="email">
+                      <label>Email</label>
                     </div>
                   </div>
                 </div>
-                <hr>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="input-item">
-                      <select name="" data-placeholder="Область/Район">
-                        <option></option>
-                        <option value="asd1">asd1</option>
-                        <option value="asd2">asd2</option>
-                        <option value="asd3">asd3</option>
-                      </select>
-                    </div>
+              </div>
+              <div class="checkout-block">
+                <div class="checkout-block__title-flex">
+                  <div class="checkout-block__title like-h3">Способ доставки</div><a class="shipping-zones-link link-underline" href="">Время доставки зависит от зоны</a>
+                </div>
+                <div class="checkout-block__radios">
+                  <div class="radio-item">
+                    <input class="radio" id="c-radio-1" type="radio" name="shipping" checked>
+                    <label for="c-radio-1">Самовывоз из розничного магазина</label>
                   </div>
-                  <div class="col-md-6">
-                    <div class="input-item">
-                      <select name="" data-placeholder="Населенный пункт">
-                        <option></option>
-                        <option value="asd">asd</option>
-                        <option value="asd">asd</option>
-                        <option value="asd">asd</option>
-                      </select>
-                    </div>
+                  <div class="radio-item">
+                    <input class="radio" id="c-radio-2" type="radio" name="shipping">
+                    <label for="c-radio-2">Курьерская служба</label>
                   </div>
-                  <div class="col-xl-6 col-lg-12 col-md-6">
-                    <div class="input-item">
-                      <input class="input" type="text">
-                      <label>Улица/Переулок</label>
-                    </div>
+                  <div class="radio-item">
+                    <input class="radio" id="c-radio-3" type="radio" name="shipping">
+                    <label for="c-radio-3">Почта России</label>
                   </div>
-                  <div class="col-xl-6 col-lg-12 col-md-6">
-                    <div class="inputs__house-num">
+                </div>
+              </div>
+              <div class="checkout-block shipping-address">
+                <div class="checkout-block__title like-h3">Где вы хотите получить свой заказ?</div>
+                <div class="checkout-block__inputs">
+                  <div class="row">
+                    <div class="col-md-6">
                       <div class="input-item">
                         <input class="input" type="text">
-                        <label>№ дома/корпуса</label>
+                        <label>Имя</label>
                       </div>
+                    </div>
+                    <div class="col-md-6">
                       <div class="input-item">
                         <input class="input" type="text">
-                        <label>№ квартиры</label>
+                        <label>Фамилия</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="tel">
+                        <label>Номер телефона</label>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="input-item">
-                      <input class="input" type="text">
-                      <label>Почтовый индекс</label>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <select name="" data-placeholder="Область/Район">
+                          <option></option>
+                          <option value="asd1">asd1</option>
+                          <option value="asd2">asd2</option>
+                          <option value="asd3">asd3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <select name="" data-placeholder="Населенный пункт">
+                          <option></option>
+                          <option value="asd">asd</option>
+                          <option value="asd">asd</option>
+                          <option value="asd">asd</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="text">
+                        <label>Улица/Переулок</label>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-6">
+                      <div class="inputs__house-num">
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>№ дома/корпуса</label>
+                        </div>
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>№ квартиры</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="text">
+                        <label>Почтовый индекс</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-item">
+                    <input class="checkbox" id="setAddressDefault" type="checkbox">
+                    <label for="setAddressDefault">Сделать адресом по умолчанию</label>
+                  </div>
+                </div>
+                <div class="shipping-address-saved shipping-saved-js">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="block checked">
+                        <input type="radio" hidden>
+                        <div class="block__select-icon"></div>
+                        <div class="block__title">Жираф Полосатый</div>
+                        <div class="block__phone">+7 912 345-67-89</div>
+                        <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div>
+                        <div class="block__edit-address"><a class="with-svg" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false"> <i class="ab-i-edit"></i><span>Редактировать адрес</span></a></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="block">
+                        <input type="radio" name="shipping-address" hidden>
+                        <div class="block__select-icon"></div>
+                        <div class="block__title">Жираф Полосатый</div>
+                        <div class="block__phone">+7 912 345-67-89</div>
+                        <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div>
+                        <div class="block__edit-address"><a class="with-svg" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false"> <i class="ab-i-edit"></i><span>Редактировать адрес</span></a></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 add-address">
+                      <p>Или добавьте новый адрес</p><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false">Добавить адрес</a>
                     </div>
                   </div>
                 </div>
-                <div class="input-item">
-                  <input class="checkbox" id="setAddressDefault" type="checkbox">
-                  <label for="setAddressDefault">Сделать адресом по умолчанию</label>
-                </div>
-              </div>
-              <div class="checkout-shipping-saved">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="block checked">
-                      <input type="radio" hidden>
-                      <div class="block__select-icon"></div>
-                      <div class="block__title">Жираф Полосатый</div>
-                      <div class="block__phone">+7 912 345-67-89</div>
-                      <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div><a class="block__edit-address with-svg" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false">
-                         <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.24 2.59c.788-.787 2.142-.786 2.927 0l2.727 2.729c.39.39.606.911.606 1.463 0 .553-.215 1.073-.606 1.464l-12.33 12.23a.707.707 0 01-.302.177l-6.364 1.82a.704.704 0 01-.871-.871l1.818-6.37a.71.71 0 01.178-.302L16.24 2.59zm.999 1.012l-1.81 1.825 3.644 3.643 1.826-1.81a.653.653 0 00.192-.465.653.653 0 00-.193-.466L18.17 3.602a.681.681 0 00-.932 0zm-2.801 2.826l-8.225 8.3h.128c.267 0 .51.15.63.388l.472.945 8.314-8.314-1.32-1.319zM8.439 17.057l.944.472c.239.12.39.363.39.63v.128l8.299-8.225-1.32-1.319-8.313 8.314zm-.075 2.389v-.852l-1.429-.714a.705.705 0 01-.315-.315l-.715-1.429h-.85l-.53 1.852 1.987 1.987 1.852-.53zm-4.282.092l-.351 1.232 1.23-.352-.879-.88zm8.871 1.212h7v1.5h-7v-1.5z" fill="#67ADD7"/></svg><span>Редактировать адрес</span></a>
+                <div class="shipping-address-shops">
+                  <div class="shops-search">
+                    <autocomplete class="search-city__autocomplete" :search="searchCity" :get-result-value="getCity" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="submitCity"></autocomplete>
+                  </div>
+                  <div class="shops-result">
+                    <div class="radio-item">
+                      <input class="radio" id="s-radio-1" type="radio" name="shipping-shops" checked>
+                      <label for="s-radio-1">Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29</label>
+                    </div>
+                    <div class="radio-item">
+                      <input class="radio" id="s-radio-2" type="radio" name="shipping-shops">
+                      <label for="s-radio-2">Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29</label>
+                    </div>
+                    <div class="radio-item">
+                      <input class="radio" id="s-radio-3" type="radio" name="shipping-shops">
+                      <label for="s-radio-3">Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29</label>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="block">
-                      <input type="radio" name="shipping-address" hidden>
-                      <div class="block__select-icon"></div>
-                      <div class="block__title">Жираф Полосатый</div>
-                      <div class="block__phone">+7 912 345-67-89</div>
-                      <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div><a class="block__edit-address with-svg" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false">
-                         <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.24 2.59c.788-.787 2.142-.786 2.927 0l2.727 2.729c.39.39.606.911.606 1.463 0 .553-.215 1.073-.606 1.464l-12.33 12.23a.707.707 0 01-.302.177l-6.364 1.82a.704.704 0 01-.871-.871l1.818-6.37a.71.71 0 01.178-.302L16.24 2.59zm.999 1.012l-1.81 1.825 3.644 3.643 1.826-1.81a.653.653 0 00.192-.465.653.653 0 00-.193-.466L18.17 3.602a.681.681 0 00-.932 0zm-2.801 2.826l-8.225 8.3h.128c.267 0 .51.15.63.388l.472.945 8.314-8.314-1.32-1.319zM8.439 17.057l.944.472c.239.12.39.363.39.63v.128l8.299-8.225-1.32-1.319-8.313 8.314zm-.075 2.389v-.852l-1.429-.714a.705.705 0 01-.315-.315l-.715-1.429h-.85l-.53 1.852 1.987 1.987 1.852-.53zm-4.282.092l-.351 1.232 1.23-.352-.879-.88zm8.871 1.212h7v1.5h-7v-1.5z" fill="#67ADD7"/></svg><span>Редактировать адрес</span></a>
-                    </div>
+                </div>
+              </div>
+              <div class="checkout-block checkout-payment">
+                <div class="checkout-block__title like-h3">Оплата</div>
+                <div class="checkout-block__radios">
+                  <div class="radio-item">
+                    <input class="radio" id="c-radio-4" type="radio" name="payment" checked>
+                    <label for="c-radio-4">Оплата банковской картой онлайн</label>
                   </div>
-                  <div class="col-md-6 add-address">
-                    <p>Или добавьте новый адрес</p><a class="button button_blue-bordered" href="javascript:;" data-fancybox data-src="#addAddressForm" data-touch="false">Добавить адрес</a>
+                  <div class="radio-item">
+                    <input class="radio" id="c-radio-5" type="radio" name="payment">
+                    <label for="c-radio-5">Оплата при получении</label>
                   </div>
                 </div>
               </div>
-              <div class="checkout-shipping-shops">
-                <div class="shops-search">
-                  <autocomplete class="search-city__autocomplete" :search="searchCity" :get-result-value="getCity" :debounce-time="100" placeholder="Введите город" aria-label="Введите город" base-class="search-autocomplete" @submit="submitCity"></autocomplete>
-                </div>
-                <div class="shops-result">
-                  <div class="radio-item">
-                    <input class="radio" id="s-radio-1" type="radio" name="shipping-shops" checked>
-                    <label for="s-radio-1">Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29</label>
-                  </div>
-                  <div class="radio-item">
-                    <input class="radio" id="s-radio-2" type="radio" name="shipping-shops">
-                    <label for="s-radio-2">Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29</label>
-                  </div>
-                  <div class="radio-item">
-                    <input class="radio" id="s-radio-3" type="radio" name="shipping-shops">
-                    <label for="s-radio-3">Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29</label>
-                  </div>
-                </div>
+              <div class="checkout-button d-lg-flex d-none">
+                <button class="button button_blue-filled">Подтвердить и оплатить</button><span>Нажав на  на кнопку «Подтвердить  и оплатить» Вы будете перенаправлены на страницу оплаты</span>
               </div>
-            </div>
-            <div class="checkout-block checkout-payment">
-              <div class="checkout-block__title like-h3">Оплата</div>
-              <div class="checkout-block__radios">
-                <div class="radio-item">
-                  <input class="radio" id="c-radio-4" type="radio" name="payment" checked>
-                  <label for="c-radio-4">Оплата банковской картой онлайн</label>
-                </div>
-                <div class="radio-item">
-                  <input class="radio" id="c-radio-5" type="radio" name="payment">
-                  <label for="c-radio-5">Оплата при получении</label>
-                </div>
-              </div>
-            </div>
-            <div class="checkout-button d-lg-flex d-none"><a class="button button_blue-filled" href="checkout.html">Подтвердить и оплатить</a><span>Нажав на  на кнопку «Подтвердить  и оплатить» Вы будете перенаправлены на страницу оплаты</span></div>
+            </form>
           </div>
           <div class="col-lg-4">
             <div class="order-info">
@@ -471,7 +475,7 @@
       </div>
       <div class="add-address-form modal" id="addAddressForm">
         <div class="modal-title">Добавить адрес</div>
-        <div class="checkout-block">
+        <div class="checkout-block shipping-address">
           <div class="row">
             <div class="col-md-6">
               <div class="input-item">
@@ -659,6 +663,22 @@
         <div class="search-city__item"><a href="">Ярославль</a></div>
       </div>
     </div>
+    <div class="modal" id="callback">
+      <div class="modal-title">Обратный звонок</div>
+      <p>Оставьте Ваши контактные данные и мы Вам перезвоним</p>
+      <form class="form" id="callback-form" @submit.prevent="submit" novalidate>
+        <div class="input-item">
+          <input class="input" type="text" v-model.trim="$v.name.$model" :class="[{invalid : $v.name.$error}, {valid : !this.$v.name.$invalid}]">
+          <label>Имя</label>
+        </div>
+        <div class="input-item">
+          <input class="input" type="tel" v-mask="'+7 ### ###-##-##'" v-model.trim="$v.phone.$model" :class="[{invalid : $v.phone.$error}, {valid : !this.$v.phone.$invalid}]" @focus="phoneFocus">
+          <label>Телефон</label>
+        </div>
+        <button class="form__button button button_blue-filled">Отправить</button>
+      </form>
+      <div class="form__privacy">Отправляя форму, вы принимаете <a class="link" href="">Условия пользовательского соглашения </a>«Alexander Bogdanov».</div>
+    </div>
     <div class="auth-form modal" id="auth-form">
       <div class="auth-form__type">
         <div class="modal-title active" data-form="login">Вход</div>
@@ -734,7 +754,17 @@
         <div class="form__back"><a class="link" href="javascript:;" data-fancybox data-src="#auth-form">Я вспомнил пароль</a></div>
       </form>
     </div>
-    <div class="subscribe-success modal" id="subscribe-success">
+    <div class="modal-success modal" id="callback-success">
+      <div class="modal-thumb"> 
+        <picture>
+          <source srcset="images/form-success.webp" type="image/webp"><img src="images/form-success.png" alt="">
+        </picture>
+      </div>
+      <div class="modal-title">Заявка отправлена</div>
+      <p>Наши менеджеры скоро Вам перезвонят</p>
+      <div class="modal-close button button_blue-filled">Хорошо</div>
+    </div>
+    <div class="modal-success modal" id="subscribe-success">
       <div class="modal-thumb"> 
         <picture>
           <source srcset="images/form-success.webp" type="image/webp"><img src="images/form-success.png" alt="">
@@ -754,6 +784,7 @@
     <script src="js/vue.autocomplete.min.js" defer></script>
     <script src="js/vue.validators.min.js" defer></script>
     <script src="js/vue.vuelidate.min.js" defer></script>
-    <script src="js/scripts.js?v0.3.0" defer></script>
+    <script src="js/vue.v-mask.min.js" defer></script>
+    <script src="js/scripts.js?v0.4.0" defer></script>
   </body>
 </html>

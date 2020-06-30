@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Личный кабинет</title>
+    <title>Адреса доставки - Личный кабинет</title>
     <meta charset="UTF-8">
     <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <script>function svp(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
@@ -238,13 +238,14 @@
       <div class="page-top container">
         <div class="breadcrumbs">
           <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
-          <div class="breadcrumbs__item"><span>Личный кабинет</span></div>
+          <div class="breadcrumbs__item"><a href="lk.html">Личный кабинет</a></div>
+          <div class="breadcrumbs__item"><span>Адреса доставки</span></div>
         </div>
-        <h1 class="page-top__title like-h1">Личный кабинет</h1>
+        <h1 class="page-top__title like-h1">Адреса доставки</h1>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-xl-3">
+          <div class="col-xl-3 d-none d-xl-block">
             <div class="account-sidebar">
               <div class="account-sidebar__header">
                 <!-- .avatar.avatar_letters| ЛТ
@@ -273,11 +274,204 @@
               </div>
             </div>
           </div>
-          <div class="page-account__left col-lg-8 col-xl-9 d-none d-lg-block">
-            <div class="welcome-tile">
-              <div class="welcome-tile__text">
-                <div class="welcome-tile__title like-h2">Мы рады, что вы к нам зашли!</div>
-                <p>Здесь вы можете посмотреть ваши недавние заказы, настроить адрес доставки, а также изменить пароль и основную информацию.</p>
+          <div class="page-account__left col-xl-9">
+            <div class="page-account__block">
+              <div class="shipping-address">
+                <div class="like-h3">Управление адресами</div>
+                <p>Управляйте всеми адресами для доставки по вашему усмотрению (ваш домашний адрес, место работы, адрес родителей и т. д.). Это позволит вам избежать необходимости при каждом следующем заказе заново заполнять адрес для доставки.</p>
+                <form action="">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="text">
+                        <label>Имя</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="text">
+                        <label>Фамилия</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="tel">
+                        <label>Номер телефона</label>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <select name="" data-placeholder="Область/Район">
+                          <option></option>
+                          <option value="asd1">asd1</option>
+                          <option value="asd2">asd2</option>
+                          <option value="asd3">asd3</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <select name="" data-placeholder="Населенный пункт">
+                          <option></option>
+                          <option value="asd">asd</option>
+                          <option value="asd">asd</option>
+                          <option value="asd">asd</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="text">
+                        <label>Улица/Переулок</label>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-6">
+                      <div class="inputs__house-num">
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>№ дома/корпуса</label>
+                        </div>
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>№ квартиры</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="input-item">
+                        <input class="input" type="text">
+                        <label>Почтовый индекс</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-item">
+                    <input class="checkbox" id="setAddressDefault" type="checkbox">
+                    <label for="setAddressDefault">Сделать адресом по умолчанию</label>
+                  </div>
+                  <button class="button button_blue-filled">Добавить адрес</button>
+                </form>
+              </div><br>
+              <!-- другая страница--><br>
+              <div class="shipping-address">
+                <div class="like-h3">Управление адресами</div>
+                <p>Управляйте всеми адресами для доставки по вашему усмотрению (ваш домашний адрес, место работы, адрес родителей и т. д.). Это позволит вам избежать необходимости при каждом следующем заказе заново заполнять адрес для доставки.</p><a class="button button_blue-filled" href="">Добавить адрес</a>
+                <div class="shipping-address-saved">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="block checked">
+                        <div class="block__edit-icons"><a class="edit-icon ab-i-edit" href=""></a><a class="edit-icon ab-i-cart-remove" href=""></a></div>
+                        <div class="block__title">Жираф Полосатый</div>
+                        <div class="block__phone">+7 912 345-67-89</div>
+                        <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div>
+                        <div class="block__edit-address">
+                          <input class="checkbox" id="setAddressDefault1" type="radio" name="saved-def">
+                          <label for="setAddressDefault1">Сделать адресом по умолчанию</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="block">
+                        <div class="block__edit-icons"><a class="edit-icon ab-i-edit" href=""></a><a class="edit-icon ab-i-cart-remove" href=""></a></div>
+                        <div class="block__title">Жираф Полосатый</div>
+                        <div class="block__phone">+7 912 345-67-89</div>
+                        <div class="block__address">г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</div>
+                        <div class="block__edit-address">
+                          <input class="checkbox" id="setAddressDefault2" type="radio" name="saved-def">
+                          <label for="setAddressDefault2">Сделать адресом по умолчанию</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <!-- другая страница--><br>
+              <div class="shipping-address">
+                <div class="page-account__back"><a class="back-arrow" href="">
+                    <svg width="19" height="15" fill="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 15l1.225-1.313-4.9-5.25H19V6.563H4.075l4.9-5.25L7.75 0l-7 7.5 7 7.5z"/></svg>Вернуться назад</a></div>
+                <div class="like-h3">Изменить адрес</div>
+                <p>Если вы хотите изменить адрес для доставки, связанный с вашим аккаунтом, обновите поля ниже.</p>
+                <div class="shipping-address">
+                  <form action="">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>Имя</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>Фамилия</label>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-item">
+                          <input class="input" type="tel">
+                          <label>Номер телефона</label>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-item">
+                          <select name="" data-placeholder="Область/Район">
+                            <option></option>
+                            <option value="asd1">asd1</option>
+                            <option value="asd2">asd2</option>
+                            <option value="asd3">asd3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-item">
+                          <select name="" data-placeholder="Населенный пункт">
+                            <option></option>
+                            <option value="asd">asd</option>
+                            <option value="asd">asd</option>
+                            <option value="asd">asd</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xl-6 col-lg-12 col-md-6">
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>Улица/Переулок</label>
+                        </div>
+                      </div>
+                      <div class="col-xl-6 col-lg-12 col-md-6">
+                        <div class="inputs__house-num">
+                          <div class="input-item">
+                            <input class="input" type="text">
+                            <label>№ дома/корпуса</label>
+                          </div>
+                          <div class="input-item">
+                            <input class="input" type="text">
+                            <label>№ квартиры</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="input-item">
+                          <input class="input" type="text">
+                          <label>Почтовый индекс</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-item">
+                      <input class="checkbox" id="setAddressDefault3" type="checkbox">
+                      <label for="setAddressDefault3">Сделать адресом по умолчанию</label>
+                    </div>
+                  </form>
+                  <div class="shipping-address__buttons">
+                    <button class="button button_blue-filled">Изменить адрес</button>
+                    <button class="button button_blue-bordered">Удалить адрес</button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

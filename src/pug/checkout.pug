@@ -32,160 +32,159 @@ block content
                 .promocode
                     a.promocode__link.link-underline(href="") Применен промокод
 
-
-                .checkout-block
-                    .checkout-block__title.like-h3 Контактная информация
-                    
-                    .checkout-block__inputs.row
-                        .col-md-6
-                            .input-item
-                                input(type="text").input
-                                label Имя
-                        .col-md-6
-                            .input-item
-                                input(type="tel").input
-                                label Номер телефона
-                        .col-md-6
-                            .input-item
-                                input(type="text").input
-                                label Фамилия
-                        .col-md-6
-                            .input-item
-                                input(type="email").input
-                                label Email
-
-                .checkout-block
-                    .checkout-block__title-flex
-                        .checkout-block__title.like-h3 Способ доставки
-                        a.shipping-zones-link.link-underline(href="") Время доставки зависит от зоны
-                    
-                    .checkout-block__radios
-                        .radio-item
-                            input#c-radio-1(type="radio", name="shipping", checked).radio
-                            label(for="c-radio-1") Самовывоз из розничного магазина
-                        .radio-item
-                            input#c-radio-2(type="radio", name="shipping").radio
-                            label(for="c-radio-2") Курьерская служба
-                        .radio-item
-                            input#c-radio-3(type="radio", name="shipping").radio
-                            label(for="c-radio-3") Почта России
-
-                .checkout-block.checkout-shipping
-                    .checkout-block__title.like-h3 Где вы хотите получить свой заказ?
-                    
-                    .checkout-block__inputs
-                        .row
+                form(action="")
+                    .checkout-block
+                        .checkout-block__title.like-h3 Контактная информация
+                        
+                        .checkout-block__inputs.row
                             .col-md-6
                                 .input-item
                                     input(type="text").input
                                     label Имя
                             .col-md-6
                                 .input-item
+                                    input(type="tel").input
+                                    label Номер телефона
+                            .col-md-6
+                                .input-item
                                     input(type="text").input
                                     label Фамилия
                             .col-md-6
                                 .input-item
-                                    input(type="tel").input
-                                    label Номер телефона
+                                    input(type="email").input
+                                    label Email
+
+                    .checkout-block
+                        .checkout-block__title-flex
+                            .checkout-block__title.like-h3 Способ доставки
+                            a.shipping-zones-link.link-underline(href="") Время доставки зависит от зоны
                         
-                        hr
-                        .row
-                            .col-md-6
-                                .input-item
-                                    select(name="", data-placeholder="Область/Район")
-                                        option
-                                        option(value="asd1") asd1
-                                        option(value="asd2") asd2
-                                        option(value="asd3") asd3
-                            .col-md-6
-                                .input-item
-                                    select(name="", data-placeholder="Населенный пункт")
-                                        option
-                                        option(value="asd") asd
-                                        option(value="asd") asd
-                                        option(value="asd") asd
-                            .col-xl-6.col-lg-12.col-md-6
-                                .input-item
-                                    input(type="text").input
-                                    label Улица/Переулок
-                            .col-xl-6.col-lg-12.col-md-6
-                                .inputs__house-num
+                        .checkout-block__radios
+                            .radio-item
+                                input#c-radio-1(type="radio", name="shipping", checked).radio
+                                label(for="c-radio-1") Самовывоз из розничного магазина
+                            .radio-item
+                                input#c-radio-2(type="radio", name="shipping").radio
+                                label(for="c-radio-2") Курьерская служба
+                            .radio-item
+                                input#c-radio-3(type="radio", name="shipping").radio
+                                label(for="c-radio-3") Почта России
+
+                    .checkout-block.shipping-address
+                        .checkout-block__title.like-h3 Где вы хотите получить свой заказ?
+                        
+                        .checkout-block__inputs
+                            .row
+                                .col-md-6
                                     .input-item
                                         input(type="text").input
-                                        label № дома/корпуса
+                                        label Имя
+                                .col-md-6
                                     .input-item
                                         input(type="text").input
-                                        label № квартиры
-                            .col-md-6
-                                .input-item
-                                    input(type="text").input
-                                    label Почтовый индекс
-                        .input-item
-                            input#setAddressDefault(type="checkbox").checkbox
-                            label(for="setAddressDefault") Сделать адресом по умолчанию
+                                        label Фамилия
+                                .col-md-6
+                                    .input-item
+                                        input(type="tel").input
+                                        label Номер телефона
+                            hr
+                            .row
+                                .col-md-6
+                                    .input-item
+                                        select(name="", data-placeholder="Область/Район")
+                                            option
+                                            option(value="asd1") asd1
+                                            option(value="asd2") asd2
+                                            option(value="asd3") asd3
+                                .col-md-6
+                                    .input-item
+                                        select(name="", data-placeholder="Населенный пункт")
+                                            option
+                                            option(value="asd") asd
+                                            option(value="asd") asd
+                                            option(value="asd") asd
+                                .col-xl-6.col-lg-12.col-md-6
+                                    .input-item
+                                        input(type="text").input
+                                        label Улица/Переулок
+                                .col-xl-6.col-lg-12.col-md-6
+                                    .inputs__house-num
+                                        .input-item
+                                            input(type="text").input
+                                            label № дома/корпуса
+                                        .input-item
+                                            input(type="text").input
+                                            label № квартиры
+                                .col-md-6
+                                    .input-item
+                                        input(type="text").input
+                                        label Почтовый индекс
+                            .input-item
+                                input#setAddressDefault(type="checkbox").checkbox
+                                label(for="setAddressDefault") Сделать адресом по умолчанию
 
-                    .checkout-shipping-saved
-                        .row
-                            .col-md-6
-                                .block.checked
-                                    input(type="radio", hidden)
-                                    .block__select-icon
-                                    .block__title Жираф Полосатый
+                        .shipping-address-saved.shipping-saved-js
+                            .row
+                                .col-md-6
+                                    .block.checked
+                                        input(type="radio", hidden)
+                                        .block__select-icon
+                                        .block__title Жираф Полосатый
 
-                                    .block__phone +7 912 345-67-89
+                                        .block__phone +7 912 345-67-89
 
-                                    .block__address г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки
+                                        .block__address г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки
+                                        
+                                        .block__edit-address
+                                            a(href="javascript:;", data-fancybox, data-src="#addAddressForm", data-touch="false").with-svg 
+                                                i.ab-i-edit
+                                                span Редактировать адрес
+                                .col-md-6
+                                    .block
+                                        input(type="radio", name="shipping-address", hidden)
+                                        .block__select-icon
+                                        .block__title Жираф Полосатый
 
-                                    a(href="javascript:;", data-fancybox, data-src="#addAddressForm", data-touch="false").block__edit-address.with-svg 
-                                        include ../svg-min/checkout-edit-address.svg
-                                        span Редактировать адрес
-                            .col-md-6
-                                .block
-                                    input(type="radio", name="shipping-address", hidden)
-                                    .block__select-icon
-                                    .block__title Жираф Полосатый
+                                        .block__phone +7 912 345-67-89
 
-                                    .block__phone +7 912 345-67-89
+                                        .block__address г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки
+                                        .block__edit-address
+                                            a(href="javascript:;", data-fancybox, data-src="#addAddressForm", data-touch="false").with-svg 
+                                                i.ab-i-edit
+                                                span Редактировать адрес
+                                .col-md-6.add-address
+                                    p Или добавьте новый адрес
+                                    a(href="javascript:;", data-fancybox, data-src="#addAddressForm", data-touch="false").button.button_blue-bordered Добавить адрес
 
-                                    .block__address г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки
+                        .shipping-address-shops
+                            .shops-search
+                                autocomplete(:search="searchCity", :get-result-value="getCity", :debounce-time="100", placeholder="Введите город", aria-label="Введите город", base-class="search-autocomplete", @submit="submitCity").search-city__autocomplete
 
-                                    a(href="javascript:;", data-fancybox, data-src="#addAddressForm", data-touch="false").block__edit-address.with-svg 
-                                        include ../svg-min/checkout-edit-address.svg
-                                        span Редактировать адрес
-                            .col-md-6.add-address
-                                p Или добавьте новый адрес
-                                a(href="javascript:;", data-fancybox, data-src="#addAddressForm", data-touch="false").button.button_blue-bordered Добавить адрес
+                            .shops-result
+                                .radio-item
+                                    input#s-radio-1(type="radio", name="shipping-shops", checked).radio
+                                    label(for="s-radio-1") Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29
+                                .radio-item
+                                    input#s-radio-2(type="radio", name="shipping-shops").radio
+                                    label(for="s-radio-2") Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29
+                                .radio-item
+                                    input#s-radio-3(type="radio", name="shipping-shops").radio
+                                    label(for="s-radio-3") Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29
 
-                    .checkout-shipping-shops
-                        .shops-search
-                            autocomplete(:search="searchCity", :get-result-value="getCity", :debounce-time="100", placeholder="Введите город", aria-label="Введите город", base-class="search-autocomplete", @submit="submitCity").search-city__autocomplete
-
-                        .shops-result
+                    .checkout-block.checkout-payment
+                        .checkout-block__title.like-h3 Оплата
+                        
+                        .checkout-block__radios
                             .radio-item
-                                input#s-radio-1(type="radio", name="shipping-shops", checked).radio
-                                label(for="s-radio-1") Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29
+                                input#c-radio-4(type="radio", name="payment", checked).radio
+                                label(for="c-radio-4") Оплата банковской картой онлайн
                             .radio-item
-                                input#s-radio-2(type="radio", name="shipping-shops").radio
-                                label(for="s-radio-2") Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29
-                            .radio-item
-                                input#s-radio-3(type="radio", name="shipping-shops").radio
-                                label(for="s-radio-3") Магазин «BGD-Bogdanov», ТРЦ «Ладья», м. Митино, ул. Дубравная, 34/29
+                                input#c-radio-5(type="radio", name="payment").radio
+                                label(for="c-radio-5") Оплата при получении
 
-
-                .checkout-block.checkout-payment
-                    .checkout-block__title.like-h3 Оплата
-                    
-                    .checkout-block__radios
-                        .radio-item
-                            input#c-radio-4(type="radio", name="payment", checked).radio
-                            label(for="c-radio-4") Оплата банковской картой онлайн
-                        .radio-item
-                            input#c-radio-5(type="radio", name="payment").radio
-                            label(for="c-radio-5") Оплата при получении
-
-                .checkout-button.d-lg-flex.d-none
-                    a(href=order_link).button.button_blue-filled Подтвердить и оплатить
-                    span Нажав на  на кнопку «Подтвердить  и оплатить» Вы будете перенаправлены на страницу оплаты
+                    .checkout-button.d-lg-flex.d-none
+                        button.button.button_blue-filled Подтвердить и оплатить
+                        span Нажав на  на кнопку «Подтвердить  и оплатить» Вы будете перенаправлены на страницу оплаты
 
 
             .col-lg-4
@@ -211,7 +210,7 @@ block content
 
     #addAddressForm.add-address-form.modal
         .modal-title Добавить адрес
-        .checkout-block
+        .checkout-block.shipping-address
             .row
                 .col-md-6
                     .input-item

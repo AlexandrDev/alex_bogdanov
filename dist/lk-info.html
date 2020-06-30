@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <title>Личный кабинет</title>
+    <title>Личные данные - Личный кабинет</title>
     <meta charset="UTF-8">
     <meta id="mvp" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <script>function svp(){let e=screen.width<=360?"width=360,user-scalable=no":"width=device-width,initial-scale=1,maximum-scale=1";document.getElementById("mvp").setAttribute("content",e)}svp();window.onresize=function(n){svp()}</script>
@@ -238,13 +238,14 @@
       <div class="page-top container">
         <div class="breadcrumbs">
           <div class="breadcrumbs__item"><a href="homepage.html">Главная</a></div>
-          <div class="breadcrumbs__item"><span>Личный кабинет</span></div>
+          <div class="breadcrumbs__item"><a href="lk.html">Личный кабинет</a></div>
+          <div class="breadcrumbs__item"><span>Личные данные</span></div>
         </div>
-        <h1 class="page-top__title like-h1">Личный кабинет</h1>
+        <h1 class="page-top__title like-h1">Личные данные</h1>
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-xl-3">
+          <div class="col-xl-3 d-none d-xl-block">
             <div class="account-sidebar">
               <div class="account-sidebar__header">
                 <!-- .avatar.avatar_letters| ЛТ
@@ -273,12 +274,106 @@
               </div>
             </div>
           </div>
-          <div class="page-account__left col-lg-8 col-xl-9 d-none d-lg-block">
-            <div class="welcome-tile">
-              <div class="welcome-tile__text">
-                <div class="welcome-tile__title like-h2">Мы рады, что вы к нам зашли!</div>
-                <p>Здесь вы можете посмотреть ваши недавние заказы, настроить адрес доставки, а также изменить пароль и основную информацию.</p>
-              </div>
+          <div class="page-account__left col-xl-9">
+            <div class="personal-info page-account__block">
+              <div class="like-h3">Персональная информация</div>
+              <p>Вы в любой момент можете обновить вашу учетную запись и внести любые изменения в приведенные ниже данные.</p>
+              <form action="">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="input-item">
+                      <input class="input" type="text">
+                      <label>Имя</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-item">
+                      <input class="input" type="text">
+                      <label>Фамилия</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-item">
+                      <input class="input" type="tel">
+                      <label>Номер телефона</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-item">
+                      <input class="input" type="email">
+                      <label>Email</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="input-item personal-info__birthday">
+                      <div class="birthday__label">Дата рождения (дд/мм/гггг)</div>
+                      <div class="birthday__day">
+                        <select name="" data-placeholder="День">
+                          <option></option>
+                          <option value="asd1">31</option>
+                          <option value="asd2">asd2</option>
+                          <option value="asd3">asd3</option>
+                        </select>
+                      </div>
+                      <div class="birthday__mounth">
+                        <select name="" data-placeholder="Месяц">
+                          <option></option>
+                          <option value="asd1">Сентябрь</option>
+                          <option value="asd2">asd2</option>
+                          <option value="asd3">asd3</option>
+                        </select>
+                      </div>
+                      <div class="birthday__year">
+                        <select name="" data-placeholder="Год">
+                          <option></option>
+                          <option value="asd1">2020</option>
+                          <option value="asd2">asd2</option>
+                          <option value="asd3">asd3</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="personal-info__sex radio-group">
+                      <div class="radio-group__title">Ваш пол</div>
+                      <div class="radio-item">
+                        <input class="radio" id="c-radio-1" type="radio" name="sex" checked>
+                        <label for="c-radio-1">Женский</label>
+                      </div>
+                      <div class="radio-item">
+                        <input class="radio" id="c-radio-2" type="radio" name="sex">
+                        <label for="c-radio-2">Мужской</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="button button_blue-filled">Сохранить изменения</button>
+              </form>
+            </div>
+            <div class="change-password">
+              <div class="like-h3">Изменение пароля</div>
+              <p>Пароль должен содержать не менее восьми символов. Это может быть любая комбинация букв латинского алфавита, цифр и других символов.</p>
+              <form action="">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-item">
+                      <div class="show-password ab-i-password"></div>
+                      <input class="input input_password" type="password" v-model.trim="$v.oldPassword.$model" :class="[{invalid : $v.oldPassword.$error}]">
+                      <label>Текущий пароль</label>
+                    </div>
+                    <div class="input-item">
+                      <div class="show-password ab-i-password"></div>
+                      <input class="input input_password" type="password" v-model.trim="$v.newPassword.$model" :class="[{invalid : $v.newPassword.$error}]">
+                      <label>Новый пароль</label>
+                    </div>
+                    <div class="input-item">
+                      <input class="input input_password" type="password" v-model.trim="$v.repeatPassword.$model" :class="[{invalid : $v.repeatPassword.$error}]">
+                      <label>Повторите пароль</label>
+                    </div>
+                    <button class="button button_blue-filled">Сохранить изменения</button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

@@ -6,7 +6,12 @@ block variables
 - var cart_link = 'cart.html'
 - var order_link = 'checkout.html'
 - var lk_link = 'lk.html'
-- var version = 'v0.3.0'
+- var lk_info = 'lk-info.html'
+- var lk_orders = 'lk-orders.html'
+- var lk_wishlist = 'lk-wishlist.html'
+- var lk_addresses = 'lk-addresses.html'
+- var lk_subscribes = 'lk-subscribes.html'
+- var version = 'v0.4.0'
 
 doctype html
 html(lang="ru")
@@ -43,5 +48,6 @@ html(lang="ru")
         script(src="js/vue.autocomplete.min.js", defer)
         script(src="js/vue.validators.min.js", defer)
         script(src="js/vue.vuelidate.min.js", defer)
+        script(src="js/vue.v-mask.min.js", defer)
         script(src="js/scripts.js?" + version, defer)
         block scripts

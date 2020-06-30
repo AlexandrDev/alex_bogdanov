@@ -1,0 +1,54 @@
+extends ./components/_layout.pug
+block variables
+    - var title = 'Оформленные заказы - Личный кабинет'
+    - var mainCls = 'page-account'
+
+block content
+    .page-top.container
+        .breadcrumbs
+            .breadcrumbs__item
+                a(href=home_link) Главная
+            .breadcrumbs__item
+                a(href=lk_link) Личный кабинет
+            .breadcrumbs__item
+                span Оформленные заказы
+        h1.page-top__title.like-h1 Оформленные заказы
+
+
+    .container
+        .row
+            .col-xl-3.d-none.d-xl-block
+                include ./components/_account-sidebar
+
+            .page-account__left.col-xl-9
+                .like-h3 Оформленные заказы
+                p Узнавайте о состоянии осуществленных вами заказов. Если заказы отправлены по вашему адресу, то вы можете посмотреть ссылки для их отслеживания.
+
+
+                .orders.row
+                    .orders__col.col-lg-6
+                        .order-item
+                            .order-item__gallery
+                            .order-item__info
+                                .order-item__number № 430510846
+                                .order-item__details
+                                    p 15 мая 2020
+                                    p 222 000 ₽
+                                .order-status Ждет оплаты
+
+                            a(href="").order-item__view
+
+                            
+
+                .order-detail
+                    .page-account__back
+                        a(href="").back-arrow
+                            include ../svg-min/back-arrow-checkStock.svg
+                            | Вернуться назад
+                    .order-detail__title.like-h3 Детали заказа № 150010846 от 3 апреля 2018
+                        .order-status Ждет оплаты
+                    
+                    .order-detail__
+
+                    .order-detail__table
+
