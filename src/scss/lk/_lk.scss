@@ -1,22 +1,3 @@
-.change-password {
-    &__info {
-        margin-top: 25px;
-        padding-left: 30px;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        color: #4E5B67;
-    
-        @include laptop {
-            padding-left: 0;
-        }
-    }
-
-    .button {
-        margin-top: 25px;
-    }
-}
-
 .page-account {
     &__left {
         padding-top: 50px;
@@ -27,10 +8,15 @@
     }
 
     .back-arrow {
-        display: inline-block;
-        color: #4E5B67;
+        display: inline-flex;
+        align-items: center;
+        color: #67add7;
         cursor: pointer;
         transition: color .16s ease;
+        
+        svg {
+            fill: #67add7;
+        }
         
         &:hover {
             color: $blue;
@@ -41,9 +27,13 @@
         }
 
         svg {
-            margin-top: -2px;
+            margin-top: -1px;
             margin-right: 15px;
         }
+    }
+
+    .italic {
+        font-style: italic;
     }
 
 
@@ -172,3 +162,39 @@
     }
 }
 
+.change-password {
+    &__info {
+        margin-top: 25px;
+        padding-left: 30px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #4E5B67;
+    
+        @include laptop {
+            padding-left: 0;
+        }
+    }
+
+    .button {
+        margin-top: 25px;
+    }
+}
+
+.subscribe-settings {
+    margin-bottom: 40px;
+
+    .toggle-group {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .input-item {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .button {
+        margin-top: 10px;
+    }
+}

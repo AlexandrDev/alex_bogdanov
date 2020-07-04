@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.4.0">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.5.0">
   </head>
   <body>
     <header>
@@ -274,7 +274,43 @@
               </div>
             </div>
           </div>
-          <div class="page-account__left col-xl-9"></div>
+          <div class="page-account__left col-xl-9">
+            <div class="like-h3">События</div>
+            <p>Выберите, какая информация вас интересует, и каким способом Вы хотите получать наши новости. <br>Если Вы хотите прекратить получать сообщения, то снимите все флажки.</p>
+            <form class="subscribe-settings" action="">
+              <div class="toggle-group">
+                <div class="toggle-group__title">Канал уведомлений:</div>
+                <div class="toggle">
+                  <input type="checkbox">
+                  <div class="toggle__item"></div>
+                  <div class="toggle__label">SMS</div>
+                </div>
+                <div class="toggle">
+                  <input type="checkbox">
+                  <div class="toggle__item"></div>
+                  <div class="toggle__label">E-mail</div>
+                </div>
+              </div>
+              <div class="input-item">
+                <input class="checkbox" id="sub-type1" type="checkbox">
+                <label for="sub-type1">Новости и акции</label>
+              </div>
+              <div class="input-item">
+                <input class="checkbox" id="sub-type2" type="checkbox">
+                <label for="sub-type2">Мероприятия</label>
+              </div>
+              <div class="input-item">
+                <input class="checkbox" id="sub-type3" type="checkbox">
+                <label for="sub-type3">Специальные предложения</label>
+              </div>
+              <div class="input-item">
+                <input class="checkbox" id="sub-type4" type="checkbox">
+                <label for="sub-type4">Новые коллекции</label>
+              </div>
+              <button class="button button_blue-filled">Сохранить изменения</button>
+            </form>
+            <p class="italic">Если Вы откажетесь от какой-либо подписки, имейте ввиду, что в течение последующих 48 часов Вы ещё можете получить информационный e-mail.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -511,6 +547,6 @@
     <script src="js/vue.validators.min.js" defer></script>
     <script src="js/vue.vuelidate.min.js" defer></script>
     <script src="js/vue.v-mask.min.js" defer></script>
-    <script src="js/scripts.js?v0.4.0" defer></script>
+    <script src="js/scripts.js?v0.5.0" defer></script>
   </body>
 </html>

@@ -26,17 +26,62 @@ block content
 
 
                 .orders.row
-                    .orders__col.col-lg-6
+                    .orders__col.col-md-6
                         .order-item
-                            .order-item__gallery
+                            a(href="").order-item__gallery
+                                .item
+                                    img(src="images/dev/prod-thumb3.png", alt="").item__img
+                                .item
+                                    img(src="images/dev/prod-thumb2.png", alt="").item__img
+                                .item
+                                    img(src="images/dev/prod-thumb.png", alt="").item__img
+                                .item.item_more
+                                    .more-count +2
+
                             .order-item__info
-                                .order-item__number № 430510846
+                                a(href="").order-item__number № 430510846
                                 .order-item__details
                                     p 15 мая 2020
                                     p 222 000 ₽
-                                .order-status Ждет оплаты
+                                .order-status.wait Ждет оплаты
+                                // .order-status.assemble В сборке
+                                // .order-status.transfer В пути
+                                // .order-status.delivered Доставлено
+                                // .order-status.canceled Отменен
 
-                            a(href="").order-item__view
+                                a(href="").order-item__view.link-detailed
+                    .orders__col.col-md-6
+                        .order-item
+                            a(href="").order-item__gallery
+                                .item
+                                    img(src="images/dev/prod-thumb3.png", alt="").item__img
+                                .item
+                                    img(src="images/dev/prod-thumb2.png", alt="").item__img
+                                .item
+                                .item
+
+                            .order-item__info
+                                a(href="").order-item__number № 430510846
+                                .order-item__details
+                                    p 15 мая 2020
+                                    p 222 000 ₽
+                                .order-status.assemble В сборке
+
+                                .order-item__view
+                                    a(href="").link-detailed
+                    .orders__col.col-md-6
+                        .order-item
+                            a(href="").order-item__image
+                                img(src="images/dev/prod-thumb3.png", alt="")
+
+                            .order-item__info
+                                a(href="").order-item__number № 430510846
+                                .order-item__details
+                                    p 15 мая 2020
+                                    p 222 000 ₽
+                                .order-status.delivered Доставлено
+
+                                a(href="").order-item__view.link-detailed
 
                             
 
@@ -44,11 +89,67 @@ block content
                     .page-account__back
                         a(href="").back-arrow
                             include ../svg-min/back-arrow-checkStock.svg
-                            | Вернуться назад
-                    .order-detail__title.like-h3 Детали заказа № 150010846 от 3 апреля 2018
-                        .order-status Ждет оплаты
+                            span Вернуться назад
+                    .order-detail__title.like-h3 
+                        span Детали заказа № 150010846 от 3 апреля 2018
+                        .order-status.assemble В сборке
                     
-                    .order-detail__
+                    .order-detail__main-info.row
+                        .main-info.col-lg-4.col-md-6
+                            .main-info__title Получатель
+                            p Жираф Полосатый, +7 912 345-67-89
+                        .main-info.col-lg-6.col-md-6
+                            .main-info__title Способ оплаты
+                            p Онлайн оплата
+                        .main-info.col-lg-4.col-md-6
+                            .main-info__title Способ доставки
+                            p Курьерская доставка
+                        .main-info.col-lg-6.col-md-6
+                            .main-info__title Адрес доставки
+                            p г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки
+
 
                     .order-detail__table
+                        .title Состав заказа
+
+                        .order-table
+                            .order-table__header
+                                .col-image Товар
+                                .col-name Описание
+                                .col-sku Артикул
+                                .col-size Размер
+                                .col-quantity Количество
+                                .col-price Цена
+                            .order-table__item
+                                .col-image 
+                                    img(src="", alt="").thumbnail
+                                .col-name Блузон «Овация» в две строки
+                                    .m-article Арт. 1234567
+                                .col-sku 1234567
+                                .col-size 
+                                    .m-col-title Размер
+                                    | 46
+                                .col-quantity 
+                                    .m-col-title Кол-во
+                                    | 2
+                                .col-price 
+                                    .m-col-title Цена
+                                    | 14 000 ₽
+                        
+                            .order-table__bottom.row
+                                .order-table__totals.col-lg-4.col-md-5.order-md-2
+                                    .item
+                                        span Товаров: 3
+                                        span 444 598 ₽
+                                    .item
+                                        span Доставка
+                                        span Бесплатно
+                                    .item.item_last
+                                        span Итого
+                                        span 4 598 ₽
+
+                                .col-lg-8.col-md-7.order-md-1
+                                    a(href="").link-detailed Условия возврата и/или обмена
+
+
 

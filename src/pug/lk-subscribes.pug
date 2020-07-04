@@ -21,3 +21,37 @@ block content
                 include ./components/_account-sidebar
 
             .page-account__left.col-xl-9
+                .like-h3 События
+                p Выберите, какая информация вас интересует, и каким способом Вы хотите получать наши новости. 
+                    br 
+                    | Если Вы хотите прекратить получать сообщения, то снимите все флажки.
+
+                form(action="").subscribe-settings
+                    .toggle-group
+                        .toggle-group__title Канал уведомлений:
+                        .toggle
+                            input(type="checkbox")
+                            .toggle__item
+                            .toggle__label SMS
+                        .toggle
+                            input(type="checkbox")
+                            .toggle__item
+                            .toggle__label E-mail
+                    .input-item
+                        input#sub-type1(type="checkbox").checkbox
+                        label(for="sub-type1") Новости и акции
+                    .input-item
+                        input#sub-type2(type="checkbox").checkbox
+                        label(for="sub-type2") Мероприятия
+                    .input-item
+                        input#sub-type3(type="checkbox").checkbox
+                        label(for="sub-type3") Специальные предложения
+                    .input-item
+                        input#sub-type4(type="checkbox").checkbox
+                        label(for="sub-type4") Новые коллекции
+                    
+                    button.button.button_blue-filled Сохранить изменения
+
+                p.italic Если Вы откажетесь от какой-либо подписки, имейте ввиду, что в течение последующих 48 часов Вы ещё можете получить информационный e-mail.
+
+                                

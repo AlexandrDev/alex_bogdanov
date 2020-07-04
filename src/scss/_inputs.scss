@@ -1,6 +1,7 @@
 .input-item {
     position: relative;
     margin-top: 25px;
+    font-size: 0;
     // margin-bottom: 25px;
 
     .show-password {
@@ -202,6 +203,7 @@
     + label {
         position: relative;
         display: inline-flex;
+        font-size: 15px;
         line-height: 22px;
         cursor: pointer;
 
@@ -299,6 +301,94 @@
             background: $blue;
             border-radius: 50%;
         }
+    }
+}
+
+.toggle-group {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    background: #E8F0F6;
+    border: 1px solid #E8F0F6;
+
+    &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        color: #132434;
+        margin-right: 20px;
+    }
+    
+    .toggle:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    @include tablet {
+        &__title {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.toggle {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 20px;
+        opacity: 0;
+        border-radius: 16px;
+        cursor: pointer;
+        z-index: 2;
+
+        &:checked + {
+            .toggle__item {
+                background: #67ADD7;
+
+                &::after {
+                    left: 18px;
+                }
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        width: 36px;
+        height: 20px;
+        background: rgba(78, 91, 103, 0.2);
+        border-radius: 16px;
+        cursor: pointer;
+        transition: background .16s ease;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            border-radius: 50%;
+            background-color: #fff;
+            z-index: 1;
+            transition: all .16s ease;
+        }
+    }
+
+    &__label {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 20px;
+        margin-left: 14px;
     }
 }
 

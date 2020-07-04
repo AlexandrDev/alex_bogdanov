@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap-grid-custom.min.css">
     <link rel="stylesheet" href="css/flickity.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="css/stylesheet.css?v0.4.0">
+    <link rel="stylesheet" href="css/stylesheet.css?v0.5.0">
   </head>
   <body>
     <header>
@@ -278,28 +278,115 @@
             <div class="like-h3">Оформленные заказы</div>
             <p>Узнавайте о состоянии осуществленных вами заказов. Если заказы отправлены по вашему адресу, то вы можете посмотреть ссылки для их отслеживания.</p>
             <div class="orders row">
-              <div class="orders__col col-lg-6">
-                <div class="order-item">
-                  <div class="order-item__gallery"></div>
-                  <div class="order-item__info">
-                    <div class="order-item__number">№ 430510846</div>
+              <div class="orders__col col-md-6">
+                <div class="order-item"><a class="order-item__gallery" href="">
+                    <div class="item"><img class="item__img" src="images/dev/prod-thumb3.png" alt=""></div>
+                    <div class="item"><img class="item__img" src="images/dev/prod-thumb2.png" alt=""></div>
+                    <div class="item"><img class="item__img" src="images/dev/prod-thumb.png" alt=""></div>
+                    <div class="item item_more">
+                      <div class="more-count">+2</div>
+                    </div></a>
+                  <div class="order-item__info"><a class="order-item__number" href="">№ 430510846</a>
                     <div class="order-item__details">
                       <p>15 мая 2020</p>
                       <p>222 000 ₽</p>
                     </div>
-                    <div class="order-status">Ждет оплаты</div>
-                  </div><a class="order-item__view" href=""></a>
+                    <div class="order-status wait">Ждет оплаты</div>
+                    <!-- .order-status.assemble В сборке-->
+                    <!-- .order-status.transfer В пути-->
+                    <!-- .order-status.delivered Доставлено-->
+                    <!-- .order-status.canceled Отменен--><a class="order-item__view link-detailed" href=""></a>
+                  </div>
+                </div>
+              </div>
+              <div class="orders__col col-md-6">
+                <div class="order-item"><a class="order-item__gallery" href="">
+                    <div class="item"><img class="item__img" src="images/dev/prod-thumb3.png" alt=""></div>
+                    <div class="item"><img class="item__img" src="images/dev/prod-thumb2.png" alt=""></div>
+                    <div class="item"></div>
+                    <div class="item"></div></a>
+                  <div class="order-item__info"><a class="order-item__number" href="">№ 430510846</a>
+                    <div class="order-item__details">
+                      <p>15 мая 2020</p>
+                      <p>222 000 ₽</p>
+                    </div>
+                    <div class="order-status assemble">В сборке</div>
+                    <div class="order-item__view"><a class="link-detailed" href=""></a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="orders__col col-md-6">
+                <div class="order-item"><a class="order-item__image" href=""><img src="images/dev/prod-thumb3.png" alt=""></a>
+                  <div class="order-item__info"><a class="order-item__number" href="">№ 430510846</a>
+                    <div class="order-item__details">
+                      <p>15 мая 2020</p>
+                      <p>222 000 ₽</p>
+                    </div>
+                    <div class="order-status delivered">Доставлено</div><a class="order-item__view link-detailed" href=""></a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="order-detail">
-              <div class="page-account__back"><a class="back-arrow" href="">
-                  <svg width="19" height="15" fill="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 15l1.225-1.313-4.9-5.25H19V6.563H4.075l4.9-5.25L7.75 0l-7 7.5 7 7.5z"/></svg>Вернуться назад</a></div>
-              <div class="order-detail__title like-h3">Детали заказа № 150010846 от 3 апреля 2018
-                <div class="order-status">Ждет оплаты</div>
+              <div class="page-account__back"><a class="back-arrow" href=""><svg width="19" height="15" fill="#4E5B67" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 15l1.225-1.313-4.9-5.25H19V6.563H4.075l4.9-5.25L7.75 0l-7 7.5 7 7.5z"/></svg><span>Вернуться назад</span></a></div>
+              <div class="order-detail__title like-h3"> <span>Детали заказа № 150010846 от 3 апреля 2018</span>
+                <div class="order-status assemble">В сборке</div>
               </div>
-              <div class="order-detail__"></div>
-              <div class="order-detail__table"></div>
+              <div class="order-detail__main-info row">
+                <div class="main-info col-lg-4 col-md-6">
+                  <div class="main-info__title">Получатель</div>
+                  <p>Жираф Полосатый, +7 912 345-67-89</p>
+                </div>
+                <div class="main-info col-lg-6 col-md-6">
+                  <div class="main-info__title">Способ оплаты</div>
+                  <p>Онлайн оплата</p>
+                </div>
+                <div class="main-info col-lg-4 col-md-6">
+                  <div class="main-info__title">Способ доставки</div>
+                  <p>Курьерская доставка</p>
+                </div>
+                <div class="main-info col-lg-6 col-md-6">
+                  <div class="main-info__title">Адрес доставки</div>
+                  <p>г. Омск, Омская область, ул. Лопухина, 45/2, 134, на всякий случай адрес в три супердлинные строки</p>
+                </div>
+              </div>
+              <div class="order-detail__table">
+                <div class="title">Состав заказа</div>
+                <div class="order-table">
+                  <div class="order-table__header">
+                    <div class="col-image">Товар</div>
+                    <div class="col-name">Описание</div>
+                    <div class="col-sku">Артикул</div>
+                    <div class="col-size">Размер</div>
+                    <div class="col-quantity">Количество</div>
+                    <div class="col-price">Цена</div>
+                  </div>
+                  <div class="order-table__item">
+                    <div class="col-image"> <img class="thumbnail" src="" alt=""></div>
+                    <div class="col-name">Блузон «Овация» в две строки
+                      <div class="m-article">Арт. 1234567</div>
+                    </div>
+                    <div class="col-sku">1234567</div>
+                    <div class="col-size"> 
+                      <div class="m-col-title">Размер</div>46
+                    </div>
+                    <div class="col-quantity"> 
+                      <div class="m-col-title">Кол-во</div>2
+                    </div>
+                    <div class="col-price"> 
+                      <div class="m-col-title">Цена</div>14 000 ₽
+                    </div>
+                  </div>
+                  <div class="order-table__bottom row">
+                    <div class="order-table__totals col-lg-4 col-md-5 order-md-2">
+                      <div class="item"><span>Товаров: 3</span><span>444 598 ₽</span></div>
+                      <div class="item"><span>Доставка</span><span>Бесплатно</span></div>
+                      <div class="item item_last"><span>Итого</span><span>4 598 ₽</span></div>
+                    </div>
+                    <div class="col-lg-8 col-md-7 order-md-1"><a class="link-detailed" href="">Условия возврата и/или обмена</a></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -538,6 +625,6 @@
     <script src="js/vue.validators.min.js" defer></script>
     <script src="js/vue.vuelidate.min.js" defer></script>
     <script src="js/vue.v-mask.min.js" defer></script>
-    <script src="js/scripts.js?v0.4.0" defer></script>
+    <script src="js/scripts.js?v0.5.0" defer></script>
   </body>
 </html>
