@@ -799,7 +799,7 @@ header.sticky-header {
 }
 
 header.sticky-header .header__top {
-  display: none;
+  margin-top: -40px;
 }
 
 header.sticky-header .header__main {
@@ -808,6 +808,18 @@ header.sticky-header .header__main {
 
 header.sticky-header .header__logo {
   width: 136px;
+}
+
+header.sticky-scroll-show .header__top {
+  transition: margin-top .2s ease;
+}
+
+header.scrollUp {
+  position: fixed;
+}
+
+header.scrollUp .header__top {
+  margin-top: 0;
 }
 
 .header__top {

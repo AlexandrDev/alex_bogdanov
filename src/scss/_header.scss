@@ -12,8 +12,9 @@ header {
         position: fixed;
 
         .header__top {
-            display: none;
-        }
+            margin-top: -40px;
+        }     
+
         .header__main {
             height: 70px;
         }
@@ -22,6 +23,20 @@ header {
         }
     }
 
+    &.sticky-scroll-show {
+        .header__top {
+            transition: margin-top .2s ease;
+        }  
+    }
+
+    &.scrollUp {
+        position: fixed;
+        .header__top {
+            margin-top: 0;
+            
+        }
+    }
+    
     @include desktop {
         position: fixed;
     }
@@ -30,6 +45,7 @@ header {
 .header {
     &__top {
         background: rgba(232, 240, 246, 0.4);
+        
 
         @include desktop {
             display: none;
