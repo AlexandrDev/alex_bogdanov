@@ -3103,6 +3103,12 @@ header.scrollUp .header__top {
   border: 1px solid #67ADD7;
   border-radius: 3px;
   margin-bottom: 30px;
+  transition: all .2s ease;
+}
+
+.loadmore:hover {
+  background: #67ADD7;
+  color: #ffffff;
 }
 
 .loadmore__icon {
@@ -3125,6 +3131,7 @@ header.scrollUp .header__top {
 .pagination .pages {
   grid-area: pages;
   display: flex;
+  justify-content: center;
 }
 
 .pagination .item > a,
@@ -3149,6 +3156,21 @@ header.scrollUp .header__top {
 .pagination .prev,
 .pagination .next {
   line-height: 40px;
+}
+
+.pagination .prev svg,
+.pagination .next svg {
+  transition: all .16s ease;
+}
+
+.pagination .prev:hover a,
+.pagination .next:hover a {
+  color: #67ADD7;
+}
+
+.pagination .prev:hover svg,
+.pagination .next:hover svg {
+  stroke: #67ADD7;
 }
 
 .pagination .prev {
@@ -5056,7 +5078,14 @@ footer {
 .ab-i-refresh::after {
   width: 20px;
   height: 22px;
+  transition: transform 0s ease;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 22' fill='none'%3E%3Cpath d='M19.827 9.758c-.067-.426-.465-.716-.888-.648a.78.78 0 0 0-.644.894c.792 4.695-2.337 9.134-6.988 9.93s-9.06-2.355-9.85-7.036 2.34-9.12 7-9.915a8.51 8.51 0 0 1 7.73 2.67L12.74 6.805c-.406.136-.626.578-.49.987s.575.63.98.495l4.655-1.562a.78.78 0 0 0 .531-.741V1.3a.78.78 0 0 0-.776-.781.78.78 0 0 0-.776.781v2.852a9.94 9.94 0 0 0-14.114.356c-3.8 4.02-3.642 10.382.354 14.206a9.94 9.94 0 0 0 14.114-.356c2.167-2.293 3.134-5.48 2.6-8.6z' fill='%234e5b67'/%3E%3C/svg%3E");
+}
+
+*:hover > .ab-i-refresh::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 22' fill='none'%3E%3Cpath d='M19.827 9.758c-.067-.426-.465-.716-.888-.648a.78.78 0 0 0-.644.894c.792 4.695-2.337 9.134-6.988 9.93s-9.06-2.355-9.85-7.036 2.34-9.12 7-9.915a8.51 8.51 0 0 1 7.73 2.67L12.74 6.805c-.406.136-.626.578-.49.987s.575.63.98.495l4.655-1.562a.78.78 0 0 0 .531-.741V1.3a.78.78 0 0 0-.776-.781.78.78 0 0 0-.776.781v2.852a9.94 9.94 0 0 0-14.114.356c-3.8 4.02-3.642 10.382.354 14.206a9.94 9.94 0 0 0 14.114-.356c2.167-2.293 3.134-5.48 2.6-8.6z' fill='%23ffffff'/%3E%3C/svg%3E");
+  transform: rotate(359deg);
+  transition: transform 1s ease;
 }
 
 .ab-i-password::after {
@@ -5711,6 +5740,10 @@ footer {
     padding-bottom: 60px;
   }
 
+  .page-catalog-common .page-top {
+    margin-bottom: 40px;
+  }
+
   .page-category .page-top {
     margin-bottom: 20px;
   }
@@ -6177,6 +6210,10 @@ footer {
     letter-spacing: 0.025em;
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .page-catalog-common .page-top {
+    margin-bottom: 30px;
   }
 
   .category-sort .mobile-filter-button {

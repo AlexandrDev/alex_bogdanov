@@ -9,6 +9,16 @@
             padding-bottom: 60px;
         }
     }
+
+    .page-top {
+        @include laptop {
+            margin-bottom: 40px;
+        }
+
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .page-category {
@@ -206,6 +216,12 @@
     border: 1px solid #67ADD7;
     border-radius: 3px;
     margin-bottom: 30px;
+    transition: all .2s ease;
+
+    &:hover {
+        background: #67ADD7;
+        color: #ffffff;
+    }
 
     @include laptop {
         margin-bottom: 25px;
@@ -245,6 +261,7 @@
     .pages {
         grid-area: pages;
         display: flex;
+        justify-content: center;
         @include tablet {
             margin-bottom: 10px;
         }
@@ -279,6 +296,20 @@
 
     .prev, .next {
         line-height: 40px;
+
+        svg {
+            transition: all .16s ease;
+        }
+
+        &:hover {
+            a {
+                color: $blue;
+            }
+
+            svg {
+                stroke: $blue;
+            }
+        }
     }
 
     .prev {
