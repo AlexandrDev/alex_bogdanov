@@ -1,10 +1,11 @@
 .main-menu {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     height: 100%;
 
     &__link {
+        height: calc(50% + 12px);
         margin-right: 17px;
         margin-left: 17px;
 
@@ -21,6 +22,15 @@
 
 
 .catalog-menu {
+    cursor: pointer;
+    
+    &:hover > &__dropdown {
+        top: 100% !important;
+        opacity: 1;
+        visibility: visible;
+    }
+
+
     &__dropdown {
         top: 110% !important;
         left: 0;

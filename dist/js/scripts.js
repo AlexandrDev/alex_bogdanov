@@ -35,7 +35,7 @@ $(function() {
             submit() {
                 this.$v.$touch()
                 if (!this.$v.$invalid) {
-                    console.log('submit!')
+                    this.$el.dispatchEvent(new CustomEvent('validationSuccess', { bubbles: true}));
                 }
             }
         }
@@ -62,7 +62,7 @@ $(function() {
                 this.$v.$touch()
                 if (!this.$v.$invalid) {
                     showSuccess()
-                    console.log('submit!')
+                    this.$el.dispatchEvent(new CustomEvent('validationSuccess', { bubbles: true}));
                 }
             }
         }
@@ -86,7 +86,7 @@ $(function() {
             submit() {
                 this.$v.$touch()
                 if (!this.$v.$invalid) {
-                    console.log('submit!')
+                    this.$el.dispatchEvent(new CustomEvent('validationSuccess', { bubbles: true}));
                 }
             }
         }
@@ -106,7 +106,7 @@ $(function() {
             submit() {
                 this.$v.$touch()
                 if (!this.$v.$invalid) {
-                    console.log('submit!')
+                    this.$el.dispatchEvent(new CustomEvent('validationSuccess', { bubbles: true}));
                 }
             }
         }
@@ -130,7 +130,7 @@ $(function() {
             submit() {
                 this.$v.$touch()
                 if (!this.$v.$invalid) {
-                    console.log('submit!')
+                    this.$el.dispatchEvent(new CustomEvent('validationSuccess', { bubbles: true}));
                 }
             }
         }
@@ -148,7 +148,7 @@ $(function() {
             submit() {
                 this.$v.$touch()
                 if (!this.$v.$invalid) {
-                    console.log('submit!')
+                    this.$el.dispatchEvent(new CustomEvent('validationSuccess', { bubbles: true}));
                 }
             }
         }

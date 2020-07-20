@@ -1210,12 +1210,13 @@ header.scrollUp .header__top {
 
 .main-menu {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   height: 100%;
 }
 
 .main-menu__link {
+  height: calc(50% + 12px);
   margin-right: 17px;
   margin-left: 17px;
 }
@@ -1227,6 +1228,16 @@ header.scrollUp .header__top {
   font-size: 16px;
   color: #132434;
   text-transform: uppercase;
+}
+
+.catalog-menu {
+  cursor: pointer;
+}
+
+.catalog-menu:hover > .catalog-menu__dropdown {
+  top: 100% !important;
+  opacity: 1;
+  visibility: visible;
 }
 
 .catalog-menu__dropdown {
