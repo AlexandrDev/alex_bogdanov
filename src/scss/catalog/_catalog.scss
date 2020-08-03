@@ -169,6 +169,8 @@
 .view-type {
     &__item {
         margin-left: 15px;
+        cursor: pointer;
+
         svg {
             display: block;
             transition: all .12s ease;
@@ -181,13 +183,13 @@
             }
         }
 
-        &_3cols {
+        &[data-cols="3"] {
             @include tablet {
                 display: none;
             }
         }
 
-        &_1col {
+        &[data-cols="1"] {
             display: none;
 
             @include tablet {

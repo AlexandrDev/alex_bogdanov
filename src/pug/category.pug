@@ -19,25 +19,26 @@ block content
     
     .category-wrapper.container
         .row
-            .sidebar.col-lg-3.d-none.d-lg-block
-                .categories-list
-                    .categories-list__title Одежда
-                    .categories-list__item
-                        a(href="") Платья
-                    .categories-list__item
-                        a(href="") Блузы и рубашки
-                    .categories-list__item.parent.active
-                        a(href="") Джемперы и кардиганы
-                        .arrow
-                        .categories-list-sub
-                            .categories-list-sub__item.current
-                                a(href="") Свитеры
-                            .categories-list-sub__item
-                                a(href="") Кардиганы
-                    .categories-list__item
-                        a(href="") Юбки
+            .col-lg-3.d-none.d-lg-block
+                .sidebar
+                    .categories-list
+                        .categories-list__title Одежда
+                        .categories-list__item
+                            a(href="") Платья
+                        .categories-list__item
+                            a(href="") Блузы и рубашки
+                        .categories-list__item.parent.active
+                            a(href="") Джемперы и кардиганы
+                            .arrow
+                            .categories-list-sub
+                                .categories-list-sub__item.current
+                                    a(href="") Свитеры
+                                .categories-list-sub__item
+                                    a(href="") Кардиганы
+                        .categories-list__item
+                            a(href="") Юбки
 
-                .categories-list
+                    .categories-list
                     .categories-list__title Аксессуары
                     .categories-list__item
                         a(href="") Палантины
@@ -144,11 +145,11 @@ block content
                         a(href="").order-by__item скидка
                     .view-type
                         span Вид:
-                        a(href="").view-type__item.view-type__item_3cols.active
+                        .view-type__item(data-cols="3")
                             include ../svg-min/view-type-3.svg
-                        a(href="").view-type__item.view-type__item_2cols
+                        .view-type__item(data-cols="2")
                             include ../svg-min/view-type-2.svg
-                        a(href="").view-type__item.view-type__item_1col
+                        .view-type__item(data-cols="1")
                             include ../svg-min/view-type-1.svg
 
                 .category-items.row

@@ -170,6 +170,7 @@
         
         .product-card {
             &__thumb {
+                flex: 1 0 85px;
                 width: 85px;
                 height: 127px;
                 margin-right: 20px;

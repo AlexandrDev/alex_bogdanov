@@ -46,9 +46,18 @@ block content
                     .product-info
                         .product-info__top
                             .product-info__article Арт. 12365478
-                            a(href="").share.with-svg
-                                include ../svg-min/share.svg
-                                | Поделиться
+                            .share-wrapper
+                                a(href="", data-toggle="dropdown").share.with-svg
+                                    include ../svg-min/share.svg
+                                    | Поделиться
+                                .share__dropdown.dropdown-menu
+                                    a(href="").share__item.ab-i-fb
+                                    a(href="").share__item.ab-i-twitter
+                                    a(href="").share__item.ab-i-pinterest
+                                    a(href="").share__item.ab-i-vk
+                                    a(href="").share__item.ab-i-link
+                                    
+
                             
                         h1.like-h1 Платье «Зазеркалье» в две строки
                         

@@ -246,21 +246,22 @@
       </div>
       <div class="category-wrapper container">
         <div class="row">
-          <div class="sidebar col-lg-3 d-none d-lg-block">
-            <div class="categories-list">
-              <div class="categories-list__title">Одежда</div>
-              <div class="categories-list__item"><a href="">Платья</a></div>
-              <div class="categories-list__item"><a href="">Блузы и рубашки</a></div>
-              <div class="categories-list__item parent active"><a href="">Джемперы и кардиганы</a>
-                <div class="arrow"></div>
-                <div class="categories-list-sub">
-                  <div class="categories-list-sub__item current"><a href="">Свитеры</a></div>
-                  <div class="categories-list-sub__item"><a href="">Кардиганы</a></div>
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="sidebar">
+              <div class="categories-list">
+                <div class="categories-list__title">Одежда</div>
+                <div class="categories-list__item"><a href="">Платья</a></div>
+                <div class="categories-list__item"><a href="">Блузы и рубашки</a></div>
+                <div class="categories-list__item parent active"><a href="">Джемперы и кардиганы</a>
+                  <div class="arrow"></div>
+                  <div class="categories-list-sub">
+                    <div class="categories-list-sub__item current"><a href="">Свитеры</a></div>
+                    <div class="categories-list-sub__item"><a href="">Кардиганы</a></div>
+                  </div>
                 </div>
+                <div class="categories-list__item"><a href="">Юбки</a></div>
               </div>
-              <div class="categories-list__item"><a href="">Юбки</a></div>
-            </div>
-            <div class="categories-list">
+              <div class="categories-list"></div>
               <div class="categories-list__title">Аксессуары</div>
               <div class="categories-list__item"><a href="">Палантины</a></div>
               <div class="categories-list__item"><a href="">Снуды</a></div>
@@ -377,7 +378,11 @@
             </div>
             <div class="category-sort"><a class="mobile-filter-button" href="javascript:;" data-fancybox data-src="#category-filter" data-touch="false">Отфильтровать и упорядочить</a>
               <div class="order-by"><span>Упорядочить</span><a class="order-by__item default" href="">по умолчанию</a><a class="order-by__item asc selected" href="">новинки</a><a class="order-by__item" href="">популярность</a><a class="order-by__item desc" href="">цена</a><a class="order-by__item" href="">скидка</a></div>
-              <div class="view-type"><span>Вид:</span><a class="view-type__item view-type__item_3cols active" href=""><svg width="27" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H0v8h7V0zm10 0H9v8h8V0zm2 0h8v8h-8V0zM7 10H0v8h7v-8zm2 0h8v8H9v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_2cols" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M8 0H0v8h8V0zm10 0h-8v8h8V0zM0 10h8v8H0v-8zm18 0h-8v8h8v-8z"/></svg></a><a class="view-type__item view-type__item_1col" href=""><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h18v18H0z"/></svg></a></div>
+              <div class="view-type"><span>Вид:</span>
+                <div class="view-type__item" data-cols="3"><svg width="27" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0H0v8h7V0zm10 0H9v8h8V0zm2 0h8v8h-8V0zM7 10H0v8h7v-8zm2 0h8v8H9v-8zm18 0h-8v8h8v-8z"/></svg></div>
+                <div class="view-type__item" data-cols="2"><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M8 0H0v8h8V0zm10 0h-8v8h8V0zM0 10h8v8H0v-8zm18 0h-8v8h8v-8z"/></svg></div>
+                <div class="view-type__item" data-cols="1"><svg width="18" height="18" fill="#4E5B67" opacity=".2" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h18v18H0z"/></svg></div>
+              </div>
             </div>
             <div class="category-items row">
               <div class="col-md-4 col-6">

@@ -2231,6 +2231,60 @@ header.scrollUp .header__top {
   color: #67ADD7;
 }
 
+.share-wrapper {
+  position: relative;
+}
+
+.share__dropdown {
+  left: unset !important;
+  right: 0;
+  display: flex;
+  margin-top: 7px;
+  padding: 10px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(19, 36, 52, 0.05);
+}
+
+.share__dropdown::before {
+  width: 10px;
+  height: 10px;
+  top: -5px;
+  right: 48px;
+}
+
+.share__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.share__item:not(:last-child) {
+  margin-right: 6px;
+}
+
+.share__item.ab-i-fb {
+  background: #637CAC;
+}
+
+.share__item.ab-i-twitter {
+  background: #03A9F4;
+}
+
+.share__item.ab-i-pinterest {
+  background: #D32F2F;
+}
+
+.share__item.ab-i-vk {
+  background: #5181B8;
+}
+
+.share__item.ab-i-link {
+  border: 1px solid rgba(78, 91, 103, 0.2);
+}
+
 .fw-slider,
 .fw-slide {
   width: 100%;
@@ -3074,6 +3128,7 @@ header.scrollUp .header__top {
 
 .view-type__item {
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .view-type__item svg {
@@ -3087,7 +3142,7 @@ header.scrollUp .header__top {
   opacity: 1;
 }
 
-.view-type__item_1col {
+.view-type__item[data-cols="1"] {
   display: none;
 }
 
@@ -3439,6 +3494,7 @@ header.scrollUp .header__top {
 }
 
 .product-card_small .product-card__thumb {
+  flex: 1 0 85px;
   width: 85px;
   height: 127px;
   margin-right: 20px;
@@ -5052,6 +5108,24 @@ footer {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 16' fill='%23fff'%3E%3Cpath d='M7.652 15.303c4.415 0 7.35-3.1 7.35-7.474 0-.5-.052-.888-.124-1.273H7.653v2.63h4.343c-.178 1.117-1.315 3.298-4.343 3.298-2.61 0-4.74-2.16-4.74-4.833s2.13-4.834 4.74-4.834c1.493 0 2.484.637 3.048 1.18l2.077-1.993C11.44.752 9.718 0 7.652 0a7.65 7.65 0 1 0 0 15.303z'/%3E%3C/svg%3E");
 }
 
+.ab-i-pinterest::after {
+  width: 13px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 13 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.717 0C2.332 0 0 2.81 0 5.874 0 7.295.794 9.067 2.065 9.63c.193.087.298.05.341-.129.038-.136.205-.79.286-1.1a.283.283 0 00-.068-.278c-.422-.488-.757-1.377-.757-2.21 0-2.138 1.7-4.213 4.59-4.213 2.5 0 4.25 1.624 4.25 3.947 0 2.625-1.39 4.442-3.195 4.442-.999 0-1.743-.785-1.507-1.755.285-1.155.844-2.397.844-3.23 0-.747-.422-1.365-1.284-1.365-1.017 0-1.842 1.007-1.842 2.36 0 .858.304 1.438.304 1.438L2.834 12.36c-.316 1.285.043 3.366.074 3.545.02.099.13.13.192.049.1-.13 1.315-1.865 1.656-3.12l.633-2.31c.335.606 1.302 1.113 2.332 1.113C10.786 11.636 13 8.942 13 5.6 12.989 2.397 10.246 0 6.717 0z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.ab-i-twitter::after {
+  width: 20px;
+  height: 17px;
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 20 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.692 2.77a8.417 8.417 0 01-2.326.637 4.015 4.015 0 001.776-2.232 8.07 8.07 0 01-2.56.978A4.036 4.036 0 009.6 4.913c0 .32.027.628.093.92a11.427 11.427 0 01-8.32-4.222 4.064 4.064 0 00-.554 2.04c0 1.399.72 2.638 1.794 3.356a3.987 3.987 0 01-1.824-.498v.045c0 1.962 1.4 3.591 3.234 3.966a4.02 4.02 0 01-1.058.133 3.52 3.52 0 01-.765-.069c.523 1.6 2.008 2.775 3.773 2.813a8.112 8.112 0 01-5.006 1.722c-.33 0-.648-.015-.966-.056a11.366 11.366 0 006.193 1.812c7.43 0 11.49-6.154 11.49-11.488 0-.178-.006-.35-.014-.522a8.052 8.052 0 002.023-2.096z' fill='%23FEFEFE'/%3E%3C/svg%3E");
+}
+
+.ab-i-link::after {
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.626 1.093a3.733 3.733 0 115.279 5.28L11.51 9.766a3.732 3.732 0 01-1.73.98h-.03l-.155.033-.085.016-.184.026h-.09a.82.82 0 00-.114.01l-.076.006-.16.019h-.203a3.724 3.724 0 01-.397-.037 4.322 4.322 0 01-.323-.067l-.157-.043a2.136 2.136 0 01-.233-.078 1.844 1.844 0 01-.164-.065c-.037-.015-.075-.03-.112-.049a3.701 3.701 0 01-1.067-.746 1.067 1.067 0 010-1.504 1.093 1.093 0 011.499 0 1.6 1.6 0 002.26 0l.875-.87.022-.023 2.5-2.498a1.6 1.6 0 10-2.263-2.264L9.116 4.618a.267.267 0 01-.29.059 4.48 4.48 0 00-1.704-.334h-.099a.267.267 0 01-.195-.456l2.798-2.794zm-.491 4.64c.227.144.437.313.626.503.216.217.33.516.31.821a1.067 1.067 0 01-.31.678 1.093 1.093 0 01-1.498 0 1.6 1.6 0 00-2.261 0l-3.405 3.402A1.6 1.6 0 104.861 13.4l2.013-2.015c.076-.077.19-.1.29-.059a4.48 4.48 0 001.707.33h.106a.267.267 0 01.19.457l-2.8 2.8A3.733 3.733 0 011.091 9.63l3.391-3.395a3.733 3.733 0 014.653-.504z' fill='%234E5B67'/%3E%3C/svg%3E");
+}
+
 .ab-i-logout::after {
   width: 16px;
   height: 15px;
@@ -5280,7 +5354,7 @@ footer {
   .product-photo .slider-nav__dots {
     position: -webkit-sticky;
     position: sticky;
-    top: 100px;
+    top: 140px;
     flex-direction: column;
     padding-bottom: 100px;
     pointer-events: all;
@@ -6233,11 +6307,11 @@ footer {
     display: none;
   }
 
-  .view-type__item_3cols {
+  .view-type__item[data-cols="3"] {
     display: none;
   }
 
-  .view-type__item_1col {
+  .view-type__item[data-cols="1"] {
     display: block;
   }
 
