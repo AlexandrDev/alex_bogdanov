@@ -7,6 +7,12 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        &__group {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
     
         &__link {
             display: flex;

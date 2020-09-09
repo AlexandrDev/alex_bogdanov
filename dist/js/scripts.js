@@ -335,10 +335,10 @@ $(function() {
             let slides_count = flkty.slides.length,
                 current_slide = '01';
 
-            let $navs = $(slider).parent().find('.slider-nav'),
-                $dotsContainer = $navs.find('.slider-nav__dots');
-
             if (slides_count > 1) {
+                let $navs = $(slider).parent().find('.slider-nav'),
+                    $dotsContainer = $navs.find('.slider-nav__dots');
+
                 $navs.css('display', 'flex')
             
                 for (let i = 0; i < slides_count; i++) {
@@ -412,33 +412,35 @@ $(function() {
 
                 let slides_count = flkty.slides.length;
 
-                let $navs = $(slider).find('.product-slider__navs'),
-                    $prev = $navs.find('.arrow-prev'),
-                    $next = $navs.find('.arrow-next');
+                if (slides_count > 1) {
+                    let $navs = $(slider).find('.product-slider__navs'),
+                        $prev = $navs.find('.arrow-prev'),
+                        $next = $navs.find('.arrow-next');
 
-                $prev.addClass('disabled');
+                    $prev.addClass('disabled');
 
-                flkty.on('select', function(index) {
-                    if (index == 0) {
-                        $prev.addClass('disabled');
-                    } else {
-                        $prev.removeClass('disabled');
-                    }
-                    
-                    if (index == slides_count - 1) {
-                        $next.addClass('disabled');
-                    } else {
-                        $next.removeClass('disabled');
-                    }                
-                });
+                    flkty.on('select', function (index) {
+                        if (index == 0) {
+                            $prev.addClass('disabled');
+                        } else {
+                            $prev.removeClass('disabled');
+                        }
 
-                $prev.on('click', function() {
-                    flkty.previous();
-                });
+                        if (index == slides_count - 1) {
+                            $next.addClass('disabled');
+                        } else {
+                            $next.removeClass('disabled');
+                        }
+                    });
 
-                $next.on('click', function() {
-                    flkty.next();
-                });
+                    $prev.on('click', function () {
+                        flkty.previous();
+                    });
+
+                    $next.on('click', function () {
+                        flkty.next();
+                    });
+                }
             })
         }
     });
@@ -499,6 +501,7 @@ $(function() {
     if (document.querySelector('.product-photo-slider')) {
         product_photo_slider();
     }
+
     function product_photo_slider() {
         let slider_cls = '.product-photo-slider';
 
@@ -510,32 +513,33 @@ $(function() {
             pageDots: false,
             watchCSS: true,
         });
-        
 
         let slides_count = (flkty.slides) ? flkty.slides.length : $(slider_cls).find('> .slide').length;
-        
-        let $navs = $(slider_cls).parent().find('.slider-nav'),
-            $dotsContainer = $navs.find('.slider-nav__dots');
 
-        $navs.css('display', 'flex')
-    
-        for (let i = 0; i < slides_count; i++) {
-            let cls = (i == 0) ? 'dot current' : 'dot';
-    
-            $dotsContainer.append('<span class="' + cls + '"></span>');
+        if (slides_count > 1) {
+            let $navs = $(slider_cls).parent().find('.slider-nav'),
+                $dotsContainer = $navs.find('.slider-nav__dots');
+
+            $navs.css('display', 'flex')
+
+            for (let i = 0; i < slides_count; i++) {
+                let cls = (i == 0) ? 'dot current' : 'dot';
+
+                $dotsContainer.append('<span class="' + cls + '"></span>');
+            }
+
+            let $dots = $navs.find('.dot');
+
+            // update selected dots
+            flkty.on('select', function () {
+                $dots.filter('.current').removeClass('current');
+                $dots.eq(flkty.selectedIndex).addClass('current');
+            });
+
+            $dots.on('click', function () {
+                flkty.select($(this).index());
+            });
         }
-    
-        let $dots = $navs.find('.dot');
-    
-        // update selected dots
-        flkty.on('select', function() {            
-            $dots.filter('.current').removeClass('current');
-            $dots.eq(flkty.selectedIndex).addClass('current');
-        });
-    
-        $dots.on('click', function() {
-            flkty.select( $(this).index() );
-        });
     }
 
 

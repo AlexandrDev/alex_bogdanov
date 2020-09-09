@@ -1,6 +1,2 @@
-.idea/
-.vscode/
-_workfolder/
 node_modules/
 yarn.lock
-.DS_Store
