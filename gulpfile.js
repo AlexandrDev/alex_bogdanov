@@ -38,6 +38,7 @@ function styles() {
         .pipe(autoprefixer())
         .pipe(gcmq())
         .pipe(gulp.dest(path.build.css))
+        .pipe(gulp.dest('../bgd/local/templates/bgd/assets/css/'))
 }
 
 function images() {
@@ -65,10 +66,10 @@ function svg() {
 
 
 function watch() {
-    gulp.watch(path.watch.html, html)
+    // gulp.watch(path.watch.html, html)
     gulp.watch(path.watch.css, styles)
-    gulp.watch(path.watch.img, images)
-    gulp.watch('src/svg/*', svg)
+    // gulp.watch(path.watch.img, images)
+    // gulp.watch('src/svg/*', svg)
 }
 
-exports.default = gulp.parallel(html, styles, watch);
+exports.default = gulp.parallel(/*html,*/ styles, watch);

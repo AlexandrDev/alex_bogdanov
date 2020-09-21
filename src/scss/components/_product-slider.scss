@@ -129,6 +129,10 @@
         width: 255px;
         margin-right: 40px;
 
+        .product-card__name {
+            min-height: 40px;
+        }
+
         @include laptop {
             width: 285px;
             margin-right: 30px;

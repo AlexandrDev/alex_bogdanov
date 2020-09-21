@@ -73,7 +73,7 @@
             flex-wrap: wrap;
 
             .checkbox-block {
-                margin-right: 20px;
+                flex: 1 0 50%;
             }
         }
 
@@ -90,6 +90,7 @@
         
         &-collapse {
             flex-grow: 1;
+            max-width: 30%;
             border-width: 1px 0 1px 1px;
             &:last-child {
                 border-right-width: 1px;

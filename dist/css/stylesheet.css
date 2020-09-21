@@ -2100,6 +2100,10 @@ header.scrollUp .header__top {
   margin-right: 40px;
 }
 
+.product-slider .product-card_small .product-card__name {
+  min-height: 40px;
+}
+
 .additional-slider {
   padding-bottom: 82px;
   margin-bottom: 100px;
@@ -3025,7 +3029,7 @@ header.scrollUp .header__top {
 }
 
 .filter-collapse__checkbox-grid .checkbox-block {
-  margin-right: 20px;
+  flex: 1 0 50%;
 }
 
 .filter-collapse .checkbox-block {
@@ -5301,6 +5305,7 @@ footer {
 
   .filter-collapse {
     flex-grow: 1;
+    max-width: 30%;
     border-width: 1px 0 1px 1px;
   }
 
