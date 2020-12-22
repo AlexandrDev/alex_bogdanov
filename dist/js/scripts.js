@@ -744,4 +744,37 @@ $(function() {
     });
 
     $.fancybox.defaults.closeExisting = true;
+
+
+    /*
+     * ProdCard imgs slider
+     */
+    $('.product-card').each(function () {
+        let $container = $(this).find('.product-card__thumb > a'),
+            $main_img = $container.find('img'),
+            images = $main_img.data('additional') ?? null,
+            dots_cls = 'product-card__dots',
+            dot_cls = 'product-card__dot';
+
+        if (images && images.length) {
+            images.unshift($main_img.attr('src'))
+
+            $container.append('<div class="' + dots_cls + '"></div>')
+
+            for (let i = 0; i < images.length; i++) {
+                let active_cls = i === 0 ? ' active' : '';
+
+                $container.find('.' + dots_cls).append('<div class="' + dot_cls + active_cls + '"></div>')
+            }
+
+            let $dot = $container.find('.' + dot_cls)
+
+            $dot.hover(function () {
+                $main_img.attr('src', images[$(this).index()])
+
+                $dot.removeClass('active')
+                $(this).addClass('active')
+            })
+        }
+    })
 });

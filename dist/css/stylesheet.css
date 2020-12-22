@@ -3362,6 +3362,10 @@ header.scrollUp .header__top {
   z-index: 1;
 }
 
+.product-card__thumb:hover .product-card__dots {
+  opacity: 1;
+}
+
 .product-card .label {
   position: absolute;
   top: 120px;
@@ -3386,6 +3390,48 @@ header.scrollUp .header__top {
 
 .product-card .label_new {
   background: #67ADD7;
+}
+
+.product-card__dots {
+  position: absolute;
+  top: 0;
+  bottom: 55px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0;
+  z-index: 20;
+}
+
+.product-card__dot {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+}
+
+.product-card__dot:first-child {
+  padding-left: 6px;
+}
+
+.product-card__dot:last-child {
+  padding-right: 6px;
+}
+
+.product-card__dot:before {
+  content: '';
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #E8F0F6;
+  transition: background-color .1s ease;
+}
+
+.product-card__dot.active:before {
+  background-color: #67ADD7;
 }
 
 .product-card__buttons {

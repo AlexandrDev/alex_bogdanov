@@ -2,8 +2,8 @@
     .product-card__thumb
         a(href=product_link)
             picture
-                source(srcset="images/dev/prod-thumb2.webp", type="image/webp")
-                img(src="images/dev/prod-thumb2.png", alt="")
+                //source(srcset="images/dev/prod-thumb2.webp", type="image/webp", data-additional="[\"images/dev/prod-thumb3.webp\", \"images/dev/prod-thumb.webp\"]")
+                img(src="images/dev/prod-thumb2.png", alt="", data-additional="[\"images/dev/prod-thumb3.png\", \"images/dev/prod-thumb.png\"]")
             .label.label_best Бестселлер
         .product-card__buttons
             a(href="").add-to-cart.ab-i-add2cart Добавить
@@ -12,7 +12,6 @@
             //-     a(href="").select-size__item 42
             //-     a(href="").select-size__item 44
             //-     a(href="").select-size__item 46
-
     .product-card__bottom
         .product-card__sku Арт. 1234567
         a(href=product_link).product-card__name Блузон «Овация»
